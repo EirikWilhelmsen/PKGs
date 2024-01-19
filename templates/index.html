@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style.css">
+    <title>Streaming Platforms</title>
+</head>
+<body>
+    <h1>Streaming Platforms</h1>
+
+    <table class="index_table">
+        <tr>
+            <td><img src="static/images/Netflix.jpg" class="index_img"></td>
+            <td>Netflix</td>
+            <td><a href="{{ url_for('views.profile', platform_name='netflix') }}"><button class="platform-btn">Login</button></a></td>
+
+        </tr>
+        <tr>
+            <td><img src="static/images/spotify.jpg" class="index_img"></td>
+            <td>Spotify</td>
+            <td><a href="{{ url_for('views.profile', platform_name='spotify') }}"><button class="platform-btn">Login</button></a></td>
+        </tr>
+        <tr>
+            <td><img src="static/images/HboMax.jpg" class="index_img"></td>
+            <td>Hbo Max</td>
+            <td><a href="{{ url_for('views.profile', platform_name='HboMax') }}"><button class="platform-btn">Login</button></a></td>
+        </tr>
+    </table>
+</body>
+</html>
