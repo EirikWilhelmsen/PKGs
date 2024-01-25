@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Profile</title>
+</head>
+<body>
+    <div class="container">
+        <div class="profile_information">
+            <h1>User information</h1>
+            <p><img src="{{ user_info.images[1].url }}" alt="Profile Picture" class="profilepic_img"></p>
+            <table class="profile_table">
+                <tr>
+                    <td><strong>Display Name:</strong> {{ user_info['display_name'] }}</td>
+                    <td><strong>Email:</strong> {{ user_info['email'] }}</td>
+                    <td><strong>Country:</strong> {{ user_info['country'] }}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="profile_information">
+            <h1>Your Top {{ top_tracks|length }} Tracks on Spotify</h1>
+            <table class="profile_table">
+                {% for track in top_tracks %}
+                    <tr>
+                        <td><img src="{{ track['album']['images'][0]['url'] }}" alt="Album Cover" class="index_img"></td>
+                        <td><strong>Track Name:</strong> {{ track['name'] }}</td>
+                        <td><strong>Artist:</strong> {{ track['artists'][0]['name'] }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <div class="profile_information">
+            <h1>Playlists</h1> 
+            {% for playlist in playlists %}
+                <li>{{ playlist['name'] }}</li>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
