@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Profile</title>
+</head>
+<body>
+    <div class="container">
+        <div class="profile_information">
+            <h1>User information</h1>
+            <table class="insta_profile">
+                <tr><td><strong>Email:</strong></td><td> {{ user_info['string_map_data']['Email']['value'] }}</td></tr>
+                <tr><td><strong>Username:</strong></td><td> {{ user_info['string_map_data']['Username']['value'] }}</td></tr>
+                <tr><td><strong>Name:</strong> </td><td> {{ user_info['string_map_data']['Name']['value'] }}</td></tr>
+                <tr><td><strong>Bio:</strong> </td><td>{{ user_info['string_map_data']['Bio']['value'] }}</td></tr>
+                <tr><td><strong>Gender:</strong> </td><td> {{ user_info['string_map_data']['Gender']['value'] }}</td></tr>
+                <tr><td><strong>Date of Birth:</strong></td><td> {{ user_info['string_map_data']['Date of birth']['value'] }}</td></tr>
+                <tr><td><strong>Private Account:</strong></td><td> {{ user_info['string_map_data']['Private Account']['value'] }}</td></tr>
+                <tr><td><strong>Location:</strong> </td><td> {{ account_based_in['string_map_data']['City Name']['value'] }}</td></tr>
+            </table>    
+        </div>
+        <div class="profile_information">
+            <h2>Posts</h2>
+            {% for post in posts %}
+                <img src="{{ post['uri'] }}" alt="Post Image" class="insta_post_img">
+            {% endfor %}            
+        </div>
+        <div class="profile_information">
+            <h1>Personal Topics</h1>
+
+            <div class="topics-container">
+                {% for topic in topics %}
+                    <div class="topic">
+                        <p>{{ topic['string_map_data']['Name']['value'] }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

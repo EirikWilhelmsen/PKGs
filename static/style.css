@@ -1,7 +1,66 @@
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
+    background-color: #f4f4f4; /* Add a light background color */
 }
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.profile_information {
+    flex: 1;
+    margin: 20px;
+    text-align: center;
+    background-color: #ffffff; /* Add a white background for each profile section */
+    border-radius: 8px; /* Add rounded corners for a cleaner look */
+    padding: 20px; /* Add padding for better spacing */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+}
+
+.profile_table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.profile_table th, .profile_table td {
+    padding: 10px;
+}
+.profile_table td {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center; /* Center align on smaller screens */
+}
+.profile_table td img{
+    margin: 0 auto; /* Center align images */
+}
+.profile_table tr{
+    border-bottom: 1px solid #ddd; /* Add a gray border to all table rows */
+}
+
+.profile_table tr:hover {
+    background-color: #f0f0f0; /* Light gray background on hover */
+}
+
+.index_img {
+    width: 50px;
+    height: 50px;
+}
+
+.profilepic_img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Make the profile picture round */
+    object-fit: cover; /* Ensure the image covers the entire area */
+    border: 3px solid #ffffff; /* Add a white border for contrast */
+}
+
 .platform-btn {
     background-color: #51a1f6;
     color: white;
@@ -12,55 +71,143 @@ body {
     display: inline-block;
     font-size: 14px;
     cursor: pointer;
-}
-.index_table{
-    border-collapse: collapse;
-    width: 20%;
-    margin-top: 20px;
-}
-li {
-    margin: 10px 0;
-    text-align: left;
-}
-.profile_table{
-    border-collapse: collapse;
-    width: 100%;
-}
-.index_table th, .index_table td {
-    padding: 15px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-}
-.index_table tr:hover {
-    background-color: #bbc3ff;
-}
-.profile_table td {
-    padding-top: 5px;
-}
-.index_img{
-    width: 50px;
-    height: 50px;
-}
-.profilepic_img{
-    width: 100px;
-    height: 100px;
-
-}
-.profile_information {
-    flex: 1;
-    margin: 20px;
-    text-align: center;
+    border-radius: 5px; /* Add rounded corners to the button */
 }
 
-@media (max-width: 600px){
+/* Media Query for smaller screens */
+@media (max-width: 600px) {
     .profile_information {
         flex-basis: 100%;
     }
+    .top-tracks-table .track-info {
+        flex-direction: column; /* Display items stacked for smaller screens */
+        text-align: center; /* Center-align text for smaller screens */
+    }
+    .top-tracks-table .index_img {
+        margin-right: 0;
+        align-self: center;
+    }
+    .top-tracks-table div {
+        text-align: center;
+    }
 }
-.container {
+
+/* ... */
+.top-tracks-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    display: flex; /* Use Flexbox for layout */
+    align-items: center; /* Center items vertically */
+}
+
+.top-tracks-table .track-info {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.top-tracks-table .track-info div {
+    flex-grow: 1; /* Allow the text to grow and take remaining space */
+}
+.top-tracks-table .index_img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 4px; /* Optional: Add border-radius to the image */
+}
+.netflix-table {
+    width: 100%;
+    border-collapse: collapse;
     margin-top: 20px;
+}
+
+.netflix-table th, .netflix-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.netflix-table th {
+    background-color: #597492;
+    color: white;
+}
+
+.netflix-table tr:hover {
+    background-color: #f0f0f0;
+}
+.netflix-information {
+    flex: 1;
+    margin: 20px;
+    text-align: center;
+    background-color: #ffffff; /* Add a white background for each profile section */
+    border-radius: 8px; /* Add rounded corners for a cleaner look */
+    padding: 20px; /* Add padding for better spacing */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+}
+.insta_post_img{
+    width: 200px;
+    object-fit: cover;
+    border-radius: 8px; /* Add rounded corners for a cleaner look */
+}
+.insta_profile{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.insta_profile th, .insta_profile td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.insta_profile th {
+    background-color: #597492;
+    color: white;
+}
+
+.insta_profile tr:hover {
+    background-color: #f0f0f0;
+}
+.topics-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Two equal-width columns */
+    gap: 5px; /* Adjust the gap between columns */
+}
+
+.topic {
+    border-bottom: 1px solid #ddd; /* Add border for each topic for better visibility */
+}
+.options {
+    display: none;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+
+.options h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.options label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.options button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.options button:hover {
+    background-color: #45a049;
 }

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Netflix</title>
+</head>
+<body>
+    <h1>Netflix viewing history</h1>
+    <div class="netflix-information">
+        <table class="index_table netflix-table" id="netflixTable">
+            <tr>
+                <th colspan="1">
+                    <h2>Netflix information</h2>
+                </th>
+                <th colspan="2">
+                    <h2>Additional OMDb information</h2>
+                </th>
+                <th>
+                    <h2>Wiki link for first actor</h2>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    Movie Title:
+                </th>
+                <th>
+                    Actors:
+                </th>
+                <th>
+                    IMDb movie link:
+                </th>
+                <th>
+                    IMDb first actor link:
+                </th>
+            </tr>
+            {% for i in range(movie_info|length) %}
+            <tr class="netflix-row" {% if loop.index > 20 %} style="display: none;" {% endif %}>
+                <td>{{ movie_info[i]['Title'] }}</td>
+                <td>        
+                    {% for actor in movie_info[i]['Actors'].split(", ") %}
+                        <li>{{ actor }}</li>
+                    {% endfor %}
+                </td>
+                <td>
+                    <a href="https://www.imdb.com/title/{{ movie_info[i]['imdbID'] }}" target="_blank">https://www.imdb.com/title/{{ movie_info[i]['imdbID'] }}/</a>
+                </td>
+                <td>
+                    <a href="https://en.wikipedia.org/wiki/{{ movie_info[i]['Actors'].split(", ")[0] }}" target="_blank">https://en.wikipedia.org/wiki/{{ movie_info[i]['Actors'].split(", ")[0] }}/</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+        <button id="showMoreBtn" onclick="loadMoreRows()">Load More</button>
+    </div>
+    <script>
+        function onload() {
+            if (movie_info.length <= 20) {
+                document.getElementById("showMoreBtn").style.display = "none";
+            }
+            else{
+                document.getElementById("showMoreBtn").style.display = "block";
+            }
+        }
+        function loadMoreRows() {
+            var table = document.getElementById("netflixTable");
+            var rows = table.rows;
+            var hiddenRows = document.querySelectorAll('.netflix-row[style="display: none;"]');
+            console.log(movie_info)
+
+            for (var i = 0; i < 20 && i < hiddenRows.length; i++) {
+                hiddenRows[i].style.display = "table-row";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -10,34 +10,113 @@
 <body>
     <div class="container">
         <div class="profile_information">
-            <h1>User information</h1>
-            <p><img src="{{ user_info.images[1].url }}" alt="Profile Picture" class="profilepic_img"></p>
-            <table class="profile_table">
-                <tr>
-                    <td><strong>Display Name:</strong> {{ user_info['display_name'] }}</td>
-                    <td><strong>Email:</strong> {{ user_info['email'] }}</td>
-                    <td><strong>Country:</strong> {{ user_info['country'] }}</td>
-                </tr>
-            </table>
+            {% if user_info %}
+                <h1>User information</h1>
+                <p><img src="{{ user_info.images[1].url }}" alt="Profile Picture" class="profilepic_img"></p>
+                <table class="profile_table">
+                    <tr>
+                        <td><strong>Display Name:</strong> {{ user_info['display_name'] }}</td>
+                        <td><strong>Email:</strong> {{ user_info['email'] }}</td>
+                        <td colspan="2"><strong>Country:</strong> {{ user_info['country'] }}</td>
+                    </tr>
+                </table>
+                <h2>Following Users</h2>
+                <table class="profile_table">
+                    {% for user in following_users %}
+                        <tr><td>{{ user['name'] }}</td></tr>
+                    {% endfor %}
+                </table>
+            {% else %}
+                <p>No user information available.</p>
+            {% endif %}
         </div>
         <div class="profile_information">
-            <h1>Your Top {{ top_tracks|length }} Tracks on Spotify</h1>
-            <table class="profile_table">
-                {% for track in top_tracks %}
+            <label for="actionDropdown">Select a term:</label>
+            <select id="actionDropdown" onchange="updateTable(this.value)">
+              <option value="" disabled selected>Select a term</option>
+              <option value="top_tracks_short">4 weeks</option>
+              <option value="top_tracks_medium">6 months</option>
+              <option value="top_tracks_long">max</option>
+            </select>
+        
+            <h1>Your Top {{ top_tracks_short|length }} Tracks on Spotify</h1>
+        
+            <!-- Table for 4 weeks -->
+            <table class="profile_table top-tracks-table" id="topTracksTableShort" style="display: none;">
+                {% for track in top_tracks_short %}
                     <tr>
-                        <td><img src="{{ track['album']['images'][0]['url'] }}" alt="Album Cover" class="index_img"></td>
-                        <td><strong>Track Name:</strong> {{ track['name'] }}</td>
-                        <td><strong>Artist:</strong> {{ track['artists'][0]['name'] }}</td>
+                        <td class="track-info">
+                            <img src="{{ track['album']['images'][0]['url'] }}" alt="Album Cover" class="index_img">
+                            <div>
+                                <strong>Track Name:</strong> {{ track['name'] }}<br>
+                                <strong>Artist:</strong> {{ track['artists'][0]['name'] }}
+                            </div>
+                        </td>
                     </tr>
                 {% endfor %}
             </table>
-        </div>
+        
+            <!-- Table for 6 months -->
+            <table class="profile_table top-tracks-table" id="topTracksTableMedium" style="display: none;">
+                {% for track in top_tracks_medium %}
+                    <tr>
+                        <td class="track-info">
+                            <img src="{{ track['album']['images'][0]['url'] }}" alt="Album Cover" class="index_img">
+                            <div>
+                                <strong>Track Name:</strong> {{ track['name'] }}<br>
+                                <strong>Artist:</strong> {{ track['artists'][0]['name'] }}
+                            </div>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+        
+            <!-- Table for max -->
+            <table class="profile_table top-tracks-table" id="topTracksTableLong" style="display: none;">
+                {% for track in top_tracks_long %}
+                    <tr>
+                        <td class="track-info">
+                            <img src="{{ track['album']['images'][0]['url'] }}" alt="Album Cover" class="index_img">
+                            <div>
+                                <strong>Track Name:</strong> {{ track['name'] }}<br>
+                                <strong>Artist:</strong> {{ track['artists'][0]['name'] }}
+                            </div>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+        
+          </div>
         <div class="profile_information">
             <h1>Playlists</h1> 
+            <table class="profile_table">
             {% for playlist in playlists %}
-                <li>{{ playlist['name'] }}</li>
+                <tr>
+                    <td><strong>Name:</strong> {{ playlist['name'] }}</td>
+                    <td><strong>Owner:</strong> {{ playlist['owner']['display_name'] }}</td>
+                    <td><strong>Tracks:</strong> {{ playlist['tracks']['total'] }}</td>
+                </tr>
             {% endfor %}
+            </table>    
         </div>
     </div>
+
+    <script>
+        function updateTable(selectedValue) {
+          // Hide all tables
+          document.getElementById('topTracksTableShort').style.display = 'none';
+          document.getElementById('topTracksTableMedium').style.display = 'none';
+          document.getElementById('topTracksTableLong').style.display = 'none';
+    
+          // Show the selected table
+          if (selectedValue === 'top_tracks_short') {
+            document.getElementById('topTracksTableShort').style.display = 'table';
+          } else if (selectedValue === 'top_tracks_medium') {
+            document.getElementById('topTracksTableMedium').style.display = 'table';
+          } else if (selectedValue === 'top_tracks_long') {
+            document.getElementById('topTracksTableLong').style.display = 'table';
+          }
+        }
+      </script>
 </body>
 </html>

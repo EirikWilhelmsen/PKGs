@@ -14,17 +14,75 @@
         <tr>
             <td><img src="static/images/Netflix.jpg" class="index_img"></td>
             <td>Netflix</td>
+            <td><button class="platform-btn" onclick="showOptions('netflixOptions')">Login</button></td>
         </tr>
         <tr>
             <td><img src="static/images/spotify.jpg" class="index_img"></td>
             <td>Spotify</td>
-            <td><a href="{{ url_for('login',platform='spotify') }}"><button class="platform-btn">Login</button></a></td>
+            <td><button class="platform-btn" onclick="showOptions('spotifyOptions')">Login</button></td>
         </tr>
         <tr>
             <td><img src="static/images/HboMax.jpg" class="index_img"></td>
-            <td>Hbo Max</td>
-            
+            <td>Instagram</td>
+            <td><a href="{{ url_for('login',platform='instagram') }}"><button class="platform-btn">Enter</button></a></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Entity Linking</td>
+            <td><a href="{{ url_for('login',platform='Entity_Linking') }}"><button class="platform-btn">Enter</button></a></td>
         </tr>
     </table>
+
+    <div class="options" id="spotifyOptions" style="display: none;">
+        <form action="/proceed" method="post"> <!-- Form starts here -->
+            <h2>Select Spotify Options</h2>
+            <label><input type="checkbox" name="usernameCheckbox"> Username</label> <!-- Added name attribute -->
+            <label><input type="checkbox" name="playlistsCheckbox"> Playlists</label> <!-- Added name attribute -->
+            <label><input type="checkbox" name="songsCheckbox" onclick="toggleNumSongs()"> Songs</label> <!-- Added onclick attribute -->
+            <div id="numSongsDiv" style="display: none;">
+                Number of Songs: <input type="number" name="numSongsInput" min="1" value="1"> <!-- Added name attribute -->
+            </div>
+            <button type="submit" name="platform" value="spotify">Proceed</button>
+        </form>
+    </div>
+    <div class="options" id="netflixOptions" style="display: none;">
+        <form action="/proceed" method="post" enctype="multipart/form-data">
+            <h2>Select Netflix Options</h2>
+            <label><input type="checkbox" name="viewCheckbox" onclick="togglePrecentOfHistory()">Give access to Netflix viewing history</label> <!-- Added onclick attribute -->
+            <div id="PercentageDiv" style="display: none;">
+                <input type="file" name="file" accept=".csv">
+            </div>
+            <button type="submit" name="platform" value="netflix">Proceed</button> 
+        </form>
+    </div>
+
+    <script>
+        function showOptions(optionId) {
+            var optionsDiv = document.getElementById(optionId);
+            if (optionsDiv.style.display === "none") {
+                optionsDiv.style.display = "block";
+            } else {
+                optionsDiv.style.display = "none";
+            }
+        }
+
+        function toggleNumSongs() {
+            var numSongsDiv = document.getElementById("numSongsDiv");
+            if (numSongsDiv.style.display === "none") {
+                numSongsDiv.style.display = "block";
+            } else {
+                numSongsDiv.style.display = "none";
+            }
+        }
+        
+        function togglePrecentOfHistory() {
+            var percentageDiv = document.getElementById("PercentageDiv");
+            if (percentageDiv.style.display === "none") {
+                percentageDiv.style.display = "block";
+            } else {
+                percentageDiv.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
