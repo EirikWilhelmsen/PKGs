@@ -3,12 +3,29 @@ import json
 import csv
 import urllib.parse
 from datetime import datetime
+import imdb
+from rfc3987 import match
 
 API_URL = "https://rel.cs.ru.nl/api"
 
 class PKGFunctions:
+    """
+    Class that contains functions for the PKG.
+    """
     def __init__(self):
         pass
+
+    def get_actor_imdb_id(self,actor_name):
+        ia = imdb.IMDb()
+
+        search_results = ia.search_person(actor_name)
+
+        if search_results:
+            actor = search_results[0]
+            actor_id = actor.getID()
+            return actor_id
+        else:
+            return None
     
     def read_csv_file(self, file_path):
         print(file_path)
@@ -73,18 +90,106 @@ class PKGFunctions:
         }
         response = requests.get(url, params=params)
         data = response.json()
-        return data
+        if data.get('Response') == 'False':
+            response = data.get('Response')
+            info = {
+                'Response': response
+            }
+            return info
+        elif data.get('Response') == 'True': 
+            movie = data.get('Title')
+            actors = data.get('Actors')
+            actor_list = actors.split(',')
+            imdbID = data.get('imdbID')
+            response = data.get('Response')
+            info = {
+                'Movie': movie,
+                'Actors': actor_list,
+                'ImdbID': imdbID,
+                'Response': response
+            }
+            return info
+
     
-    def get_api_response(self):
-        # Make a GET request to the API endpoint
+    def get_REL_api_response(self, example_string):
+        """
+        Sends a request to the REL API and returns the response.
+        """
         response = requests.get(API_URL)
         
-        # Check if the request was successful (status code 200)
         if response.status_code == 200:
-            # Print the response content
             response = requests.post(
-                API_URL, json={"text": "I dislike all movie with Tom Cruise", "spans": []}
+                API_URL, json={"text": example_string, "spans": []}
             )
             return response.json()
         else:
             return {"error": response.status_code}
+        
+    def link_entities(self, reference):
+        """
+        Creates URI links for entities, depending on the type of entity.
+        """
+        movie_actor_dict = {}  # Dictionary to store movie-actor associations
+        for key, _  in reference.items():
+            if key[:2] == 'tt':
+                platform = "Netflix"
+                break
+        if platform == "Netflix":
+            for key, value in reference.items():
+                actors = []
+                if key.startswith("tt"):
+                    movie_ID = key
+                    template = f"https://www.imdb.com/title/{movie_ID}/"
+                    movie_uri = URI(template.format(entity_name=movie_ID))
+                if 'Actors' in value:
+                    for actor_name in value.get('Actors'):
+                        actor_URI = self.get_actor_imdb_id(actor_name)
+                        actors.append(URI(f"https://www.imdb.com/name/nm{actor_URI}/"))
+                    movie_actor_dict[movie_uri] = {
+                        'actor_uris': actors
+                    }
+        return movie_actor_dict      
+       
+    
+    def process_entity_linking_response(self, NER_response, input_text):
+        """
+        Translates the input text into a tagged test based on the NER response.
+        """
+        
+        entity_dict = {}
+        for entity in NER_response:
+            start_index, end_index = entity[:2]
+            entity_dict[(start_index, end_index)] = (entity[2], entity[3], entity[6])
+        string_index = 0
+        output_array = []
+        count = 0
+        
+        for item in entity_dict.items():
+            start = item[0][0]
+            end = item[0][1] + start
+            entity = input_text[start:end]
+            output_array.append(input_text[string_index:start])
+            
+            if entity:
+                text = f"<{item[1][2]}> {entity} </{item[1][2]}>"
+                output_array.append(text)
+                count += 1         
+            string_index = end
+            if count == len(entity_dict):
+                output_array.append(input_text[string_index:]) 
+
+        output_text = ''.join(output_array)
+        return(output_text)
+    
+
+
+
+
+
+SPARQLQuery = str
+class URI(str):
+    def __new__(cls, *args, **kwargs):
+        """Creates a new URI."""
+        assert match(args[0], rule="IRI"), f"Invalid URI: {args[0]}"
+        return super().__new__(cls, *args, **kwargs)
+        

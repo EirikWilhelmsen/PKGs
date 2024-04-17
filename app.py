@@ -30,6 +30,7 @@ SPOTIFY_API_ME_URL = SPOTIFY_API_BASE_URL + "/me"
 SPOTIFY_API_PLAYLISTS_URL = SPOTIFY_API_BASE_URL + "/me/playlists"
 
 app.config['UPLOAD_FOLDER'] = 'uploads'
+app.config['test_files'] = 'tests'
 
 # API URL
 API_URL = "https://rel.cs.ru.nl/api"
@@ -64,7 +65,7 @@ def proceed():
     if request.method == 'POST':
         platform = request.form.get('platform')
         print(platform)
-        if platform == 'spotify':
+        if platform == 'spotify-API':
             username_checked = 'usernameCheckbox' in request.form
             playlists_checked = 'playlistsCheckbox' in request.form
             songs_checked = 'songsCheckbox' in request.form
@@ -104,7 +105,21 @@ def proceed():
             if file:
                 filename = secure_filename(file.filename)
                 file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-                auth_url = url_for('profile', platform='netflix', file_path=os.path.join(app.config['UPLOAD_FOLDER'], filename))
+                file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+                return redirect(url_for('profile', platform='netflix', file_path=file_path))
+        elif platform == 'Entity_Linking':
+            example_string = request.form.get('statement', '')
+            return redirect(url_for('profile', platform='Entity_Linking', example_string=example_string))
+        
+        elif platform == 'spotify-TEST':
+            file_path = os.path.join(os.path.dirname(__file__), 'test_files', 'spotify_test_file.json')
+
+            with open(file_path, 'r') as file:
+                data = json.load(file)
+
+                # Now 'data' contains the contents of the JSON file
+            return render_template('/profile/spotify.html', top_tracks_short=data)
+
         return redirect(auth_url)
 
 
@@ -134,7 +149,7 @@ def error():
     return f'Error: {error_message}', 400
 
 @app.route('/profile/<platform>')
-def profile(platform, file_path=None):
+def profile(platform):
     ###############
     ### Spotify ###
     ###############
@@ -165,6 +180,8 @@ def profile(platform, file_path=None):
             top_tracks_short_response = requests.get(f"{SPOTIFY_API_ME_URL}/top/tracks?time_range=short_term&limit={num_songs}", headers=headers)
             top_tracks_medium_response = requests.get(f"{SPOTIFY_API_ME_URL}/top/tracks?time_range=medium_term&limit={num_songs}", headers=headers)
             top_tracks_long_response = requests.get(f"{SPOTIFY_API_ME_URL}/top/tracks?time_range=long_term&limit={num_songs}", headers=headers)
+            
+            
 
             if all(response.status_code == 200 for response in [top_tracks_short_response, top_tracks_medium_response, top_tracks_long_response]):
                 top_tracks_short = top_tracks_short_response.json().get('items', [])
@@ -173,26 +190,27 @@ def profile(platform, file_path=None):
             
             # Iterate through the top tracks
             list_of_ranges = [top_tracks_short, top_tracks_medium, top_tracks_long]
-            for item in list_of_ranges:
-                for track in item:
-                    # Get the artist's genres from Spotify
-                    artist_name = track['artists'][0]['name']
-                    artist_id = track['artists'][0]['id']
-                    url = f'https://api.spotify.com/v1/artists/{artist_id}'
-                    artist_info_response = requests.get(url, headers=headers)
-                    artist_info = artist_info_response.json()
-                    if artist_info:
-                        artist_genres = artist_info['genres']
-                        print(f"Artist: {artist_name}, Genres: {artist_genres}")
-                    else:
-                        print(f"Artist {artist_name} not found on Spotify")
-
-                    artist_info = pkg_functions.search_artist(artist_name)
-                    if artist_info:
-                        artist_uri = artist_info['id']
-                        print(f"Artist: {artist_name}, MusicBrainz URI: {artist_uri}")
-                    else:
-                        print(f"Artist {artist_name} not found on MusicBrainz")
+            print(top_tracks_long)
+            #for item in list_of_ranges:
+            #    for track in item:
+            #        # Get the artist's genres from Spotify
+            #        artist_name = track['artists'][0]['name']
+            #        artist_id = track['artists'][0]['id']
+            #        url = f'https://api.spotify.com/v1/artists/{artist_id}'
+            #        artist_info_response = requests.get(url, headers=headers)
+            #        artist_info = artist_info_response.json()
+            #        if artist_info:
+            #            artist_genres = artist_info['genres']
+            #            print(f"Artist: {artist_name}, Genres: {artist_genres}")
+            #        else:
+            #            print(f"Artist {artist_name} not found on Spotify")
+            #
+            #        artist_info = pkg_functions.search_artist(artist_name)
+            #        if artist_info:
+            #            artist_uri = artist_info['id']
+            #            print(f"Artist: {artist_name}, MusicBrainz URI: {artist_uri}")
+            #        else:
+            #            print(f"Artist {artist_name} not found on MusicBrainz")
 
         if username_checked:
             user_info_response = requests.get(SPOTIFY_API_ME_URL, headers=headers)
@@ -221,32 +239,48 @@ def profile(platform, file_path=None):
     ###############
 
     elif platform == 'netflix':
+        file_path = request.args.get('file_path')
         csv_file_path = file_path
-        print(csv_file_path)
         hooks, liked_movies= pkg_functions.read_csv_file(csv_file_path)
         movies_info = []
-
-        if len(liked_movies) > 0:  
-            print(len(liked_movies))
-            for i in range(len(liked_movies)):
-                movie_info = pkg_functions.search_OMDb(liked_movies[i][0], 'movie')
-                if movie_info['Response'] == 'True':
-                    movies_info.append(movie_info)
-        all_actors = []  # Initialize an empty list to store all actors
-        for movie in movies_info:
-            actors = movie['Actors'].split(", ")
-            for i, actor in enumerate(actors):
-                actors[i] = actor.replace(" ", "_")
-            all_actors.extend(actors)  # Extend the list with actors from each movie
+        actorIDs = []
+        movie_titles = {}
+        movie_actor_list = {}
     
-        print(f"https://en.wikipedia.org/wiki/{all_actors[0]}") 
-        
+        for movie_title, _ in liked_movies:
+            movie_info = pkg_functions.search_OMDb(movie_title, 'movie')
+            if movie_info['Response'] == 'True':
+                movies_info.append(movie_info)
+                movie_titles[movie_title] = movie_info['Movie']
+                movie_actor_list[movie_info['ImdbID']] = {
+                    'Actors': movie_info['Actors']
+                }
+        print(movie_actor_list)
+        movie_actor_uris = pkg_functions.link_entities(movie_actor_list)
+        print(movie_actor_uris)
+
+        combined_data = list(zip(movie_actor_list.items(), movie_actor_uris.items(), movie_titles.items()))
+        """
+        combined_data =
+        [
+            (
+                ('tt0322259', {'Actors': ['Paul Walker', ' Tyrese Gibson', ' Cole Hauser']}), 
+                ('https://www.imdb.com/title/tt0322259/', {'actor_uris': ['https://www.imdb.com/name/nm0908094/', 'https://www.imdb.com/name/nm0879085/', 'https://www.imdb.com/name/nm0369513/']}), 
+                ('2 Fast 2 Furious', '2 Fast 2 Furious')
+            ), 
+            (
+                ('tt0120338', {'Actors': ['Leonardo DiCaprio', ' Kate Winslet', ' Billy Zane']}), 
+                ('https://www.imdb.com/title/tt0120338/', {'actor_uris': ['https://www.imdb.com/name/nm0000138/', 'https://www.imdb.com/name/nm0000701/', 'https://www.imdb.com/name/nm0000708/']}), 
+                ('Titanic', 'Titanic')
+            )
+        ]
+        """
+
+
 
         if liked_movies:
             return render_template('/profile/netflix.html', 
-                                        liked_movies=liked_movies,
-                                        movie_info=movies_info,
-                                        actors=all_actors
+                                        combined_data=combined_data
                                         )
         else: 
             return redirect(url_for('error'))
@@ -272,8 +306,10 @@ def profile(platform, file_path=None):
     ######################
 
     elif platform == 'Entity_Linking':
-        pkg_functions.get_api_response()
-        return render_template('/profile/EntityLinking.html')
+        example_string = request.args.get('example_string')
+        entity_recognitions = pkg_functions.get_REL_api_response(example_string)
+        processed_NER = pkg_functions.process_entity_linking_response(entity_recognitions, example_string)
+        return render_template('/profile/EntityLinking.html', processed_NER=processed_NER)
 
 
 if __name__ == '__main__':

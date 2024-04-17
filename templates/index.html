@@ -29,7 +29,7 @@
         <tr>
             <td></td>
             <td>Entity Linking</td>
-            <td><a href="{{ url_for('login',platform='Entity_Linking') }}"><button class="platform-btn">Enter</button></a></td>
+            <td><button class="platform-btn" onclick="showOptions('EntityOptions')">Enter</button></td>
         </tr>
     </table>
 
@@ -42,7 +42,8 @@
             <div id="numSongsDiv" style="display: none;">
                 Number of Songs: <input type="number" name="numSongsInput" min="1" value="1"> <!-- Added name attribute -->
             </div>
-            <button type="submit" name="platform" value="spotify">Proceed</button>
+            <button type="submit" name="platform" value="spotify-API">Proceed</button>
+            <button type="submit" name="platform" value="spotify-TEST">Proceed</button>
         </form>
     </div>
     <div class="options" id="netflixOptions" style="display: none;">
@@ -53,6 +54,13 @@
                 <input type="file" name="file" accept=".csv">
             </div>
             <button type="submit" name="platform" value="netflix">Proceed</button> 
+        </form>
+    </div>
+    <div class="options" id="EntityOptions" style="display: none;">
+        <form action="/proceed" method="post"> <!-- Form starts here -->
+            <h2>Write a statement</h2>
+            <input type="text" name="statement" placeholder="I like the movie Titanic by Leonardo DiCaprio">
+            <button type="submit" name="platform" value="Entity_Linking">Proceed</button>
         </form>
     </div>
 

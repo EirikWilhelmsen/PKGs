@@ -15,11 +15,14 @@
                 <th colspan="1">
                     <h2>Netflix information</h2>
                 </th>
-                <th colspan="2">
+                <th colspan="1">
                     <h2>Additional OMDb information</h2>
                 </th>
                 <th>
-                    <h2>Wiki link for first actor</h2>
+                    <h2>IMDb actor links</h2>
+                </th>
+                <th>
+                    <h2>IMDb movie links</h2>
                 </th>
             </tr>
             <tr>
@@ -30,28 +33,32 @@
                     Actors:
                 </th>
                 <th>
-                    IMDb movie link:
+                    IMDb actors link:
                 </th>
                 <th>
-                    IMDb first actor link:
+                    IMDb movie link:
                 </th>
             </tr>
-            {% for i in range(movie_info|length) %}
-            <tr class="netflix-row" {% if loop.index > 20 %} style="display: none;" {% endif %}>
-                <td>{{ movie_info[i]['Title'] }}</td>
-                <td>        
-                    {% for actor in movie_info[i]['Actors'].split(", ") %}
-                        <li>{{ actor }}</li>
+            {% for movie_info in combined_data %}
+            <tr>
+                <td>{{ movie_info[2][1] }}</td>
+                <td>
+                    {% for actor in movie_info[0][1]['Actors'] %}
+                    <a>{{ actor }}</a><br>
                     {% endfor %}
                 </td>
                 <td>
-                    <a href="https://www.imdb.com/title/{{ movie_info[i]['imdbID'] }}" target="_blank">https://www.imdb.com/title/{{ movie_info[i]['imdbID'] }}/</a>
+                    {% for actor_uri in movie_info[1][1]['actor_uris'] %}
+                        <a href="{{ actor_uri }}", target="blank_" >[{{ actor_uri }}]</a><br>
+                    {% endfor %}
                 </td>
                 <td>
-                    <a href="https://en.wikipedia.org/wiki/{{ movie_info[i]['Actors'].split(", ")[0] }}" target="_blank">https://en.wikipedia.org/wiki/{{ movie_info[i]['Actors'].split(", ")[0] }}/</a>
+                    <a href="{{ movie_info[1][0] }}", target="blank_">[{{ movie_info[1][0] }}]</a>
                 </td>
             </tr>
             {% endfor %}
+           
+
         </table>
         <button id="showMoreBtn" onclick="loadMoreRows()">Load More</button>
     </div>
