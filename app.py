@@ -10,8 +10,11 @@ import base64
 import urllib.parse
 import csv
 from PKGClass import PKGFunctions
+import requests
 
 pkg_functions = PKGFunctions() 
+
+url = "http://127.0.0.1:5000/statements"
 
 
 app = Flask(__name__)
@@ -96,7 +99,7 @@ def proceed():
                 'show_dialog': True # Force user to approve app again if they've already done so
             }
             auth_url = f"{SPOTIFY_AUTH_URL}?{urllib.parse.urlencode(params)}"
-        elif platform == 'netflix':
+        elif platform == 'netflix-upload':
             if 'file' not in request.files:
                 return 'No file part'
             file = request.files['file']
@@ -118,7 +121,53 @@ def proceed():
                 data = json.load(file)
 
                 # Now 'data' contains the contents of the JSON file
-            return render_template('/profile/spotify.html', top_tracks_short=data)
+            track_URI_list = []
+            artist_URI_list = []
+            for track in data:
+                artist_name = track['artists'][0]['name']
+                song_name = track['name']
+                artist_URI, song_URI = pkg_functions.search_artist(artist_name, song_name)
+                if song_URI is not None and artist_URI is not None:
+                    track_URI_list.append(song_URI)
+                    artist_URI_list.append(artist_URI)
+                else:
+                    track_URI_list.append("No:URI:found")
+                    artist_URI_list.append("No:URI:found")
+            top_tracks_short = data
+            
+            i = 0
+            for track in top_tracks_short:
+                print(track['name'])
+                print(track['artists'][0]['name'])
+                print(track_URI_list[i])
+                print(artist_URI_list[i])
+                data = {
+                        "owner_uri": "http://example.com/test",
+                        "owner_username": "test",
+                        "description": f"I like the song {track['name']} by {track['artists'][0]['name']}",
+                        "subject": "http://example.com/test",   # Single string when using URI
+                        "predicate": {"value": {"description": "like"}},    # Use dictionary when the field is a concept
+                        "object": {"value": {"description": f"the song {track['name']} by {track['artists'][0]['name']}", 
+                                            "related_entities": ["https://schema.org/artist", f"{artist_URI_list[i]}", "https://schema.org/song", f"{track_URI_list[i]}"]}},
+                        "preference": 1.0
+                    }
+                response = requests.post(url, json=data)
+                assert response.status_code == 200
+                
+                i += 1
+            
+            file_path_1 = os.path.join(os.path.dirname(__file__), '..', 'data', 'RDFStore', 'test.ttl')
+            file_path_2 = os.path.join(os.path.dirname(__file__), 'data', 'ground_truth_spotify.ttl')
+
+            precision, recall = pkg_functions.compute_precision_recall(file_path_1, file_path_2)
+            print(f"Precision: {precision:.4f}")
+            print(f"Recall: {recall:.4f}")
+                
+            return render_template('/profile/spotify.html', top_tracks_short=data, track_URI_list=track_URI_list, artist_URI_list=artist_URI_list)
+        elif platform == 'netflix-TEST':
+            file_path = os.path.join(os.path.dirname(__file__), 'test_files', 'test.csv')
+            return redirect(url_for('profile', platform='netflix', file_path=file_path))
+
 
         return redirect(auth_url)
 
@@ -180,8 +229,6 @@ def profile(platform):
             top_tracks_short_response = requests.get(f"{SPOTIFY_API_ME_URL}/top/tracks?time_range=short_term&limit={num_songs}", headers=headers)
             top_tracks_medium_response = requests.get(f"{SPOTIFY_API_ME_URL}/top/tracks?time_range=medium_term&limit={num_songs}", headers=headers)
             top_tracks_long_response = requests.get(f"{SPOTIFY_API_ME_URL}/top/tracks?time_range=long_term&limit={num_songs}", headers=headers)
-            
-            
 
             if all(response.status_code == 200 for response in [top_tracks_short_response, top_tracks_medium_response, top_tracks_long_response]):
                 top_tracks_short = top_tracks_short_response.json().get('items', [])
@@ -190,27 +237,7 @@ def profile(platform):
             
             # Iterate through the top tracks
             list_of_ranges = [top_tracks_short, top_tracks_medium, top_tracks_long]
-            print(top_tracks_long)
-            #for item in list_of_ranges:
-            #    for track in item:
-            #        # Get the artist's genres from Spotify
-            #        artist_name = track['artists'][0]['name']
-            #        artist_id = track['artists'][0]['id']
-            #        url = f'https://api.spotify.com/v1/artists/{artist_id}'
-            #        artist_info_response = requests.get(url, headers=headers)
-            #        artist_info = artist_info_response.json()
-            #        if artist_info:
-            #            artist_genres = artist_info['genres']
-            #            print(f"Artist: {artist_name}, Genres: {artist_genres}")
-            #        else:
-            #            print(f"Artist {artist_name} not found on Spotify")
-            #
-            #        artist_info = pkg_functions.search_artist(artist_name)
-            #        if artist_info:
-            #            artist_uri = artist_info['id']
-            #            print(f"Artist: {artist_name}, MusicBrainz URI: {artist_uri}")
-            #        else:
-            #            print(f"Artist {artist_name} not found on MusicBrainz")
+
 
         if username_checked:
             user_info_response = requests.get(SPOTIFY_API_ME_URL, headers=headers)
@@ -246,8 +273,10 @@ def profile(platform):
         actorIDs = []
         movie_titles = {}
         movie_actor_list = {}
-    
+        print("found liked movies", len(liked_movies))
+        i = 0
         for movie_title, _ in liked_movies:
+            print(i)
             movie_info = pkg_functions.search_OMDb(movie_title, 'movie')
             if movie_info['Response'] == 'True':
                 movies_info.append(movie_info)
@@ -255,33 +284,39 @@ def profile(platform):
                 movie_actor_list[movie_info['ImdbID']] = {
                     'Actors': movie_info['Actors']
                 }
-        print(movie_actor_list)
+            i += 1
         movie_actor_uris = pkg_functions.link_entities(movie_actor_list)
-        print(movie_actor_uris)
+
 
         combined_data = list(zip(movie_actor_list.items(), movie_actor_uris.items(), movie_titles.items()))
-        """
-        combined_data =
-        [
-            (
-                ('tt0322259', {'Actors': ['Paul Walker', ' Tyrese Gibson', ' Cole Hauser']}), 
-                ('https://www.imdb.com/title/tt0322259/', {'actor_uris': ['https://www.imdb.com/name/nm0908094/', 'https://www.imdb.com/name/nm0879085/', 'https://www.imdb.com/name/nm0369513/']}), 
-                ('2 Fast 2 Furious', '2 Fast 2 Furious')
-            ), 
-            (
-                ('tt0120338', {'Actors': ['Leonardo DiCaprio', ' Kate Winslet', ' Billy Zane']}), 
-                ('https://www.imdb.com/title/tt0120338/', {'actor_uris': ['https://www.imdb.com/name/nm0000138/', 'https://www.imdb.com/name/nm0000701/', 'https://www.imdb.com/name/nm0000708/']}), 
-                ('Titanic', 'Titanic')
-            )
-        ]
-        """
-
-
 
         if liked_movies:
-            return render_template('/profile/netflix.html', 
-                                        combined_data=combined_data
-                                        )
+            for movie_info in combined_data:
+                data = {
+                    "owner_uri": "http://example.com/test",
+                    "owner_username": "test",
+                    "description": f"I like the movie {movie_info[2][1]} starring {', '.join(movie_info[0][1]['Actors'])}",
+                    "subject": "http://example.com/test",   # Single string when using URI
+                    "predicate": {"value": {"description": "like"}},    # Use dictionary when the field is a concept
+                    "object": {"value": {"description": f"the movie {movie_info[2][1]} starring {', '.join(movie_info[0][1]['Actors'])}", 
+                                        "related_entities": ["https://schema.org/actor", f"{movie_info[1][1]['actor_uris'][0]}", "https://schema.org/actor", f"{movie_info[1][1]['actor_uris'][1]}", "https://schema.org/actor", f"{movie_info[1][1]['actor_uris'][2]}"]}},
+                    "preference": 1.0
+                }
+
+                response = requests.post(url, json=data)
+                assert response.status_code == 200
+
+            file_path_1 = os.path.join(os.path.dirname(__file__), '..', 'data', 'RDFStore', 'test.ttl')
+            file_path_2 = os.path.join(os.path.dirname(__file__), 'data', 'ground_truth_netflix.ttl')
+
+            precision, recall = pkg_functions.compute_precision_recall(file_path_1, file_path_2)
+            print(f"Precision: {precision:.4f}")
+            print(f"Recall: {recall:.4f}")
+
+            # print("hei")
+            # return render_template('/profile/netflix.html', 
+            #                             combined_data=combined_data
+            #                             )
         else: 
             return redirect(url_for('error'))
     
@@ -313,4 +348,4 @@ def profile(platform):
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=3000)

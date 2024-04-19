@@ -68,18 +68,27 @@ class PKGFunctions:
             data = json.load(json_file)
         return data
     
-    def search_artist(self, artist_name):
-        url = 'https://musicbrainz.org/ws/2/artist'
+    def search_artist(self, artist_name, song_name):
+        url = 'https://musicbrainz.org/ws/2/recording'
+        print(f'"{artist_name}""{song_name}"')
         params = {
-            'query': artist_name,
+            'query': f'"{artist_name}""{song_name}"',
             'fmt': 'json'  # Response format
         }
         response = requests.get(url, params=params)
         data = response.json()
-        if data['artists']:
-            return data['artists'][0]
+        if data['recordings'] is not None:
+            for record in data['recordings']:
+                if artist_name == record['artist-credit'][0]['artist']['name']:
+                    artist_template = f"https://musicbrainz.org/artist/{record['artist-credit'][0]['artist']['id']}"
+                    artist_uri = URI(artist_template.format(entity_name=artist_name))
+                    song_template = f"https://musicbrainz.org/recording/{record['id']}"
+                    song_uri = URI(song_template.format(entity_name=song_name))
+                    return artist_uri, song_uri
+                else:
+                    return None, None
         else:
-            return None
+            return None, None
     
     def search_OMDb(self, query, type):
         url = 'http://www.omdbapi.com/'
@@ -136,6 +145,7 @@ class PKGFunctions:
                 break
         if platform == "Netflix":
             for key, value in reference.items():
+                print(key, value)
                 actors = []
                 if key.startswith("tt"):
                     movie_ID = key
@@ -181,7 +191,48 @@ class PKGFunctions:
         output_text = ''.join(output_array)
         return(output_text)
     
+    def compute_precision_recall(self, file_path_1, file_path_2):
+        """
+        This function computes precision and recall based on user preferences in two RDF files.
 
+        Args:
+            file1 (str): Path to the first RDF file.
+            file2 (str): Path to the second RDF file.
+
+        Returns:
+            dict: A dictionary containing precision and recall values.
+        """
+        true_positives = 0
+        false_positives = 0
+        false_negatives = 0
+        true_negatives = 0
+
+        # Extracting true negatives from file 1
+        with open(file_path_1, 'r') as f:
+            for line in f:
+                if any(keyword in line for keyword in ["ex:", "authoredOn", "rdf:object _:"]):
+                    true_negatives += 1
+                else:
+                    print(line)
+
+        # Extracting true positives, false positives, and false negatives from file 2
+        with open(file_path_2, 'r') as f:
+            for line in f:
+                if not any(keyword in line for keyword in ["ex:", "authoredOn", "_:"]):
+                    if line in open(file_path_1).read():
+                        true_positives += 1
+                        print("true_p",line)
+                    else:
+                        false_positives += 1
+                        print("false_p",line)
+
+        # Calculating false negatives
+        # false_negatives = true_negatives - true_positives
+
+        precision = true_positives / (true_positives + false_positives) if true_positives + false_positives > 0 else 0
+        recall = true_positives / (true_positives + false_negatives) if true_positives + false_negatives > 0 else 0
+
+        return precision, recall
 
 
 
