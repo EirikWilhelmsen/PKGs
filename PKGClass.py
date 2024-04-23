@@ -54,12 +54,35 @@ class PKGFunctions:
                             movies[title].append(date_obj)
 
         for title, dates in movies.items():
+            new_dates = []
+            
             if len(dates) >= 2:
                 dates.sort()
-                if (dates[-1].date() - dates[0].date()).days < 7 and dates[-1].date().month == dates[0].date().month:
-                    movies[title] = [dates[-1]]
-                else:
-                    liked_movies.append((title, movies[title]))
+                i = 0
+                k = i + 1
+                
+                while k <= len(dates):
+                    print(f"checking {title} dates: {dates[i].date()} and {dates[k].date()}")
+                    print(title)
+                    if (dates[k].date() - dates[i].date()).days < 7 and dates[k].date().month == dates[i].date().month and dates[k].date().year == dates[i].date().year:
+                        k += 1
+                        if k == len(dates):
+                            new_dates.append(dates[i])
+                            break
+                    else:
+                        new_dates.append(dates[i])
+                        i = k
+                        k += 1
+                        if k == len(dates):
+                            new_dates.append(dates[k-1])
+                            break
+                        
+            
+            movies[title] = new_dates
+            if len(movies[title]) >= 2: 
+                liked_movies.append((title, movies[title]))
+
+        print("liked movies",liked_movies)
 
         return hooks, liked_movies
     
@@ -165,6 +188,8 @@ class PKGFunctions:
         """
         Translates the input text into a tagged test based on the NER response.
         """
+        print(NER_response)
+        print(input_text)
         
         entity_dict = {}
         for entity in NER_response:
@@ -191,48 +216,7 @@ class PKGFunctions:
         output_text = ''.join(output_array)
         return(output_text)
     
-    def compute_precision_recall(self, file_path_1, file_path_2):
-        """
-        This function computes precision and recall based on user preferences in two RDF files.
 
-        Args:
-            file1 (str): Path to the first RDF file.
-            file2 (str): Path to the second RDF file.
-
-        Returns:
-            dict: A dictionary containing precision and recall values.
-        """
-        true_positives = 0
-        false_positives = 0
-        false_negatives = 0
-        true_negatives = 0
-
-        # Extracting true negatives from file 1
-        with open(file_path_1, 'r') as f:
-            for line in f:
-                if any(keyword in line for keyword in ["ex:", "authoredOn", "rdf:object _:"]):
-                    true_negatives += 1
-                else:
-                    print(line)
-
-        # Extracting true positives, false positives, and false negatives from file 2
-        with open(file_path_2, 'r') as f:
-            for line in f:
-                if not any(keyword in line for keyword in ["ex:", "authoredOn", "_:"]):
-                    if line in open(file_path_1).read():
-                        true_positives += 1
-                        print("true_p",line)
-                    else:
-                        false_positives += 1
-                        print("false_p",line)
-
-        # Calculating false negatives
-        # false_negatives = true_negatives - true_positives
-
-        precision = true_positives / (true_positives + false_positives) if true_positives + false_positives > 0 else 0
-        recall = true_positives / (true_positives + false_negatives) if true_positives + false_negatives > 0 else 0
-
-        return precision, recall
 
 
 

@@ -187,6 +187,7 @@ body {
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-top: 10px;
+    margin-right: 75%;
 }
 
 .options h2 {
@@ -210,4 +211,7 @@ body {
 
 .options button:hover {
     background-color: #45a049;
+}
+input {
+    margin-bottom: 10px;
 }
