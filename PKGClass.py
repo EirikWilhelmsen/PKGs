@@ -12,7 +12,9 @@ class PKGFunctions:
     """
     Class that contains functions for the PKG.
     """
+
     def __init__(self):
+        self.temp_song = []
         pass
 
     def get_actor_imdb_id(self,actor_name):
@@ -54,35 +56,12 @@ class PKGFunctions:
                             movies[title].append(date_obj)
 
         for title, dates in movies.items():
-            new_dates = []
-            
             if len(dates) >= 2:
                 dates.sort()
-                i = 0
-                k = i + 1
-                
-                while k <= len(dates):
-                    print(f"checking {title} dates: {dates[i].date()} and {dates[k].date()}")
-                    print(title)
-                    if (dates[k].date() - dates[i].date()).days < 7 and dates[k].date().month == dates[i].date().month and dates[k].date().year == dates[i].date().year:
-                        k += 1
-                        if k == len(dates):
-                            new_dates.append(dates[i])
-                            break
-                    else:
-                        new_dates.append(dates[i])
-                        i = k
-                        k += 1
-                        if k == len(dates):
-                            new_dates.append(dates[k-1])
-                            break
-                        
-            
-            movies[title] = new_dates
-            if len(movies[title]) >= 2: 
-                liked_movies.append((title, movies[title]))
-
-        print("liked movies",liked_movies)
+                if (dates[-1].date() - dates[0].date()).days < 7 and dates[-1].date().month == dates[0].date().month:
+                    movies[title] = [dates[-1]]
+                else:
+                    liked_movies.append((title, movies[title]))
 
         return hooks, liked_movies
     
@@ -93,14 +72,16 @@ class PKGFunctions:
     
     def search_artist(self, artist_name, song_name):
         url = 'https://musicbrainz.org/ws/2/recording'
-        print(f'"{artist_name}""{song_name}"')
         params = {
             'query': f'"{artist_name}""{song_name}"',
             'fmt': 'json'  # Response format
         }
         response = requests.get(url, params=params)
         data = response.json()
-        if data['recordings'] is not None:
+
+        print(f"søker {artist_name} - {song_name}")
+
+        if data.get('recordings'):
             for record in data['recordings']:
                 if artist_name == record['artist-credit'][0]['artist']['name']:
                     artist_template = f"https://musicbrainz.org/artist/{record['artist-credit'][0]['artist']['id']}"
@@ -109,9 +90,8 @@ class PKGFunctions:
                     song_uri = URI(song_template.format(entity_name=song_name))
                     return artist_uri, song_uri
                 else:
-                    return None, None
-        else:
-            return None, None
+                    print("fant ingenting")
+        return None, None
     
     def search_OMDb(self, query, type):
         url = 'http://www.omdbapi.com/'
@@ -141,7 +121,31 @@ class PKGFunctions:
                 'Response': response
             }
             return info
+    
+    def assign_URI(self, file_path):
+        with open(file_path, 'r') as file:
+            data = json.load(file)
 
+        track_URI_list = []
+        artist_URI_list = []
+
+        for track in data:
+            artist_uri_list = []
+            for artist in track["artists"]:
+                artist_name = artist['name']
+                song_name = track['name']
+                artist_URI, song_URI = self.search_artist(artist_name, song_name)
+
+                if song_URI is not None and artist_URI is not None:
+                    track_URI_list.append(song_URI)
+                    artist_uri_list.append(artist_URI)
+                else:
+                    track_URI_list.append("No:URI:found")
+                    artist_uri_list.append("No:URI:found")
+
+            artist_URI_list.append(artist_uri_list)
+
+        return data, track_URI_list, artist_URI_list
     
     def get_REL_api_response(self, example_string):
         """
@@ -188,8 +192,6 @@ class PKGFunctions:
         """
         Translates the input text into a tagged test based on the NER response.
         """
-        print(NER_response)
-        print(input_text)
         
         entity_dict = {}
         for entity in NER_response:
@@ -216,7 +218,44 @@ class PKGFunctions:
         output_text = ''.join(output_array)
         return(output_text)
     
+    def compute_precision_recall(self, file_path_1, file_path_2):
+        """
+        This function computes precision and recall based on user preferences in two RDF files.
 
+        Args:
+            file1 (str): Path to the first RDF file.
+            file2 (str): Path to the second RDF file.
+
+        Returns:
+            dict: A dictionary containing precision and recall values.
+        """
+        true_positives = 0
+        false_positives = 0
+        false_negatives = 0
+        true_negatives = 0
+
+        # Extracting true negatives from file 1
+        with open(file_path_1, 'r') as f:
+            for line in f:
+                if any(keyword in line for keyword in ["ex:", "authoredOn", "_:"]):
+                    true_negatives += 1
+
+        # Extracting true positives, false positives, and false negatives from file 2
+        with open(file_path_2, 'r') as f:
+            for line in f:
+                if not any(keyword in line for keyword in ["ex:", "authoredOn", "_:"]):
+                    if line in open(file_path_1).read():
+                        true_positives += 1
+                    else:
+                        false_negatives += 1
+
+        # Calculating false negatives
+        # false_negatives = true_negatives - true_positives
+
+        precision = true_positives / (true_positives + false_positives) if true_positives + false_positives > 0 else 0
+        recall = true_positives / (true_positives + false_negatives) if true_positives + false_negatives > 0 else 0
+
+        return precision, recall
 
 
 

@@ -22,8 +22,8 @@
             <td><button class="platform-btn" onclick="showOptions('spotifyOptions')">Login</button></td>
         </tr>
         <tr>
-            <td><img src="static/images/HboMax.jpg" class="index_img"></td>
-            <td>Instagram</td>
+            <td><img src="static/images/HboMax.jpg" alt="missing" class="index_img"></td>
+            <td>Apple Music</td>
             <td><a href="{{ url_for('login',platform='instagram') }}"><button class="platform-btn">Enter</button></a></td>
         </tr>
         <tr>
@@ -40,9 +40,12 @@
             <label><input type="checkbox" name="playlistsCheckbox"> Playlists</label> <!-- Added name attribute -->
             <label><input type="checkbox" name="songsCheckbox" onclick="toggleNumSongs()"> Songs</label> <!-- Added onclick attribute -->
             <div id="numSongsDiv" style="display: none;">
-                Number of Songs: <input type="number" name="numSongsInput" min="1" value="1"><br>
-                <button type="submit" name="platform" value="spotify-API">Proceed</button>
+                Number of Songs: <input type="number" name="numSongsInput" min="1" value="1"> <!-- Added name attribute -->
             </div>
+            <button  type="submit" name="platform" value="spotify-API">Proceed</button>
+        </form>
+        <form action="/proceed_test" method="post">
+            <button style="margin-top:10px;" type="submit" name="platform" value="spotify-TEST">test</button>
         </form>
     </div>
     <div class="options" id="netflixOptions" style="display: none;">
@@ -52,8 +55,10 @@
             <div id="PercentageDiv" style="display: none;">
                 <input type="file" name="file" accept=".csv">
             </div>
-            <button type="submit" name="platform" value="netflix-upload">Proceed</button> 
-            <button type="submit" name="platform" value="netflix-TEST">Test</button>
+            <button type="submit" name="platform" value="netflix-upload">Proceed</button>
+        </form>
+        <form action="/proceed_test" method="post">
+            <button style="margin-top:10px;" type="submit" name="platform" value="netflix-TEST">test</button>
         </form>
     </div>
     <div class="options" id="EntityOptions" style="display: none;">
@@ -76,7 +81,6 @@
 
         function toggleNumSongs() {
             var numSongsDiv = document.getElementById("numSongsDiv");
-
             if (numSongsDiv.style.display === "none") {
                 numSongsDiv.style.display = "block";
             } else {
@@ -86,6 +90,7 @@
         
         function togglePrecentOfHistory() {
             var percentageDiv = document.getElementById("PercentageDiv");
+            
             if (percentageDiv.style.display === "none") {
                 percentageDiv.style.display = "block";
             } else {

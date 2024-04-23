@@ -1,0 +1,93 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix ex: <http://example.org/pkg#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix pkg: <http://w3id.org/pkg/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wi: <http://purl.org/ontology/wi/core#> .
+@prefix wo: <http://purl.org/ontology/wo/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:e823e494-00cf-11ef-94fe-92ec2fe3b553 a rdf:Statement ;
+    dc:description "I like the song Beverly Hills by Amara" ;
+    pav:authoredBy <http://example.com/test> ;
+    pav:authoredOn "2024-04-22T19:44:02.467199"^^xsd:dateTime ;
+    rdf:object _:nf9425330a7824b04b36a7c07552b6d1db1 ;
+    rdf:predicate [ a skos:Concept ;
+            dc:description "like" ] ;
+    rdf:subject <http://example.com/test> .
+
+ex:e8322298-00cf-11ef-94fe-92ec2fe3b553 a rdf:Statement ;
+    dc:description "I like the song MY EYES by Travis Scott" ;
+    pav:authoredBy <http://example.com/test> ;
+    pav:authoredOn "2024-04-22T19:44:02.560486"^^xsd:dateTime ;
+    rdf:object _:nf9425330a7824b04b36a7c07552b6d1db3 ;
+    rdf:predicate [ a skos:Concept ;
+            dc:description "like" ] ;
+    rdf:subject <http://example.com/test> .
+
+ex:e834bfb2-00cf-11ef-94fe-92ec2fe3b553 a rdf:Statement ;
+    dc:description "I like the song FANTA (feat. Mariinomadeit!) by Ozzi, and Mariinomadeit!" ;
+    pav:authoredBy <http://example.com/test> ;
+    pav:authoredOn "2024-04-22T19:44:02.577615"^^xsd:dateTime ;
+    rdf:object _:nf9425330a7824b04b36a7c07552b6d1db5 ;
+    rdf:predicate [ a skos:Concept ;
+            dc:description "like" ] ;
+    rdf:subject <http://example.com/test> .
+
+ex:e837ac40-00cf-11ef-94fe-92ec2fe3b553 a rdf:Statement ;
+    dc:description "I like the song farger by Dutty Dior, and Chirag" ;
+    pav:authoredBy <http://example.com/test> ;
+    pav:authoredOn "2024-04-22T19:44:02.596778"^^xsd:dateTime ;
+    rdf:object _:Ne2c0c32258ad44249acdebc09047a756 ;
+    rdf:predicate [ a skos:Concept ;
+            dc:description "like" ] ;
+    rdf:subject <http://example.com/test> .
+
+<http://example.com/test> wi:preference [ wi:topic _:Ne2c0c32258ad44249acdebc09047a756 ;
+            wo:weight [ wo:scale pkg:StandardScale ;
+                    wo:weight_value 1.0 ] ;
+            pav:derivedFrom ex:e837ac40-00cf-11ef-94fe-92ec2fe3b553 ],
+        [ wi:topic _:nf9425330a7824b04b36a7c07552b6d1db1 ;
+            wo:weight [ wo:scale pkg:StandardScale ;
+                    wo:weight_value 1.0 ] ;
+            pav:derivedFrom ex:e823e494-00cf-11ef-94fe-92ec2fe3b553 ],
+        [ wi:topic _:nf9425330a7824b04b36a7c07552b6d1db5 ;
+            wo:weight [ wo:scale pkg:StandardScale ;
+                    wo:weight_value 1.0 ] ;
+            pav:derivedFrom ex:e834bfb2-00cf-11ef-94fe-92ec2fe3b553 ],
+        [ wi:topic _:nf9425330a7824b04b36a7c07552b6d1db3 ;
+            wo:weight [ wo:scale pkg:StandardScale ;
+                    wo:weight_value 1.0 ] ;
+            pav:derivedFrom ex:e8322298-00cf-11ef-94fe-92ec2fe3b553 ] .
+
+_:Ne2c0c32258ad44249acdebc09047a756 a skos:Concept ;
+    dc:description "the song farger by Dutty Dior, and Chirag" ;
+    skos:related <No:URI:found>,
+        <https://musicbrainz.org/artist/daf0b012-0004-435b-9f7e-5e9ab40ec9a4>,
+        schema:artist,
+        schema:song .
+
+_:nf9425330a7824b04b36a7c07552b6d1db1 a skos:Concept ;
+    dc:description "the song Beverly Hills by Amara" ;
+    skos:related <No:URI:found>,
+        <https://musicbrainz.org/artist/62051d1b-50e6-43ce-bf51-6ed96b00e9fc>,
+        schema:artist,
+        schema:song .
+
+_:nf9425330a7824b04b36a7c07552b6d1db3 a skos:Concept ;
+    dc:description "the song MY EYES by Travis Scott" ;
+    skos:related <https://musicbrainz.org/artist/e4a51f17-a57b-47b1-b37b-f552d0f8e9e6>,
+        <https://musicbrainz.org/recording/8ff798b3-68c3-4d73-9d8b-34d8c0b1f8e0>,
+        schema:artist,
+        schema:song .
+
+_:nf9425330a7824b04b36a7c07552b6d1db5 a skos:Concept ;
+    dc:description "the song FANTA (feat. Mariinomadeit!) by Ozzi, and Mariinomadeit!" ;
+    skos:related <https://musicbrainz.org/artist/62051d1b-50e6-43ce-bf51-6ed96b00e9fc>,
+        <https://musicbrainz.org/artist/6a1c5825-2e6f-4668-9598-18af71c710cf>,
+        <https://musicbrainz.org/recording/0edbbf06-6895-4d18-a328-29d868c5dcc1>,
+        schema:artist,
+        schema:song .
+

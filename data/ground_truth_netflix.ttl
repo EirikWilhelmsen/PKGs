@@ -1,0 +1,32 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix ex: <http://example.org/pkg#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix pkg: <http://w3id.org/pkg/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wi: <http://purl.org/ontology/wi/core#> .
+@prefix wo: <http://purl.org/ontology/wo/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:26ee1b06-fe30-11ee-afbb-92ec2fe3b553 a rdf:Statement ;
+    dc:description "I like the movie Titanic starring Leonardo DiCaprio, Kate Winslet, Billy Zane" ;
+    pav:authoredBy <http://example.com/test> ;
+    pav:authoredOn "2024-04-19T11:35:26.008866"^^xsd:dateTime ;
+    rdf:object _:N9d3a24b43c664b6a91e0ab36d3bd333d ;
+    rdf:predicate [ a skos:Concept ;
+            dc:description "like" ] ;
+    rdf:subject <http://example.com/test> .
+
+<http://example.com/test> wi:preference [ wi:topic _:N9d3a24b43c664b6a91e0ab36d3bd333d ;
+            wo:weight [ wo:scale pkg:StandardScale ;
+                    wo:weight_value 1.0 ] ;
+            pav:derivedFrom ex:26ee1b06-fe30-11ee-afbb-92ec2fe3b553 ] .
+
+_:N9d3a24b43c664b6a91e0ab36d3bd333d a skos:Concept ;
+    dc:description "the movie Titanic starring Leonardo DiCaprio, Kate Winslet, Billy Zane" ;
+    skos:related schema:actor,
+        <https://www.imdb.com/name/nm0000138/>,
+        <https://www.imdb.com/name/nm0000701/>,
+        <https://www.imdb.com/name/nm0000708/> .
+

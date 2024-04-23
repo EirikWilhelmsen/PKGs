@@ -43,52 +43,79 @@
         
             <!-- Table for 4 weeks -->
             <table class="profile_table top-tracks-table" id="topTracksTableShort" style="display: none;">
-                {% for track in top_tracks_short %}
+                {% for track in top_tracks_short %}                
                     <tr>
                         <td class="track-info">
                             <img src="{{ track['album']['images'][0]['url'] }}" alt="Album Cover" class="index_img">
                             <div>
                                 <strong>Track Name:</strong> {{ track['name'] }}<br>
-                                <strong>Artist:</strong> {{ track['artists'][0]['name'] }}<br>
+                                {% if track['artists']|length > 1 %}
+                                    <strong>Artists:</strong><br>
+                                    {% set j = loop.index0 %}
+                                    {% for artist in track['artists'] %}
+                                        {{ artist['name'] }} <a href="{{ artist_URI_list[0][j][loop.index0] }}" target="_blank"> ({{ artist_URI_list[0][j][loop.index0] }})</a><br>{% if not loop.last %}{% endif %}
+                                    {% endfor %}
+                                {% else %}
+                                    <strong>Artist:</strong><br>{{ track['artists'][0]['name'] }} <a href="{{ artist_URI_list[0][loop.index0][0] }}" target="_blank"> ({{ artist_URI_list[0][loop.index0][0] }}) </a><br>
+                                {% endif %}
                                 <strong>Song URI:</strong> <a href="{{ track_URI_list[0][loop.index0] }}" target="_blank">{{ track_URI_list[0][loop.index0] }}</a><br>
-                                <strong>Artist URI:</strong> <a href="{{ artist_URI_list[0][loop.index0] }}" target="_blank">{{ artist_URI_list[0][loop.index0] }}</a><br>
                             </div>
                         </td>
                     </tr>
+                    
                 {% endfor %}
             </table>
+            
+            
+            
         
             <!-- Table for 6 months -->
             <table class="profile_table top-tracks-table" id="topTracksTableMedium" style="display: none;">
-                {% for track in top_tracks_medium %}
-                    <tr>
-                        <td class="track-info">
-                            <img src="{{ track['album']['images'][0]['url'] }}" alt="Album Cover" class="index_img">
-                            <div>
-                                <strong>Track Name:</strong> {{ track['name'] }}<br>
-                                <strong>Artist:</strong> {{ track['artists'][0]['name'] }}<br>
-                                <strong>Song URI:</strong> <a href="{{ track_URI_list[1][loop.index0] }}" target="_blank">{{ track_URI_list[1][loop.index0] }}</a><br>
-                                <strong>Artist URI:</strong> <a href="{{ artist_URI_list[1][loop.index0] }}" target="_blank">{{ artist_URI_list[1][loop.index0] }}</a><br>
-                            </div>
-                        </td>
-                    </tr>
+                {% for track in top_tracks_medium %}                
+                <tr>
+                    <td class="track-info">
+                        <img src="{{ track['album']['images'][0]['url'] }}" alt="Album Cover" class="index_img">
+                        <div>
+                            <strong>Track Name:</strong> {{ track['name'] }}<br>
+                            {% if track['artists']|length > 1 %}
+                                <strong>Artists:</strong><br>
+                                {% set j = loop.index0 %}
+                                {% for artist in track['artists'] %}
+                                    {{ artist['name'] }} <a href="{{ artist_URI_list[1][j][loop.index0] }}" target="_blank"> ({{ artist_URI_list[1][j][loop.index0] }})</a><br>{% if not loop.last %}{% endif %}
+                                {% endfor %}
+                            {% else %}
+                                <strong>Artist:</strong><br>{{ track['artists'][0]['name'] }} <a href="{{ artist_URI_list[1][loop.index0][0] }}" target="_blank"> ({{ artist_URI_list[1][loop.index0][0] }}) </a><br>
+                            {% endif %}
+                            <strong>Song URI:</strong> <a href="{{ track_URI_list[1][loop.index0] }}" target="_blank">{{ track_URI_list[1][loop.index0] }}</a><br>
+                        </div>
+                    </td>
+                </tr>
+                
                 {% endfor %}
             </table>
         
             <!-- Table for max -->
             <table class="profile_table top-tracks-table" id="topTracksTableLong" style="display: none;">
-                {% for track in top_tracks_long %}
-                    <tr>
-                        <td class="track-info">
-                            <img src="{{ track['album']['images'][0]['url'] }}" alt="Album Cover" class="index_img">
-                            <div>
-                                <strong>Track Name:</strong> {{ track['name'] }}<br>
-                                <strong>Artist:</strong> {{ track['artists'][0]['name'] }}<br>
-                                <strong>Song URI:</strong> <a href="{{ track_URI_list[2][loop.index0] }}" target="_blank">{{ track_URI_list[2][loop.index0] }}</a><br>
-                                <strong>Artist URI:</strong> <a href="{{ artist_URI_list[2][loop.index0] }}" target="_blank">{{ artist_URI_list[2][loop.index0] }}</a><br>
-                            </div>
-                        </td>
-                    </tr>
+                {% for track in top_tracks_long %}                
+                <tr>
+                    <td class="track-info">
+                        <img src="{{ track['album']['images'][0]['url'] }}" alt="Album Cover" class="index_img">
+                        <div>
+                            <strong>Track Name:</strong> {{ track['name'] }}<br>
+                            {% if track['artists']|length > 1 %}
+                                <strong>Artists:</strong><br>
+                                {% set j = loop.index0 %}
+                                {% for artist in track['artists'] %}
+                                    {{ artist['name'] }} <a href="{{ artist_URI_list[2][j][loop.index0] }}" target="_blank"> ({{ artist_URI_list[2][j][loop.index0] }})</a><br>{% if not loop.last %}{% endif %}
+                                {% endfor %}
+                            {% else %}
+                                <strong>Artist:</strong><br>{{ track['artists'][0]['name'] }} <a href="{{ artist_URI_list[2][loop.index0][0] }}" target="_blank"> ({{ artist_URI_list[2][loop.index0][0] }}) </a><br>
+                            {% endif %}
+                            <strong>Song URI:</strong> <a href="{{ track_URI_list[2][loop.index0] }}" target="_blank">{{ track_URI_list[2][loop.index0] }}</a><br>
+                        </div>
+                    </td>
+                </tr>
+                
                 {% endfor %}
             </table>
         

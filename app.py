@@ -10,8 +10,13 @@ import base64
 import urllib.parse
 import csv
 from PKGClass import PKGFunctions
+import requests
+from Statements import statements
 
 pkg_functions = PKGFunctions() 
+pkg_statements = statements()
+
+url = "http://127.0.0.1:5000/statements"
 
 
 app = Flask(__name__)
@@ -20,7 +25,7 @@ app.secret_key = "lrip4pJM10OMJHdaHZ9c5w"  # Change this to a secure, random key
 # Spotify API credentials
 SPOTIFY_CLIENT_ID = "13793570c33c4c2885ee1735e4749ac3"
 SPOTIFY_CLIENT_SECRET = "9b0dcf81e61b4e66990cc3d3c29b76dd"
-SPOTIFY_REDIRECT_URI = "http://127.0.0.1:5000/callback"
+SPOTIFY_REDIRECT_URI = "http://127.0.0.1:7000/callback"
 
 # Spotify API endpoints
 SPOTIFY_API_BASE_URL = "https://api.spotify.com/v1"
@@ -51,12 +56,9 @@ def login(platform):
         return redirect(url_for('index'))
     elif platform == 'netflix':
         return redirect(url_for('profile', platform='netflix'))
-    elif platform == 'instagram':
-        return redirect(url_for('profile', platform='instagram'))
     elif platform == 'Entity_Linking':
         return redirect(url_for('profile', platform='Entity_Linking'))
     else:
-        # Handle unknown platform, for example, redirect to the index page
         return redirect(url_for('index'))
 
 @app.route('/proceed', methods=['POST'])
@@ -96,6 +98,8 @@ def proceed():
                 'show_dialog': True # Force user to approve app again if they've already done so
             }
             auth_url = f"{SPOTIFY_AUTH_URL}?{urllib.parse.urlencode(params)}"
+            return redirect(auth_url)
+        
         elif platform == 'netflix-upload':
             if 'file' not in request.files:
                 return 'No file part'
@@ -107,39 +111,25 @@ def proceed():
                 file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
                 file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
                 return redirect(url_for('profile', platform='netflix', file_path=file_path))
+            
         elif platform == 'Entity_Linking':
             example_string = request.form.get('statement', '')
             return redirect(url_for('profile', platform='Entity_Linking', example_string=example_string))
-        
+    return redirect(url_for('index'))
+
+@app.route('/proceed_test', methods=['POST'])
+def proceed_test():
+    if request.method == 'POST':
+        platform = request.form.get('platform')
+        print(platform)
+        if platform == 'spotify-TEST':
+            return redirect(url_for('test', platform='spotify-TEST'))
         elif platform == 'netflix-TEST':
-            file_path = os.path.join(os.path.dirname(__file__), 'test_files', 'test.csv')
+            return redirect(url_for('test', platform='netflix-TEST'))
+    return redirect(url_for('index'))
+
+
             
-            hooks, liked_movies= pkg_functions.read_csv_file(file_path)
-        
-        elif platform == 'spotify-TEST':
-            file_path = os.path.join(os.path.dirname(__file__), 'test_files', 'spotify_test_file.json')
-
-            with open(file_path, 'r') as file:
-                data = json.load(file)
-
-                # Now 'data' contains the contents of the JSON file
-            track_URI_list = []
-            artist_URI_list = []
-            for track in data:
-                artist_name = track['artists'][0]['name']
-                song_name = track['name']
-                artist_URI, song_URI = pkg_functions.search_artist(artist_name, song_name)
-                if song_URI is not None and artist_URI is not None:
-                    track_URI_list.append(song_URI)
-                    artist_URI_list.append(artist_URI)
-                else:
-                    track_URI_list.append("No URI found")
-                    artist_URI_list.append("No URI found")
-            print("track_uri_list",track_URI_list)
-            print("artist_uri_list",artist_URI_list)
-            return render_template('/profile/spotify.html', top_tracks_short=data, track_URI_list=track_URI_list, artist_URI_list=artist_URI_list)
-
-        return redirect(auth_url)
 
 
 @app.route('/callback')
@@ -205,35 +195,44 @@ def profile(platform):
                 top_tracks_medium = top_tracks_medium_response.json().get('items', [])
                 top_tracks_long = top_tracks_long_response.json().get('items', [])
             
-            # Iterate through the top tracks
             list_of_ranges = [top_tracks_short, top_tracks_medium, top_tracks_long]
             
 
             track_URI_list_combined = []
             artist_URI_list_combined = []
-            for track in list_of_ranges:
+            
+            for track_data in list_of_ranges:
+                songs_checked = []
                 track_URI_list = []
                 artist_URI_list = []
-                for track_data in track:
-                    artist_name = track_data['artists'][0]['name']
-                    song_name = track_data['name']
-                    artist_URI, song_URI = pkg_functions.search_artist(artist_name, song_name)
-                    if song_URI is not None and artist_URI is not None:
-                        track_URI_list.append(song_URI)
-                        artist_URI_list.append(artist_URI)
-                    else:
-                        track_URI_list.append("No URI found")
-                        artist_URI_list.append("No URI found")
+                for track in track_data:
+                    artist_uri_list = []
+                    for artist in track["artists"]:
+                        artist_name = artist['name']
+                        song_name = track['name']
+                        
+                        artist_URI, song_URI = pkg_functions.search_artist(artist_name, song_name)
 
+                        if song_URI is not None and artist_URI is not None:
+                            artist_uri_list.append(artist_URI)
+                            if song_name in songs_checked and song_URI not in track_URI_list:
+                                track_URI_list[-1] = song_URI
+                            else:
+                                track_URI_list.append(song_URI)
+                        else:
+                            artist_uri_list.append("No:URI:found")
+                            if song_name in songs_checked:
+                                break
+                            track_URI_list.append("No:URI:found")
+                        songs_checked.append(song_name)
+
+                    artist_URI_list.append(artist_uri_list)
                 track_URI_list_combined.append(track_URI_list)
                 artist_URI_list_combined.append(artist_URI_list)
+
+            for item in artist_URI_list_combined:
+                print(item, "\n")
             
-            print(track_URI_list_combined[0][0])
-            print(artist_URI_list_combined[0][0])
-            print(track_URI_list_combined[1][0])
-            print(artist_URI_list_combined[1][0])
-            print(track_URI_list_combined[2][0])
-            print(artist_URI_list_combined[2][0])
 
 
         if username_checked:
@@ -249,6 +248,9 @@ def profile(platform):
 
             if playlists_response.status_code == 200:
                 playlists = playlists_response.json().get('items', [])
+        
+        if songs_checked == False and playlists_checked == False and username_checked == False:
+            return redirect(url_for('error'), error='Oops, seems like you did not select any data to retrieve from Spotify')
 
         return render_template('/profile/spotify.html', 
                                 top_tracks_short=top_tracks_short, 
@@ -256,7 +258,7 @@ def profile(platform):
                                 top_tracks_long=top_tracks_long, 
                                 user_info=user_info, 
                                 playlists=playlists,
-                                following_users=following_users, 
+                                following_users=following_users,
                                 track_URI_list=track_URI_list_combined, 
                                 artist_URI_list=artist_URI_list_combined
                                 )        
@@ -269,7 +271,6 @@ def profile(platform):
         csv_file_path = file_path
         hooks, liked_movies= pkg_functions.read_csv_file(csv_file_path)
         movies_info = []
-        actorIDs = []
         movie_titles = {}
         movie_actor_list = {}
         print("found liked movies", len(liked_movies))
@@ -284,55 +285,18 @@ def profile(platform):
                     'Actors': movie_info['Actors']
                 }
             i += 1
-        print("alle filmer funnet")
         movie_actor_uris = pkg_functions.link_entities(movie_actor_list)
-        print("enheter linket")
 
-
-        print("begynner å kombinere nå")
         combined_data = list(zip(movie_actor_list.items(), movie_actor_uris.items(), movie_titles.items()))
-        print("ferdig med å kombinere")
-        """
-        combined_data =
-        [
-            (
-                ('tt0322259', {'Actors': ['Paul Walker', ' Tyrese Gibson', ' Cole Hauser']}), 
-                ('https://www.imdb.com/title/tt0322259/', {'actor_uris': ['https://www.imdb.com/name/nm0908094/', 'https://www.imdb.com/name/nm0879085/', 'https://www.imdb.com/name/nm0369513/']}), 
-                ('2 Fast 2 Furious', '2 Fast 2 Furious')
-            ), 
-            (
-                ('tt0120338', {'Actors': ['Leonardo DiCaprio', ' Kate Winslet', ' Billy Zane']}), 
-                ('https://www.imdb.com/title/tt0120338/', {'actor_uris': ['https://www.imdb.com/name/nm0000138/', 'https://www.imdb.com/name/nm0000701/', 'https://www.imdb.com/name/nm0000708/']}), 
-                ('Titanic', 'Titanic')
-            )
-        ]
-        """
-
-
 
         if liked_movies:
-            print("hei")
+            pkg_statements.create_netflix_statement(combined_data)
+
             return render_template('/profile/netflix.html', 
                                         combined_data=combined_data
                                         )
         else: 
-            return redirect(url_for('error'))
-    
-    #################
-    ### Instagram ###
-    #################
-
-    elif platform == 'instagram':
-        json_file_path = 'instagram-eirik/personal_information/personal_information/personal_information.json'
-        user_info = pkg_functions.read_json_file(json_file_path)['profile_user'][0]
-        json_file_path = 'instagram-eirik/personal_information/information_about_you/account_based_in.json'
-        account_based_in = pkg_functions.read_json_file(json_file_path)['inferred_data_primary_location'][0]
-        json_file_path = 'instagram-eirik/your_instagram_activity/content/posts_1.json'
-        posts = pkg_functions.read_json_file(json_file_path).get('media', [])
-        json_file_path = 'instagram-eirik/preferences/your_topics/your_topics.json'
-        topics = pkg_functions.read_json_file(json_file_path)['topics_your_topics']
-
-        return render_template('/profile/instagram.html', user_info=user_info, account_based_in=account_based_in, posts=posts, topics=topics)
+            return redirect(url_for('error', error = 'Does not seem like you have watched any movies on Netflix twice'))
 
     ######################
     ### Entity Linking ###
@@ -344,6 +308,71 @@ def profile(platform):
         processed_NER = pkg_functions.process_entity_linking_response(entity_recognitions, example_string)
         return render_template('/profile/EntityLinking.html', processed_NER=processed_NER)
 
+@app.route('/test/<platform>/')
+def test(platform):
+    if platform == 'spotify-TEST':
+        file_path = os.path.join(os.path.dirname(__file__), 'test_files', 'spotify_test_file.json')
+
+        top_tracks_short, track_URI_list, artist_URI_list = pkg_functions.assign_URI(file_path)
+        combined_artists = [artist_URI_list]
+        combined_tracks = [track_URI_list]
+        
+        
+        pkg_statements.create_spotify_statement(top_tracks_short, track_URI_list, artist_URI_list)
+               
+        file_path_1 = os.path.join(os.path.dirname(__file__), '..', 'data', 'RDFStore', 'test.ttl')
+        file_path_2 = os.path.join(os.path.dirname(__file__), 'data', 'ground_truth_spotify.ttl')
+        precision, recall = pkg_functions.compute_precision_recall(file_path_1, file_path_2)
+        print("-----------------------------------------")
+        print(f"Precision: {precision:.4f}")
+        print(f"Recall: {recall:.4f}")
+        print("-----------------------------------------")
+            
+        return render_template('/profile/spotify.html', top_tracks_short=top_tracks_short, track_URI_list=combined_tracks, artist_URI_list=combined_artists)
+    
+    elif platform == 'netflix-TEST':
+        file_path = os.path.join(os.path.dirname(__file__), 'test_files', 'test.csv')
+
+        hooks, liked_movies= pkg_functions.read_csv_file(file_path)
+        movies_info = []
+        movie_titles = {}
+        movie_actor_list = {}
+        print("found liked movies", len(liked_movies))
+        i = 0
+        for movie_title, _ in liked_movies:
+            print(i)
+            movie_info = pkg_functions.search_OMDb(movie_title, 'movie')
+            if movie_info['Response'] == 'True':
+                movies_info.append(movie_info)
+                movie_titles[movie_title] = movie_info['Movie']
+                movie_actor_list[movie_info['ImdbID']] = {
+                    'Actors': movie_info['Actors']
+                }
+            i += 1
+        movie_actor_uris = pkg_functions.link_entities(movie_actor_list)
+
+        combined_data = list(zip(movie_actor_list.items(), movie_actor_uris.items(), movie_titles.items()))
+
+        if liked_movies:
+            pkg_statements.create_netflix_statement(combined_data)
+
+            file_path_1 = os.path.join(os.path.dirname(__file__), '..', 'data', 'RDFStore', 'test.ttl')
+            file_path_2 = os.path.join(os.path.dirname(__file__), 'data', 'ground_truth_netflix.ttl')
+
+            precision, recall = pkg_functions.compute_precision_recall(file_path_1, file_path_2)
+            print("-----------------------------------------")
+            print(f"Precision: {precision:.4f}")
+            print(f"Recall: {recall:.4f}")
+            print("-----------------------------------------")
+
+            return render_template('/profile/netflix.html', 
+                                        combined_data=combined_data
+                                        )
+        else: 
+            return redirect(url_for('error', error = 'Does not seem like you have watched any movies on Netflix twice'))
+            
+        
+
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=7000)
