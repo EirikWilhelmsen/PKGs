@@ -12,9 +12,11 @@ import csv
 from PKGClass import PKGFunctions
 import requests
 from Statements import statements
+from GroundTruthStatements import GroundTruthStatement
 
 pkg_functions = PKGFunctions() 
 pkg_statements = statements()
+ground_truth_statements = GroundTruthStatement()
 
 url = "http://127.0.0.1:5000/statements"
 
@@ -317,16 +319,21 @@ def test(platform):
         combined_artists = [artist_URI_list]
         combined_tracks = [track_URI_list]
         
-        
-        pkg_statements.create_spotify_statement(top_tracks_short, track_URI_list, artist_URI_list)
+        test_data = pkg_statements.create_spotify_statement(top_tracks_short, track_URI_list, artist_URI_list)
+        ground_truth_data = ground_truth_statements.create_statement(platform='spotify')
+
+        precision, recall = pkg_functions.compute_precision_recall(ground_truth_data, test_data)
+
+        print("Precision:", precision)
+        print("Recall:", recall)
                
-        file_path_1 = os.path.join(os.path.dirname(__file__), '..', 'data', 'RDFStore', 'test.ttl')
-        file_path_2 = os.path.join(os.path.dirname(__file__), 'data', 'ground_truth_spotify.ttl')
-        precision, recall = pkg_functions.compute_precision_recall(file_path_1, file_path_2)
-        print("-----------------------------------------")
-        print(f"Precision: {precision:.4f}")
-        print(f"Recall: {recall:.4f}")
-        print("-----------------------------------------")
+        # file_path_1 = os.path.join(os.path.dirname(__file__), '..', 'data', 'RDFStore', 'test.ttl')
+        # file_path_2 = os.path.join(os.path.dirname(__file__), 'data', 'ground_truth_spotify.ttl')
+        # precision, recall = pkg_functions.compute_precision_recall(file_path_1, file_path_2)
+        # print("-----------------------------------------")
+        # print(f"Precision: {precision:.4f}")
+        # print(f"Recall: {recall:.4f}")
+        # print("-----------------------------------------")
             
         return render_template('/profile/spotify.html', top_tracks_short=top_tracks_short, track_URI_list=combined_tracks, artist_URI_list=combined_artists)
     
@@ -340,7 +347,6 @@ def test(platform):
         print("found liked movies", len(liked_movies))
         i = 0
         for movie_title, _ in liked_movies:
-            print(i)
             movie_info = pkg_functions.search_OMDb(movie_title, 'movie')
             if movie_info['Response'] == 'True':
                 movies_info.append(movie_info)
@@ -354,15 +360,14 @@ def test(platform):
         combined_data = list(zip(movie_actor_list.items(), movie_actor_uris.items(), movie_titles.items()))
 
         if liked_movies:
-            pkg_statements.create_netflix_statement(combined_data)
-
-            file_path_1 = os.path.join(os.path.dirname(__file__), '..', 'data', 'RDFStore', 'test.ttl')
-            file_path_2 = os.path.join(os.path.dirname(__file__), 'data', 'ground_truth_netflix.ttl')
-
-            precision, recall = pkg_functions.compute_precision_recall(file_path_1, file_path_2)
+            test_data = pkg_statements.create_netflix_statement(combined_data)
+            ground_truth_data = ground_truth_statements.create_statement(platform='netflix')
+            print("ground_truth_data", ground_truth_data)
+            print("test_data", test_data)
+            precision, recall = pkg_functions.compute_precision_recall(ground_truth_data, test_data)
             print("-----------------------------------------")
-            print(f"Precision: {precision:.4f}")
-            print(f"Recall: {recall:.4f}")
+            print("Precision:", precision)
+            print("Recall:", recall)
             print("-----------------------------------------")
 
             return render_template('/profile/netflix.html', 

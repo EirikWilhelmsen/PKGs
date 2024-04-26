@@ -218,44 +218,35 @@ class PKGFunctions:
         output_text = ''.join(output_array)
         return(output_text)
     
-    def compute_precision_recall(self, file_path_1, file_path_2):
-        """
-        This function computes precision and recall based on user preferences in two RDF files.
-
-        Args:
-            file1 (str): Path to the first RDF file.
-            file2 (str): Path to the second RDF file.
-
-        Returns:
-            dict: A dictionary containing precision and recall values.
-        """
+    def compute_precision_recall(self, ground_truth_data, test_data):
         true_positives = 0
         false_positives = 0
         false_negatives = 0
-        true_negatives = 0
 
-        # Extracting true negatives from file 1
-        with open(file_path_1, 'r') as f:
-            for line in f:
-                if any(keyword in line for keyword in ["ex:", "authoredOn", "_:"]):
-                    true_negatives += 1
+        for test_item in test_data:
+            # Search for a matching item in the ground truth dataset
+            match_found = False
+            for ground_truth_item in ground_truth_data:
+                if (test_item["subject"] == ground_truth_item["subject"] and
+                    test_item["predicate"] == ground_truth_item["predicate"] and
+                    test_item["object"] == ground_truth_item["object"]):
+                    true_positives += 1
+                    match_found = True
+                    break
 
-        # Extracting true positives, false positives, and false negatives from file 2
-        with open(file_path_2, 'r') as f:
-            for line in f:
-                if not any(keyword in line for keyword in ["ex:", "authoredOn", "_:"]):
-                    if line in open(file_path_1).read():
-                        true_positives += 1
-                    else:
-                        false_negatives += 1
+            # If no match is found, count it as false positive
+            if not match_found:
+                false_positives += 1
 
-        # Calculating false negatives
-        # false_negatives = true_negatives - true_positives
+        # Count false negatives
+        false_negatives = len(ground_truth_data) - true_positives
 
-        precision = true_positives / (true_positives + false_positives) if true_positives + false_positives > 0 else 0
-        recall = true_positives / (true_positives + false_negatives) if true_positives + false_negatives > 0 else 0
+        # Calculate precision and recall
+        precision = true_positives / (true_positives + false_positives) if (true_positives + false_positives) > 0 else 0
+        recall = true_positives / (true_positives + false_negatives) if (true_positives + false_negatives) > 0 else 0
 
         return precision, recall
+
 
 
 

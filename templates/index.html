@@ -35,14 +35,14 @@
 
     <div class="options" id="spotifyOptions" style="display: none;">
         <form action="/proceed" method="post"> <!-- Form starts here -->
-            <h2>Select Spotify Options</h2>
+            <h2>Select the data from Spotify you let us get access to</h2>
             <label><input type="checkbox" name="usernameCheckbox"> Username</label> <!-- Added name attribute -->
             <label><input type="checkbox" name="playlistsCheckbox"> Playlists</label> <!-- Added name attribute -->
             <label><input type="checkbox" name="songsCheckbox" onclick="toggleNumSongs()"> Songs</label> <!-- Added onclick attribute -->
             <div id="numSongsDiv" style="display: none;">
                 Number of Songs: <input type="number" name="numSongsInput" min="1" value="1"> <!-- Added name attribute -->
             </div>
-            <button  type="submit" name="platform" value="spotify-API">Proceed</button>
+            <button id="proceed-spotify" style="display: none;"  type="submit" name="platform" value="spotify-API">Proceed</button>
         </form>
         <form action="/proceed_test" method="post">
             <button style="margin-top:10px;" type="submit" name="platform" value="spotify-TEST">test</button>
@@ -50,12 +50,12 @@
     </div>
     <div class="options" id="netflixOptions" style="display: none;">
         <form action="/proceed" method="post" enctype="multipart/form-data">
-            <h2>Select Netflix Options</h2>
+            <h2>Select the data from Netflix you let us get access to</h2>
             <label><input type="checkbox" name="viewCheckbox" onclick="togglePrecentOfHistory()">Give access to Netflix viewing history</label> <!-- Added onclick attribute -->
             <div id="PercentageDiv" style="display: none;">
                 <input type="file" name="file" accept=".csv">
             </div>
-            <button type="submit" name="platform" value="netflix-upload">Proceed</button>
+            <button id="procced-netflix" style="display: none;" type="submit" name="platform" value="netflix-upload">Proceed</button>
         </form>
         <form action="/proceed_test" method="post">
             <button style="margin-top:10px;" type="submit" name="platform" value="netflix-TEST">test</button>
@@ -72,29 +72,44 @@
     <script>
         function showOptions(optionId) {
             var optionsDiv = document.getElementById(optionId);
-            if (optionsDiv.style.display === "none") {
+            var spotifyOptions = document.getElementById("spotifyOptions");
+            var netflixOptions = document.getElementById("netflixOptions");
+            if (spotifyOptions.style.display === "block") {
+                spotifyOptions.style.display = "none";
                 optionsDiv.style.display = "block";
-            } else {
-                optionsDiv.style.display = "none";
+            }
+            else if (netflixOptions.style.display === "block") {
+                netflixOptions.style.display = "none";
+                optionsDiv.style.display = "block";
+            }
+            else {
+                optionsDiv.style.display = "block";
             }
         }
 
         function toggleNumSongs() {
             var numSongsDiv = document.getElementById("numSongsDiv");
+            var button = document.getElementById("proceed-spotify");
             if (numSongsDiv.style.display === "none") {
                 numSongsDiv.style.display = "block";
+                button.style.display = "block";
+
             } else {
                 numSongsDiv.style.display = "none";
+                button.style.display = "none";
             }
         }
         
         function togglePrecentOfHistory() {
             var percentageDiv = document.getElementById("PercentageDiv");
+            var button = document.getElementById("procced-netflix");
             
             if (percentageDiv.style.display === "none") {
                 percentageDiv.style.display = "block";
+                button.style.display = "block";
             } else {
                 percentageDiv.style.display = "none";
+                button.style.display = "none";
             }
         }
     </script>
