@@ -1,20 +1,22 @@
 # app.py
 
-from datetime import datetime, timedelta
+from datetime import datetime
 import os
 from werkzeug.utils import secure_filename
-from flask import Flask, render_template, redirect, url_for, session, request, jsonify
+from flask import Flask, render_template, redirect, url_for, session, request
 import requests
-import json
-import base64
 import urllib.parse
-import csv
 from PKGClass import PKGFunctions
 import requests
 from Statements import statements
 from GroundTruthStatements import GroundTruthStatement
+from NetflixClass import NetflixFunctions
+from SpotifyClass import SpotifyFunctions
 
-pkg_functions = PKGFunctions() 
+pkg_functions = PKGFunctions()
+netflix_functions = NetflixFunctions()
+spotify_functions = SpotifyFunctions()
+
 pkg_statements = statements()
 ground_truth_statements = GroundTruthStatement()
 
@@ -208,12 +210,13 @@ def profile(platform):
                 track_URI_list = []
                 artist_URI_list = []
                 for track in track_data:
-                    artist_uri_list = []
+                    artist_uri_list = [] 
                     for artist in track["artists"]:
                         artist_name = artist['name']
                         song_name = track['name']
                         
-                        artist_URI, song_URI = pkg_functions.search_artist(artist_name, song_name)
+                        artist_URI, song_URI = spotify_functions.search_artist(artist_name, song_name)
+                        print("returned artist_URI", artist_URI, "returned song_URI", song_URI)
 
                         if song_URI is not None and artist_URI is not None:
                             artist_uri_list.append(artist_URI)
@@ -228,9 +231,12 @@ def profile(platform):
                             track_URI_list.append("No:URI:found")
                         songs_checked.append(song_name)
 
+
                     artist_URI_list.append(artist_uri_list)
                 track_URI_list_combined.append(track_URI_list)
                 artist_URI_list_combined.append(artist_URI_list)
+            print("track_URI_list_combined", track_URI_list_combined, "\n")
+            print("artist_URI_list_combined", artist_URI_list_combined)
 
             for item in artist_URI_list_combined:
                 print(item, "\n")
@@ -271,7 +277,7 @@ def profile(platform):
     elif platform == 'netflix':
         file_path = request.args.get('file_path')
         csv_file_path = file_path
-        hooks, liked_movies= pkg_functions.read_csv_file(csv_file_path)
+        hooks, liked_movies= netflix_functions.read_csv_file(csv_file_path)
         movies_info = []
         movie_titles = {}
         movie_actor_list = {}
@@ -279,7 +285,7 @@ def profile(platform):
         i = 0
         for movie_title, _ in liked_movies:
             print(i)
-            movie_info = pkg_functions.search_OMDb(movie_title, 'movie')
+            movie_info = netflix_functions.search_OMDb(movie_title, 'movie')
             if movie_info['Response'] == 'True':
                 movies_info.append(movie_info)
                 movie_titles[movie_title] = movie_info['Movie']
@@ -287,7 +293,7 @@ def profile(platform):
                     'Actors': movie_info['Actors']
                 }
             i += 1
-        movie_actor_uris = pkg_functions.link_entities(movie_actor_list)
+        movie_actor_uris = netflix_functions.link_entities(movie_actor_list)
 
         combined_data = list(zip(movie_actor_list.items(), movie_actor_uris.items(), movie_titles.items()))
 
@@ -315,39 +321,34 @@ def test(platform):
     if platform == 'spotify-TEST':
         file_path = os.path.join(os.path.dirname(__file__), 'test_files', 'spotify_test_file.json')
 
-        top_tracks_short, track_URI_list, artist_URI_list = pkg_functions.assign_URI(file_path)
+        top_tracks_short, track_URI_list, artist_URI_list = spotify_functions.assign_URI(file_path)
         combined_artists = [artist_URI_list]
         combined_tracks = [track_URI_list]
         
         test_data = pkg_statements.create_spotify_statement(top_tracks_short, track_URI_list, artist_URI_list)
         ground_truth_data = ground_truth_statements.create_statement(platform='spotify')
 
-        precision, recall = pkg_functions.compute_precision_recall(ground_truth_data, test_data)
+        # precision, recall, F_measure = pkg_functions.compute_precision_recall(ground_truth_data, test_data)
+        # print("-----------------------------------------")
+        # print("Precision:", precision)
+        # print("Recall:", recall)
+        # print("F-measure:", F_measure)
+        # print("-----------------------------------------")               
 
-        print("Precision:", precision)
-        print("Recall:", recall)
-               
-        # file_path_1 = os.path.join(os.path.dirname(__file__), '..', 'data', 'RDFStore', 'test.ttl')
-        # file_path_2 = os.path.join(os.path.dirname(__file__), 'data', 'ground_truth_spotify.ttl')
-        # precision, recall = pkg_functions.compute_precision_recall(file_path_1, file_path_2)
-        # print("-----------------------------------------")
-        # print(f"Precision: {precision:.4f}")
-        # print(f"Recall: {recall:.4f}")
-        # print("-----------------------------------------")
             
         return render_template('/profile/spotify.html', top_tracks_short=top_tracks_short, track_URI_list=combined_tracks, artist_URI_list=combined_artists)
     
     elif platform == 'netflix-TEST':
         file_path = os.path.join(os.path.dirname(__file__), 'test_files', 'test.csv')
 
-        hooks, liked_movies= pkg_functions.read_csv_file(file_path)
+        hooks, liked_movies= netflix_functions.read_csv_file(file_path)
         movies_info = []
         movie_titles = {}
         movie_actor_list = {}
         print("found liked movies", len(liked_movies))
         i = 0
         for movie_title, _ in liked_movies:
-            movie_info = pkg_functions.search_OMDb(movie_title, 'movie')
+            movie_info = netflix_functions.search_OMDb(movie_title, 'movie')
             if movie_info['Response'] == 'True':
                 movies_info.append(movie_info)
                 movie_titles[movie_title] = movie_info['Movie']
@@ -355,7 +356,7 @@ def test(platform):
                     'Actors': movie_info['Actors']
                 }
             i += 1
-        movie_actor_uris = pkg_functions.link_entities(movie_actor_list)
+        movie_actor_uris = netflix_functions.link_entities(movie_actor_list)
 
         combined_data = list(zip(movie_actor_list.items(), movie_actor_uris.items(), movie_titles.items()))
 
@@ -364,10 +365,11 @@ def test(platform):
             ground_truth_data = ground_truth_statements.create_statement(platform='netflix')
             print("ground_truth_data", ground_truth_data)
             print("test_data", test_data)
-            precision, recall = pkg_functions.compute_precision_recall(ground_truth_data, test_data)
+            precision, recall, F_measure = pkg_functions.compute_precision_recall(ground_truth_data, test_data)
             print("-----------------------------------------")
             print("Precision:", precision)
             print("Recall:", recall)
+            print("F-measure:", F_measure)
             print("-----------------------------------------")
 
             return render_template('/profile/netflix.html', 

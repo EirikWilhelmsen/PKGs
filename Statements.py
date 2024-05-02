@@ -2,8 +2,6 @@ import uuid
 import requests
 import sys
 sys.path.append('..')
-from pkg_api.core.annotation import Concept, PKGData, Triple, TripleElement
-from pkg_api.pkg import PKG
 
 
 url = "http://127.0.0.1:5000/statements"
@@ -120,8 +118,8 @@ class statements:
                     "preference": 1.0
                 }
 
-                response = requests.post(url, json=data)
-                assert response.status_code == 200 
+                #response = requests.post(url, json=data)
+                #assert response.status_code == 200 
 
                 test_sample = {
                     "subject": subject,
@@ -129,4 +127,5 @@ class statements:
                     "object": object['value']['related_entities'] 
                 }
                 test_data_list.append(test_sample)
+                
         return test_data_list

@@ -1,24 +1,50 @@
-subject = "http://example.com/test"
-predicate = {"value": {"description": "like"}}
-object_desription = '{"value": {"description": "the movie Titanic starring Leonardo DiCaprio, Kate Winslet, Billy Zane",'
-object_related_entities =  ' related_entities: ["https://schema.org/actor", "https://www.imdb.com/name/nm0000138/", "https://schema.org/actor", "https://www.imdb.com/name/nm0000701/", "https://schema.org/actor", "https://www.imdb.com/name/nm0000708/", "https://schema.org/Movie", "https://www.imdb.com/title/tt0120338/"]}}'
+import requests
 
-test_data = {
-    "subject": subject,
-    "predicate": predicate,
-    "object": object_desription + object_related_entities 
-}
+def get_track_and_artist_uris(song_title, artist_name):
+    # Genius API endpoint for searching songs
+    url = "https://api.genius.com/search"
+    
+    # Set up the request headers with your Genius API token
+    headers = {
+        "Authorization": "Bearer YOUR_ACCESS_TOKEN"
+    }
+    
+    # Set up the request parameters
+    params = {
+        "q": song_title + " " + artist_name
+    }
+    
+    # Send the request to the Genius API
+    response = requests.get(url, params=params, headers=headers)
+    
+    # Check if the request was successful
+    if response.status_code == 200:
+        # Get the JSON data from the response
+        data = response.json()
+        
+        # Check if there are any search results
+        if "hits" in data and data["hits"]:
+            # Get the first search result
+            first_hit = data["hits"][0]["result"]
+            
+            # Get the track URI
+            track_uri = first_hit["url"]
+            
+            # Get the artist URI
+            primary_artist = first_hit["primary_artist"]
+            artist_uri = primary_artist["url"]
+            
+            return track_uri, artist_uri
+        else:
+            print("No search results found.")
+    else:
+        print("Error:", response.status_code)
 
-print(test_data["object"])
+# Example usage
+song_title = "Bohemian Rhapsody"
+artist_name = "Queen"
 
-object = {"value": {"description": "the movie Titanic starring Leonardo DiCaprio, Kate Winslet, Billy Zane",
-                    "related_entities": ["https://schema.org/actor", "https://www.imdb.com/name/nm0000138/",
-                                        "https://schema.org/actor", "https://www.imdb.com/name/nm0000701/",
-                                        "https://schema.org/actor", "https://www.imdb.com/name/nm0000708/",
-                                        "https://schema.org/Movie", "https://www.imdb.com/title/tt0120338/"]}}
-test_data = {
-    "subject": subject,
-    "predicate": predicate,
-    "object": object["value"]["related_entities"] 
-}
-print(test_data["object"])
+track_uri, artist_uri = get_track_and_artist_uris(song_title, artist_name)
+if track_uri and artist_uri:
+    print("Track URI:", track_uri)
+    print("Artist URI:", artist_uri)
