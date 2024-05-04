@@ -1,7 +1,29 @@
 
-{"subject": "http://example.com/test", "predicate": {"value": {"description": "like"}}, "object": {"value": {"description": "the song Hotel California by Eagles", "related_entities": ["https://schema.org/artist", "https://musicbrainz.org/artist/f46bd570-5768-462e-b84c-c7c993bbf47e", "https://schema.org/song", "https://musicbrainz.org/recording/c0e9452e-ee38-45a4-857e-ed9cd5e98c7f"]}}}
-{"subject": "http://example.com/test", "predicate": {"value": {"description": "like"}}, "object": {"value": {"description": "the song Paint It, Black by The Rolling Stones", "related_entities": ["https://schema.org/artist", "No:URI:found", "https://schema.org/song", "No:URI:found"]}}}
-{"subject": "http://example.com/test", "predicate": {"value": {"description": "like"}}, "object": {"value": {"description": "the song Fortunate Son by Creedence Clearwater Revival", "related_entities": ["https://schema.org/artist", "https://musicbrainz.org/artist/109958eb-a335-4c5e-907e-597ff4c6af46", "https://schema.org/song", "https://musicbrainz.org/recording/9e74fbaf-8d5b-40fc-a2c2-955712df69c0"]}}}
+
+class groundTruthSpotify():
+    def __init__(self):
+        pass
+    def create_spotify_statement(self):
+        test_data_list = []
+
+        subject = "http://example.com/test"
+        predicate = {"value": {"description": "like"}}
+        object = {"value": {"description": "the song",
+                "related_entities": ["https://schema.org/artist", "https://www.imdb.com/name/nm1801800/",
+                                    "https://schema.org/song", "https://www.imdb.com/name/nm2463696/"]}}
+        
+        test_data = {
+            "subject": subject,
+            "predicate": predicate,
+            "object": object['value']['related_entities'] 
+        }
+        test_data_list.append(test_data)
+
+        #######################################################################################################################
+
+        "subject": "http://example.com/test", "predicate": {"value": {"description": "like"}}, "object": {"value": {"description": "the song Hotel California by Eagles", "related_entities": ["https://schema.org/artist", "https://musicbrainz.org/artist/f46bd570-5768-462e-b84c-c7c993bbf47e", "https://schema.org/song", "https://musicbrainz.org/recording/c0e9452e-ee38-45a4-857e-ed9cd5e98c7f"]}}
+        {"subject": "http://example.com/test", "predicate": {"value": {"description": "like"}}, "object": {"value": {"description": "the song Paint It, Black by The Rolling Stones", "related_entities": ["https://schema.org/artist", "No:URI:found", "https://schema.org/song", "No:URI:found"]}}}
+        {"subject": "http://example.com/test", "predicate": {"value": {"description": "like"}}, "object": {"value": {"description": "the song Fortunate Son by Creedence Clearwater Revival", "related_entities": ["https://schema.org/artist", "https://musicbrainz.org/artist/109958eb-a335-4c5e-907e-597ff4c6af46", "https://schema.org/song", "https://musicbrainz.org/recording/9e74fbaf-8d5b-40fc-a2c2-955712df69c0"]}}}
 {"subject": "http://example.com/test", "predicate": {"value": {"description": "like"}}, "object": {"value": {"description": "the song Sweet Child O' Mine by Guns N' Roses", "related_entities": ["https://schema.org/artist", "No:URI:found", "https://schema.org/song", "No:URI:found"]}}}
 {"subject": "http://example.com/test", "predicate": {"value": {"description": "like"}}, "object": {"value": {"description": "the song Enter Sandman by Metallica", "related_entities": ["https://schema.org/artist", "https://musicbrainz.org/artist/65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab", "https://schema.org/song", "https://musicbrainz.org/recording/1eae4668-76ef-424b-9142-ad0fe3392665"]}}}
 {"subject": "http://example.com/test", "predicate": {"value": {"description": "like"}}, "object": {"value": {"description": "the song Seven Nation Army by The White Stripes", "related_entities": ["https://schema.org/artist", "https://musicbrainz.org/artist/11ae9fbb-f3d7-4a47-936f-4c0a04d3b3b5", "https://schema.org/song", "https://musicbrainz.org/recording/aae0d97b-572e-4598-9b14-977895222794"]}}}
@@ -99,4 +121,7 @@
 {"subject": "http://example.com/test", "predicate": {"value": {"description": "like"}}, "object": {"value": {"description": "the song Glimmer of Hope by Tevvez", "related_entities": ["https://schema.org/artist", "https://musicbrainz.org/artist/92ced488-d102-44b5-a3b7-18f9aa67cf66", "https://schema.org/song", "https://musicbrainz.org/recording/88f7465c-e003-418b-8601-1ac6b59f5c35"]}}}
 {"subject": "http://example.com/test", "predicate": {"value": {"description": "like"}}, "object": {"value": {"description": "the song Stronger by Vertile", "related_entities": ["https://schema.org/artist", "No:URI:found", "https://schema.org/song", "No:URI:found"]}}}
 {"subject": "http://example.com/test", "predicate": {"value": {"description": "like"}}, "object": {"value": {"description": "the song 1-800-273-8255 by Logic, Alessia Cara, and Khalid", "related_entities": ["https://schema.org/artist", "https://musicbrainz.org/artist/713e751f-3ddb-4b77-b3b1-9e6f2e953ad5", "https://schema.org/artist", "No:URI:found", "https://schema.org/artist", "No:URI:found", "https://schema.org/song", "https://musicbrainz.org/recording/ff95390a-ad32-4cc9-b70c-174328e6fdc1"]}}}
+
+
+        return test_data_list
 

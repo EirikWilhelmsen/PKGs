@@ -9,16 +9,19 @@ import urllib.parse
 from PKGClass import PKGFunctions
 import requests
 from Statements import statements
-from GroundTruthStatements import GroundTruthStatement
+
+from GroundTruthNetflix import groundTruthNetflix
 from NetflixClass import NetflixFunctions
+
 from SpotifyClass import SpotifyFunctions
 
 pkg_functions = PKGFunctions()
 netflix_functions = NetflixFunctions()
+
 spotify_functions = SpotifyFunctions()
 
 pkg_statements = statements()
-ground_truth_statements = GroundTruthStatement()
+ground_truth__Netflix_statements = groundTruthNetflix()
 
 url = "http://127.0.0.1:5000/statements"
 
