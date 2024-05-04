@@ -13,6 +13,7 @@ from Statements import statements
 from GroundTruthNetflix import groundTruthNetflix
 from NetflixClass import NetflixFunctions
 
+from GroundTruthSpotify import groundTruthSpotify
 from SpotifyClass import SpotifyFunctions
 
 pkg_functions = PKGFunctions()
@@ -21,7 +22,8 @@ netflix_functions = NetflixFunctions()
 spotify_functions = SpotifyFunctions()
 
 pkg_statements = statements()
-ground_truth__Netflix_statements = groundTruthNetflix()
+ground_truth_Netflix_statements = groundTruthNetflix()
+ground_truth_Spotify_statements = groundTruthSpotify()
 
 url = "http://127.0.0.1:5000/statements"
 
@@ -337,18 +339,15 @@ def test(platform):
         combined_artists.append(artist_URI_list)
         combined_tracks = []
         combined_tracks.append(track_URI_list)
-
-        print("artist_URI_list", combined_artists)
-        print("track_URI_list", combined_tracks)
         
-        ground_truth_data = ground_truth_statements.create_statement(platform='spotify')
+        ground_truth_data = ground_truth_Spotify_statements.create_statement()
 
-        # precision, recall, F_measure = pkg_functions.compute_precision_recall(ground_truth_data, test_data)
-        # print("-----------------------------------------")
-        # print("Precision:", precision)
-        # print("Recall:", recall)
-        # print("F-measure:", F_measure)
-        # print("-----------------------------------------")               
+        precision, recall, F_measure = pkg_functions.compute_precision_recall(ground_truth_data, test_data)
+        print("-----------------------------------------")
+        print("Precision:", precision)
+        print("Recall:", recall)
+        print("F-measure:", F_measure)
+        print("-----------------------------------------")               
 
             
         return render_template('/profile/spotify.html', top_tracks_short=top_tracks_short, track_URI_list=combined_tracks, artist_URI_list=combined_artists)
@@ -377,7 +376,7 @@ def test(platform):
 
         if liked_movies:
             test_data = pkg_statements.create_netflix_statement(combined_data)
-            ground_truth_data = ground_truth_statements.create_statement(platform='netflix')
+            ground_truth_data = ground_truth_Netflix_statements.create_statement()
             print("ground_truth_data", ground_truth_data)
             print("test_data", test_data)
             precision, recall, F_measure = pkg_functions.compute_precision_recall(ground_truth_data, test_data)

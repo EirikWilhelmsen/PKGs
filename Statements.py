@@ -14,52 +14,48 @@ class statements:
     def create_spotify_statement(self, top_tracks_short, track_URI_list, artist_URI_list):
         test_data_list = []
         i = 0
-        with open('data/test_data_list.json', 'a', encoding="utf-8") as f:
-            f.write('\n')
-            i = 0
-            for track in top_tracks_short:
-                print(track['name'], "by", track['artists'][0]['name'])
-                if len(track['artists']) == 3:
-                    subject = "http://example.com/test"
-                    predicate = {"value": {"description": "like"}}
-                    object = {"value": {"description": f"the song {track['name']} by {track['artists'][0]['name']}, {track['artists'][1]['name']}, and {track['artists'][2]['name']}",
-                                        "related_entities": ["https://schema.org/artist", f"{artist_URI_list[i][0]}",
-                                                            "https://schema.org/artist", f"{artist_URI_list[i][1]}",
-                                                            "https://schema.org/artist", f"{artist_URI_list[i][2]}",
-                                                            "https://schema.org/song", f"{track_URI_list[i][0]}"]}}
-                elif len(track['artists']) == 2:
-                    subject = "http://example.com/test"
-                    predicate = {"value": {"description": "like"}}
-                    object = {"value": {"description": f"the song {track['name']} by {track['artists'][0]['name']}, and {track['artists'][1]['name']}",
-                                        "related_entities": ["https://schema.org/artist", f"{artist_URI_list[i][0]}",
-                                                            "https://schema.org/artist", f"{artist_URI_list[i][1]}",
-                                                            "https://schema.org/song", f"{track_URI_list[i][0]}"]}}
-                else:
+        for track in top_tracks_short:
+            print(track['name'], "by", track['artists'][0]['name'])
+            if len(track['artists']) == 3:
+                subject = "http://example.com/test"
+                predicate = {"value": {"description": "like"}}
+                object = {"value": {"description": f"the song {track['name']} by {track['artists'][0]['name']}, {track['artists'][1]['name']}, and {track['artists'][2]['name']}",
+                                    "related_entities": ["https://schema.org/artist", f"{artist_URI_list[i][0]}",
+                                                        "https://schema.org/artist", f"{artist_URI_list[i][1]}",
+                                                        "https://schema.org/artist", f"{artist_URI_list[i][2]}",
+                                                        "https://schema.org/song", f"{track_URI_list[i][0]}"]}}
+            elif len(track['artists']) == 2:
+                subject = "http://example.com/test"
+                predicate = {"value": {"description": "like"}}
+                object = {"value": {"description": f"the song {track['name']} by {track['artists'][0]['name']}, and {track['artists'][1]['name']}",
+                                    "related_entities": ["https://schema.org/artist", f"{artist_URI_list[i][0]}",
+                                                        "https://schema.org/artist", f"{artist_URI_list[i][1]}",
+                                                        "https://schema.org/song", f"{track_URI_list[i][0]}"]}}
+            else:
 
-                    subject = "http://example.com/test"
-                    predicate = {"value": {"description": "like"}}
-                    object = {"value": {"description": f"the song {track['name']} by {track['artists'][0]['name']}",
-                                        "related_entities": ["https://schema.org/artist", f"{artist_URI_list[i][0]}",
-                                                            "https://schema.org/song", f"{track_URI_list[i][0]}"]}}
-                data = {
-                        "owner_uri": "http://example.com/test",
-                        "owner_username": "test",
-                        "description": f"I like the song {track['name']} by {track['artists'][0]['name']}",
-                        "subject": subject,
-                        "predicate": predicate,
-                        "object": object,
-                        "preference": 1.0
-                }
-                test_sample = {
+                subject = "http://example.com/test"
+                predicate = {"value": {"description": "like"}}
+                object = {"value": {"description": f"the song {track['name']} by {track['artists'][0]['name']}",
+                                    "related_entities": ["https://schema.org/artist", f"{artist_URI_list[i][0]}",
+                                                        "https://schema.org/song", f"{track_URI_list[i][0]}"]}}
+            data = {
+                    "owner_uri": "http://example.com/test",
+                    "owner_username": "test",
+                    "description": f"I like the song {track['name']} by {track['artists'][0]['name']}",
                     "subject": subject,
                     "predicate": predicate,
-                    "object": object
-                }
-                test_data_list.append(test_sample)
-                json.dump(test_sample, f, ensure_ascii=False)
-                f.write('\n')
-                
-                i += 1
+                    "object": object,
+                    "preference": 1.0
+            }
+            test_sample = {
+                "subject": subject,
+                "predicate": predicate,
+                "object": object['value']['related_entities'] 
+            }
+            test_data_list.append(test_sample)
+            
+            
+            i += 1
         return test_data_list
     
     def create_netflix_statement(self, combined_data):

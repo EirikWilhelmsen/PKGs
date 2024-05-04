@@ -87,6 +87,7 @@ class PKGFunctions:
         recall -- recall TP / (TP + FN), 
         F_measure -- F1 score 2 * (precision * recall) / (precision + recall)
         """
+        print(len(ground_truth_data), len(test_data))
         
         true_positives = 0
         false_positives = 0
@@ -95,9 +96,7 @@ class PKGFunctions:
         for test_item in test_data:
             match_found = False
             for ground_truth_item in ground_truth_data:
-                if (test_item["subject"] == ground_truth_item["subject"] and
-                    test_item["predicate"] == ground_truth_item["predicate"] and
-                    test_item["object"] == ground_truth_item["object"]):
+                if (test_item["object"] == ground_truth_item["object"]):
                     print("Match found\n")
                     true_positives += 1
                     match_found = True
@@ -107,10 +106,13 @@ class PKGFunctions:
                 false_positives += 1
 
         false_negatives = len(ground_truth_data) - true_positives
+        
+        print(f"True positives: {true_positives}, False positives: {false_positives}, False negatives: {false_negatives}")
 
         precision = true_positives / (true_positives + false_positives) if (true_positives + false_positives) > 0 else 0
         recall = true_positives / (true_positives + false_negatives) if (true_positives + false_negatives) > 0 else 0
         F_measure = 2 * (precision * recall) / (precision + recall) if (precision + recall) > 0 else 0
+        print(f"Precision: {precision}, Recall: {recall}, F-measure: {F_measure}")
 
         return precision, recall, F_measure
 
