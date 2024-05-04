@@ -60,7 +60,7 @@
                                 {% else %}
                                     <strong>Artist:</strong><br>{{ track['artists'][0]['name'] }} <a href="{{ artist_URI_list[0][loop.index0][0] }}" target="_blank"> ({{ artist_URI_list[0][loop.index0][0] }}) </a><br>
                                 {% endif %}
-                                <strong>Song URI:</strong> <a href="{{ track_URI_list[0][loop.index0] }}" target="_blank">{{ track_URI_list[0][loop.index0] }}</a><br>
+                                <strong>Song URI:</strong> <a href="{{ track_URI_list[0][loop.index0][0] }}" target="_blank">{{ track_URI_list[0][loop.index0][0] }}</a><br>
                             </div>
                         </td>
                     </tr>
@@ -88,7 +88,7 @@
                             {% else %}
                                 <strong>Artist:</strong><br>{{ track['artists'][0]['name'] }} <a href="{{ artist_URI_list[1][loop.index0][0] }}" target="_blank"> ({{ artist_URI_list[1][loop.index0][0] }}) </a><br>
                             {% endif %}
-                            <strong>Song URI:</strong> <a href="{{ track_URI_list[1][loop.index0] }}" target="_blank">{{ track_URI_list[1][loop.index0] }}</a><br>
+                            <strong>Song URI:</strong> <a href="{{ track_URI_list[1][loop.index0][0] }}" target="_blank">{{ track_URI_list[1][loop.index0][0] }}</a><br>
                         </div>
                     </td>
                 </tr>
@@ -113,7 +113,7 @@
                             {% else %}
                                 <strong>Artist:</strong><br>{{ track['artists'][0]['name'] }} <a href="{{ artist_URI_list[2][loop.index0][0] }}" target="_blank"> ({{ artist_URI_list[2][loop.index0][0] }}) </a><br>
                             {% endif %}
-                            <strong>Song URI:</strong> <a href="{{ track_URI_list[2][loop.index0] }}" target="_blank">{{ track_URI_list[2][loop.index0] }}</a><br>
+                            <strong>Song URI:</strong> <a href="{{ track_URI_list[2][loop.index0][0] }}" target="_blank">{{ track_URI_list[2][loop.index0][0] }}</a><br>
                         </div>
                     </td>
                 </tr>

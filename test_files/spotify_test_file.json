@@ -1,548 +1,2807 @@
 [
-    {"album": 
-        {
-            "album_type": "SINGLE", 
-            "artists": [{
-                    "external_urls": {"spotify": "https://open.spotify.com/artist/657xkMQUyPIa9vA7fycV5j"}, 
-                    "href": "https://api.spotify.com/v1/artists/657xkMQUyPIa9vA7fycV5j", 
-                    "id": "657xkMQUyPIa9vA7fycV5j", 
-                    "name": "Amara", 
-                    "type": "artist", 
-                    "uri": "spotify:artist:657xkMQUyPIa9vA7fycV5j"
-                }], 
-                "available_markets": ["AR", "AU", "AT", "BE", "BO", "BR", "BG", "CA", "CL", "CO", "CR", "CY", "CZ", "DK", "DO", "DE", "EC", "EE", "SV", "FI", "FR", "GR", "GT", "HN", "HK", "HU", "IS", "IE", "IT", "LV", "LT", "LU", "MY", "MT", "MX", "NL", "NZ", "NI", "NO", "PA", "PY", "PE", "PH", "PL", "PT", "SG", "SK", "ES", "SE", "CH", "TW", "TR", "UY", "US", "GB", "AD", "LI", "MC", "ID", "JP", "TH", "VN", "RO", "IL", "ZA", "SA", "AE", "BH", "QA", "OM", "KW", "EG", "MA", "DZ", "TN", "LB", "JO", "PS", "IN", "KZ", "MD", "UA", "AL", "BA", "HR", "ME", "MK", "RS", "SI", "KR", "BD", "PK", "LK", "GH", "KE", "NG", "TZ", "UG", "AG", "AM", "BS", "BB", "BZ", "BT", "BW", "BF", "CV", "CW", "DM", "FJ", "GM", "GE", "GD", "GW", "GY", "HT", "JM", "KI", "LS", "LR", "MW", "MV", "ML", "MH", "FM", "NA", "NR", "NE", "PW", "PG", "PR", "WS", "SM", "ST", "SN", "SC", "SL", "SB", "KN", "LC", "VC", "SR", "TL", "TO", "TT", "TV", "VU", "AZ", "BN", "BI", "KH", "CM", "TD", "KM", "GQ", "SZ", "GA", "GN", "KG", "LA", "MO", "MR", "MN", "NP", "RW", "TG", "UZ", "ZW", "BJ", "MG", "MU", "MZ", "AO", "CI", "DJ", "ZM", "CD", "CG", "IQ", "LY", "TJ", "VE", "ET", "XK"], 
-                "external_urls": {"spotify": "https://open.spotify.com/album/7hSjecsWNsaLrypYmc0tN5"}, 
-                "href": "https://api.spotify.com/v1/albums/7hSjecsWNsaLrypYmc0tN5", 
-                "id": "7hSjecsWNsaLrypYmc0tN5", 
-                "images": [{"height": 640, "url": "https://i.scdn.co/image/ab67616d0000b27311dfd172a80723e9b11ec563", "width": 640}, {"height": 300, "url": "https://i.scdn.co/image/ab67616d00001e0211dfd172a80723e9b11ec563", "width": 300}, {"height": 64, "url": "https://i.scdn.co/image/ab67616d0000485111dfd172a80723e9b11ec563", "width": 64}], 
-                "name": "Beverly Hills", 
-                "release_date": "2023-04-21", 
-                "release_date_precision": "day", 
-                "total_tracks": 1, 
-                "type": "album", 
-                "uri": "spotify:album:7hSjecsWNsaLrypYmc0tN5"
-        }, 
-        "artists": [{
-                    "external_urls": {"spotify": "https://open.spotify.com/artist/657xkMQUyPIa9vA7fycV5j"}, 
-                    "href": "https://api.spotify.com/v1/artists/657xkMQUyPIa9vA7fycV5j", 
-                    "id": "657xkMQUyPIa9vA7fycV5j", 
-                    "name": "Amara", 
-                    "type": "artist", 
-                    "uri": "spotify:artist:657xkMQUyPIa9vA7fycV5j"
-                }], 
-                "available_markets": ["AR", "AU", "AT", "BE", "BO", "BR", "BG", "CA", "CL", "CO", "CR", "CY", "CZ", "DK", "DO", "DE", "EC", "EE", "SV", "FI", "FR", "GR", "GT", "HN", "HK", "HU", "IS", "IE", "IT", "LV", "LT", "LU", "MY", "MT", "MX", "NL", "NZ", "NI", "NO", "PA", "PY", "PE", "PH", "PL", "PT", "SG", "SK", "ES", "SE", "CH", "TW", "TR", "UY", "US", "GB", "AD", "LI", "MC", "ID", "JP", "TH", "VN", "RO", "IL", "ZA", "SA", "AE", "BH", "QA", "OM", "KW", "EG", "MA", "DZ", "TN", "LB", "JO", "PS", "IN", "KZ", "MD", "UA", "AL", "BA", "HR", "ME", "MK", "RS", "SI", "KR", "BD", "PK", "LK", "GH", "KE", "NG", "TZ", "UG", "AG", "AM", "BS", "BB", "BZ", "BT", "BW", "BF", "CV", "CW", "DM", "FJ", "GM", "GE", "GD", "GW", "GY", "HT", "JM", "KI", "LS", "LR", "MW", "MV", "ML", "MH", "FM", "NA", "NR", "NE", "PW", "PG", "PR", "WS", "SM", "ST", "SN", "SC", "SL", "SB", "KN", "LC", "VC", "SR", "TL", "TO", "TT", "TV", "VU", "AZ", "BN", "BI", "KH", "CM", "TD", "KM", "GQ", "SZ", "GA", "GN", "KG", "LA", "MO", "MR", "MN", "NP", "RW", "TG", "UZ", "ZW", "BJ", "MG", "MU", "MZ", "AO", "CI", "DJ", "ZM", "CD", "CG", "IQ", "LY", "TJ", "VE", "ET", "XK"], 
-                "disc_number": 1, 
-                "duration_ms": 188785, 
-                "explicit": false, 
-                "external_ids": {"isrc": "NONB72101280"}, 
-                "external_urls": {"spotify": "https://open.spotify.com/track/5ZfR2ZsJrBJpLIMsN7zMIn"}, 
-                "href": "https://api.spotify.com/v1/tracks/5ZfR2ZsJrBJpLIMsN7zMIn", 
-                "id": "5ZfR2ZsJrBJpLIMsN7zMIn", 
-                "is_local": false, 
-                "name": "Beverly Hills", 
-                "popularity": 37, 
-                "preview_url": "https://p.scdn.co/mp3-preview/394d605f99c13e611cd288d3e02cd7a16541ac20?cid=13793570c33c4c2885ee1735e4749ac3", 
-                "track_number": 1, 
-                "type": "track", 
-                "uri": "spotify:track:5ZfR2ZsJrBJpLIMsN7zMIn"
-    }, 
-
-    {"album": 
-        {
-            "album_type": "ALBUM", 
-            "artists": [{
-                    "external_urls": {"spotify": "https://open.spotify.com/artist/0Y5tJX1MQlPlqiwlOH1tJY"}, 
-                    "href": "https://api.spotify.com/v1/artists/0Y5tJX1MQlPlqiwlOH1tJY", 
-                    "id": "0Y5tJX1MQlPlqiwlOH1tJY", 
-                    "name": "Travis Scott", 
-                    "type": "artist", 
-                    "uri": "spotify:artist:0Y5tJX1MQlPlqiwlOH1tJY"
-                }], 
-                "available_markets": ["AR", "AU", "AT", "BE", "BO", "BR", "BG", "CA", "CL", "CO", "CR", "CY", "CZ", "DK", "DO", "DE", "EC", "EE", "SV", "FI", "FR", "GR", "GT", "HN", "HK", "HU", "IS", "IE", "IT", "LV", "LT", "LU", "MY", "MT", "MX", "NL", "NZ", "NI", "NO", "PA", "PY", "PE", "PH", "PL", "PT", "SG", "SK", "ES", "SE", "CH", "TW", "TR", "UY", "US", "GB", "AD", "LI", "MC", "ID", "JP", "TH", "VN", "RO", "IL", "ZA", "SA", "AE", "BH", "QA", "OM", "KW", "EG", "MA", "DZ", "TN", "LB", "JO", "PS", "IN", "BY", "KZ", "MD", "UA", "AL", "BA", "HR", "ME", "MK", "RS", "SI", "KR", "BD", "PK", "LK", "GH", "KE", "NG", "TZ", "UG", "AG", "AM", "BS", "BB", "BZ", "BT", "BW", "BF", "CV", "CW", "DM", "FJ", "GM", "GE", "GD", "GW", "GY", "HT", "JM", "KI", "LS", "LR", "MW", "MV", "ML", "MH", "FM", "NA", "NR", "NE", "PW", "PG", "PR", "WS", "SM", "ST", "SN", "SC", "SL", "SB", "KN", "LC", "VC", "SR", "TL", "TO", "TT", "TV", "VU", "AZ", "BN", "BI", "KH", "CM", "TD", "KM", "GQ", "SZ", "GA", "GN", "KG", "LA", "MO", "MR", "MN", "NP", "RW", "TG", "UZ", "ZW", "BJ", "MG", "MU", "MZ", "AO", "CI", "DJ", "ZM", "CD", "CG", "IQ", "LY", "TJ", "VE", "ET", "XK"], 
-                "external_urls": {"spotify": "https://open.spotify.com/album/18NOKLkZETa4sWwLMIm0UZ"}, 
-                "href": "https://api.spotify.com/v1/albums/18NOKLkZETa4sWwLMIm0UZ", 
-                "id": "18NOKLkZETa4sWwLMIm0UZ", 
-                "images": [{"height": 640, "url": "https://i.scdn.co/image/ab67616d0000b273881d8d8378cd01099babcd44", "width": 640}, {"height": 300, "url": "https://i.scdn.co/image/ab67616d00001e02881d8d8378cd01099babcd44", "width": 300}, {"height": 64, "url": "https://i.scdn.co/image/ab67616d00004851881d8d8378cd01099babcd44", "width": 64}], 
-                "name": "UTOPIA", 
-                "release_date": "2023-07-28", 
-                "release_date_precision": "day", 
-                "total_tracks": 19, 
-                "type": "album", 
-                "uri": "spotify:album:18NOKLkZETa4sWwLMIm0UZ"
-        }, 
-        "artists": [{
-                    "external_urls": {"spotify": "https://open.spotify.com/artist/0Y5tJX1MQlPlqiwlOH1tJY"}, 
-                    "href": "https://api.spotify.com/v1/artists/0Y5tJX1MQlPlqiwlOH1tJY", 
-                    "id": "0Y5tJX1MQlPlqiwlOH1tJY", 
-                    "name": "Travis Scott", 
-                    "type": "artist", 
-                    "uri": "spotify:artist:0Y5tJX1MQlPlqiwlOH1tJY"
-                }], 
-                "available_markets": ["AR", "AU", "AT", "BE", "BO", "BR", "BG", "CA", "CL", "CO", "CR", "CY", "CZ", "DK", "DO", "DE", "EC", "EE", "SV", "FI", "FR", "GR", "GT", "HN", "HK", "HU", "IS", "IE", "IT", "LV", "LT", "LU", "MY", "MT", "MX", "NL", "NZ", "NI", "NO", "PA", "PY", "PE", "PH", "PL", "PT", "SG", "SK", "ES", "SE", "CH", "TW", "TR", "UY", "US", "GB", "AD", "LI", "MC", "ID", "JP", "TH", "VN", "RO", "IL", "ZA", "SA", "AE", "BH", "QA", "OM", "KW", "EG", "MA", "DZ", "TN", "LB", "JO", "PS", "IN", "BY", "KZ", "MD", "UA", "AL", "BA", "HR", "ME", "MK", "RS", "SI", "KR", "BD", "PK", "LK", "GH", "KE", "NG", "TZ", "UG", "AG", "AM", "BS", "BB", "BZ", "BT", "BW", "BF", "CV", "CW", "DM", "FJ", "GM", "GE", "GD", "GW", "GY", "HT", "JM", "KI", "LS", "LR", "MW", "MV", "ML", "MH", "FM", "NA", "NR", "NE", "PW", "PG", "PR", "WS", "SM", "ST", "SN", "SC", "SL", "SB", "KN", "LC", "VC", "SR", "TL", "TO", "TT", "TV", "VU", "AZ", "BN", "BI", "KH", "CM", "TD", "KM", "GQ", "SZ", "GA", "GN", "KG", "LA", "MO", "MR", "MN", "NP", "RW", "TG", "UZ", "ZW", "BJ", "MG", "MU", "MZ", "AO", "CI", "DJ", "ZM", "CD", "CG", "IQ", "LY", "TJ", "VE", "ET", "XK"], 
-                "disc_number": 1, 
-                "duration_ms": 251249, 
-                "explicit": true, 
-                "external_ids": {"isrc": "USSM12305007"}, 
-                "external_urls": {"spotify": "https://open.spotify.com/track/4kjI1gwQZRKNDkw1nI475M"}, 
-                "href": "https://api.spotify.com/v1/tracks/4kjI1gwQZRKNDkw1nI475M", 
-                "id": "4kjI1gwQZRKNDkw1nI475M", 
-                "is_local": false, 
-                "name": "MY EYES", 
-                "popularity": 88, 
-                "preview_url": "https://p.scdn.co/mp3-preview/b52f66d1d36c1253c12a96b673fca7f69f62b4ab?cid=13793570c33c4c2885ee1735e4749ac3", 
-                "track_number": 4, 
-                "type": "track", 
-                "uri": "spotify:track:4kjI1gwQZRKNDkw1nI475M"
-    }, 
-    
-    {"album": 
-        {
-            "album_type": "ALBUM", 
-            "artists": [{
-                        "external_urls": {"spotify": "https://open.spotify.com/artist/5B7GVolIHZ24VRNrf5LL6i"}, 
-                        "href": "https://api.spotify.com/v1/artists/5B7GVolIHZ24VRNrf5LL6i", 
-                        "id": "5B7GVolIHZ24VRNrf5LL6i", 
-                        "name": "Ozzi", 
-                        "type": "artist", 
-                        "uri": "spotify:artist:5B7GVolIHZ24VRNrf5LL6i"
-                    }], 
-                    "available_markets": ["AR", "AU", "AT", "BE", "BO", "BR", "BG", "CA", "CL", "CO", "CR", "CY", "CZ", "DK", "DO", "DE", "EC", "EE", "SV", "FI", "FR", "GR", "GT", "HN", "HK", "HU", "IS", "IE", "IT", "LV", "LT", "LU", "MY", "MT", "MX", "NL", "NZ", "NI", "NO", "PA", "PY", "PE", "PH", "PL", "PT", "SG", "SK", "ES", "SE", "CH", "TW", "TR", "UY", "US", "GB", "AD", "LI", "MC", "ID", "JP", "TH", "VN", "RO", "IL", "ZA", "SA", "AE", "BH", "QA", "OM", "KW", "EG", "MA", "DZ", "TN", "LB", "JO", "PS", "IN", "BY", "KZ", "MD", "UA", "AL", "BA", "HR", "ME", "MK", "RS", "SI", "KR", "BD", "PK", "LK", "GH", "KE", "NG", "TZ", "UG", "AG", "AM", "BS", "BB", "BZ", "BT", "BW", "BF", "CV", "CW", "DM", "FJ", "GM", "GE", "GD", "GW", "GY", "HT", "JM", "KI", "LS", "LR", "MW", "MV", "ML", "MH", "FM", "NA", "NR", "NE", "PW", "PG", "PR", "WS", "SM", "ST", "SN", "SC", "SL", "SB", "KN", "LC", "VC", "SR", "TL", "TO", "TT", "TV", "VU", "AZ", "BN", "BI", "KH", "CM", "TD", "KM", "GQ", "SZ", "GA", "GN", "KG", "LA", "MO", "MR", "MN", "NP", "RW", "TG", "UZ", "ZW", "BJ", "MG", "MU", "MZ", "AO", "CI", "DJ", "ZM", "CD", "CG", "IQ", "LY", "TJ", "VE", "ET", "XK"], 
-                    "external_urls": {"spotify": "https://open.spotify.com/album/3kZwrwGb5w4vxpJbs9YZfG"}, 
-                    "href": "https://api.spotify.com/v1/albums/3kZwrwGb5w4vxpJbs9YZfG", 
-                    "id": "3kZwrwGb5w4vxpJbs9YZfG", 
-                    "images": [{"height": 640, "url": "https://i.scdn.co/image/ab67616d0000b273a93c559a206e70510e876730", "width": 640}, {"height": 300, "url": "https://i.scdn.co/image/ab67616d00001e02a93c559a206e70510e876730", "width": 300}, {"height": 64, "url": "https://i.scdn.co/image/ab67616d00004851a93c559a206e70510e876730", "width": 64}], 
-                    "name": "GEEKSTAR", 
-                    "release_date": "2022-08-26", 
-                    "release_date_precision": "day", 
-                    "total_tracks": 13, 
-                    "type": "album", 
-                    "uri": "spotify:album:3kZwrwGb5w4vxpJbs9YZfG"
-        }, 
-        "artists": [{
-                    "external_urls": {"spotify": "https://open.spotify.com/artist/5B7GVolIHZ24VRNrf5LL6i"}, 
-                    "href": "https://api.spotify.com/v1/artists/5B7GVolIHZ24VRNrf5LL6i", 
-                    "id": "5B7GVolIHZ24VRNrf5LL6i", 
-                    "name": "Ozzi", 
-                    "type": "artist", 
-                    "uri": "spotify:artist:5B7GVolIHZ24VRNrf5LL6i"
-                }, 
+    {"artists": [
+          {
+            "name": "Eagles"
+          }
+        ],
+        "album": {
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b2734637341b9f507521afa9a778",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e024637341b9f507521afa9a778",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d000048514637341b9f507521afa9a778",
+              "width": 64
+            }
+          ]
+        },
+        "name": "Hotel California"
+    },
+    {
+      
+            "artists": [
+              {
+                "name": "The Rolling Stones"
+              }
+            ],
+            "album": {
+              "images": [
                 {
-                    "external_urls": {"spotify": "https://open.spotify.com/artist/0cgVbTKlv3aI7Rg4kvVFn7"}, 
-                    "href": "https://api.spotify.com/v1/artists/0cgVbTKlv3aI7Rg4kvVFn7", 
-                    "id": "0cgVbTKlv3aI7Rg4kvVFn7", 
-                    "name": "Mariinomadeit!", 
-                    "type": "artist", 
-                    "uri": "spotify:artist:0cgVbTKlv3aI7Rg4kvVFn7"
-                }], 
-                "available_markets": ["AR", "AU", "AT", "BE", "BO", "BR", "BG", "CA", "CL", "CO", "CR", "CY", "CZ", "DK", "DO", "DE", "EC", "EE", "SV", "FI", "FR", "GR", "GT", "HN", "HK", "HU", "IS", "IE", "IT", "LV", "LT", "LU", "MY", "MT", "MX", "NL", "NZ", "NI", "NO", "PA", "PY", "PE", "PH", "PL", "PT", "SG", "SK", "ES", "SE", "CH", "TW", "TR", "UY", "US", "GB", "AD", "LI", "MC", "ID", "JP", "TH", "VN", "RO", "IL", "ZA", "SA", "AE", "BH", "QA", "OM", "KW", "EG", "MA", "DZ", "TN", "LB", "JO", "PS", "IN", "BY", "KZ", "MD", "UA", "AL", "BA", "HR", "ME", "MK", "RS", "SI", "KR", "BD", "PK", "LK", "GH", "KE", "NG", "TZ", "UG", "AG", "AM", "BS", "BB", "BZ", "BT", "BW", "BF", "CV", "CW", "DM", "FJ", "GM", "GE", "GD", "GW", "GY", "HT", "JM", "KI", "LS", "LR", "MW", "MV", "ML", "MH", "FM", "NA", "NR", "NE", "PW", "PG", "PR", "WS", "SM", "ST", "SN", "SC", "SL", "SB", "KN", "LC", "VC", "SR", "TL", "TO", "TT", "TV", "VU", "AZ", "BN", "BI", "KH", "CM", "TD", "KM", "GQ", "SZ", "GA", "GN", "KG", "LA", "MO", "MR", "MN", "NP", "RW", "TG", "UZ", "ZW", "BJ", "MG", "MU", "MZ", "AO", "CI", "DJ", "ZM", "CD", "CG", "IQ", "LY", "TJ", "VE", "ET", "XK"], 
-                "disc_number": 1, 
-                "duration_ms": 106666, 
-                "explicit": true, 
-                "external_ids": {"isrc": "NOUKB2201040"}, 
-                "external_urls": {"spotify": "https://open.spotify.com/track/6fmyWPJDiZsuGr3XHMp3fO"}, 
-                "href": "https://api.spotify.com/v1/tracks/6fmyWPJDiZsuGr3XHMp3fO", 
-                "id": "6fmyWPJDiZsuGr3XHMp3fO", 
-                "is_local": false, 
-                "name": "FANTA (feat. Mariinomadeit!)", 
-                "popularity": 5, 
-                "preview_url": "https://p.scdn.co/mp3-preview/858bdec17e3fb1ba59379c87c06167aca681a9f3?cid=13793570c33c4c2885ee1735e4749ac3", 
-                "track_number": 4, 
-                "type": "track", 
-                "uri": "spotify:track:6fmyWPJDiZsuGr3XHMp3fO"
-        },
-        {
-          "album": {
-            "album_type": "album",
+                  "height": 640,
+                  "url": "https://i.scdn.co/image/ab67616d0000b273bad7062c3fd2f2d037989694",
+                  "width": 640
+                },
+                {
+                  "height": 300,
+                  "url": "https://i.scdn.co/image/ab67616d00001e02bad7062c3fd2f2d037989694",
+                  "width": 300
+                },
+                {
+                  "height": 64,
+                  "url": "https://i.scdn.co/image/ab67616d00004851bad7062c3fd2f2d037989694",
+                  "width": 64
+                }
+              ]
+            },
+            "name": "Paint It, Black"
+          }
+        ,{
             "artists": [
               {
-                "external_urls": {
-                  "spotify": "https://open.spotify.com/artist/5ktSHm2pKmqua1MTV1dkrg"
+                "name": "Creedence Clearwater Revival"
+              }
+            ],
+            "album": {
+              "images": [
+                {
+                  "height": 640,
+                  "url": "https://i.scdn.co/image/ab67616d0000b2739f39192f9f8ca1c90847b3e5",
+                  "width": 640
                 },
-                "href": "https://api.spotify.com/v1/artists/5ktSHm2pKmqua1MTV1dkrg",
-                "id": "5ktSHm2pKmqua1MTV1dkrg",
-                "name": "Dutty Dior",
-                "type": "artist",
-                "uri": "spotify:artist:5ktSHm2pKmqua1MTV1dkrg"
-              }
-            ],
-            
-            "external_urls": {
-              "spotify": "https://open.spotify.com/album/78pLqJwUxMeqtkwwItADPX"
+                {
+                  "height": 300,
+                  "url": "https://i.scdn.co/image/ab67616d00001e029f39192f9f8ca1c90847b3e5",
+                  "width": 300
+                },
+                {
+                  "height": 64,
+                  "url": "https://i.scdn.co/image/ab67616d000048519f39192f9f8ca1c90847b3e5",
+                  "width": 64
+                }
+              ]
             },
-            "href": "https://api.spotify.com/v1/albums/78pLqJwUxMeqtkwwItADPX",
-            "id": "78pLqJwUxMeqtkwwItADPX",
-            "images": [
-              {
-                "url": "https://i.scdn.co/image/ab67616d0000b2735a12c433bb7f71e608ea4093",
-                "width": 640,
-                "height": 640
-              },
-              {
-                "url": "https://i.scdn.co/image/ab67616d00001e025a12c433bb7f71e608ea4093",
-                "width": 300,
-                "height": 300
-              },
-              {
-                "url": "https://i.scdn.co/image/ab67616d000048515a12c433bb7f71e608ea4093",
-                "width": 64,
-                "height": 64
-              }
-            ],
-            "name": "det er mindre ensomt alene",
-            "release_date": "2023-09-12",
-            "release_date_precision": "day",
-            "total_tracks": 11,
-            "type": "album",
-            "uri": "spotify:album:78pLqJwUxMeqtkwwItADPX"
-          },
-          "artists": [
-            {
-              "external_urls": {
-                "spotify": "https://open.spotify.com/artist/5ktSHm2pKmqua1MTV1dkrg"
-              },
-              "href": "https://api.spotify.com/v1/artists/5ktSHm2pKmqua1MTV1dkrg",
-              "id": "5ktSHm2pKmqua1MTV1dkrg",
-              "name": "Dutty Dior",
-              "type": "artist",
-              "uri": "spotify:artist:5ktSHm2pKmqua1MTV1dkrg"
-            },
-            {
-              "external_urls": {
-                "spotify": "https://open.spotify.com/artist/1Xfv0o1xU7jH7M9QYod7rj"
-              },
-              "href": "https://api.spotify.com/v1/artists/1Xfv0o1xU7jH7M9QYod7rj",
-              "id": "1Xfv0o1xU7jH7M9QYod7rj",
-              "name": "Chirag",
-              "type": "artist",
-              "uri": "spotify:artist:1Xfv0o1xU7jH7M9QYod7rj"
-            }
-          ],
-          "disc_number": 1,
-          "duration_ms": 198270,
-          "explicit": false,
-          "external_ids": {
-            "isrc": "NOA7Y4100420"
-          },
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/1TlykKAjLgM94KrSb0pSqS"
-          },
-          "href": "https://api.spotify.com/v1/tracks/1TlykKAjLgM94KrSb0pSqS",
-          "id": "1TlykKAjLgM94KrSb0pSqS",
-          "is_local": false,
-          "name": "farger",
-          "popularity": 53,
-          "preview_url": "https://p.scdn.co/mp3-preview/1c4023702cef033182cee2c7faae34f2ad9be58e?cid=cfe923b2d660439caf2b557b21f31221",
-          "track_number": 2,
-          "type": "track",
-          "uri": "spotify:track:1TlykKAjLgM94KrSb0pSqS"
-        },
-        {
-          "album": {
-            "album_type": "album",
+            "name": "Fortunate Son"
+          }
+        ,{
             "artists": [
               {
-                "external_urls": {
-                  "spotify": "https://open.spotify.com/artist/3fMbdgg4jU18AjLCKBhRSm"
+                "name": "Guns N' Roses"
+              }
+            ],
+            "album": {
+              "images": [
+                {
+                  "height": 640,
+                  "url": "https://i.scdn.co/image/ab67616d0000b27321ebf49b3292c3f0f575f0f5",
+                  "width": 640
                 },
-                "href": "https://api.spotify.com/v1/artists/3fMbdgg4jU18AjLCKBhRSm",
-                "id": "3fMbdgg4jU18AjLCKBhRSm",
-                "name": "Michael Jackson",
-                "type": "artist",
-                "uri": "spotify:artist:3fMbdgg4jU18AjLCKBhRSm"
-              }
-            ],
-            "external_urls": {
-              "spotify": "https://open.spotify.com/album/2ANVost0y2y52ema1E9xAZ"
+                {
+                  "height": 300,
+                  "url": "https://i.scdn.co/image/ab67616d00001e0221ebf49b3292c3f0f575f0f5",
+                  "width": 300
+                },
+                {
+                  "height": 64,
+                  "url": "https://i.scdn.co/image/ab67616d0000485121ebf49b3292c3f0f575f0f5",
+                  "width": 64
+                }
+              ]
             },
-            "href": "https://api.spotify.com/v1/albums/2ANVost0y2y52ema1E9xAZ",
-            "id": "2ANVost0y2y52ema1E9xAZ",
-            "images": [
-              {
-                "url": "https://i.scdn.co/image/ab67616d0000b273de437d960dda1ac0a3586d97",
-                "width": 640,
-                "height": 640
-              },
-              {
-                "url": "https://i.scdn.co/image/ab67616d00001e02de437d960dda1ac0a3586d97",
-                "width": 300,
-                "height": 300
-              },
-              {
-                "url": "https://i.scdn.co/image/ab67616d00004851de437d960dda1ac0a3586d97",
-                "width": 64,
-                "height": 64
-              }
-            ],
-            "name": "Thriller",
-            "release_date": "1982-11-30",
-            "release_date_precision": "day",
-            "total_tracks": 9,
-            "type": "album",
-            "uri": "spotify:album:2ANVost0y2y52ema1E9xAZ"
-          },
-          "artists": [
-            {
-              "external_urls": {
-                "spotify": "https://open.spotify.com/artist/3fMbdgg4jU18AjLCKBhRSm"
-              },
-              "href": "https://api.spotify.com/v1/artists/3fMbdgg4jU18AjLCKBhRSm",
-              "id": "3fMbdgg4jU18AjLCKBhRSm",
-              "name": "Michael Jackson",
-              "type": "artist",
-              "uri": "spotify:artist:3fMbdgg4jU18AjLCKBhRSm"
-            }
-          ],
-          
-          "disc_number": 1,
-          "duration_ms": 294226,
-          "explicit": false,
-          "external_ids": {
-            "isrc": "USSM19902991"
-          },
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/7J1uxwnxfQLu4APicE5Rnj"
-          },
-          "href": "https://api.spotify.com/v1/tracks/7J1uxwnxfQLu4APicE5Rnj",
-          "id": "7J1uxwnxfQLu4APicE5Rnj",
-          "is_local": false,
-          "name": "Billie Jean",
-          "popularity": 82,
-          "preview_url": "https://p.scdn.co/mp3-preview/77cd91bbc7db184389223ea31ed9cd9b21ccd8df?cid=cfe923b2d660439caf2b557b21f31221",
-          "track_number": 6,
-          "type": "track",
-          "uri": "spotify:track:7J1uxwnxfQLu4APicE5Rnj"
-        },
-        {
-          "album": {
-            "album_type": "album",
+            "name": "Sweet Child O' Mine"
+          }
+        ,{
             "artists": [
               {
-                "external_urls": {
-                  "spotify": "https://open.spotify.com/artist/3fMbdgg4jU18AjLCKBhRSm"
+                "name": "Metallica"
+              }
+            ],
+            "album": {
+              "images": [
+                {
+                  "height": 640,
+                  "url": "https://i.scdn.co/image/ab67616d0000b273cf84c5b276431b473e924802",
+                  "width": 640
                 },
-                "href": "https://api.spotify.com/v1/artists/3fMbdgg4jU18AjLCKBhRSm",
-                "id": "3fMbdgg4jU18AjLCKBhRSm",
-                "name": "Michael Jackson",
-                "type": "artist",
-                "uri": "spotify:artist:3fMbdgg4jU18AjLCKBhRSm"
-              }
-            ],
-            
-            "external_urls": {
-              "spotify": "https://open.spotify.com/album/2ANVost0y2y52ema1E9xAZ"
+                {
+                  "height": 300,
+                  "url": "https://i.scdn.co/image/ab67616d00001e02cf84c5b276431b473e924802",
+                  "width": 300
+                },
+                {
+                  "height": 64,
+                  "url": "https://i.scdn.co/image/ab67616d00004851cf84c5b276431b473e924802",
+                  "width": 64
+                }
+              ]
             },
-            "href": "https://api.spotify.com/v1/albums/2ANVost0y2y52ema1E9xAZ",
-            "id": "2ANVost0y2y52ema1E9xAZ",
-            "images": [
-              {
-                "url": "https://i.scdn.co/image/ab67616d0000b273de437d960dda1ac0a3586d97",
-                "width": 640,
-                "height": 640
-              },
-              {
-                "url": "https://i.scdn.co/image/ab67616d00001e02de437d960dda1ac0a3586d97",
-                "width": 300,
-                "height": 300
-              },
-              {
-                "url": "https://i.scdn.co/image/ab67616d00004851de437d960dda1ac0a3586d97",
-                "width": 64,
-                "height": 64
-              }
-            ],
-            "name": "Thriller",
-            "release_date": "1982-11-30",
-            "release_date_precision": "day",
-            "total_tracks": 9,
-            "type": "album",
-            "uri": "spotify:album:2ANVost0y2y52ema1E9xAZ"
-          },
-          "artists": [
-            {
-              "external_urls": {
-                "spotify": "https://open.spotify.com/artist/3fMbdgg4jU18AjLCKBhRSm"
-              },
-              "href": "https://api.spotify.com/v1/artists/3fMbdgg4jU18AjLCKBhRSm",
-              "id": "3fMbdgg4jU18AjLCKBhRSm",
-              "name": "Michael Jackson",
-              "type": "artist",
-              "uri": "spotify:artist:3fMbdgg4jU18AjLCKBhRSm"
-            }
-          ],
-          
-          "disc_number": 1,
-          "duration_ms": 258399,
-          "explicit": false,
-          "external_ids": {
-            "isrc": "USSM19902990"
-          },
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/3BovdzfaX4jb5KFQwoPfAw"
-          },
-          "href": "https://api.spotify.com/v1/tracks/3BovdzfaX4jb5KFQwoPfAw",
-          "id": "3BovdzfaX4jb5KFQwoPfAw",
-          "is_local": false,
-          "name": "Beat It",
-          "popularity": 80,
-          "preview_url": "https://p.scdn.co/mp3-preview/3b0b3eb44b3149bb49ae06dd64869e20e8c13380?cid=cfe923b2d660439caf2b557b21f31221",
-          "track_number": 5,
-          "type": "track",
-          "uri": "spotify:track:3BovdzfaX4jb5KFQwoPfAw"
-        },
-        {
-          "album": {
-            "album_type": "album",
+            "name": "Enter Sandman"
+          }
+        ,{
             "artists": [
               {
-                "external_urls": {
-                  "spotify": "https://open.spotify.com/artist/5K4W6rqBFWDnAN6FQUkS6x"
+                "name": "The White Stripes"
+              }
+            ],
+            "album": {
+              "images": [
+                {
+                  "height": 640,
+                  "url": "https://i.scdn.co/image/ab67616d0000b273a69f71a8794e2d867a52f98f",
+                  "width": 640
                 },
-                "href": "https://api.spotify.com/v1/artists/5K4W6rqBFWDnAN6FQUkS6x",
-                "id": "5K4W6rqBFWDnAN6FQUkS6x",
-                "name": "Kanye West",
-                "type": "artist",
-                "uri": "spotify:artist:5K4W6rqBFWDnAN6FQUkS6x"
-              }
-            ],
-            
-            "external_urls": {
-              "spotify": "https://open.spotify.com/album/4SZko61aMnmgvNhfhgTuD3"
+                {
+                  "height": 300,
+                  "url": "https://i.scdn.co/image/ab67616d00001e02a69f71a8794e2d867a52f98f",
+                  "width": 300
+                },
+                {
+                  "height": 64,
+                  "url": "https://i.scdn.co/image/ab67616d00004851a69f71a8794e2d867a52f98f",
+                  "width": 64
+                }
+              ]
             },
-            "href": "https://api.spotify.com/v1/albums/4SZko61aMnmgvNhfhgTuD3",
-            "id": "4SZko61aMnmgvNhfhgTuD3",
-            "images": [
-              {
-                "url": "https://i.scdn.co/image/ab67616d0000b27326f7f19c7f0381e56156c94a",
-                "width": 640,
-                "height": 640
-              },
-              {
-                "url": "https://i.scdn.co/image/ab67616d00001e0226f7f19c7f0381e56156c94a",
-                "width": 300,
-                "height": 300
-              },
-              {
-                "url": "https://i.scdn.co/image/ab67616d0000485126f7f19c7f0381e56156c94a",
-                "width": 64,
-                "height": 64
-              }
-            ],
-            "name": "Graduation",
-            "release_date": "2007-09-11",
-            "release_date_precision": "day",
-            "total_tracks": 14,
-            "type": "album",
-            "uri": "spotify:album:4SZko61aMnmgvNhfhgTuD3"
-          },
-          "artists": [
-            {
-              "external_urls": {
-                "spotify": "https://open.spotify.com/artist/5K4W6rqBFWDnAN6FQUkS6x"
-              },
-              "href": "https://api.spotify.com/v1/artists/5K4W6rqBFWDnAN6FQUkS6x",
-              "id": "5K4W6rqBFWDnAN6FQUkS6x",
-              "name": "Kanye West",
-              "type": "artist",
-              "uri": "spotify:artist:5K4W6rqBFWDnAN6FQUkS6x"
-            }
-          ],
-          
-          "disc_number": 1,
-          "duration_ms": 195093,
-          "explicit": true,
-          "external_ids": {
-            "isrc": "USUM70749081"
-          },
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/6MXXY2eiWkpDCezVCc0cMH"
-          },
-          "href": "https://api.spotify.com/v1/tracks/6MXXY2eiWkpDCezVCc0cMH",
-          "id": "6MXXY2eiWkpDCezVCc0cMH",
-          "is_local": false,
-          "name": "Good Morning",
-          "popularity": 74,
-          "preview_url": "https://p.scdn.co/mp3-preview/db99c81aacfb47b85a37bbc131556a53c2547a63?cid=cfe923b2d660439caf2b557b21f31221",
-          "track_number": 1,
-          "type": "track",
-          "uri": "spotify:track:6MXXY2eiWkpDCezVCc0cMH"
-        },
-        {
-          "album": {
-            "album_type": "album",
+            "name": "Seven Nation Army"
+          }
+        ,{
             "artists": [
               {
-                "external_urls": {
-                  "spotify": "https://open.spotify.com/artist/1LyYIhqdjG9R9VdIRSftBb"
+                "name": "Nirvana"
+              }
+            ],
+            "album": {
+              "images": [
+                {
+                  "height": 640,
+                  "url": "https://i.scdn.co/image/ab67616d0000b273fbc71c99f9c1296c56dd51b6",
+                  "width": 640
                 },
-                "href": "https://api.spotify.com/v1/artists/1LyYIhqdjG9R9VdIRSftBb",
-                "id": "1LyYIhqdjG9R9VdIRSftBb",
-                "name": "UNDERGRUNN",
-                "type": "artist",
-                "uri": "spotify:artist:1LyYIhqdjG9R9VdIRSftBb"
-              }
-            ],
-            
-            "external_urls": {
-              "spotify": "https://open.spotify.com/album/7pNnH6DtwnTYEQOrrGAzlO"
+                {
+                  "height": 300,
+                  "url": "https://i.scdn.co/image/ab67616d00001e02fbc71c99f9c1296c56dd51b6",
+                  "width": 300
+                },
+                {
+                  "height": 64,
+                  "url": "https://i.scdn.co/image/ab67616d00004851fbc71c99f9c1296c56dd51b6",
+                  "width": 64
+                }
+              ]
             },
-            "href": "https://api.spotify.com/v1/albums/7pNnH6DtwnTYEQOrrGAzlO",
-            "id": "7pNnH6DtwnTYEQOrrGAzlO",
-            "images": [
+            "name": "Smells Like Teen Spirit"
+          }
+        ,{
+            "artists": [
               {
-                "url": "https://i.scdn.co/image/ab67616d0000b273ec6cd8e750adb2b0f5006c56",
-                "width": 640,
-                "height": 640
-              },
-              {
-                "url": "https://i.scdn.co/image/ab67616d00001e02ec6cd8e750adb2b0f5006c56",
-                "width": 300,
-                "height": 300
-              },
-              {
-                "url": "https://i.scdn.co/image/ab67616d00004851ec6cd8e750adb2b0f5006c56",
-                "width": 64,
-                "height": 64
+                "name": "AC/DC"
               }
             ],
-            "name": "Egoland",
-            "release_date": "2023-04-13",
-            "release_date_precision": "day",
-            "total_tracks": 10,
-            "type": "album",
-            "uri": "spotify:album:7pNnH6DtwnTYEQOrrGAzlO"
-          },
-          "artists": [
-            {
-              "external_urls": {
-                "spotify": "https://open.spotify.com/artist/1LyYIhqdjG9R9VdIRSftBb"
+            "album": {
+              "images": [
+                {
+                  "height": 640,
+                  "url": "https://i.scdn.co/image/ab67616d0000b2738399047ff71200928f5b6508",
+                  "width": 640
+                },
+                {
+                  "height": 300,
+                  "url": "https://i.scdn.co/image/ab67616d00001e028399047ff71200928f5b6508",
+                  "width": 300
+                },
+                {
+                  "height": 64,
+                  "url": "https://i.scdn.co/image/ab67616d000048518399047ff71200928f5b6508",
+                  "width": 64
+                }
+              ]
+            },
+            "name": "Thunderstruck"
+          }
+        ,{
+            "artists": [
+              {
+                "name": "Aerosmith"
+              }
+            ],
+            "album": {
+              "images": [
+                {
+                  "height": 640,
+                  "url": "https://i.scdn.co/image/ab67616d0000b273bbf0146981704a073405b6c2",
+                  "width": 640
+                },
+                {
+                  "height": 300,
+                  "url": "https://i.scdn.co/image/ab67616d00001e02bbf0146981704a073405b6c2",
+                  "width": 300
+                },
+                {
+                  "height": 64,
+                  "url": "https://i.scdn.co/image/ab67616d00004851bbf0146981704a073405b6c2",
+                  "width": 64
+                }
+              ]
+            },
+            "name": "Dream On"
+          }
+        ,{
+            "artists": [
+              {
+                "name": "ZZ Top"
+              }
+            ],
+            "album": {
+              "images": [
+                {
+                  "height": 640,
+                  "url": "https://i.scdn.co/image/ab67616d0000b273db9c5945ce3a3f873695d18a",
+                  "width": 640
+                },
+                {
+                  "height": 300,
+                  "url": "https://i.scdn.co/image/ab67616d00001e02db9c5945ce3a3f873695d18a",
+                  "width": 300
+                },
+                {
+                  "height": 64,
+                  "url": "https://i.scdn.co/image/ab67616d00004851db9c5945ce3a3f873695d18a",
+                  "width": 64
+                }
+              ]
+            },
+            "name": "La Grange (2005 Remaster)"
+          }
+        ,{
+            "artists": [
+              {
+                "name": "Tory Lanez"
+              }
+            ],
+            "album": {
+              "images": [
+                {
+                  "height": 640,
+                  "url": "https://i.scdn.co/image/ab67616d0000b2730c5f23cbf0b1ab7e37d0dc67",
+                  "width": 640
+                },
+                {
+                  "height": 300,
+                  "url": "https://i.scdn.co/image/ab67616d00001e020c5f23cbf0b1ab7e37d0dc67",
+                  "width": 300
+                },
+                {
+                  "height": 64,
+                  "url": "https://i.scdn.co/image/ab67616d000048510c5f23cbf0b1ab7e37d0dc67",
+                  "width": 64
+                }
+              ]
+            },
+            "name": "The Color Violet"
+          }
+        ,{
+            "artists": [
+              {
+                "name": "Frank Ocean"
+              }
+            ],
+            "album": {
+              "images": [
+                {
+                  "height": 640,
+                  "url": "https://i.scdn.co/image/ab67616d0000b273c5649add07ed3720be9d5526",
+                  "width": 640
+                },
+                {
+                  "height": 300,
+                  "url": "https://i.scdn.co/image/ab67616d00001e02c5649add07ed3720be9d5526",
+                  "width": 300
+                },
+                {
+                  "height": 64,
+                  "url": "https://i.scdn.co/image/ab67616d00004851c5649add07ed3720be9d5526",
+                  "width": 64
+                }
+              ]
+            },
+            "name": "Godspeed"
+          }
+        ,{
+            "artists": [
+              {
+                "name": "PARTYNEXTDOOR"
+              }
+            ],
+            "album": {
+              "images": [
+                {
+                  "height": 640,
+                  "url": "https://i.scdn.co/image/ab67616d0000b273090b1f9557a6d23c0817bd88",
+                  "width": 640
+                },
+                {
+                  "height": 300,
+                  "url": "https://i.scdn.co/image/ab67616d00001e02090b1f9557a6d23c0817bd88",
+                  "width": 300
+                },
+                {
+                  "height": 64,
+                  "url": "https://i.scdn.co/image/ab67616d00004851090b1f9557a6d23c0817bd88",
+                  "width": 64
+                }
+              ]
+            },
+            "name": "Break from Toronto"
+          }
+        ,{
+            "artists": [
+              {
+                "name": "Drake"
               },
-              "href": "https://api.spotify.com/v1/artists/1LyYIhqdjG9R9VdIRSftBb",
-              "id": "1LyYIhqdjG9R9VdIRSftBb",
-              "name": "UNDERGRUNN",
-              "type": "artist",
-              "uri": "spotify:artist:1LyYIhqdjG9R9VdIRSftBb"
-            }
-          ],
-          
-          "disc_number": 1,
-          "duration_ms": 184346,
-          "explicit": true,
-          "external_ids": {
-            "isrc": "NO2DY2300227"
+              {
+                "name": "Michael Jackson"
+              }
+            ],
+            "album": {
+              "images": [
+                {
+                  "height": 640,
+                  "url": "https://i.scdn.co/image/ab67616d0000b273f907de96b9a4fbc04accc0d5",
+                  "width": 640
+                },
+                {
+                  "height": 300,
+                  "url": "https://i.scdn.co/image/ab67616d00001e02f907de96b9a4fbc04accc0d5",
+                  "width": 300
+                },
+                {
+                  "height": 64,
+                  "url": "https://i.scdn.co/image/ab67616d00004851f907de96b9a4fbc04accc0d5",
+                  "width": 64
+                }
+              ]
+            },
+            "name": "Don’t Matter To Me (with Michael Jackson)"
+          }
+        ,{
+            "artists": [
+              {
+                "name": "Brent Faiyaz"
+              }
+            ],
+            "album": {
+              "images": [
+                {
+                  "height": 640,
+                  "url": "https://i.scdn.co/image/ab67616d0000b2736a463f436bbf07f3c9e8c62a",
+                  "width": 640
+                },
+                {
+                  "height": 300,
+                  "url": "https://i.scdn.co/image/ab67616d00001e026a463f436bbf07f3c9e8c62a",
+                  "width": 300
+                },
+                {
+                  "height": 64,
+                  "url": "https://i.scdn.co/image/ab67616d000048516a463f436bbf07f3c9e8c62a",
+                  "width": 64
+                }
+              ]
+            },
+            "name": "Been Away"
+          }
+        ,{
+            "artists": [
+              {
+                "name": "A$AP Rocky"
+              }
+            ],
+            "album": {
+              "images": [
+                {
+                  "height": 640,
+                  "url": "https://i.scdn.co/image/ab67616d0000b27381a6a2cafab2e7a4066b5eec",
+                  "width": 640
+                },
+                {
+                  "height": 300,
+                  "url": "https://i.scdn.co/image/ab67616d00001e0281a6a2cafab2e7a4066b5eec",
+                  "width": 300
+                },
+                {
+                  "height": 64,
+                  "url": "https://i.scdn.co/image/ab67616d0000485181a6a2cafab2e7a4066b5eec",
+                  "width": 64
+                }
+              ]
+            },
+            "name": "L$D"
+          }
+        ,{
+            "artists": [
+              {
+                "name": "Tory Lanez"
+              }
+            ],
+            "album": {
+              "images": [
+                {
+                  "height": 640,
+                  "url": "https://i.scdn.co/image/ab67616d0000b2730c5f23cbf0b1ab7e37d0dc67",
+                  "width": 640
+                },
+                {
+                  "height": 300,
+                  "url": "https://i.scdn.co/image/ab67616d00001e020c5f23cbf0b1ab7e37d0dc67",
+                  "width": 300
+                },
+                {
+                  "height": 64,
+                  "url": "https://i.scdn.co/image/ab67616d000048510c5f23cbf0b1ab7e37d0dc67",
+                  "width": 64
+                }
+              ]
+            },
+            "name": "Lady Of Namek"
+          }
+        ,{
+            "artists": [
+              {
+                "name": "Frank Ocean"
+              }
+            ],
+            "album": {
+              "images": [
+                {
+                  "height": 640,
+                  "url": "https://i.scdn.co/image/ab67616d0000b273c5649add07ed3720be9d5526",
+                  "width": 640
+                },
+                {
+                  "height": 300,
+                  "url": "https://i.scdn.co/image/ab67616d00001e02c5649add07ed3720be9d5526",
+                  "width": 300
+                },
+                {
+                  "height": 64,
+                  "url": "https://i.scdn.co/image/ab67616d00004851c5649add07ed3720be9d5526",
+                  "width": 64
+                }
+              ]
+            },
+            "name": "White Ferrari"
+          }
+        ,{
+            "artists": [
+              {
+                "name": "SZA"
+              }
+            ],
+            "album": {
+              "images": [
+                {
+                  "height": 640,
+                  "url": "https://i.scdn.co/image/ab67616d0000b2734c79d5ec52a6d0302f3add25",
+                  "width": 640
+                },
+                {
+                  "height": 300,
+                  "url": "https://i.scdn.co/image/ab67616d00001e024c79d5ec52a6d0302f3add25",
+                  "width": 300
+                },
+                {
+                  "height": 64,
+                  "url": "https://i.scdn.co/image/ab67616d000048514c79d5ec52a6d0302f3add25",
+                  "width": 64
+                }
+              ]
+            },
+            "name": "Normal Girl"
+          }
+        ,{
+            "artists": [
+              {
+                "name": "Post Malone"
+              }
+            ],
+            "album": {
+              "images": [
+                {
+                  "height": 640,
+                  "url": "https://i.scdn.co/image/ab67616d0000b27355404f712deb84d0650a4b41",
+                  "width": 640
+                },
+                {
+                  "height": 300,
+                  "url": "https://i.scdn.co/image/ab67616d00001e0255404f712deb84d0650a4b41",
+                  "width": 300
+                },
+                {
+                  "height": 64,
+                  "url": "https://i.scdn.co/image/ab67616d0000485155404f712deb84d0650a4b41",
+                  "width": 64
+                }
+              ]
+            },
+            "name": "Go Flex"
+          }
+        ,{
+            "artists": [
+              {
+                "name": "William Bell"
+              }
+            ],
+            "album": {
+              "images": [
+                {
+                  "height": 640,
+                  "url": "https://i.scdn.co/image/ab67616d0000b27358ce6454e1dcb0ee2cf87de0",
+                  "width": 640
+                },
+                {
+                  "height": 300,
+                  "url": "https://i.scdn.co/image/ab67616d00001e0258ce6454e1dcb0ee2cf87de0",
+                  "width": 300
+                },
+                {
+                  "height": 64,
+                  "url": "https://i.scdn.co/image/ab67616d0000485158ce6454e1dcb0ee2cf87de0",
+                  "width": 64
+                }
+              ]
+            },
+            "name": "I Forgot To Be Your Lover"
+          }
+        ,{
+            "artists": [
+              {
+                "name": "Bill Withers"
+              }
+            ],
+            "album": {
+              "images": [
+                {
+                  "height": 640,
+                  "url": "https://i.scdn.co/image/ab67616d0000b273e1e350d06ffebd2e19e047ce",
+                  "width": 640
+                },
+                {
+                  "height": 300,
+                  "url": "https://i.scdn.co/image/ab67616d00001e02e1e350d06ffebd2e19e047ce",
+                  "width": 300
+                },
+                {
+                  "height": 64,
+                  "url": "https://i.scdn.co/image/ab67616d00004851e1e350d06ffebd2e19e047ce",
+                  "width": 64
+                }
+              ]
+            },
+            "name": "Ain't No Sunshine"
+          }
+        ,{
+            "artists": [
+              {
+                "name": "James Brown"
+              }
+            ],
+            "album": {
+              "images": [
+                {
+                  "height": 640,
+                  "url": "https://i.scdn.co/image/ab67616d0000b2735699b266b27a6da5ac81b6de",
+                  "width": 640
+                },
+                {
+                  "height": 300,
+                  "url": "https://i.scdn.co/image/ab67616d00001e025699b266b27a6da5ac81b6de",
+                  "width": 300
+                },
+                {
+                  "height": 64,
+                  "url": "https://i.scdn.co/image/ab67616d000048515699b266b27a6da5ac81b6de",
+                  "width": 64
+                }
+              ]
+            },
+            "name": "It's A Man's, Man's, Man's World"
+          }
+        ,{
+            "artists": [
+              {
+                "name": "Marvin Gaye"
+              },
+              {
+                "name": "Tammi Terrell"
+              }
+            ],
+            "album": {
+              "images": [
+                {
+                  "height": 640,
+                  "url": "https://i.scdn.co/image/ab67616d0000b2739173e50e99bdea2400222f02",
+                  "width": 640
+                },
+                {
+                  "height": 300,
+                  "url": "https://i.scdn.co/image/ab67616d00001e029173e50e99bdea2400222f02",
+                  "width": 300
+                },
+                {
+                  "height": 64,
+                  "url": "https://i.scdn.co/image/ab67616d000048519173e50e99bdea2400222f02",
+                  "width": 64
+                }
+              ]
+            },
+            "name": "Ain't No Mountain High Enough"
+          }
+        ,{
+            "artists": [
+              {
+                "name": "Frank Sinatra"
+              },
+              {
+                "name": "Nancy Sinatra"
+              }
+            ],
+            "album": {
+              "images": [
+                {
+                  "height": 640,
+                  "url": "https://i.scdn.co/image/ab67616d0000b2733e2331ff09f59ea3c87fe5d6",
+                  "width": 640
+                },
+                {
+                  "height": 300,
+                  "url": "https://i.scdn.co/image/ab67616d00001e023e2331ff09f59ea3c87fe5d6",
+                  "width": 300
+                },
+                {
+                  "height": 64,
+                  "url": "https://i.scdn.co/image/ab67616d000048513e2331ff09f59ea3c87fe5d6",
+                  "width": 64
+                }
+              ]
+            },
+            "name": "Somethin' Stupid"
+          }
+        ,{
+            "artists": [
+              {
+                "name": "Earth, Wind & Fire"
+              }
+            ],
+            "album": {
+              "images": [
+                {
+                  "height": 640,
+                  "url": "https://i.scdn.co/image/ab67616d0000b2730faf2fc17446651865ce2282",
+                  "width": 640
+                },
+                {
+                  "height": 300,
+                  "url": "https://i.scdn.co/image/ab67616d00001e020faf2fc17446651865ce2282",
+                  "width": 300
+                },
+                {
+                  "height": 64,
+                  "url": "https://i.scdn.co/image/ab67616d000048510faf2fc17446651865ce2282",
+                  "width": 64
+                }
+              ]
+            },
+            "name": "September"
+          }
+        ,{
+            "artists": [
+              {
+                "name": "Rick James"
+              }
+            ],
+            "album": {
+              "images": [
+                {
+                  "height": 640,
+                  "url": "https://i.scdn.co/image/ab67616d0000b27317f9e7e7784ed40b223e261c",
+                  "width": 640
+                },
+                {
+                  "height": 300,
+                  "url": "https://i.scdn.co/image/ab67616d00001e0217f9e7e7784ed40b223e261c",
+                  "width": 300
+                },
+                {
+                  "height": 64,
+                  "url": "https://i.scdn.co/image/ab67616d0000485117f9e7e7784ed40b223e261c",
+                  "width": 64
+                }
+              ]
+            },
+            "name": "Super Freak"
+          }
+        ,{
+            "artists": [
+              {
+                "name": "Bill Withers"
+              }
+            ],
+            "album": {
+              "images": [
+                {
+                  "height": 640,
+                  "url": "https://i.scdn.co/image/ab67616d0000b27398e08f603553915a041b6937",
+                  "width": 640
+                },
+                {
+                  "height": 300,
+                  "url": "https://i.scdn.co/image/ab67616d00001e0298e08f603553915a041b6937",
+                  "width": 300
+                },
+                {
+                  "height": 64,
+                  "url": "https://i.scdn.co/image/ab67616d0000485198e08f603553915a041b6937",
+                  "width": 64
+                }
+              ]
+            },
+            "name": "Lean on Me"
+          }
+        ,{
+            "artists": [
+              {
+                "name": "Nina Simone"
+              }
+            ],
+            "album": {
+              "images": [
+                {
+                  "height": 640,
+                  "url": "https://i.scdn.co/image/ab67616d0000b273a3e94aa06432d0fa06e54f76",
+                  "width": 640
+                },
+                {
+                  "height": 300,
+                  "url": "https://i.scdn.co/image/ab67616d00001e02a3e94aa06432d0fa06e54f76",
+                  "width": 300
+                },
+                {
+                  "height": 64,
+                  "url": "https://i.scdn.co/image/ab67616d00004851a3e94aa06432d0fa06e54f76",
+                  "width": 64
+                }
+              ]
+            },
+            "name": "Baltimore"
+          }
+        ,{
+            "artists": [
+              {
+                "name": "Bill Withers"
+              }
+            ],
+            "album": {
+              "images": [
+                {
+                  "height": 640,
+                  "url": "https://i.scdn.co/image/ab67616d0000b273e1e350d06ffebd2e19e047ce",
+                  "width": 640
+                },
+                {
+                  "height": 300,
+                  "url": "https://i.scdn.co/image/ab67616d00001e02e1e350d06ffebd2e19e047ce",
+                  "width": 300
+                },
+                {
+                  "height": 64,
+                  "url": "https://i.scdn.co/image/ab67616d00004851e1e350d06ffebd2e19e047ce",
+                  "width": 64
+                }
+              ]
+            },
+            "name": "Grandma's Hands"
           },
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/4KjHgPOIsA8LlMwyAJRlfv"
-          },
-          "href": "https://api.spotify.com/v1/tracks/4KjHgPOIsA8LlMwyAJRlfv",
-          "id": "4KjHgPOIsA8LlMwyAJRlfv",
-          "is_local": false,
-          "name": "Michelin Stjerner",
-          "popularity": 58,
-          "preview_url": "https://p.scdn.co/mp3-preview/0dd1ae8ca4ac847f626f04d96b9fd07cc6484139?cid=cfe923b2d660439caf2b557b21f31221",
-          "track_number": 3,
-          "type": "track",
-          "uri": "spotify:track:4KjHgPOIsA8LlMwyAJRlfv"
-        }
-        
-         
-]
+          {
+            "artists": [
+                    {
+                      "name": "Mobb Deep"
+                    }
+                  ],
+                  "album": {
+                    "images": [
+                      {
+                        "height": 640,
+                        "url": "https://i.scdn.co/image/ab67616d0000b273a2203fa0656cede30f879b97",
+                        "width": 640
+                      },
+                      {
+                        "height": 300,
+                        "url": "https://i.scdn.co/image/ab67616d00001e02a2203fa0656cede30f879b97",
+                        "width": 300
+                      },
+                      {
+                        "height": 64,
+                        "url": "https://i.scdn.co/image/ab67616d00004851a2203fa0656cede30f879b97",
+                        "width": 64
+                      }
+                    ]
+                  },
+                  "name": "Shook Ones, Pt. II"
+                }
+              ,{
+                  "artists": [
+                    {
+                      "name": "Ice Cube"
+                    }
+                  ],
+                  "album": {
+                    "images": [
+                      {
+                        "height": 640,
+                        "url": "https://i.scdn.co/image/ab67616d0000b27368820c2a3865d138ab7daba3",
+                        "width": 640
+                      },
+                      {
+                        "height": 300,
+                        "url": "https://i.scdn.co/image/ab67616d00001e0268820c2a3865d138ab7daba3",
+                        "width": 300
+                      },
+                      {
+                        "height": 64,
+                        "url": "https://i.scdn.co/image/ab67616d0000485168820c2a3865d138ab7daba3",
+                        "width": 64
+                      }
+                    ]
+                  },
+                  "name": "You Know How We Do It"
+                }
+              ,{
+                  "artists": [
+                    {
+                      "name": "2Pac"
+                    }
+                  ],
+                  "album": {
+                    "images": [
+                      {
+                        "height": 640,
+                        "url": "https://i.scdn.co/image/ab67616d0000b2737f6f6c9e4b492a3d7e910d82",
+                        "width": 640
+                      },
+                      {
+                        "height": 300,
+                        "url": "https://i.scdn.co/image/ab67616d00001e027f6f6c9e4b492a3d7e910d82",
+                        "width": 300
+                      },
+                      {
+                        "height": 64,
+                        "url": "https://i.scdn.co/image/ab67616d000048517f6f6c9e4b492a3d7e910d82",
+                        "width": 64
+                      }
+                    ]
+                  },
+                  "name": "Keep Ya Head Up"
+                }
+              ,{
+                  "artists": [
+                    {
+                      "name": "The Notorious B.I.G."
+                    }
+                  ],
+                  "album": {
+                    "images": [
+                      {
+                        "height": 640,
+                        "url": "https://i.scdn.co/image/ab67616d0000b2734ad6e5838f15401ff7d62856",
+                        "width": 640
+                      },
+                      {
+                        "height": 300,
+                        "url": "https://i.scdn.co/image/ab67616d00001e024ad6e5838f15401ff7d62856",
+                        "width": 300
+                      },
+                      {
+                        "height": 64,
+                        "url": "https://i.scdn.co/image/ab67616d000048514ad6e5838f15401ff7d62856",
+                        "width": 64
+                      }
+                    ]
+                  },
+                  "name": "Big Poppa - 2005 Remaster"
+                }
+              ,{
+                  "artists": [
+                    {
+                      "name": "Fugees"
+                    },
+                    {
+                      "name": "Ms. Lauryn Hill"
+                    },
+                    {
+                      "name": "Wyclef Jean"
+                    },
+                    {
+                      "name": "Pras"
+                    }
+                  ],
+                  "album": {
+                    "images": [
+                      {
+                        "height": 640,
+                        "url": "https://i.scdn.co/image/ab67616d0000b2735b7865be7f7fcc05faec6137",
+                        "width": 640
+                      },
+                      {
+                        "height": 300,
+                        "url": "https://i.scdn.co/image/ab67616d00001e025b7865be7f7fcc05faec6137",
+                        "width": 300
+                      },
+                      {
+                        "height": 64,
+                        "url": "https://i.scdn.co/image/ab67616d000048515b7865be7f7fcc05faec6137",
+                        "width": 64
+                      }
+                    ]
+                  },
+                  "name": "Ready or Not"
+                }
+              ,{
+                  "artists": [
+                    {
+                      "name": "Nas"
+                    }
+                  ],
+                  "album": {
+                    "images": [
+                      {
+                        "height": 640,
+                        "url": "https://i.scdn.co/image/ab67616d0000b273045fc920ecf4f8094888ec26",
+                        "width": 640
+                      },
+                      {
+                        "height": 300,
+                        "url": "https://i.scdn.co/image/ab67616d00001e02045fc920ecf4f8094888ec26",
+                        "width": 300
+                      },
+                      {
+                        "height": 64,
+                        "url": "https://i.scdn.co/image/ab67616d00004851045fc920ecf4f8094888ec26",
+                        "width": 64
+                      }
+                    ]
+                  },
+                  "name": "N.Y. State of Mind"
+                }
+              ,{
+                  "artists": [
+                    {
+                      "name": "Mobb Deep"
+                    }
+                  ],
+                  "album": {
+                    "images": [
+                      {
+                        "height": 640,
+                        "url": "https://i.scdn.co/image/ab67616d0000b273a2203fa0656cede30f879b97",
+                        "width": 640
+                      },
+                      {
+                        "height": 300,
+                        "url": "https://i.scdn.co/image/ab67616d00001e02a2203fa0656cede30f879b97",
+                        "width": 300
+                      },
+                      {
+                        "height": 64,
+                        "url": "https://i.scdn.co/image/ab67616d00004851a2203fa0656cede30f879b97",
+                        "width": 64
+                      }
+                    ]
+                  },
+                  "name": "Survival of the Fittest"
+                }
+              ,{
+                  "artists": [
+                    {
+                      "name": "Gang Starr"
+                    }
+                  ],
+                  "album": {
+                    "images": [
+                      {
+                        "height": 640,
+                        "url": "https://i.scdn.co/image/ab67616d0000b2733a76edacefe2e7a589222787",
+                        "width": 640
+                      },
+                      {
+                        "height": 300,
+                        "url": "https://i.scdn.co/image/ab67616d00001e023a76edacefe2e7a589222787",
+                        "width": 300
+                      },
+                      {
+                        "height": 64,
+                        "url": "https://i.scdn.co/image/ab67616d000048513a76edacefe2e7a589222787",
+                        "width": 64
+                      }
+                    ]
+                  },
+                  "name": "Work"
+                }
+              ,{
+                  "artists": [
+                    {
+                      "name": "Will Smith"
+                    }
+                  ],
+                  "album": {
+                    "images": [
+                      {
+                        "height": 640,
+                        "url": "https://i.scdn.co/image/ab67616d0000b273b6f3ee6d2e2d45c0c34ff300",
+                        "width": 640
+                      },
+                      {
+                        "height": 300,
+                        "url": "https://i.scdn.co/image/ab67616d00001e02b6f3ee6d2e2d45c0c34ff300",
+                        "width": 300
+                      },
+                      {
+                        "height": 64,
+                        "url": "https://i.scdn.co/image/ab67616d00004851b6f3ee6d2e2d45c0c34ff300",
+                        "width": 64
+                      }
+                    ]
+                  },
+                  "name": "Miami"
+                }
+              ,{
+                  "artists": [
+                    {
+                      "name": "The Notorious B.I.G."
+                    }
+                  ],
+                  "album": {
+                    "images": [
+                      {
+                        "height": 640,
+                        "url": "https://i.scdn.co/image/ab67616d0000b273fde79b88e2a659c394c5ae30",
+                        "width": 640
+                      },
+                      {
+                        "height": 300,
+                        "url": "https://i.scdn.co/image/ab67616d00001e02fde79b88e2a659c394c5ae30",
+                        "width": 300
+                      },
+                      {
+                        "height": 64,
+                        "url": "https://i.scdn.co/image/ab67616d00004851fde79b88e2a659c394c5ae30",
+                        "width": 64
+                      }
+                    ]
+                  },
+                  "name": "Hypnotize - 2014 Remaster"
+                }
+              ,{
+                  "artists": [
+                    {
+                      "name": "The Weeknd"
+                    },
+                    {
+                      "name": "Daft Punk"
+                    }
+                  ],
+                  "album": {
+                    "images": [
+                      {
+                        "height": 640,
+                        "url": "https://i.scdn.co/image/ab67616d0000b2734718e2b124f79258be7bc452",
+                        "width": 640
+                      },
+                      {
+                        "height": 300,
+                        "url": "https://i.scdn.co/image/ab67616d00001e024718e2b124f79258be7bc452",
+                        "width": 300
+                      },
+                      {
+                        "height": 64,
+                        "url": "https://i.scdn.co/image/ab67616d000048514718e2b124f79258be7bc452",
+                        "width": 64
+                      }
+                    ]
+                  },
+                  "name": "Starboy"
+                }
+              ,{
+                  "artists": [
+                    {
+                      "name": "Drake"
+                    },
+                    {
+                      "name": "Wizkid"
+                    },
+                    {
+                      "name": "Kyla"
+                    }
+                  ],
+                  "album": {
+                    "images": [
+                      {
+                        "height": 640,
+                        "url": "https://i.scdn.co/image/ab67616d0000b2739416ed64daf84936d89e671c",
+                        "width": 640
+                      },
+                      {
+                        "height": 300,
+                        "url": "https://i.scdn.co/image/ab67616d00001e029416ed64daf84936d89e671c",
+                        "width": 300
+                      },
+                      {
+                        "height": 64,
+                        "url": "https://i.scdn.co/image/ab67616d000048519416ed64daf84936d89e671c",
+                        "width": 64
+                      }
+                    ]
+                  },
+                  "name": "One Dance"
+                }
+              ,{
+                  "artists": [
+                    {
+                      "name": "Justin Bieber"
+                    }
+                  ],
+                  "album": {
+                    "images": [
+                      {
+                        "height": 640,
+                        "url": "https://i.scdn.co/image/ab67616d0000b273f46b9d202509a8f7384b90de",
+                        "width": 640
+                      },
+                      {
+                        "height": 300,
+                        "url": "https://i.scdn.co/image/ab67616d00001e02f46b9d202509a8f7384b90de",
+                        "width": 300
+                      },
+                      {
+                        "height": 64,
+                        "url": "https://i.scdn.co/image/ab67616d00004851f46b9d202509a8f7384b90de",
+                        "width": 64
+                      }
+                    ]
+                  },
+                  "name": "Love Yourself"
+                }
+              ,{
+                  "artists": [
+                    {
+                      "name": "The Chainsmokers"
+                    },
+                    {
+                      "name": "Halsey"
+                    }
+                  ],
+                  "album": {
+                    "images": [
+                      {
+                        "height": 640,
+                        "url": "https://i.scdn.co/image/ab67616d0000b273495ce6da9aeb159e94eaa453",
+                        "width": 640
+                      },
+                      {
+                        "height": 300,
+                        "url": "https://i.scdn.co/image/ab67616d00001e02495ce6da9aeb159e94eaa453",
+                        "width": 300
+                      },
+                      {
+                        "height": 64,
+                        "url": "https://i.scdn.co/image/ab67616d00004851495ce6da9aeb159e94eaa453",
+                        "width": 64
+                      }
+                    ]
+                  },
+                  "name": "Closer"
+                }
+              ,{
+                  "artists": [
+                    {
+                      "name": "Adele"
+                    }
+                  ],
+                  "album": {
+                    "images": [
+                      {
+                        "height": 640,
+                        "url": "https://i.scdn.co/image/ab67616d0000b2737b9888dc365b8f957c63df14",
+                        "width": 640
+                      },
+                      {
+                        "height": 300,
+                        "url": "https://i.scdn.co/image/ab67616d00001e027b9888dc365b8f957c63df14",
+                        "width": 300
+                      },
+                      {
+                        "height": 64,
+                        "url": "https://i.scdn.co/image/ab67616d000048517b9888dc365b8f957c63df14",
+                        "width": 64
+                      }
+                    ]
+                  },
+                  "name": "Hello"
+                }
+              ,{
+                  "artists": [
+                    {
+                      "name": "Desiigner"
+                    }
+                  ],
+                  "album": {
+                    "images": [
+                      {
+                        "height": 640,
+                        "url": "https://i.scdn.co/image/ab67616d0000b273c598ea6ec584cafb062cafdf",
+                        "width": 640
+                      },
+                      {
+                        "height": 300,
+                        "url": "https://i.scdn.co/image/ab67616d00001e02c598ea6ec584cafb062cafdf",
+                        "width": 300
+                      },
+                      {
+                        "height": 64,
+                        "url": "https://i.scdn.co/image/ab67616d00004851c598ea6ec584cafb062cafdf",
+                        "width": 64
+                      }
+                    ]
+                  },
+                  "name": "Panda"
+                }
+              ,{
+                  "artists": [
+                    {
+                      "name": "Frank Ocean"
+                    }
+                  ],
+                  "album": {
+                    "images": [
+                      {
+                        "height": 640,
+                        "url": "https://i.scdn.co/image/ab67616d0000b273c5649add07ed3720be9d5526",
+                        "width": 640
+                      },
+                      {
+                        "height": 300,
+                        "url": "https://i.scdn.co/image/ab67616d00001e02c5649add07ed3720be9d5526",
+                        "width": 300
+                      },
+                      {
+                        "height": 64,
+                        "url": "https://i.scdn.co/image/ab67616d00004851c5649add07ed3720be9d5526",
+                        "width": 64
+                      }
+                    ]
+                  },
+                  "name": "Pink + White"
+                }
+              ,{
+                  "artists": [
+                    {
+                      "name": "Sia"
+                    },
+                    {
+                      "name": "Sean Paul"
+                    }
+                  ],
+                  "album": {
+                    "images": [
+                      {
+                        "height": 640,
+                        "url": "https://i.scdn.co/image/ab67616d0000b2739f5a5f3d50cd3939ba8e465c",
+                        "width": 640
+                      },
+                      {
+                        "height": 300,
+                        "url": "https://i.scdn.co/image/ab67616d00001e029f5a5f3d50cd3939ba8e465c",
+                        "width": 300
+                      },
+                      {
+                        "height": 64,
+                        "url": "https://i.scdn.co/image/ab67616d000048519f5a5f3d50cd3939ba8e465c",
+                        "width": 64
+                      }
+                    ]
+                  },
+                  "name": "Cheap Thrills (feat. Sean Paul)"
+                }
+              ,{
+                  "artists": [
+                    {
+                      "name": "Future"
+                    },
+                    {
+                      "name": "The Weeknd"
+                    }
+                  ],
+                  "album": {
+                    "images": [
+                      {
+                        "height": 640,
+                        "url": "https://i.scdn.co/image/ab67616d0000b273626745b3aa04899001a924ad",
+                        "width": 640
+                      },
+                      {
+                        "height": 300,
+                        "url": "https://i.scdn.co/image/ab67616d00001e02626745b3aa04899001a924ad",
+                        "width": 300
+                      },
+                      {
+                        "height": 64,
+                        "url": "https://i.scdn.co/image/ab67616d00004851626745b3aa04899001a924ad",
+                        "width": 64
+                      }
+                    ]
+                  },
+                  "name": "Low Life (feat. The Weeknd)"
+                }
+              ,{
+                  "artists": [
+                    {
+                      "name": "Rihanna"
+                    },
+                    {
+                      "name": "Drake"
+                    }
+                  ],
+                  "album": {
+                    "images": [
+                      {
+                        "height": 640,
+                        "url": "https://i.scdn.co/image/ab67616d0000b27333c6b920eabcf4c00d7a1093",
+                        "width": 640
+                      },
+                      {
+                        "height": 300,
+                        "url": "https://i.scdn.co/image/ab67616d00001e0233c6b920eabcf4c00d7a1093",
+                        "width": 300
+                      },
+                      {
+                        "height": 64,
+                        "url": "https://i.scdn.co/image/ab67616d0000485133c6b920eabcf4c00d7a1093",
+                        "width": 64
+                      }
+                    ]
+                  },
+                  "name": "Work"
+                }
+              ,{
+                  "artists": [
+                    {
+                      "name": "Jonas Blue"
+                    },
+                    {
+                      "name": "Dakota"
+                    }
+                  ],
+                  "album": {
+                    "images": [
+                      {
+                        "height": 640,
+                        "url": "https://i.scdn.co/image/ab67616d0000b2735cf78b9932b45387375528eb",
+                        "width": 640
+                      },
+                      {
+                        "height": 300,
+                        "url": "https://i.scdn.co/image/ab67616d00001e025cf78b9932b45387375528eb",
+                        "width": 300
+                      },
+                      {
+                        "height": 64,
+                        "url": "https://i.scdn.co/image/ab67616d000048515cf78b9932b45387375528eb",
+                        "width": 64
+                      }
+                    ]
+                  },
+                  "name": "Fast Car"
+                }
+              ,{
+                  "artists": [
+                    {
+                      "name": "The Chainsmokers"
+                    },
+                    {
+                      "name": "Daya"
+                    }
+                  ],
+                  "album": {
+                    "images": [
+                      {
+                        "height": 640,
+                        "url": "https://i.scdn.co/image/ab67616d0000b27302df2d642b572cf4f284a5c3",
+                        "width": 640
+                      },
+                      {
+                        "height": 300,
+                        "url": "https://i.scdn.co/image/ab67616d00001e0202df2d642b572cf4f284a5c3",
+                        "width": 300
+                      },
+                      {
+                        "height": 64,
+                        "url": "https://i.scdn.co/image/ab67616d0000485102df2d642b572cf4f284a5c3",
+                        "width": 64
+                      }
+                    ]
+                  },
+                  "name": "Don't Let Me Down"
+                }
+              ,{
+                  "artists": [
+                    {
+                      "name": "Macklemore & Ryan Lewis"
+                    },
+                    {
+                      "name": "Macklemore"
+                    },
+                    {
+                      "name": "Ryan Lewis"
+                    },
+                    {
+                      "name": "Wanz"
+                    }
+                  ],
+                  "album": {
+                    "images": [
+                      {
+                        "height": 640,
+                        "url": "https://i.scdn.co/image/ab67616d0000b27398a02fef3a8b1d80a0f164ec",
+                        "width": 640
+                      },
+                      {
+                        "height": 300,
+                        "url": "https://i.scdn.co/image/ab67616d00001e0298a02fef3a8b1d80a0f164ec",
+                        "width": 300
+                      },
+                      {
+                        "height": 64,
+                        "url": "https://i.scdn.co/image/ab67616d0000485198a02fef3a8b1d80a0f164ec",
+                        "width": 64
+                      }
+                    ]
+                  },
+                  "name": "Thrift Shop (feat. Wanz)"
+                }
+              , {
+                  "artists": [
+                    {
+                      "name": "CLMD"
+                    },
+                    {
+                      "name": "Astrid S"
+                    }
+                  ],
+                  "album": {
+                    "images": [
+                      {
+                        "height": 640,
+                        "url": "https://i.scdn.co/image/ab67616d0000b273e4fcb08d710fb7aca1180601",
+                        "width": 640
+                      },
+                      {
+                        "height": 300,
+                        "url": "https://i.scdn.co/image/ab67616d00001e02e4fcb08d710fb7aca1180601",
+                        "width": 300
+                      },
+                      {
+                        "height": 64,
+                        "url": "https://i.scdn.co/image/ab67616d00004851e4fcb08d710fb7aca1180601",
+                        "width": 64
+                      }
+                    ]
+                  },
+                  "name": "Dust - feat. Astrid S"
+                }
+              , {
+                  "artists": [
+                    {
+                      "name": "Suite 16"
+                    }
+                  ],
+                  "album": {
+                    "images": [
+                      {
+                        "height": 640,
+                        "url": "https://i.scdn.co/image/ab67616d0000b273dcca4fbd14cab2f735c3606b",
+                        "width": 640
+                      },
+                      {
+                        "height": 300,
+                        "url": "https://i.scdn.co/image/ab67616d00001e02dcca4fbd14cab2f735c3606b",
+                        "width": 300
+                      },
+                      {
+                        "height": 64,
+                        "url": "https://i.scdn.co/image/ab67616d00004851dcca4fbd14cab2f735c3606b",
+                        "width": 64
+                      }
+                    ]
+                  },
+                  "name": "Who I Wanna Be - Rykkinnfella Remix"
+                }
+              ,{
+                  "artists": [
+                    {
+                      "name": "Sonny Alven"
+                    },
+                    {
+                      "name": "Emmi"
+                    }
+                  ],
+                  "album": {
+                    "images": [
+                      {
+                        "height": 640,
+                        "url": "https://i.scdn.co/image/ab67616d0000b27311d201c025dca0d532debdd8",
+                        "width": 640
+                      },
+                      {
+                        "height": 300,
+                        "url": "https://i.scdn.co/image/ab67616d00001e0211d201c025dca0d532debdd8",
+                        "width": 300
+                      },
+                      {
+                        "height": 64,
+                        "url": "https://i.scdn.co/image/ab67616d0000485111d201c025dca0d532debdd8",
+                        "width": 64
+                      }
+                    ]
+                  },
+                  "name": "Our Youth"
+                }
+              ,{
+                  "artists": [
+                    {
+                      "name": "Karpe"
+                    }
+                  ],
+                  "album": {
+                    "images": [
+                      {
+                        "height": 640,
+                        "url": "https://i.scdn.co/image/ab67616d0000b27359b007e77281ef8267f55621",
+                        "width": 640
+                      },
+                      {
+                        "height": 300,
+                        "url": "https://i.scdn.co/image/ab67616d00001e0259b007e77281ef8267f55621",
+                        "width": 300
+                      },
+                      {
+                        "height": 64,
+                        "url": "https://i.scdn.co/image/ab67616d0000485159b007e77281ef8267f55621",
+                        "width": 64
+                      }
+                    ]
+                  },
+                  "name": "Under Overflaten (Som Marit Larsen)"
+                }
+              ,{
+                  "artists": [
+                    {
+                      "name": "Alan Walker"
+                    }
+                  ],
+                  "album": {
+                    "images": [
+                      {
+                        "height": 640,
+                        "url": "https://i.scdn.co/image/ab67616d0000b273c8dc7bd02b88a5a9834bda8e",
+                        "width": 640
+                      },
+                      {
+                        "height": 300,
+                        "url": "https://i.scdn.co/image/ab67616d00001e02c8dc7bd02b88a5a9834bda8e",
+                        "width": 300
+                      },
+                      {
+                        "height": 64,
+                        "url": "https://i.scdn.co/image/ab67616d00004851c8dc7bd02b88a5a9834bda8e",
+                        "width": 64
+                      }
+                    ]
+                  },
+                  "name": "Faded"
+                }
+              ,{
+                  "artists": [
+                    {
+                      "name": "The Police"
+                    }
+                  ],
+                  "album": {
+                    "images": [
+                      {
+                        "height": 640,
+                        "url": "https://i.scdn.co/image/ab67616d0000b273032ecf340e696eeb51b0e7a3",
+                        "width": 640
+                      },
+                      {
+                        "height": 300,
+                        "url": "https://i.scdn.co/image/ab67616d00001e02032ecf340e696eeb51b0e7a3",
+                        "width": 300
+                      },
+                      {
+                        "height": 64,
+                        "url": "https://i.scdn.co/image/ab67616d00004851032ecf340e696eeb51b0e7a3",
+                        "width": 64
+                      }
+                    ]
+                  },
+                  "name": "Every Breath You Take"
+                }
+              ,{
+                  "artists": [
+                    {
+                      "name": "Jason Derulo"
+                    },
+                    {
+                      "name": "Snoop Dogg"
+                    }
+                  ],
+                  "album": {
+                    "images": [
+                      {
+                        "height": 640,
+                        "url": "https://i.scdn.co/image/ab67616d0000b27364d58f6e7672baecc8972806",
+                        "width": 640
+                      },
+                      {
+                        "height": 300,
+                        "url": "https://i.scdn.co/image/ab67616d00001e0264d58f6e7672baecc8972806",
+                        "width": 300
+                      },
+                      {
+                        "height": 64,
+                        "url": "https://i.scdn.co/image/ab67616d0000485164d58f6e7672baecc8972806",
+                        "width": 64
+                      }
+                    ]
+                  },
+                  "name": "Wiggle (feat. Snoop Dogg)"
+                },
+                {
+                        "artists": [
+                          {
+                            "name": "Benson Boone"
+                          }
+                        ],
+                        "album": {
+                          "images": [
+                            {
+                              "height": 640,
+                              "url": "https://i.scdn.co/image/ab67616d0000b273bef221ea02a821e7feeda9cf",
+                              "width": 640
+                            },
+                            {
+                              "height": 300,
+                              "url": "https://i.scdn.co/image/ab67616d00001e02bef221ea02a821e7feeda9cf",
+                              "width": 300
+                            },
+                            {
+                              "height": 64,
+                              "url": "https://i.scdn.co/image/ab67616d00004851bef221ea02a821e7feeda9cf",
+                              "width": 64
+                            }
+                          ]
+                        },
+                        "name": "Beautiful Things"
+                      }
+                    ,{
+                        "artists": [
+                          {
+                            "name": "Hozier"
+                          }
+                        ],
+                        "album": {
+                          "images": [
+                            {
+                              "height": 640,
+                              "url": "https://i.scdn.co/image/ab67616d0000b273a5aab55aa65e5f6bd19564a2",
+                              "width": 640
+                            },
+                            {
+                              "height": 300,
+                              "url": "https://i.scdn.co/image/ab67616d00001e02a5aab55aa65e5f6bd19564a2",
+                              "width": 300
+                            },
+                            {
+                              "height": 64,
+                              "url": "https://i.scdn.co/image/ab67616d00004851a5aab55aa65e5f6bd19564a2",
+                              "width": 64
+                            }
+                          ]
+                        },
+                        "name": "Too Sweet"
+                      }
+                    ,{
+                        "artists": [
+                          {
+                            "name": "Future"
+                          },
+                          {
+                            "name": "Metro Boomin"
+                          },
+                          {
+                            "name": "Kendrick Lamar"
+                          }
+                        ],
+                        "album": {
+                          "images": [
+                            {
+                              "height": 640,
+                              "url": "https://i.scdn.co/image/ab67616d0000b273a46b07c291e6dfdee13b3ee8",
+                              "width": 640
+                            },
+                            {
+                              "height": 300,
+                              "url": "https://i.scdn.co/image/ab67616d00001e02a46b07c291e6dfdee13b3ee8",
+                              "width": 300
+                            },
+                            {
+                              "height": 64,
+                              "url": "https://i.scdn.co/image/ab67616d00004851a46b07c291e6dfdee13b3ee8",
+                              "width": 64
+                            }
+                          ]
+                        },
+                        "name": "Like That"
+                      }
+                    ,{
+                        "artists": [
+                          {
+                            "name": "Teddy Swims"
+                          }
+                        ],
+                        "album": {
+                          "images": [
+                            {
+                              "height": 640,
+                              "url": "https://i.scdn.co/image/ab67616d0000b2731d856e66d33e22746c21a09c",
+                              "width": 640
+                            },
+                            {
+                              "height": 300,
+                              "url": "https://i.scdn.co/image/ab67616d00001e021d856e66d33e22746c21a09c",
+                              "width": 300
+                            },
+                            {
+                              "height": 64,
+                              "url": "https://i.scdn.co/image/ab67616d000048511d856e66d33e22746c21a09c",
+                              "width": 64
+                            }
+                          ]
+                        },
+                        "name": "Lose Control"
+                      }
+                    ,{
+                        "artists": [
+                          {
+                            "name": "Drake"
+                          }
+                        ],
+                        "album": {
+                          "images": [
+                            {
+                              "height": 640,
+                              "url": "https://i.scdn.co/image/ab67616d0000b27384bfd0d363f0179ac7c97fa5",
+                              "width": 640
+                            },
+                            {
+                              "height": 300,
+                              "url": "https://i.scdn.co/image/ab67616d00001e0284bfd0d363f0179ac7c97fa5",
+                              "width": 300
+                            },
+                            {
+                              "height": 64,
+                              "url": "https://i.scdn.co/image/ab67616d0000485184bfd0d363f0179ac7c97fa5",
+                              "width": 64
+                            }
+                          ]
+                        },
+                        "name": "Push Ups"
+                      }
+                    ,{
+                        "artists": [
+                          {
+                            "name": "Taylor Swift"
+                          }
+                        ],
+                        "album": {
+                          "images": [
+                            {
+                              "height": 640,
+                              "url": "https://i.scdn.co/image/ab67616d0000b2738ecc33f195df6aa257c39eaa",
+                              "width": 640
+                            },
+                            {
+                              "height": 300,
+                              "url": "https://i.scdn.co/image/ab67616d00001e028ecc33f195df6aa257c39eaa",
+                              "width": 300
+                            },
+                            {
+                              "height": 64,
+                              "url": "https://i.scdn.co/image/ab67616d000048518ecc33f195df6aa257c39eaa",
+                              "width": 64
+                            }
+                          ]
+                        },
+                        "name": "I Can Fix Him (No Really I Can)"
+                      }
+                    ,{
+                        "artists": [
+                          {
+                            "name": "Shaboozey"
+                          }
+                        ],
+                        "album": {
+                          "images": [
+                            {
+                              "height": 640,
+                              "url": "https://i.scdn.co/image/ab67616d0000b27380d86d636244b72a3a1eede2",
+                              "width": 640
+                            },
+                            {
+                              "height": 300,
+                              "url": "https://i.scdn.co/image/ab67616d00001e0280d86d636244b72a3a1eede2",
+                              "width": 300
+                            },
+                            {
+                              "height": 64,
+                              "url": "https://i.scdn.co/image/ab67616d0000485180d86d636244b72a3a1eede2",
+                              "width": 64
+                            }
+                          ]
+                        },
+                        "name": "A Bar Song (Tipsy)"
+                      }
+                    ,{
+                        "artists": [
+                          {
+                            "name": "Jack Harlow"
+                          }
+                        ],
+                        "album": {
+                          "images": [
+                            {
+                              "height": 640,
+                              "url": "https://i.scdn.co/image/ab67616d0000b273fcf4adae77baba5d0169e8e8",
+                              "width": 640
+                            },
+                            {
+                              "height": 300,
+                              "url": "https://i.scdn.co/image/ab67616d00001e02fcf4adae77baba5d0169e8e8",
+                              "width": 300
+                            },
+                            {
+                              "height": 64,
+                              "url": "https://i.scdn.co/image/ab67616d00004851fcf4adae77baba5d0169e8e8",
+                              "width": 64
+                            }
+                          ]
+                        },
+                        "name": "Lovin On Me"
+                      }
+                    ,{
+                        "artists": [
+                          {
+                            "name": "SZA"
+                          }
+                        ],
+                        "album": {
+                          "images": [
+                            {
+                              "height": 640,
+                              "url": "https://i.scdn.co/image/ab67616d0000b273d70916ee9e40c90380ba5f07",
+                              "width": 640
+                            },
+                            {
+                              "height": 300,
+                              "url": "https://i.scdn.co/image/ab67616d00001e02d70916ee9e40c90380ba5f07",
+                              "width": 300
+                            },
+                            {
+                              "height": 64,
+                              "url": "https://i.scdn.co/image/ab67616d00004851d70916ee9e40c90380ba5f07",
+                              "width": 64
+                            }
+                          ]
+                        },
+                        "name": "Saturn"
+                      }
+                    ,{
+                        "artists": [
+                          {
+                            "name": "Ariana Grande"
+                          }
+                        ],
+                        "album": {
+                          "images": [
+                            {
+                              "height": 640,
+                              "url": "https://i.scdn.co/image/ab67616d0000b273c75a14e746ffe2030e8cd5da",
+                              "width": 640
+                            },
+                            {
+                              "height": 300,
+                              "url": "https://i.scdn.co/image/ab67616d00001e02c75a14e746ffe2030e8cd5da",
+                              "width": 300
+                            },
+                            {
+                              "height": 64,
+                              "url": "https://i.scdn.co/image/ab67616d00004851c75a14e746ffe2030e8cd5da",
+                              "width": 64
+                            }
+                          ]
+                        },
+                        "name": "we can't be friends (wait for your love)"
+                      }
+                    ,{
+                        "artists": [
+                          {
+                            "name": "Noah Kahan"
+                          }
+                        ],
+                        "album": {
+                          "images": [
+                            {
+                              "height": 640,
+                              "url": "https://i.scdn.co/image/ab67616d0000b2736ee35072df1af802cca09918",
+                              "width": 640
+                            },
+                            {
+                              "height": 300,
+                              "url": "https://i.scdn.co/image/ab67616d00001e026ee35072df1af802cca09918",
+                              "width": 300
+                            },
+                            {
+                              "height": 64,
+                              "url": "https://i.scdn.co/image/ab67616d000048516ee35072df1af802cca09918",
+                              "width": 64
+                            }
+                          ]
+                        },
+                        "name": "Stick Season"
+                      }
+                    ,{
+                        "artists": [
+                          {
+                            "name": "Artemas"
+                          }
+                        ],
+                        "album": {
+                          "images": [
+                            {
+                              "height": 640,
+                              "url": "https://i.scdn.co/image/ab67616d0000b273e67611dbbf69a90d0b6cb738",
+                              "width": 640
+                            },
+                            {
+                              "height": 300,
+                              "url": "https://i.scdn.co/image/ab67616d00001e02e67611dbbf69a90d0b6cb738",
+                              "width": 300
+                            },
+                            {
+                              "height": 64,
+                              "url": "https://i.scdn.co/image/ab67616d00004851e67611dbbf69a90d0b6cb738",
+                              "width": 64
+                            }
+                          ]
+                        },
+                        "name": "i like the way you kiss me"
+                      }
+                    ,{
+                        "artists": [
+                          {
+                            "name": "Zach Bryan"
+                          },
+                          {
+                            "name": "Kacey Musgraves"
+                          }
+                        ],
+                        "album": {
+                          "images": [
+                            {
+                              "height": 640,
+                              "url": "https://i.scdn.co/image/ab67616d0000b273e5a25ed08d1e7e0fbb440cef",
+                              "width": 640
+                            },
+                            {
+                              "height": 300,
+                              "url": "https://i.scdn.co/image/ab67616d00001e02e5a25ed08d1e7e0fbb440cef",
+                              "width": 300
+                            },
+                            {
+                              "height": 64,
+                              "url": "https://i.scdn.co/image/ab67616d00004851e5a25ed08d1e7e0fbb440cef",
+                              "width": 64
+                            }
+                          ]
+                        },
+                        "name": "I Remember Everything (feat. Kacey Musgraves)"
+                      }
+                    ,{
+                        "artists": [
+                          {
+                            "name": "Taylor Swift"
+                          }
+                        ],
+                        "album": {
+                          "images": [
+                            {
+                              "height": 640,
+                              "url": "https://i.scdn.co/image/ab67616d0000b273e787cffec20aa2a396a61647",
+                              "width": 640
+                            },
+                            {
+                              "height": 300,
+                              "url": "https://i.scdn.co/image/ab67616d00001e02e787cffec20aa2a396a61647",
+                              "width": 300
+                            },
+                            {
+                              "height": 64,
+                              "url": "https://i.scdn.co/image/ab67616d00004851e787cffec20aa2a396a61647",
+                              "width": 64
+                            }
+                          ]
+                        },
+                        "name": "Cruel Summer"
+                      }
+                    ,{
+                        "artists": [
+                          {
+                            "name": "Doja Cat"
+                          }
+                        ],
+                        "album": {
+                          "images": [
+                            {
+                              "height": 640,
+                              "url": "https://i.scdn.co/image/ab67616d0000b27394203dd82d27b494c777d07c",
+                              "width": 640
+                            },
+                            {
+                              "height": 300,
+                              "url": "https://i.scdn.co/image/ab67616d00001e0294203dd82d27b494c777d07c",
+                              "width": 300
+                            },
+                            {
+                              "height": 64,
+                              "url": "https://i.scdn.co/image/ab67616d0000485194203dd82d27b494c777d07c",
+                              "width": 64
+                            }
+                          ]
+                        },
+                        "name": "Agora Hills"
+                      }
+                    ,{
+                        "artists": [
+                          {
+                            "name": "GloRilla"
+                          },
+                          {
+                            "name": "Megan Thee Stallion"
+                          }
+                        ],
+                        "album": {
+                          "images": [
+                            {
+                              "height": 640,
+                              "url": "https://i.scdn.co/image/ab67616d0000b2731424f8400ef9989ab88dae2a",
+                              "width": 640
+                            },
+                            {
+                              "height": 300,
+                              "url": "https://i.scdn.co/image/ab67616d00001e021424f8400ef9989ab88dae2a",
+                              "width": 300
+                            },
+                            {
+                              "height": 64,
+                              "url": "https://i.scdn.co/image/ab67616d000048511424f8400ef9989ab88dae2a",
+                              "width": 64
+                            }
+                          ]
+                        },
+                        "name": "Wanna Be (with Megan Thee Stallion)"
+                      }
+                    ,{
+                        "artists": [
+                          {
+                            "name": "Djo"
+                          }
+                        ],
+                        "album": {
+                          "images": [
+                            {
+                              "height": 640,
+                              "url": "https://i.scdn.co/image/ab67616d0000b273fddfffec51b4580acae727c1",
+                              "width": 640
+                            },
+                            {
+                              "height": 300,
+                              "url": "https://i.scdn.co/image/ab67616d00001e02fddfffec51b4580acae727c1",
+                              "width": 300
+                            },
+                            {
+                              "height": 64,
+                              "url": "https://i.scdn.co/image/ab67616d00004851fddfffec51b4580acae727c1",
+                              "width": 64
+                            }
+                          ]
+                        },
+                        "name": "End of Beginning"
+                      }
+                    ,{
+                        "artists": [
+                          {
+                            "name": "21 Savage"
+                          }
+                        ],
+                        "album": {
+                          "images": [
+                            {
+                              "height": 640,
+                              "url": "https://i.scdn.co/image/ab67616d0000b273bbdceba2bf1867d4966d0347",
+                              "width": 640
+                            },
+                            {
+                              "height": 300,
+                              "url": "https://i.scdn.co/image/ab67616d00001e02bbdceba2bf1867d4966d0347",
+                              "width": 300
+                            },
+                            {
+                              "height": 64,
+                              "url": "https://i.scdn.co/image/ab67616d00004851bbdceba2bf1867d4966d0347",
+                              "width": 64
+                            }
+                          ]
+                        },
+                        "name": "redrum"
+                      }
+                    ,{
+                        "artists": [
+                          {
+                            "name": "Chappell Roan"
+                          }
+                        ],
+                        "album": {
+                          "images": [
+                            {
+                              "height": 640,
+                              "url": "https://i.scdn.co/image/ab67616d0000b27391b4bc7c88d91a42e0f3a8b7",
+                              "width": 640
+                            },
+                            {
+                              "height": 300,
+                              "url": "https://i.scdn.co/image/ab67616d00001e0291b4bc7c88d91a42e0f3a8b7",
+                              "width": 300
+                            },
+                            {
+                              "height": 64,
+                              "url": "https://i.scdn.co/image/ab67616d0000485191b4bc7c88d91a42e0f3a8b7",
+                              "width": 64
+                            }
+                          ]
+                        },
+                        "name": "Good Luck, Babe!"
+                      }
+                    ,{
+                        "artists": [
+                          {
+                            "name": "Beyoncé"
+                          },
+                          {
+                            "name": "Miley Cyrus"
+                          }
+                        ],
+                        "album": {
+                          "images": [
+                            {
+                              "height": 640,
+                              "url": "https://i.scdn.co/image/ab67616d0000b2731572698fff8a1db257a53599",
+                              "width": 640
+                            },
+                            {
+                              "height": 300,
+                              "url": "https://i.scdn.co/image/ab67616d00001e021572698fff8a1db257a53599",
+                              "width": 300
+                            },
+                            {
+                              "height": 64,
+                              "url": "https://i.scdn.co/image/ab67616d000048511572698fff8a1db257a53599",
+                              "width": 64
+                            }
+                          ]
+                        },
+                        "name": "II MOST WANTED"
+                      }
+                    ,{
+                        "artists": [
+                          {
+                            "name": "Benson Boone"
+                          }
+                        ],
+                        "album": {
+                          "images": [
+                            {
+                              "height": 640,
+                              "url": "https://i.scdn.co/image/ab67616d0000b273cc04ff3e70e146ba9abacf40",
+                              "width": 640
+                            },
+                            {
+                              "height": 300,
+                              "url": "https://i.scdn.co/image/ab67616d00001e02cc04ff3e70e146ba9abacf40",
+                              "width": 300
+                            },
+                            {
+                              "height": 64,
+                              "url": "https://i.scdn.co/image/ab67616d00004851cc04ff3e70e146ba9abacf40",
+                              "width": 64
+                            }
+                          ]
+                        },
+                        "name": "Cry"
+                      }
+                    , {
+                        "artists": [
+                          {
+                            "name": "Sam Hunt"
+                          }
+                        ],
+                        "album": {
+                          "images": [
+                            {
+                              "height": 640,
+                              "url": "https://i.scdn.co/image/ab67616d0000b27369958eb9a88b8ed71fbd43ce",
+                              "width": 640
+                            },
+                            {
+                              "height": 300,
+                              "url": "https://i.scdn.co/image/ab67616d00001e0269958eb9a88b8ed71fbd43ce",
+                              "width": 300
+                            },
+                            {
+                              "height": 64,
+                              "url": "https://i.scdn.co/image/ab67616d0000485169958eb9a88b8ed71fbd43ce",
+                              "width": 64
+                            }
+                          ]
+                        },
+                        "name": "Outskirts"
+                      }
+                    ,{
+                        "artists": [
+                          {
+                            "name": "Fuerza Regida"
+                          }
+                        ],
+                        "album": {
+                          "images": [
+                            {
+                              "height": 640,
+                              "url": "https://i.scdn.co/image/ab67616d0000b273abc2d11a541fa61795691697",
+                              "width": 640
+                            },
+                            {
+                              "height": 300,
+                              "url": "https://i.scdn.co/image/ab67616d00001e02abc2d11a541fa61795691697",
+                              "width": 300
+                            },
+                            {
+                              "height": 64,
+                              "url": "https://i.scdn.co/image/ab67616d00004851abc2d11a541fa61795691697",
+                              "width": 64
+                            }
+                          ]
+                        },
+                        "name": "TÚ NAME"
+                      }
+                    ,{
+                        "artists": [
+                          {
+                            "name": "Future"
+                          },
+                          {
+                            "name": "Metro Boomin"
+                          },
+                          {
+                            "name": "The Weeknd"
+                          }
+                        ],
+                        "album": {
+                          "images": [
+                            {
+                              "height": 640,
+                              "url": "https://i.scdn.co/image/ab67616d0000b273d353552c4c2932094456bbe9",
+                              "width": 640
+                            },
+                            {
+                              "height": 300,
+                              "url": "https://i.scdn.co/image/ab67616d00001e02d353552c4c2932094456bbe9",
+                              "width": 300
+                            },
+                            {
+                              "height": 64,
+                              "url": "https://i.scdn.co/image/ab67616d00004851d353552c4c2932094456bbe9",
+                              "width": 64
+                            }
+                          ]
+                        },
+                        "name": "We Still Don't Trust You"
+                      }
+                    ,{
+                        "artists": [
+                          {
+                            "name": "Kendrick Lamar"
+                          },
+                          {
+                            "name": "SZA"
+                          }
+                        ],
+                        "album": {
+                          "images": [
+                            {
+                              "height": 640,
+                              "url": "https://i.scdn.co/image/ab67616d0000b273c027ad28821777b00dcaa888",
+                              "width": 640
+                            },
+                            {
+                              "height": 300,
+                              "url": "https://i.scdn.co/image/ab67616d00001e02c027ad28821777b00dcaa888",
+                              "width": 300
+                            },
+                            {
+                              "height": 64,
+                              "url": "https://i.scdn.co/image/ab67616d00004851c027ad28821777b00dcaa888",
+                              "width": 64
+                            }
+                          ]
+                        },
+                        "name": "All The Stars (with SZA)"
+                      }
+                    ,{
+                        "artists": [
+                          {
+                            "name": "Duke Ellington"
+                          },
+                          {
+                            "name": "John Coltrane"
+                          }
+                        ],
+                        "album": {
+                          "images": [
+                            {
+                              "height": 640,
+                              "url": "https://i.scdn.co/image/ab67616d0000b2732def9ef3f6a82c8d6fd8c143",
+                              "width": 640
+                            },
+                            {
+                              "height": 300,
+                              "url": "https://i.scdn.co/image/ab67616d00001e022def9ef3f6a82c8d6fd8c143",
+                              "width": 300
+                            },
+                            {
+                              "height": 64,
+                              "url": "https://i.scdn.co/image/ab67616d000048512def9ef3f6a82c8d6fd8c143",
+                              "width": 64
+                            }
+                          ]
+                        },
+                        "name": "In A Sentimental Mood"
+                      }
+                    ,{
+                        "artists": [
+                          {
+                            "name": "Louis Armstrong"
+                          }
+                        ],
+                        "album": {
+                          "images": [
+                            {
+                              "height": 640,
+                              "url": "https://i.scdn.co/image/ab67616d0000b273845a5660b804e5f3e821fbed",
+                              "width": 640
+                            },
+                            {
+                              "height": 300,
+                              "url": "https://i.scdn.co/image/ab67616d00001e02845a5660b804e5f3e821fbed",
+                              "width": 300
+                            },
+                            {
+                              "height": 64,
+                              "url": "https://i.scdn.co/image/ab67616d00004851845a5660b804e5f3e821fbed",
+                              "width": 64
+                            }
+                          ]
+                        },
+                        "name": "What A Wonderful World"
+                      }
+                    ,{
+                        "artists": [
+                          {
+                            "name": "Frank Sinatra"
+                          },
+                          {
+                            "name": "Count Basie"
+                          }
+                        ],
+                        "album": {
+                          "images": [
+                            {
+                              "height": 640,
+                              "url": "https://i.scdn.co/image/ab67616d0000b273b19cb81319fbfd9ed54baeae",
+                              "width": 640
+                            },
+                            {
+                              "height": 300,
+                              "url": "https://i.scdn.co/image/ab67616d00001e02b19cb81319fbfd9ed54baeae",
+                              "width": 300
+                            },
+                            {
+                              "height": 64,
+                              "url": "https://i.scdn.co/image/ab67616d00004851b19cb81319fbfd9ed54baeae",
+                              "width": 64
+                            }
+                          ]
+                        },
+                        "name": "Fly Me To The Moon"
+                      }
+                    ,{
+                        "artists": [
+                          {
+                            "name": "Stan Getz"
+                          }
+                        ],
+                        "album": {
+                          "images": [
+                            {
+                              "height": 640,
+                              "url": "https://i.scdn.co/image/ab67616d0000b273417cc363d7286a88489dee3c",
+                              "width": 640
+                            },
+                            {
+                              "height": 300,
+                              "url": "https://i.scdn.co/image/ab67616d00001e02417cc363d7286a88489dee3c",
+                              "width": 300
+                            },
+                            {
+                              "height": 64,
+                              "url": "https://i.scdn.co/image/ab67616d00004851417cc363d7286a88489dee3c",
+                              "width": 64
+                            }
+                          ]
+                        },
+                        "name": "The Girl From Ipanema"
+                      }
+                    ,{
+                        "artists": [
+                          {
+                            "name": "Ella Fitzgerald"
+                          },
+                          {
+                            "name": "Louis Armstrong"
+                          }
+                        ],
+                        "album": {
+                          "images": [
+                            {
+                              "height": 640,
+                              "url": "https://i.scdn.co/image/ab67616d0000b27388ab39d88260598e95ebf5f4",
+                              "width": 640
+                            },
+                            {
+                              "height": 300,
+                              "url": "https://i.scdn.co/image/ab67616d00001e0288ab39d88260598e95ebf5f4",
+                              "width": 300
+                            },
+                            {
+                              "height": 64,
+                              "url": "https://i.scdn.co/image/ab67616d0000485188ab39d88260598e95ebf5f4",
+                              "width": 64
+                            }
+                          ]
+                        },
+                        "name": "Dream A Little Dream Of Me - Single Version"
+                      }
+                    ,{
+                        "artists": [
+                          {
+                            "name": "Lars Gullin"
+                          }
+                        ],
+                        "album": {
+                          "images": [
+                            {
+                              "height": 640,
+                              "url": "https://i.scdn.co/image/ab67616d0000b2737a280edfad1aa753895e3177",
+                              "width": 640
+                            },
+                            {
+                              "height": 300,
+                              "url": "https://i.scdn.co/image/ab67616d00001e027a280edfad1aa753895e3177",
+                              "width": 300
+                            },
+                            {
+                              "height": 64,
+                              "url": "https://i.scdn.co/image/ab67616d000048517a280edfad1aa753895e3177",
+                              "width": 64
+                            }
+                          ]
+                        },
+                        "name": "Danny's Dream"
+                      }
+                    ,{
+                        "artists": [
+                          {
+                            "name": "Billie Holiday"
+                          }
+                        ],
+                        "album": {
+                          "images": [
+                            {
+                              "height": 640,
+                              "url": "https://i.scdn.co/image/ab67616d0000b273f8743d2c7812763f7f66e83b",
+                              "width": 640
+                            },
+                            {
+                              "height": 300,
+                              "url": "https://i.scdn.co/image/ab67616d00001e02f8743d2c7812763f7f66e83b",
+                              "width": 300
+                            },
+                            {
+                              "height": 64,
+                              "url": "https://i.scdn.co/image/ab67616d00004851f8743d2c7812763f7f66e83b",
+                              "width": 64
+                            }
+                          ]
+                        },
+                        "name": "I'll Be Seeing You"
+                      }
+                    ,{
+                        "artists": [
+                          {
+                            "name": "Louis Armstrong"
+                          }
+                        ],
+                        "album": {
+                          "images": [
+                            {
+                              "height": 640,
+                              "url": "https://i.scdn.co/image/ab67616d0000b273cd1ea8639de6d3f827fba218",
+                              "width": 640
+                            },
+                            {
+                              "height": 300,
+                              "url": "https://i.scdn.co/image/ab67616d00001e02cd1ea8639de6d3f827fba218",
+                              "width": 300
+                            },
+                            {
+                              "height": 64,
+                              "url": "https://i.scdn.co/image/ab67616d00004851cd1ea8639de6d3f827fba218",
+                              "width": 64
+                            }
+                          ]
+                        },
+                        "name": "La vie en rose - Single Version"
+                      }
+                    ,{
+                        "artists": [
+                          {
+                            "name": "Chet Baker"
+                          }
+                        ],
+                        "album": {
+                          "images": [
+                            {
+                              "height": 640,
+                              "url": "https://i.scdn.co/image/ab67616d0000b273bcaf6f097b310e20504f2de0",
+                              "width": 640
+                            },
+                            {
+                              "height": 300,
+                              "url": "https://i.scdn.co/image/ab67616d00001e02bcaf6f097b310e20504f2de0",
+                              "width": 300
+                            },
+                            {
+                              "height": 64,
+                              "url": "https://i.scdn.co/image/ab67616d00004851bcaf6f097b310e20504f2de0",
+                              "width": 64
+                            }
+                          ]
+                        },
+                        "name": "My Funny Valentine"
+                      }
+                    ,{
+                        "artists": [
+                          {
+                            "name": "Chris Abolade"
+                          }
+                        ],
+                        "album": {
+                          "images": [
+                            {
+                              "height": 640,
+                              "url": "https://i.scdn.co/image/ab67616d0000b2738f202471c27f936d2a5969c8",
+                              "width": 640
+                            },
+                            {
+                              "height": 300,
+                              "url": "https://i.scdn.co/image/ab67616d00001e028f202471c27f936d2a5969c8",
+                              "width": 300
+                            },
+                            {
+                              "height": 64,
+                              "url": "https://i.scdn.co/image/ab67616d000048518f202471c27f936d2a5969c8",
+                              "width": 64
+                            }
+                          ]
+                        },
+                        "name": "Elske igjen"
+                      }
+                    ,{
+                        "artists": [
+                          {
+                            "name": "Chris Abolade"
+                          }
+                        ],
+                        "album": {
+                          "images": [
+                            {
+                              "height": 640,
+                              "url": "https://i.scdn.co/image/ab67616d0000b273d1d73a91784724a2cfe9b60b",
+                              "width": 640
+                            },
+                            {
+                              "height": 300,
+                              "url": "https://i.scdn.co/image/ab67616d00001e02d1d73a91784724a2cfe9b60b",
+                              "width": 300
+                            },
+                            {
+                              "height": 64,
+                              "url": "https://i.scdn.co/image/ab67616d00004851d1d73a91784724a2cfe9b60b",
+                              "width": 64
+                            }
+                          ]
+                        },
+                        "name": "SEX OG BLOMSTER"
+                      }
+                    ,{
+                        "artists": [
+                          {
+                            "name": "Chris Abolade"
+                          },
+                          {
+                            "name": "Amara"
+                          }
+                        ],
+                        "album": {
+                          "images": [
+                            {
+                              "height": 640,
+                              "url": "https://i.scdn.co/image/ab67616d0000b27388a18d03be578939f128d4c8",
+                              "width": 640
+                            },
+                            {
+                              "height": 300,
+                              "url": "https://i.scdn.co/image/ab67616d00001e0288a18d03be578939f128d4c8",
+                              "width": 300
+                            },
+                            {
+                              "height": 64,
+                              "url": "https://i.scdn.co/image/ab67616d0000485188a18d03be578939f128d4c8",
+                              "width": 64
+                            }
+                          ]
+                        },
+                        "name": "Fashion week"
+                      }
+                    ,{
+                        "artists": [
+                          {
+                            "name": "Tevvez"
+                          }
+                        ],
+                        "album": {
+                          "images": [
+                            {
+                              "height": 640,
+                              "url": "https://i.scdn.co/image/ab67616d0000b273a813f33b778371b9466ab652",
+                              "width": 640
+                            },
+                            {
+                              "height": 300,
+                              "url": "https://i.scdn.co/image/ab67616d00001e02a813f33b778371b9466ab652",
+                              "width": 300
+                            },
+                            {
+                              "height": 64,
+                              "url": "https://i.scdn.co/image/ab67616d00004851a813f33b778371b9466ab652",
+                              "width": 64
+                            }
+                          ]
+                        },
+                        "name": "Glimmer of Hope"
+                      }
+                    ,{
+                        "artists": [
+                          {
+                            "name": "Vertile"
+                          }
+                        ],
+                        "album": {
+                          "images": [
+                            {
+                              "height": 640,
+                              "url": "https://i.scdn.co/image/ab67616d0000b2731479c535cc2fe2596895127b",
+                              "width": 640
+                            },
+                            {
+                              "height": 300,
+                              "url": "https://i.scdn.co/image/ab67616d00001e021479c535cc2fe2596895127b",
+                              "width": 300
+                            },
+                            {
+                              "height": 64,
+                              "url": "https://i.scdn.co/image/ab67616d000048511479c535cc2fe2596895127b",
+                              "width": 64
+                            }
+                          ]
+                        },
+                        "name": "Stronger"
+                      }
+                    ,{
+                        "artists": [
+                          {
+                            "name": "Logic"
+                          },
+                          {
+                            "name": "Alessia Cara"
+                          },
+                          {
+                            "name": "Khalid"
+                          }
+                        ],
+                        "album": {
+                          "images": [
+                            {
+                              "height": 640,
+                              "url": "https://i.scdn.co/image/ab67616d0000b273cfdf40cf325b609a52457805",
+                              "width": 640
+                            },
+                            {
+                              "height": 300,
+                              "url": "https://i.scdn.co/image/ab67616d00001e02cfdf40cf325b609a52457805",
+                              "width": 300
+                            },
+                            {
+                              "height": 64,
+                              "url": "https://i.scdn.co/image/ab67616d00004851cfdf40cf325b609a52457805",
+                              "width": 64
+                            }
+                          ]
+                        },
+                        "name": "1-800-273-8255"
+                      }
+                  ]

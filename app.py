@@ -204,42 +204,47 @@ def profile(platform):
 
             track_URI_list_combined = []
             artist_URI_list_combined = []
+            songs_checked = []
             
             for track_data in list_of_ranges:
+                track_URI_list = []
+                artist_URI_list = []
+                
                 songs_checked = []
                 track_URI_list = []
                 artist_URI_list = []
+
                 for track in track_data:
-                    artist_uri_list = [] 
-                    for artist in track["artists"]:
+                    artist_uri_list = []
+                    track_uri_list = []
+                    for artist in track["artists"]: # in case of multiple artists
                         artist_name = artist['name']
                         song_name = track['name']
-                        
                         artist_URI, song_URI = spotify_functions.search_artist(artist_name, song_name)
-                        print("returned artist_URI", artist_URI, "returned song_URI", song_URI)
-
-                        if song_URI is not None and artist_URI is not None:
-                            artist_uri_list.append(artist_URI)
-                            if song_name in songs_checked and song_URI not in track_URI_list:
-                                track_URI_list[-1] = song_URI
-                            else:
-                                track_URI_list.append(song_URI)
-                        else:
+                        if artist_URI is None and song_URI is None:
                             artist_uri_list.append("No:URI:found")
-                            if song_name in songs_checked:
-                                break
-                            track_URI_list.append("No:URI:found")
-                        songs_checked.append(song_name)
-
-
+                            track_uri_list.append("No:URI:found")
+                        else:
+                            artist_uri_list.append(artist_URI)
+                            track_uri_list.append(song_URI)
                     artist_URI_list.append(artist_uri_list)
+                    track_URI_list.append(track_uri_list)
+
+                for i in range(len(track_URI_list)):
+                    if len(track_URI_list[i]) > 1:
+                        for j in range(1, len(track_URI_list[i])):
+                            if track_URI_list[i][j] == "No:URI:found":
+                                track_URI_list[i].pop(j)
+
+                test_data = pkg_statements.create_spotify_statement(track_data, track_URI_list, artist_URI_list)
                 track_URI_list_combined.append(track_URI_list)
                 artist_URI_list_combined.append(artist_URI_list)
-            print("track_URI_list_combined", track_URI_list_combined, "\n")
-            print("artist_URI_list_combined", artist_URI_list_combined)
+                
 
-            for item in artist_URI_list_combined:
-                print(item, "\n")
+                print("artist_URI_list", artist_URI_list_combined)
+                print("track_URI_list", track_URI_list_combined)
+
+            
             
 
 
@@ -284,7 +289,7 @@ def profile(platform):
         print("found liked movies", len(liked_movies))
         i = 0
         for movie_title, _ in liked_movies:
-            print(i)
+            print(movie_title)
             movie_info = netflix_functions.search_OMDb(movie_title, 'movie')
             if movie_info['Response'] == 'True':
                 movies_info.append(movie_info)
@@ -296,9 +301,9 @@ def profile(platform):
         movie_actor_uris = netflix_functions.link_entities(movie_actor_list)
 
         combined_data = list(zip(movie_actor_list.items(), movie_actor_uris.items(), movie_titles.items()))
-
+        print("hei")
         if liked_movies:
-            pkg_statements.create_netflix_statement(combined_data)
+            #pkg_statements.create_netflix_statement(combined_data)
 
             return render_template('/profile/netflix.html', 
                                         combined_data=combined_data
@@ -322,10 +327,17 @@ def test(platform):
         file_path = os.path.join(os.path.dirname(__file__), 'test_files', 'spotify_test_file.json')
 
         top_tracks_short, track_URI_list, artist_URI_list = spotify_functions.assign_URI(file_path)
-        combined_artists = [artist_URI_list]
-        combined_tracks = [track_URI_list]
-        
+
         test_data = pkg_statements.create_spotify_statement(top_tracks_short, track_URI_list, artist_URI_list)
+        
+        combined_artists = []
+        combined_artists.append(artist_URI_list)
+        combined_tracks = []
+        combined_tracks.append(track_URI_list)
+
+        print("artist_URI_list", combined_artists)
+        print("track_URI_list", combined_tracks)
+        
         ground_truth_data = ground_truth_statements.create_statement(platform='spotify')
 
         # precision, recall, F_measure = pkg_functions.compute_precision_recall(ground_truth_data, test_data)

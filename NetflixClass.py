@@ -1,6 +1,7 @@
 import requests
 import csv
 from datetime import datetime
+import json
 import imdb
 from rfc3987 import match
 from PKGClass import URI
@@ -8,8 +9,20 @@ import os
 
 class NetflixFunctions:
     def __init__(self):
-        self.actors = []
+        self.load_actors_id()
         pass
+    
+    def load_actors_id(self):
+        try:
+            with open("data/cache_files/actors.json", 'r') as file:
+                self.actors = json.load(file)
+        except FileNotFoundError:
+            self.actors = []
+    
+    def save_actors_id(self):
+        with open("data/cache_files/actors.json", 'w') as file:
+            json.dump(self.actors, file)
+
     def get_actor_imdb_id(self,actor_name):
         """sumary_line
         
@@ -28,6 +41,7 @@ class NetflixFunctions:
         if search_results:
             actor_imdb_id = search_results[0].personID
             self.actors.append({"name": actor_name, "id": actor_imdb_id})
+            self.save_actors_id()
             return actor_imdb_id
         else:
             print("none") 
@@ -140,6 +154,7 @@ class NetflixFunctions:
                         if actor_name.startswith(" "):
                             actor_name = actor_name[1:]
                         actor_URI = self.get_actor_imdb_id(actor_name)
+                        print("returnerte", actor_URI)
                         actors.append(URI(f"https://www.imdb.com/name/nm{actor_URI}/"))
                     movie_actor_dict[movie_uri] = {
                         'actor_uris': actors
