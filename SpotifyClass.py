@@ -53,6 +53,7 @@ class SpotifyFunctions:
 
         for item in self.artist_and_song_id:
             if item["artist_name"] == artist_name and item["song_name"] == song_name:
+                print("funnet i cache")
                 return item["artist_URI"], item["song_URI"]
         
         time.sleep(1)

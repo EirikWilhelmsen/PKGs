@@ -16,7 +16,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -31,7 +31,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -46,7 +46,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -61,7 +61,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -76,7 +76,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -91,7 +91,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -106,7 +106,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -121,7 +121,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -136,7 +136,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -151,7 +151,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -166,7 +166,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -181,7 +181,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -196,7 +196,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -212,7 +212,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -227,7 +227,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -242,7 +242,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -257,7 +257,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -272,7 +272,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -287,7 +287,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -302,7 +302,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -317,7 +317,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -332,7 +332,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -347,7 +347,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -363,7 +363,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -379,7 +379,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -394,7 +394,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -409,7 +409,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -424,7 +424,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -439,7 +439,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -454,7 +454,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -469,7 +469,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -484,7 +484,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -499,7 +499,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -514,7 +514,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -529,7 +529,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -544,7 +544,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -559,7 +559,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -574,7 +574,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -589,7 +589,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -604,7 +604,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -620,7 +620,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -637,7 +637,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -652,7 +652,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -668,7 +668,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -683,7 +683,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -698,7 +698,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -713,7 +713,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -729,7 +729,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -745,7 +745,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -761,7 +761,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -777,7 +777,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -793,7 +793,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -808,7 +808,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -824,7 +824,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -839,7 +839,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -855,7 +855,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -870,7 +870,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -885,7 +885,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -900,7 +900,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -916,7 +916,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -931,7 +931,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -946,7 +946,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -963,7 +963,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -978,7 +978,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -993,7 +993,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1008,7 +1008,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1023,7 +1023,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1038,7 +1038,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1053,7 +1053,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1068,7 +1068,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1083,7 +1083,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1098,7 +1098,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1114,7 +1114,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1129,7 +1129,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1144,7 +1144,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1160,7 +1160,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1175,7 +1175,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1190,7 +1190,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1205,7 +1205,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1221,7 +1221,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1236,7 +1236,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1251,7 +1251,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1266,7 +1266,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1283,7 +1283,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1299,7 +1299,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1315,7 +1315,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1330,7 +1330,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1346,7 +1346,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1361,7 +1361,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1377,7 +1377,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1392,7 +1392,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1407,7 +1407,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1422,7 +1422,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1437,7 +1437,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1452,7 +1452,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1467,7 +1467,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1483,7 +1483,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1498,7 +1498,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1513,7 +1513,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1530,7 +1530,7 @@ class groundTruthSpotify():
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 

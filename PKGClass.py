@@ -76,7 +76,7 @@ class PKGFunctions:
         output_text = ''.join(output_array)
         return(output_text)
     
-    def compute_precision_recall(self, ground_truth_data, test_data):
+    def compute_precision_recall(self, ground_truth_data, test_data, test_type):
         """sumary_line
         
         Keyword arguments:
@@ -87,25 +87,40 @@ class PKGFunctions:
         recall -- recall TP / (TP + FN), 
         F_measure -- F1 score 2 * (precision * recall) / (precision + recall)
         """
-        print(len(ground_truth_data), len(test_data))
         
         true_positives = 0
         false_positives = 0
         false_negatives = 0
 
-        for test_item in test_data:
-            match_found = False
-            for ground_truth_item in ground_truth_data:
-                if (test_item["object"] == ground_truth_item["object"]):
-                    print("Match found\n")
-                    true_positives += 1
-                    match_found = True
-                    break
+        print(f"Test type: {test_type}")
 
-            if not match_found:
-                false_positives += 1
+        if test_type == "Related_entities":
+            for test_item in test_data:
+                match_found = False
+                for ground_truth_item in ground_truth_data:
+                    if (test_item["object"]["value"]["related_entities"] == ground_truth_item["object"]["value"]["related_entities"]):
+                        true_positives += 1
+                        match_found = True
+                        break
+                if not match_found:
+                    false_positives += 1
 
-        false_negatives = len(ground_truth_data) - true_positives
+            false_negatives = len(ground_truth_data) - true_positives
+        
+        elif test_type == "Description":
+            for test_item in test_data:
+                match_found = False
+                for ground_truth_item in ground_truth_data:
+                    if (test_item["object"]["value"]["description"] == ground_truth_item["object"]["value"]["description"]):
+                        true_positives += 1
+                        match_found = True
+                        break
+                if not match_found:
+                    false_positives += 1
+            false_negatives = len(ground_truth_data) - true_positives
+        
+
+        
         
         print(f"True positives: {true_positives}, False positives: {false_positives}, False negatives: {false_negatives}")
 

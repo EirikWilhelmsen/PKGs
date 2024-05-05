@@ -32,7 +32,6 @@ class statements:
                                                         "https://schema.org/artist", f"{artist_URI_list[i][1]}",
                                                         "https://schema.org/song", f"{track_URI_list[i][0]}"]}}
             else:
-
                 subject = "http://example.com/test"
                 predicate = {"value": {"description": "like"}}
                 object = {"value": {"description": f"the song {track['name']} by {track['artists'][0]['name']}",
@@ -50,10 +49,9 @@ class statements:
             test_sample = {
                 "subject": subject,
                 "predicate": predicate,
-                "object": object['value']['related_entities'] 
+                "object": object 
             }
             test_data_list.append(test_sample)
-            
             
             i += 1
         return test_data_list
@@ -86,7 +84,7 @@ class statements:
                 test_sample = {
                     "subject": subject,
                     "predicate": predicate,
-                    "object": object['value']['related_entities'] 
+                    "object": object 
                 }
                 test_data_list.append(test_sample)
 

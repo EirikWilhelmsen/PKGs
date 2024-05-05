@@ -342,12 +342,21 @@ def test(platform):
         
         ground_truth_data = ground_truth_Spotify_statements.create_statement()
 
-        precision, recall, F_measure = pkg_functions.compute_precision_recall(ground_truth_data, test_data)
-        print("-----------------------------------------")
+        precision, recall, F_measure = pkg_functions.compute_precision_recall(ground_truth_data, test_data, test_type="Related_entities")
+        print("-------------------------------------------")
+        print("Precision and recall for Related Entities:")
         print("Precision:", precision)
         print("Recall:", recall)
         print("F-measure:", F_measure)
-        print("-----------------------------------------")               
+        print("-------------------------------------------")  
+
+        precision, recall, F_measure = pkg_functions.compute_precision_recall(ground_truth_data, test_data, test_type="Description")
+        print("-------------------------------------------")
+        print("Precision and recall for Description:")
+        print("Precision:", precision)
+        print("Recall:", recall)
+        print("F-measure:", F_measure)
+        print("-------------------------------------------")             
 
             
         return render_template('/profile/spotify.html', top_tracks_short=top_tracks_short, track_URI_list=combined_tracks, artist_URI_list=combined_artists)
@@ -377,14 +386,22 @@ def test(platform):
         if liked_movies:
             test_data = pkg_statements.create_netflix_statement(combined_data)
             ground_truth_data = ground_truth_Netflix_statements.create_statement()
-            print("ground_truth_data", ground_truth_data)
-            print("test_data", test_data)
-            precision, recall, F_measure = pkg_functions.compute_precision_recall(ground_truth_data, test_data)
-            print("-----------------------------------------")
+            
+            precision, recall, F_measure = pkg_functions.compute_precision_recall(ground_truth_data, test_data, "Related_entities")
+            print("-------------------------------------------")
+            print("Precision and recall for Related Entities:")
             print("Precision:", precision)
             print("Recall:", recall)
             print("F-measure:", F_measure)
-            print("-----------------------------------------")
+            print("-------------------------------------------")  
+
+            precision, recall, F_measure = pkg_functions.compute_precision_recall(ground_truth_data, test_data, "Description")
+            print("-------------------------------------------")
+            print("Precision and recall for Description:")
+            print("Precision:", precision)
+            print("Recall:", recall)
+            print("F-measure:", F_measure)
+            print("-------------------------------------------")
 
             return render_template('/profile/netflix.html', 
                                         combined_data=combined_data

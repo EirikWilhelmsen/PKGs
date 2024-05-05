@@ -16,7 +16,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities']
+            "object": object
         }
         test_data_list.append(test_data)
 
@@ -32,7 +32,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -48,7 +48,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities']
+            "object": object
         }
         test_data_list.append(test_data)
 
@@ -64,7 +64,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -80,7 +80,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -97,7 +97,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -114,7 +114,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -131,7 +131,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -148,7 +148,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -169,7 +169,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -186,7 +186,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -203,7 +203,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -220,7 +220,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -237,7 +237,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -254,7 +254,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -271,7 +271,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -288,7 +288,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -305,7 +305,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -322,7 +322,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -339,7 +339,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -356,7 +356,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -377,7 +377,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -394,7 +394,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -411,7 +411,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -428,7 +428,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -445,7 +445,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -462,7 +462,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -491,7 +491,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -508,7 +508,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -525,7 +525,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -546,7 +546,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -563,7 +563,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -580,7 +580,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -597,7 +597,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -614,7 +614,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -631,7 +631,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -648,7 +648,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -665,7 +665,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -686,7 +686,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -707,7 +707,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -724,7 +724,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -741,7 +741,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -758,7 +758,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -775,7 +775,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -792,7 +792,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -809,7 +809,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -826,7 +826,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -848,7 +848,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -865,7 +865,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -882,7 +882,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -899,7 +899,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -916,7 +916,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -933,7 +933,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -950,7 +950,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -967,7 +967,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -984,7 +984,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1001,7 +1001,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1018,7 +1018,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1035,7 +1035,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1052,7 +1052,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1069,7 +1069,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1086,7 +1086,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1103,7 +1103,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1120,7 +1120,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1137,7 +1137,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1154,7 +1154,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1179,7 +1179,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1196,7 +1196,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1213,7 +1213,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1230,7 +1230,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1247,7 +1247,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1264,7 +1264,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1281,7 +1281,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1298,7 +1298,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1319,7 +1319,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1336,7 +1336,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1353,7 +1353,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1370,7 +1370,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1391,7 +1391,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1408,7 +1408,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1425,7 +1425,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1442,7 +1442,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1459,7 +1459,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1476,7 +1476,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1493,7 +1493,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
@@ -1510,7 +1510,7 @@ class groundTruthNetflix:
         test_data = {
             "subject": subject,
             "predicate": predicate,
-            "object": object['value']['related_entities'] 
+            "object": object 
         }
         test_data_list.append(test_data)
 
