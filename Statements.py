@@ -89,3 +89,76 @@ class statements:
                 test_data_list.append(test_sample)
 
         return test_data_list
+
+
+    def create_apple_music_like_statement(Year, main_artist_names, entity_links_musicbrainz_artists, entity_links_musicbrainz_tracks, Cleaned_Songs):
+        #To increase the number of correct statements, only the main artist and song is entity linked. This way it's avoided that individual, less known, feature artists ruin the data by creating a false positive. 
+        i=0
+        data_list=[]
+        print(entity_links_musicbrainz_artists)
+        for year in Year:
+            
+            if entity_links_musicbrainz_artists[i] == "Artist not found":
+                data_list.append("No data")
+                i+=1
+                print("####################### ####################################")
+                print("No DATA")
+            else:
+                if Year[i]==None:
+                    data={
+                        "owner_uri": "http://example.com/test",
+                            "owner_username": "test",
+                            "description": f"I like the song {Cleaned_Songs[i]}",
+                            "subject": "http://example.com/test",   # Single string when using URI
+                            "predicate": {"value": {"description": "like"}},    # Use dictionary when the field is a concept
+                            "object": {"value": {"description": f"the song {Cleaned_Songs[i]} by {main_artist_names[i]}", 
+                                                "related_entities": ["https://schema.org/MusicGroup", f"{entity_links_musicbrainz_artists[i]}", 
+                                                                    "https://schema.org/MusicRecording", f"{entity_links_musicbrainz_tracks[i]}"]}},
+                            "preference": 1.0
+                        }
+                    i+=1
+                    print("###################################################")
+                    print(data)
+                    data_list.append(data)
+                else:
+                    data={
+                        "owner_uri": "http://example.com/test",
+                            "owner_username": "test",
+                            "description": f"I like the song {Cleaned_Songs[i]}",
+                            "subject": "http://example.com/test",   # Single string when using URI
+                            "predicate": {"value": {"description": "like"}},    # Use dictionary when the field is a concept
+                            "object": {"value": {"description": f"the song {Cleaned_Songs[i]} by {main_artist_names[i]}", 
+                                                "related_entities": ["https://schema.org/MusicGroup", f"{entity_links_musicbrainz_artists[i]}", 
+                                                                    "https://schema.org/MusicRecording", f"{entity_links_musicbrainz_tracks[i]}"]},
+                                                                    "additional_info": {"primary_listening_years": year}},
+                            "preference": 1.0
+                        }
+                    print("#####################################")
+                    print(data)
+                    i+=1
+                    data_list.append(data)
+        return data_list
+
+    def create_apple_music_dislike_statement(main_artist_names, entity_links_musicbrainz_artists, entity_links_musicbrainz_tracks, Cleaned_Songs):
+        i=0
+        data_list=[]
+        for clean_song in Cleaned_Songs:
+            if entity_links_musicbrainz_artists[i] == "Artist not found":
+                data_list.append("No data")
+                i+=1
+            else:
+                data={
+                    "owner_uri": "http://example.com/test",
+                        "owner_username": "test",
+                        "description": f"I dislike the song {clean_song}",
+                        "subject": "http://example.com/test",   # Single string when using URI
+                        "predicate": {"value": {"description": "dislike"}},    # Use dictionary when the field is a concept
+                        "object": {"value": {"description": f"the song {clean_song} by {main_artist_names[i]}", 
+                                            "related_entities": ["https://schema.org/MusicGroup", f"{entity_links_musicbrainz_artists[i]}", 
+                                                                "https://schema.org/MusicRecording", f"{entity_links_musicbrainz_tracks[i]}"]}},
+                        "preference": -1.0
+                    }
+                data_list.append(data)
+                i+=1
+        return data_list
+

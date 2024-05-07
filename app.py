@@ -16,6 +16,9 @@ from NetflixClass import NetflixFunctions
 from GroundTruthSpotify import groundTruthSpotify
 from SpotifyClass import SpotifyFunctions
 
+import pandas as pd
+from AppleMusic import AppleMusic
+
 pkg_functions = PKGFunctions()
 netflix_functions = NetflixFunctions()
 
@@ -120,7 +123,20 @@ def proceed():
                 file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
                 file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
                 return redirect(url_for('profile', platform='netflix', file_path=file_path))
+
+        elif platform == 'applemusic-upload':
+            if 'file' not in request.files:
+                return 'No file part'
+            file = request.files['file']
+            if file.filename == '':
+                return 'No selected file'
+            if file:
+                filename = secure_filename(file.filename)
+                file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+                file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+                return redirect(url_for('profile', platform='applemusic', file_path=file_path))
             
+
         elif platform == 'Entity_Linking':
             example_string = request.form.get('statement', '')
             return redirect(url_for('profile', platform='Entity_Linking', example_string=example_string))
@@ -333,6 +349,32 @@ def profile(platform):
                                         )
         else: 
             return redirect(url_for('error', error = 'Does not seem like you have watched any movies on Netflix twice'))
+
+
+    #####################
+    #### Apple Music ####
+    #####################
+
+    elif platform == 'applemusic':
+
+        print(platform)
+        df=pd.read_csv('.\\uploads\\Apple_Music_-_Play_History_Daily_Tracks.csv')
+        Year, Song_Names, Artists_and_Groups = AppleMusic.liked_songs(df)    
+        main_artist_names, entity_links_musicbrainz_artists, entity_links_musicbrainz_tracks, Cleaned_Songs, Queries = AppleMusic.search_track_musicbrainz(Song_Names, Artists_and_Groups)
+
+        statements.create_apple_music_like_statement(Year, main_artist_names, entity_links_musicbrainz_artists, entity_links_musicbrainz_tracks, Cleaned_Songs)
+        
+        if main_artist_names:
+            return render_template('/profile/applemusic.html', Cleaned_Songs=Cleaned_Songs,
+                                main_artist_names=main_artist_names,
+                                entity_links_musicbrainz_artists=entity_links_musicbrainz_artists,
+                                entity_links_musicbrainz_tracks=entity_links_musicbrainz_tracks
+                                # ,
+                                # Year=Year
+                                )
+        else: 
+            return redirect(url_for('error'))
+    
 
     ######################
     ### Entity Linking ###

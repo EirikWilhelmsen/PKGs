@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Apple music</title>
+</head>
+<body>
+    <h1>Apple music listening history</h1>
+    <div class="applemusic-information">
+        <table class="index_table applemusic-table" id="applemusicTable">
+            <tr>
+                <th colspan="1">
+                    <h2>Apple music information</h2>
+                </th>
+                <!-- <th colspan="2">
+                    <h2>Additional apple music information</h2>
+                </th> -->
+    
+                
+            </tr>
+            <tr>
+                <th>
+                    Song titles:
+                </th>
+                <th>
+                    Artists:
+                </th>
+                <th>
+                    Musicbrainz song link:
+                </th>
+                <th>
+                    Musicbrainz artist link:
+                </th>
+            </tr>
+            {% for i in range(Cleaned_Songs|length) %}
+            <tr class="applemusic-row" {% if loop.index > 50 %} style="display: none;" {% endif %}>
+                <td>
+                    <li>{{ Cleaned_Songs[i] }} </li>
+                </td>
+                <td>
+                    <li>{{ main_artist_names[i] }}</li>
+                </td>
+                <td>
+                    <a href="{{ entity_links_musicbrainz_tracks[i] }}" target="_blank">{{ entity_links_musicbrainz_tracks[i] }}/</a>
+                </td>
+                <td>
+                    <a href="{{ entity_links_musicbrainz_artists[i] }}" target="_blank">{{ entity_links_musicbrainz_artists[i] }}/</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+        <button id="showMoreBtn" onclick="loadMoreRows()">Load More</button>
+    </div>
+    <!-- <script>
+        function onload() {
+            if (movie_info.length <= 20) {
+                document.getElementById("showMoreBtn").style.display = "none";
+            }
+            else{
+                document.getElementById("showMoreBtn").style.display = "block";
+            }
+        }
+        function loadMoreRows() {
+            var table = document.getElementById("netflixTable");
+            var rows = table.rows;
+            var hiddenRows = document.querySelectorAll('.netflix-row[style="display: none;"]');
+            console.log(movie_info)
+
+            for (var i = 0; i < 20 && i < hiddenRows.length; i++) {
+                hiddenRows[i].style.display = "table-row";
+            }
+        }
+    </script> -->
+</body>
+</html>

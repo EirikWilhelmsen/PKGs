@@ -22,9 +22,9 @@
             <td><button class="platform-btn" onclick="showOptions('spotifyOptions')">Login</button></td>
         </tr>
         <tr>
-            <td><img src="static/images/HboMax.jpg" alt="missing" class="index_img"></td>
+            <td><img src="static/images/Apple_Music_icon.png" alt="missing" class="index_img"></td>
             <td>Apple Music</td>
-            <td><a href="{{ url_for('login',platform='instagram') }}"><button class="platform-btn">Enter</button></a></td>
+            <td><button class="platform-btn" onclick="showOptions('appleOptions')">Enter</button></td>
         </tr>
         <tr>
             <td></td>
@@ -61,6 +61,15 @@
             <button style="margin-top:10px;" type="submit" name="platform" value="netflix-TEST" onclick="showProgressbar('Netflix')">test</button>
         </form>
     </div>
+    <div class="options" id="appleOptions" style="display: none;">
+        <form action="/proceed" method="post" enctype="multipart/form-data">
+            <h2>Select Apple Options</h2>
+            <label><input type="checkbox" name="viewCheckbox" onclick="togglePercentOfHistory()">Give access to Apple Music listening history</label> <!-- Added onclick attribute -->
+            <div id="PrecentageDiv" style="display: none;">
+                <input type="file" name="file" accept=".csv">
+            </div>
+            <button type="submit" name="platform" value="applemusic-upload">Proceed</button> 
+        </div>
     <div class="options" id="EntityOptions" style="display: none;">
         <form action="/proceed" method="post"> <!-- Form starts here -->
             <h2>Write a statement</h2>
@@ -148,6 +157,14 @@
             } else {
                 percentageDiv.style.display = "none";
                 button.style.display = "none";
+            }
+        }
+        function togglePercentOfHistory() {
+            var percentageDiv = document.getElementById("PrecentageDiv");
+            if (percentageDiv.style.display === "none") {
+                percentageDiv.style.display = "block";
+            } else {
+                percentageDiv.style.display = "none";
             }
         }
     </script>
