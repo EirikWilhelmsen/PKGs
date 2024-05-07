@@ -112,6 +112,7 @@ class PKGFunctions:
                 match_found = False
                 for ground_truth_item in ground_truth_data:
                     if (test_item["object"]["value"]["description"] == ground_truth_item["object"]["value"]["description"]):
+                        # test_item["predicate"] = ground_truth_item["predicate"] and 
                         true_positives += 1
                         match_found = True
                         break
@@ -119,17 +120,29 @@ class PKGFunctions:
                     false_positives += 1
             false_negatives = len(ground_truth_data) - true_positives
         
-
+        elif test_type == "song_URI":
+            for test_item in test_data:
+                match_found = False
+                for ground_truth_item in ground_truth_data:
+                    if (test_item["object"]["value"]["related_entities"][-1] == ground_truth_item["object"]["value"]["related_entities"][-1]):
+                        true_positives += 1
+                        match_found = True
+                        break
+                if not match_found:
+                    false_positives += 1
+            false_negatives = len(ground_truth_data) - true_positives
         
         
-        print(f"True positives: {true_positives}, False positives: {false_positives}, False negatives: {false_negatives}")
-
         precision = true_positives / (true_positives + false_positives) if (true_positives + false_positives) > 0 else 0
         recall = true_positives / (true_positives + false_negatives) if (true_positives + false_negatives) > 0 else 0
         F_measure = 2 * (precision * recall) / (precision + recall) if (precision + recall) > 0 else 0
-        print(f"Precision: {precision}, Recall: {recall}, F-measure: {F_measure}")
 
-        return precision, recall, F_measure
+        print("-------------------------------------------")
+        print("Precision and recall for Related Entities:")
+        print("Precision:", precision)
+        print("Recall:", recall)
+        print("F-measure:", F_measure)
+        print("-------------------------------------------")
 
 
 SPARQLQuery = str

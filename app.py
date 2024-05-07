@@ -3,7 +3,7 @@
 from datetime import datetime
 import os
 from werkzeug.utils import secure_filename
-from flask import Flask, render_template, redirect, url_for, session, request
+from flask import Flask, render_template, redirect, url_for, session, request, jsonify
 import requests
 import urllib.parse
 from PKGClass import PKGFunctions
@@ -137,7 +137,26 @@ def proceed_test():
             return redirect(url_for('test', platform='netflix-TEST'))
     return redirect(url_for('index'))
 
+@app.route('/progress-spotify')
+def progress_spotify():
+    print(spotify_functions.processed_tracks, spotify_functions.total_tracks)
+    return jsonify(
+        {
+            'processed': spotify_functions.processed_tracks,
+            'total': spotify_functions.total_tracks
+        }
+    )
 
+
+@app.route('/progress-netflix')
+def progress_netflix():
+    print(netflix_functions.processed_movies, netflix_functions.total_movies)
+    return jsonify(
+        {
+            'processed': netflix_functions.processed_movies,
+            'total': netflix_functions.total_movies
+        }
+    )
             
 
 
@@ -306,7 +325,6 @@ def profile(platform):
         movie_actor_uris = netflix_functions.link_entities(movie_actor_list)
 
         combined_data = list(zip(movie_actor_list.items(), movie_actor_uris.items(), movie_titles.items()))
-        print("hei")
         if liked_movies:
             #pkg_statements.create_netflix_statement(combined_data)
 
@@ -342,22 +360,11 @@ def test(platform):
         
         ground_truth_data = ground_truth_Spotify_statements.create_statement()
 
-        precision, recall, F_measure = pkg_functions.compute_precision_recall(ground_truth_data, test_data, test_type="Related_entities")
-        print("-------------------------------------------")
-        print("Precision and recall for Related Entities:")
-        print("Precision:", precision)
-        print("Recall:", recall)
-        print("F-measure:", F_measure)
-        print("-------------------------------------------")  
-
-        precision, recall, F_measure = pkg_functions.compute_precision_recall(ground_truth_data, test_data, test_type="Description")
-        print("-------------------------------------------")
-        print("Precision and recall for Description:")
-        print("Precision:", precision)
-        print("Recall:", recall)
-        print("F-measure:", F_measure)
-        print("-------------------------------------------")             
-
+        pkg_functions.compute_precision_recall(ground_truth_data, test_data, test_type="Related_entities")
+          
+        pkg_functions.compute_precision_recall(ground_truth_data, test_data, test_type="Description")
+         
+        pkg_functions.compute_precision_recall(ground_truth_data, test_data, "song_URI")          
             
         return render_template('/profile/spotify.html', top_tracks_short=top_tracks_short, track_URI_list=combined_tracks, artist_URI_list=combined_artists)
     
@@ -387,21 +394,14 @@ def test(platform):
             test_data = pkg_statements.create_netflix_statement(combined_data)
             ground_truth_data = ground_truth_Netflix_statements.create_statement()
             
-            precision, recall, F_measure = pkg_functions.compute_precision_recall(ground_truth_data, test_data, "Related_entities")
-            print("-------------------------------------------")
-            print("Precision and recall for Related Entities:")
-            print("Precision:", precision)
-            print("Recall:", recall)
-            print("F-measure:", F_measure)
-            print("-------------------------------------------")  
+            # test all related_entities
+            pkg_functions.compute_precision_recall(ground_truth_data, test_data, "Related_entities")
+            
+            # test all descriptions
+            pkg_functions.compute_precision_recall(ground_truth_data, test_data, "Description")
 
-            precision, recall, F_measure = pkg_functions.compute_precision_recall(ground_truth_data, test_data, "Description")
-            print("-------------------------------------------")
-            print("Precision and recall for Description:")
-            print("Precision:", precision)
-            print("Recall:", recall)
-            print("F-measure:", F_measure)
-            print("-------------------------------------------")
+            
+            
 
             return render_template('/profile/netflix.html', 
                                         combined_data=combined_data

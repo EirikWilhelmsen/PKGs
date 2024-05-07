@@ -45,7 +45,7 @@
             <button id="proceed-spotify" style="display: none;"  type="submit" name="platform" value="spotify-API">Proceed</button>
         </form>
         <form action="/proceed_test" method="post">
-            <button style="margin-top:10px;" type="submit" name="platform" value="spotify-TEST">test</button>
+            <button style="margin-top:10px;" type="submit" name="platform" value="spotify-TEST" onclick="showProgressbar('Spotify')">test</button>
         </form>
     </div>
     <div class="options" id="netflixOptions" style="display: none;">
@@ -58,7 +58,7 @@
             <button id="procced-netflix" style="display: none;" type="submit" name="platform" value="netflix-upload">Proceed</button>
         </form>
         <form action="/proceed_test" method="post">
-            <button style="margin-top:10px;" type="submit" name="platform" value="netflix-TEST">test</button>
+            <button style="margin-top:10px;" type="submit" name="platform" value="netflix-TEST" onclick="showProgressbar('Netflix')">test</button>
         </form>
     </div>
     <div class="options" id="EntityOptions" style="display: none;">
@@ -68,8 +68,46 @@
             <button type="submit" name="platform" value="Entity_Linking">Proceed</button>
         </form>
     </div>
-
+    <div class="progress-container" style="display:none;">
+        <div id="progress-bar" ></div>
+    </div>
     <script>
+        function showProgressbar(platform) {
+            var progressContainer = document.getElementsByClassName("progress-container")[0];
+            progressContainer.style.display = "block";
+            var intervalId = setInterval(function() {
+                updateProgress(platform);
+            }, 100);
+        }
+        
+        function updateProgress(platform) {
+            if (platform == "Spotify") {
+                fetch('/progress-spotify')
+                    .then(response => response.json())
+                    .then(data => {
+                        var percentage = (data.processed / data.total) * 100;
+                        document.getElementById("progress-bar").style.width = percentage + "%";
+                        
+                        if (percentage === 100) {
+                            clearInterval(intervalId);
+                        }
+                    });
+            }
+            else if (platform == "Netflix") {
+                fetch('/progress-netflix')
+                    .then(response => response.json())
+                    .then(data => {
+                        var percentage = (data.processed / data.total) * 100;
+                        console.log(percentage);
+                        document.getElementById("progress-bar").style.width = percentage + "%";
+                        
+                        if (percentage === 100) {
+                            clearInterval(intervalId);
+                        }
+                    });
+            }
+        }
+
         function showOptions(optionId) {
             var optionsDiv = document.getElementById(optionId);
             var spotifyOptions = document.getElementById("spotifyOptions");

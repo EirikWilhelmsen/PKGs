@@ -10,6 +10,9 @@ import os
 class NetflixFunctions:
     def __init__(self):
         self.load_actors_id()
+        self.total_movies = 0
+        self.processed_movies = 0
+        self.load_movies()
         pass
     
     def load_actors_id(self):
@@ -19,9 +22,20 @@ class NetflixFunctions:
         except FileNotFoundError:
             self.actors = []
     
+    def load_movies(self):
+        try:
+            with open("data/cache_files/movies.json", 'r') as file:
+                self.movies = json.load(file)
+        except FileNotFoundError:
+            self.movies = []
+    
     def save_actors_id(self):
         with open("data/cache_files/actors.json", 'w') as file:
             json.dump(self.actors, file)
+    
+    def save_movies(self):
+        with open("data/cache_files/movies.json", 'w') as file:
+            json.dump(self.movies, file)
 
     def get_actor_imdb_id(self,actor_name):
         """sumary_line
@@ -31,12 +45,12 @@ class NetflixFunctions:
         Return: 
         actor_id -- IMDb ID of the actor
         """
-        ia = imdb.IMDb()
             
         for actor in self.actors:
             if actor["name"] == actor_name:
                 return actor["id"]
                 
+        ia = imdb.IMDb()
         search_results = ia.search_person(actor_name)
         if search_results:
             actor_imdb_id = search_results[0].personID
@@ -100,6 +114,11 @@ class NetflixFunctions:
         Return: 
         info -- dictionary with additional OMDb movie information
         """
+
+        for movie in self.movies:
+            if movie['Movie'] == query:
+                print("fant film i cache")
+                return movie
         
         url = 'http://www.omdbapi.com/'
         params = {
@@ -127,6 +146,8 @@ class NetflixFunctions:
                 'ImdbID': imdbID,
                 'Response': response
             }
+            self.movies.append(info)
+            self.save_movies()
             return info
         
     def link_entities(self, reference):
@@ -136,6 +157,8 @@ class NetflixFunctions:
         reference -- dictionary with movie-actor associations
         Return: movie_actor_dict -- dictionary with movie URI as key and actor URIs as values
         """
+        self.total_movies = len(reference)
+        self.processed_movies = 0
         
         movie_actor_dict = {}  
         for key, _  in reference.items():
@@ -159,4 +182,5 @@ class NetflixFunctions:
                     movie_actor_dict[movie_uri] = {
                         'actor_uris': actors
                     }
+                self.processed_movies += 1
         return movie_actor_dict

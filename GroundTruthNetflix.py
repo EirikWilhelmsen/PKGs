@@ -837,20 +837,20 @@ class groundTruthNetflix:
 
         ############################################################################################################
 
-        subject = "http://example.com/test"
-        predicate = {"value": {"description": "like"}}
-        object = {"value": {"description": "the movie The Notebook starring Gena Rowlands, James Garner, Rachel McAdams",
-                "related_entities": ["https://schema.org/actor", "https://www.imdb.com/name/nm0001687/",
-                                    "https://schema.org/actor", "https://www.imdb.com/name/nm0001258/",
-                                    "https://schema.org/actor", "https://www.imdb.com/name/nm1046097/",
-                                    "https://schema.org/Movie", "https://www.imdb.com/title/tt0332280/"]}}
-        
-        test_data = {
-            "subject": subject,
-            "predicate": predicate,
-            "object": object 
-        }
-        test_data_list.append(test_data)
+        # subject = "http://example.com/test"
+        # predicate = {"value": {"description": "like"}}
+        # object = {"value": {"description": "the movie The Notebook starring Gena Rowlands, James Garner, Rachel McAdams",
+        #         "related_entities": ["https://schema.org/actor", "https://www.imdb.com/name/nm0001687/",
+        #                             "https://schema.org/actor", "https://www.imdb.com/name/nm0001258/",
+        #                             "https://schema.org/actor", "https://www.imdb.com/name/nm1046097/",
+        #                             "https://schema.org/Movie", "https://www.imdb.com/title/tt0332280/"]}}
+        # 
+        # test_data = {
+        #     "subject": subject,
+        #     "predicate": predicate,
+        #     "object": object 
+        # }
+        # test_data_list.append(test_data)
 
         ############################################################################################################
 

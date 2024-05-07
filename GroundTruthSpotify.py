@@ -27,7 +27,7 @@ class groundTruthSpotify():
         object = {"value": {"description": "the song Paint It, Black by The Rolling Stones", # Paint It Black
                              "related_entities": ["https://schema.org/artist", "No:URI:found", 
                                                   "https://schema.org/song", "No:URI:found"]}}
-        
+        "son'g" "song`g"
         test_data = {
             "subject": subject,
             "predicate": predicate,
