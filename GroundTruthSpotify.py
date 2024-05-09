@@ -25,8 +25,8 @@ class groundTruthSpotify():
         subject = "http://example.com/test" 
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song Paint It, Black by The Rolling Stones", # Paint It Black
-                             "related_entities": ["https://schema.org/artist", "No:URI:found", 
-                                                  "https://schema.org/song", "No:URI:found"]}}
+                             "related_entities": ["https://schema.org/artist", "https://musicbrainz.org/artist/b071f9fa-14b0-4217-8e97-eb41da73f598", 
+                                                  "https://schema.org/song", "https://musicbrainz.org/recording/11a499c8-48dd-4e45-a4ba-b517c716136a"]}}
         "son'g" "song`g"
         test_data = {
             "subject": subject,
@@ -55,8 +55,8 @@ class groundTruthSpotify():
         subject = "http://example.com/test" 
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song Sweet Child O' Mine by Guns N' Roses", # Sweet Child o' Mine
-                             "related_entities": ["https://schema.org/artist", "No:URI:found", 
-                                                  "https://schema.org/song", "No:URI:found"]}}
+                             "related_entities": ["https://schema.org/artist", "https://musicbrainz.org/artist/eeb1195b-f213-4ce1-b28c-8565211f8e43", 
+                                                  "https://schema.org/song", "https://musicbrainz.org/recording/1a8b5f7c-58ed-4757-a8d3-47bf7f77a32f"]}}
         
         test_data = {
             "subject": subject,
@@ -190,8 +190,8 @@ class groundTruthSpotify():
         subject = "http://example.com/test" 
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song Break from Toronto by PARTYNEXTDOOR", # Break From Toronto
-                             "related_entities": ["https://schema.org/artist", "No:URI:found", 
-                                                  "https://schema.org/song", "No:URI:found"]}}
+                             "related_entities": ["https://schema.org/artist", "https://musicbrainz.org/artist/f23ef341-33bd-47c1-b83c-846a78581f05", 
+                                                  "https://schema.org/song", "https://musicbrainz.org/recording/6caa8fde-9af0-4a15-b477-01ee92a0a7a4"]}}
         
         test_data = {
             "subject": subject,
@@ -204,10 +204,10 @@ class groundTruthSpotify():
         
         subject = "http://example.com/test" 
         predicate = {"value": {"description": "like"}} 
-        object = {"value": {"description": "the song Don’t Matter To Me (with Michael Jackson) by Drake, and Michael Jackson", # Don't Matter to Me
-                             "related_entities": ["https://schema.org/artist", "No:URI:found", 
-                                                  "https://schema.org/artist", "No:URI:found", 
-                                                  "https://schema.org/song", "No:URI:found"]}}
+        object = {"value": {"description": "the song Don’t Matter To Me by Drake, and Michael Jackson", # Don't Matter to Me
+                             "related_entities": ["https://schema.org/artist", "https://musicbrainz.org/artist/9fff2f8a-21e6-47de-a2b8-7f449929d43f", 
+                                                  "https://schema.org/artist", "https://musicbrainz.org/artist/f27ec8db-af05-4f36-916e-3d57f91ecf5e", 
+                                                  "https://schema.org/song", "https://musicbrainz.org/recording/5b4e4136-b739-4771-825d-7ec39558fc09"]}}
         
         test_data = {
             "subject": subject,
@@ -251,8 +251,8 @@ class groundTruthSpotify():
         subject = "http://example.com/test" 
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song Lady Of Namek by Tory Lanez",  # Lady of Namek
-                             "related_entities": ["https://schema.org/artist", "No:URI:found", 
-                                                  "https://schema.org/song", "No:URI:found"]}}
+                             "related_entities": ["https://schema.org/artist", "https://musicbrainz.org/artist/5b8ec72b-9e39-4a06-a2bf-964166b92a71", 
+                                                  "https://schema.org/song", "https://musicbrainz.org/recording/b001a09a-a0ba-427a-991f-578ede7152d4"]}}
         
         test_data = {
             "subject": subject,
@@ -785,10 +785,10 @@ class groundTruthSpotify():
         
         subject = "http://example.com/test" 
         predicate = {"value": {"description": "like"}} 
-        object = {"value": {"description": "the song Don't Let Me Down by The Chainsmokers, and Daya", 
+        object = {"value": {"description": "the song Don’t Let Me Down by The Chainsmokers, and Daya", 
                              "related_entities": ["https://schema.org/artist", "https://musicbrainz.org/artist/91a81925-92f9-4fc9-b897-93cf01226282", 
                                                   "https://schema.org/artist", "https://musicbrainz.org/artist/9e8a4e92-1598-47d9-80f7-646802abce76", 
-                                                  "https://schema.org/song", "https://musicbrainz.org/recording/34b68937-b2ce-4346-b8b0-e08fd95e3a21"]}}
+                                                  "https://schema.org/song", "https://musicbrainz.org/recording/06dd7f76-f905-4ec1-8ad7-62a5a308265b"]}}
         
         test_data = {
             "subject": subject,
@@ -864,8 +864,8 @@ class groundTruthSpotify():
         subject = "http://example.com/test" 
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song Under Overflaten (Som Marit Larsen) by Karpe", # Karpe Diem
-                             "related_entities": ["https://schema.org/artist", "No:URI:found", 
-                                                  "https://schema.org/song", "No:URI:found"]}}
+                             "related_entities": ["https://schema.org/artist", "https://musicbrainz.org/artist/7d809463-4fc4-4042-8b51-5e2e87a93dc5", 
+                                                  "https://schema.org/song", "https://musicbrainz.org/recording/485006ea-cd2c-40a7-8d81-891336dcc52f"]}}
         
         test_data = {
             "subject": subject,
@@ -1032,8 +1032,8 @@ class groundTruthSpotify():
         subject = "http://example.com/test" 
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song Lovin On Me by Jack Harlow", # Lovin on Me
-                             "related_entities": ["https://schema.org/artist", "No:URI:found", 
-                                                  "https://schema.org/song", "No:URI:found"]}}
+                             "related_entities": ["https://schema.org/artist", "https://musicbrainz.org/artist/134cb0bc-06fa-42f7-8078-b0c858349975", 
+                                                  "https://schema.org/song", "https://musicbrainz.org/recording/be26a5d7-6845-429c-8742-7b0fe5955e45"]}}
         
         test_data = {
             "subject": subject,

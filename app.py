@@ -364,7 +364,9 @@ def test(platform):
           
         pkg_functions.compute_precision_recall(ground_truth_data, test_data, test_type="Description")
          
-        pkg_functions.compute_precision_recall(ground_truth_data, test_data, "song_URI")          
+        pkg_functions.compute_precision_recall(ground_truth_data, test_data, "songs_movies")
+
+        pkg_functions.compute_precision_recall(ground_truth_data, test_data, "artists_actors")          
             
         return render_template('/profile/spotify.html', top_tracks_short=top_tracks_short, track_URI_list=combined_tracks, artist_URI_list=combined_artists, song_names=song_names)
     
@@ -399,6 +401,11 @@ def test(platform):
             
             # test all descriptions
             pkg_functions.compute_precision_recall(ground_truth_data, test_data, "Description")
+
+            # test all movies
+            pkg_functions.compute_precision_recall(ground_truth_data, test_data, "songs_movies")
+
+            pkg_functions.compute_precision_recall(ground_truth_data, test_data, "artists_actors")
 
             
             

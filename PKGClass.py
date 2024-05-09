@@ -103,7 +103,7 @@ class PKGFunctions:
                         match_found = True
                         break
                 if not match_found:
-                    print("FP: ", test_item["object"]["value"]["related_entities"])
+                    print("FP: for",test_item['object']['value']['description'], test_item["object"]["value"]["related_entities"], "\n")
                     false_positives += 1
 
             false_negatives = len(ground_truth_data) - true_positives
@@ -122,7 +122,7 @@ class PKGFunctions:
                     false_positives += 1
             false_negatives = len(ground_truth_data) - true_positives
         
-        elif test_type == "song_URI":
+        elif test_type == "songs_movies":
             for test_item in test_data:
                 match_found = False
                 for ground_truth_item in ground_truth_data:
@@ -131,7 +131,20 @@ class PKGFunctions:
                         match_found = True
                         break
                 if not match_found:
-                    print("FP: ", test_item["object"]["value"]["related_entities"][-1])
+                    print("FP: for",test_item['object']['value']['description'], test_item["object"]["value"]["related_entities"][-1], "\n")
+                    false_positives += 1
+            false_negatives = len(ground_truth_data) - true_positives
+        
+        elif test_type == "artists_actors":
+            for test_item in test_data:
+                match_found = False
+                for ground_truth_item in ground_truth_data:
+                    if (test_item["object"]["value"]["related_entities"][:-2] == ground_truth_item["object"]["value"]["related_entities"][:-2]):
+                        true_positives += 1
+                        match_found = True
+                        break
+                if not match_found:
+                    print("FP: for",test_item['object']['value']['description'], test_item["object"]["value"]["related_entities"][:-2], "\n")
                     false_positives += 1
             false_negatives = len(ground_truth_data) - true_positives
         
@@ -142,9 +155,9 @@ class PKGFunctions:
 
         print("-------------------------------------------")
         print(f"Precision and recall for : {test_type}")
-        print("Precision:", precision)
-        print("Recall:", recall)
-        print("F-measure:", F_measure)
+        print("Precision: {:.3f}".format(precision))
+        print("Recall: {:.3f}".format(recall))
+        print("F-measure: {:.3f}".format(F_measure))
         print("-------------------------------------------")
 
 

@@ -72,11 +72,11 @@ class groundTruthNetflix:
 
         subject = "http://example.com/test"
         predicate = {"value": {"description": "like"}}
-        object = {"value": {"description": "The Fast and the Furious - Tokyo Drift starring Lucas Black, Zachery Ty Bryan, Shad Moss",
+        object = {"value": {"description": "the movie The Fast and the Furious: Tokyo Drift starring Lucas Black, Zachery Ty Bryan, Shad Moss",
                 "related_entities": ["https://schema.org/actor", "https://www.imdb.com/name/nm0085407/",
                                     "https://schema.org/actor", "https://www.imdb.com/name/nm0117022/",
                                     "https://schema.org/actor", "https://www.imdb.com/name/nm0510168/",
-                                    "https://schema.org/Movie", "https://www.imdb.com/title/tt0322259/"]}}
+                                    "https://schema.org/Movie", "https://www.imdb.com/title/tt0463985/"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -644,7 +644,7 @@ class groundTruthNetflix:
 
         subject = "http://example.com/test"
         predicate = {"value": {"description": "like"}}
-        object = {"value": {"description": "the movie Spider-man 3 starring Tobey Maguire, Kirsten Dunst, Topher Grace",
+        object = {"value": {"description": "the movie Spider-Man 3 starring Tobey Maguire, Kirsten Dunst, Topher Grace",
                 "related_entities": ["https://schema.org/actor", "https://www.imdb.com/name/nm0001497/",
                                     "https://schema.org/actor", "https://www.imdb.com/name/nm0000379/",
                                     "https://schema.org/actor", "https://www.imdb.com/name/nm0333410/",
@@ -1420,7 +1420,7 @@ class groundTruthNetflix:
 
         subject = "http://example.com/test"
         predicate = {"value": {"description": "like"}}
-        object = {"value": {"description": "the movie The Legend of Tarzan starring Alexander Skarsgård, Rory J. Saper, Christian Stevens",
+        object = {"value": {"description": "the movie The Legend of Tarzan starring Alexander Skarsgård, Rory J Saper, Christian Stevens",
                 "related_entities": ["https://schema.org/actor", "https://www.imdb.com/name/nm0002907/",
                                     "https://schema.org/actor", "https://www.imdb.com/name/nm4920741/",
                                     "https://schema.org/actor", "https://www.imdb.com/name/nm7222287/",
@@ -1628,7 +1628,7 @@ class groundTruthNetflix:
 
         subject = "http://example.com/test"
         predicate = {"value": {"description": "like"}}
-        object = {"value": {"description": "the movie 2012 starring John Cusack, Thandie Newton, Chiwetel Ejiofor",
+        object = {"value": {"description": "the movie 2012 starring John Cusack, Thandiwe Newton, Chiwetel Ejiofor",
                 "related_entities": ["https://schema.org/actor", "https://www.imdb.com/name/nm0000131/",
                                     "https://schema.org/actor", "https://www.imdb.com/name/nm0628601/",
                                     "https://schema.org/actor", "https://www.imdb.com/name/nm0252230/",
