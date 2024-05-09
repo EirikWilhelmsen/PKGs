@@ -156,6 +156,21 @@ class groundTruthNetflix:
 
         # "Jack Reacher: Vend aldri tilbake" is a norwegian title, with no corresponding entry in IMDb KB
 
+        subject = "http://example.com/test"
+        predicate = {"value": {"description": "like"}}
+        object = {"value": {"description": "the movie Jack Reacher: Vend aldri tilbake starring Tom Cruise, Cobie Smulders, Aldis Hodge",
+                "related_entities": ["https://schema.org/actor", "https://www.imdb.com/name/nm0000129/",
+                                    "https://schema.org/actor", "https://www.imdb.com/name/nm1130627/",
+                                    "https://schema.org/actor", "https://www.imdb.com/name/nm0388038/",
+                                    "https://schema.org/Movie", "https://www.imdb.com/title/tt3393786/"]}}
+        
+        test_data = {
+            "subject": subject,
+            "predicate": predicate,
+            "object": object 
+        }
+        test_data_list.append(test_data)
+
         ############################################################################################################
 
         subject = "http://example.com/test"
@@ -364,6 +379,21 @@ class groundTruthNetflix:
 
         # "Fangio - Mannen som temmet maskinene", is a norwegian title, with no corresponding entry in IMDb KB
 
+        subject = "http://example.com/test"
+        predicate = {"value": {"description": "like"}}
+        object = {"value": {"description": "the movie Fangio - Mannen som temmet maskinene starring Fernando Alonso, Toto Wolff, Alain Prost",
+                "related_entities": ["https://schema.org/actor", "https://www.imdb.com/name/nm1898955/",
+                                    "https://schema.org/actor", "https://www.imdb.com/name/nm5623502/",
+                                    "https://schema.org/actor", "https://www.imdb.com/name/nm1169354/",
+                                    "https://schema.org/Movie", "https://www.imdb.com/title/tt6668212/"]}}
+        
+        test_data = {
+            "subject": subject,
+            "predicate": predicate,
+            "object": object 
+        }
+        test_data_list.append(test_data)
+
         ############################################################################################################
 
         subject = "http://example.com/test"
@@ -470,13 +500,58 @@ class groundTruthNetflix:
 
         # "Transformers: De beseirede slår tilbake" is a norwegian title, with no corresponding entry in IMDb KB
 
+        subject = "http://example.com/test"
+        predicate = {"value": {"description": "like"}}
+        object = {"value": {"description": "the movie Transformers: De beseirede slår tilbake starring Shia LaBeouf, Megan Fox, Josh Duhamel",
+                "related_entities": ["https://schema.org/actor", "https://www.imdb.com/name/nm0479471/",
+                                    "https://schema.org/actor", "https://www.imdb.com/name/nm1083271/",
+                                    "https://schema.org/actor", "https://www.imdb.com/name/nm0241049/",
+                                    "https://schema.org/Movie", "https://www.imdb.com/title/tt1055369/"]}}
+        
+        test_data = {
+            "subject": subject,
+            "predicate": predicate,
+            "object": object 
+        }
+        test_data_list.append(test_data)
+
         ############################################################################################################
 
         # "American Murder: Mord i nabolaget" is a norwegian title, with no corresponding entry in IMDB KB
+        
+        subject = "http://example.com/test"
+        predicate = {"value": {"description": "like"}}
+        object = {"value": {"description": "the movie American Murder: Mord i nabolaget starring Nickole Atkinson, Jim Benemann, Luke Epple",
+                "related_entities": ["https://schema.org/actor", "https://www.imdb.com/name/nm11957672/",
+                                    "https://schema.org/actor", "https://www.imdb.com/name/nm9287661/",
+                                    "https://schema.org/actor", "https://www.imdb.com/name/nm11957853/",
+                                    "https://schema.org/Movie", "https://www.imdb.com/title/tt12987894/"]}}
+        
+        test_data = {
+            "subject": subject,
+            "predicate": predicate,
+            "object": object 
+        }
+        test_data_list.append(test_data)
 
         ############################################################################################################
 
         # "28 dager" is a norwegian title, with no corresponding entry in IMDB KB
+
+        subject = "http://example.com/test"
+        predicate = {"value": {"description": "like"}}
+        object = {"value": {"description": "the movie 28 dager starring Sandra Bullock, Viggo Mortensen, Dominic West",
+                "related_entities": ["https://schema.org/actor", "https://www.imdb.com/name/nm0000113/",
+                                    "https://schema.org/actor", "https://www.imdb.com/name/nm0001557/",
+                                    "https://schema.org/actor", "https://www.imdb.com/name/nm0922035/",
+                                    "https://schema.org/Movie", "https://www.imdb.com/title/tt0191754/"]}}
+        
+        test_data = {
+            "subject": subject,
+            "predicate": predicate,
+            "object": object 
+        }
+        test_data_list.append(test_data)
 
         ############################################################################################################
 
@@ -532,6 +607,21 @@ class groundTruthNetflix:
         ############################################################################################################
 
         # "Hobbiten: Femhærerslaget" is a norwegian title, with no corresponding entry in IMDB KB
+
+        subject = "http://example.com/test"
+        predicate = {"value": {"description": "like"}}
+        object = {"value": {"description": "the movie Hobbiten: Femhærerslaget starring Ian McKellen, Martin Freeman, Richard Armitage",
+                "related_entities": ["https://schema.org/actor", "https://www.imdb.com/name/nm0005212/",
+                                    "https://schema.org/actor", "https://www.imdb.com/name/nm0293509/",
+                                    "https://schema.org/actor", "https://www.imdb.com/name/nm0035514/",
+                                    "https://schema.org/Movie", "https://www.imdb.com/title/tt2310332/"]}}
+        
+        test_data = {
+            "subject": subject,
+            "predicate": predicate,
+            "object": object 
+        }
+        test_data_list.append(test_data)
 
         ############################################################################################################
 
@@ -673,6 +763,21 @@ class groundTruthNetflix:
 
         # "Det regner kjøttboller" is a norwegian title, with no corresponding entry in IMDB KB
 
+        subject = "http://example.com/test"
+        predicate = {"value": {"description": "like"}}
+        object = {"value": {"description": "the movie Det regner kjøttboller starring Anna Faris, Bill Hader, Bruce Campbell",
+                "related_entities": ["https://schema.org/actor", "https://www.imdb.com/name/nm0267506/",
+                                    "https://schema.org/actor", "https://www.imdb.com/name/nm0352778/",
+                                    "https://schema.org/actor", "https://www.imdb.com/name/nm0132257/",
+                                    "https://schema.org/Movie", "https://www.imdb.com/title/tt0844471/"]}}
+        
+        test_data = {
+            "subject": subject,
+            "predicate": predicate,
+            "object": object 
+        }
+        test_data_list.append(test_data)
+
         ############################################################################################################
 
         subject = "http://example.com/test"
@@ -693,6 +798,21 @@ class groundTruthNetflix:
         ############################################################################################################
 
         # "Hangover 2" is a title by Netflix, which is not present in the IMDb KB, preferred title "Hangover part II"
+
+        subject = "http://example.com/test"
+        predicate = {"value": {"description": "like"}}
+        object = {"value": {"description": "the movie Hangover 2 starring Bradley Cooper, Zach Galifianakis, Ed Helms",
+                "related_entities": ["https://schema.org/actor", "https://www.imdb.com/name/nm0177896/",
+                                    "https://schema.org/actor", "https://www.imdb.com/name/nm0302108/",
+                                    "https://schema.org/actor", "https://www.imdb.com/name/nm1159180/",
+                                    "https://schema.org/Movie", "https://www.imdb.com/title/tt1411697/"]}}
+        
+        test_data = {
+            "subject": subject,
+            "predicate": predicate,
+            "object": object 
+        }
+        test_data_list.append(test_data)
 
         ############################################################################################################
 
@@ -835,22 +955,20 @@ class groundTruthNetflix:
         # "Dagboken" is a norwegian title, with no corresponding entry in IMDB KB, but IMDb returned "Dagboken - scener ur tre böcker"
         # so we write the correct title in the ground truth
 
-        ############################################################################################################
-
-        # subject = "http://example.com/test"
-        # predicate = {"value": {"description": "like"}}
-        # object = {"value": {"description": "the movie The Notebook starring Gena Rowlands, James Garner, Rachel McAdams",
-        #         "related_entities": ["https://schema.org/actor", "https://www.imdb.com/name/nm0001687/",
-        #                             "https://schema.org/actor", "https://www.imdb.com/name/nm0001258/",
-        #                             "https://schema.org/actor", "https://www.imdb.com/name/nm1046097/",
-        #                             "https://schema.org/Movie", "https://www.imdb.com/title/tt0332280/"]}}
-        # 
-        # test_data = {
-        #     "subject": subject,
-        #     "predicate": predicate,
-        #     "object": object 
-        # }
-        # test_data_list.append(test_data)
+        subject = "http://example.com/test"
+        predicate = {"value": {"description": "like"}}
+        object = {"value": {"description": "the movie Dagboken starring Gena Rowlands, James Garner, Rachel McAdams",
+                "related_entities": ["https://schema.org/actor", "https://www.imdb.com/name/nm0001687/",
+                                    "https://schema.org/actor", "https://www.imdb.com/name/nm0001258/",
+                                    "https://schema.org/actor", "https://www.imdb.com/name/nm1046097/",
+                                    "https://schema.org/Movie", "https://www.imdb.com/title/tt0332280/"]}}
+        
+        test_data = {
+            "subject": subject,
+            "predicate": predicate,
+            "object": object 
+        }
+        test_data_list.append(test_data)
 
         ############################################################################################################
 
@@ -1162,9 +1280,39 @@ class groundTruthNetflix:
 
         # "Den enestående Will Hunting" is a norwegian title, with no corresponding entry in IMDB KB
 
+        subject = "http://example.com/test"
+        predicate = {"value": {"description": "like"}}
+        object = {"value": {"description": "the movie Den enestående Will Hunting starring Robin Williams, Matt Damon, Ben Affleck",
+                "related_entities": ["https://schema.org/actor", "https://www.imdb.com/name/nm0000245/",
+                                    "https://schema.org/actor", "https://www.imdb.com/name/nm0000354/",
+                                    "https://schema.org/actor", "https://www.imdb.com/name/nm0000255/",
+                                    "https://schema.org/Movie", "https://www.imdb.com/title/tt0119217/"]}}
+        
+        test_data = {
+            "subject": subject,
+            "predicate": predicate,
+            "object": object 
+        }
+        test_data_list.append(test_data)
+
         ############################################################################################################
 
         # "Jakten på lykke" is a norwegian title, with no corresponding entry in IMDB KB
+
+        subject = "http://example.com/test"
+        predicate = {"value": {"description": "like"}}
+        object = {"value": {"description": "the movie Jakten på lykke starring Will Smith, Thandie Newton, Jaden Smith",
+                "related_entities": ["https://schema.org/actor", "https://www.imdb.com/name/nm0000226/",
+                                    "https://schema.org/actor", "https://www.imdb.com/name/nm0628601/",
+                                    "https://schema.org/actor", "https://www.imdb.com/name/nm1535523/",
+                                    "https://schema.org/Movie", "https://www.imdb.com/title/tt0454921/"]}}
+        
+        test_data = {
+            "subject": subject,
+            "predicate": predicate,
+            "object": object 
+        }
+        test_data_list.append(test_data)
 
         ############################################################################################################
 
@@ -1306,6 +1454,21 @@ class groundTruthNetflix:
 
         # "Creed - Rocky's Legacy" is a title by Netflix, which is not present in the IMDb KB, preferred title is "Creed"
 
+        subject = "http://example.com/test"
+        predicate = {"value": {"description": "like"}}
+        object = {"value": {"description": "the movie Creed - Rocky's Legacy starring Michael B. Jordan, Sylvester Stallone, Tessa Thompson",
+                "related_entities": ["https://schema.org/actor", "https://www.imdb.com/name/nm0430107/",
+                                    "https://schema.org/actor", "https://www.imdb.com/name/nm0000230/",
+                                    "https://schema.org/actor", "https://www.imdb.com/name/nm1935086/",
+                                    "https://schema.org/Movie", "https://www.imdb.com/title/tt3076658/"]}}
+        
+        test_data = {
+            "subject": subject,
+            "predicate": predicate,
+            "object": object 
+        }
+        test_data_list.append(test_data)
+
         ############################################################################################################
 
         subject = "http://example.com/test"
@@ -1376,7 +1539,22 @@ class groundTruthNetflix:
 
         ############################################################################################################
 
-        # "Det regner kjøttboller" is a norwegian title, with no corresponding entry in IMDB KB
+        # "Det regner kjøttboller 2" is a norwegian title, with no corresponding entry in IMDB KB
+
+        subject = "http://example.com/test"
+        predicate = {"value": {"description": "like"}}
+        object = {"value": {"description": "the movie Det regner kjøttboller 2 starring Bill Hader, Anna Faris, Will Forte",
+                "related_entities": ["https://schema.org/actor", "https://www.imdb.com/name/nm0352778/",
+                                    "https://schema.org/actor", "https://www.imdb.com/name/nm0267506/",
+                                    "https://schema.org/actor", "https://www.imdb.com/name/nm0287182/",
+                                    "https://schema.org/Movie", "https://www.imdb.com/title/tt1985966/"]}}
+        
+        test_data = {
+            "subject": subject,
+            "predicate": predicate,
+            "object": object 
+        }
+        test_data_list.append(test_data)
 
         ############################################################################################################
 

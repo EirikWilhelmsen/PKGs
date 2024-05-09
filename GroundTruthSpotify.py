@@ -325,7 +325,7 @@ class groundTruthSpotify():
         
         subject = "http://example.com/test" 
         predicate = {"value": {"description": "like"}} 
-        object = {"value": {"description": "the song Ain't No Sunshine by Bill Withers", 
+        object = {"value": {"description": "the song Ain’t No Sunshine by Bill Withers", 
                              "related_entities": ["https://schema.org/artist", "https://musicbrainz.org/artist/fd1a2d9d-9bb6-44de-83a3-41560658aba9", 
                                                   "https://schema.org/song", "https://musicbrainz.org/recording/3442b706-8cef-4053-ab3e-dca0283c41dc"]}}
         
@@ -340,9 +340,9 @@ class groundTruthSpotify():
         
         subject = "http://example.com/test" 
         predicate = {"value": {"description": "like"}} 
-        object = {"value": {"description": "the song It's A Man's, Man's, Man's World by James Brown", 
+        object = {"value": {"description": "the song It’s a Man’s Man’s World by James Brown", 
                              "related_entities": ["https://schema.org/artist", "https://musicbrainz.org/artist/20ff3303-4fe2-4a47-a1b6-291e26aa3438", 
-                                                  "https://schema.org/song", "https://musicbrainz.org/release/b91eee38-1f10-4b68-bdf6-410fd0434bd7"]}}
+                                                  "https://schema.org/song", "https://musicbrainz.org/recording/cb9e4e4a-f6d3-470b-9f40-f110945165c6"]}}
         
         test_data = {
             "subject": subject,
@@ -447,9 +447,9 @@ class groundTruthSpotify():
         
         subject = "http://example.com/test" 
         predicate = {"value": {"description": "like"}} 
-        object = {"value": {"description": "the song Grandma's Hands by Bill Withers", # Grandma´s Hands
-                             "related_entities": ["https://schema.org/artist", "No:URI:found", 
-                                                  "https://schema.org/song", "No:URI:found"]}}
+        object = {"value": {"description": "the song Grandma’s Hands by Bill Withers", # Grandma’s Hands
+                             "related_entities": ["https://schema.org/artist", "https://musicbrainz.org/artist/fd1a2d9d-9bb6-44de-83a3-41560658aba9", 
+                                                  "https://schema.org/song", "https://musicbrainz.org/recording/1ed5d688-5468-4028-b8b2-cd1bab2dbbf0"]}}
         
         test_data = {
             "subject": subject,
@@ -721,7 +721,7 @@ class groundTruthSpotify():
         
         subject = "http://example.com/test" 
         predicate = {"value": {"description": "like"}} 
-        object = {"value": {"description": "the song Cheap Thrills (feat. Sean Paul) by Sia, and Sean Paul", # Cheap Thrills
+        object = {"value": {"description": "the song Cheap Thrills by Sia, and Sean Paul", # Cheap Thrills
                              "related_entities": ["https://schema.org/artist", "https://musicbrainz.org/artist/2f548675-008d-4332-876c-108b0c7ab9c5", 
                                                   "https://schema.org/artist", "https://musicbrainz.org/artist/c3da3346-2643-48a7-93cd-011f6834b3d7", 
                                                   "https://schema.org/song", "https://musicbrainz.org/recording/8fcdf7b9-6a1c-40c5-aae0-a489dc8898ef"]}}
@@ -737,7 +737,7 @@ class groundTruthSpotify():
         
         subject = "http://example.com/test" 
         predicate = {"value": {"description": "like"}} 
-        object = {"value": {"description": "the song Low Life (feat. The Weeknd) by Future, and The Weeknd", 
+        object = {"value": {"description": "the song Low Life by Future, and The Weeknd", 
                              "related_entities": ["https://schema.org/artist", "https://musicbrainz.org/artist/48262e82-db9f-4a92-b650-dfef979b73", 
                                                   "https://schema.org/artist", "https://musicbrainz.org/artist/c8b03190-306c-4120-bb0b-6f2ebfc06ea9", 
                                                   "https://schema.org/song", "https://musicbrainz.org/recording/1fb6afc2-e6b2-4646-b5d9-497902d09404"]}}
@@ -801,7 +801,7 @@ class groundTruthSpotify():
         
         subject = "http://example.com/test" 
         predicate = {"value": {"description": "like"}} 
-        object = {"value": {"description": "the song Thrift Shop (feat. Wanz) by Macklemore & Ryan Lewis", 
+        object = {"value": {"description": "the song Thrift Shop by Macklemore & Ryan Lewis", 
                              "related_entities": ["https://schema.org/artist", "https://musicbrainz.org/artist/97b226c8-7140-4da3-91ac-15e62e131a81",
                                                   "https://schema.org/song", "https://musicbrainz.org/recording/84855f43-378a-46d1-b524-a037efe28dc6"]}}
         
@@ -908,7 +908,7 @@ class groundTruthSpotify():
         
         subject = "http://example.com/test" 
         predicate = {"value": {"description": "like"}} 
-        object = {"value": {"description": "the song Wiggle (feat. Snoop Dogg) by Jason Derulo, and Snoop Dogg", 
+        object = {"value": {"description": "the song Wiggle by Jason Derulo, and Snoop Dogg", 
                              "related_entities": ["https://schema.org/artist", "https://musicbrainz.org/artist/6de0f914-3e60-4418-be3b-42e0feb6eb4d", 
                                                   "https://schema.org/artist", "https://musicbrainz.org/artist/f90e8b26-9e52-4669-a5c9-e28529c47894", 
                                                   "https://schema.org/song", "https://musicbrainz.org/recording/d7ccf1bb-3ca5-44bd-93c5-d46cb2a4244c"]}}
@@ -1061,9 +1061,9 @@ class groundTruthSpotify():
         
         subject = "http://example.com/test" 
         predicate = {"value": {"description": "like"}} 
-        object = {"value": {"description": "the song we can't be friends (wait for your love) by Ariana Grande", 
+        object = {"value": {"description": "the song we can’t be friends (wait for your love) by Ariana Grande", 
                              "related_entities": ["https://schema.org/artist", "https://musicbrainz.org/artist/f4fdbb4c-e4b7-47a0-b83b-d91bbfcfa387", 
-                                                  "https://schema.org/song", "https://musicbrainz.org/recording/5fa7bcb3-76ca-4b76-a268-031380826d70"]}}
+                                                  "https://schema.org/song", "https://musicbrainz.org/recording/b6587011-5a7c-4664-82ad-7a6368f4bd99"]}}
         
         test_data = {
             "subject": subject,
@@ -1106,7 +1106,7 @@ class groundTruthSpotify():
         
         subject = "http://example.com/test" 
         predicate = {"value": {"description": "like"}} 
-        object = {"value": {"description": "the song I Remember Everything (feat. Kacey Musgraves) by Zach Bryan, and Kacey Musgraves", # I Remember Everything
+        object = {"value": {"description": "the song I Remember Everything by Zach Bryan, and Kacey Musgraves", # I Remember Everything
                              "related_entities": ["https://schema.org/artist", "https://musicbrainz.org/artist/51e90731-08c0-4f60-89b6-5b78e5844de8", 
                                                   "https://schema.org/artist", "https://musicbrainz.org/artist/d1393ecb-431b-4fde-a6ea-d769f2f040cb", 
                                                   "https://schema.org/song", "https://musicbrainz.org/recording/010e7b4d-9e25-45c6-aaaa-d259f7007e99"]}}
@@ -1152,7 +1152,7 @@ class groundTruthSpotify():
         
         subject = "http://example.com/test" 
         predicate = {"value": {"description": "like"}} 
-        object = {"value": {"description": "the song Wanna Be (with Megan Thee Stallion) by GloRilla, and Megan Thee Stallion", # Wanna Be
+        object = {"value": {"description": "the song Wanna Be by GloRilla, and Megan Thee Stallion", # Wanna Be
                              "related_entities": ["https://schema.org/artist", "https://musicbrainz.org/artist/2a7ef045-ca10-4cb5-8fe9-1f5d38e84bc2", 
                                                   "https://schema.org/artist", "https://musicbrainz.org/artist/ee27b2d8-648c-4a9d-a68c-e55066959975", 
                                                   "https://schema.org/song", "https://musicbrainz.org/recording/b412ba65-96bd-43d4-bd2c-7f52328fd931"]}}
@@ -1274,11 +1274,11 @@ class groundTruthSpotify():
         
         subject = "http://example.com/test" 
         predicate = {"value": {"description": "like"}} 
-        object = {"value": {"description": "the song We Still Don't Trust You by Future, Metro Boomin, and The Weeknd", # We Still Don´t Trust You
+        object = {"value": {"description": "the song We Still Don’t Trust You by Future, Metro Boomin, and The Weeknd", # We Still Don´t Trust You
                              "related_entities": ["https://schema.org/artist", "https://musicbrainz.org/artist/48262e82-db9f-4a92-b650-dfef979b73ec", 
                                                   "https://schema.org/artist", "https://musicbrainz.org/artist/59db3d82-86ea-451f-881f-dffc8ec387c9", 
                                                   "https://schema.org/artist", "https://musicbrainz.org/artist/c8b03190-306c-4120-bb0b-6f2ebfc06ea9", 
-                                                  "https://schema.org/song", "No:URI:found"]}}
+                                                  "https://schema.org/song", "https://musicbrainz.org/recording/040c475a-418a-4fc6-ae88-c66b9650577b"]}}
         
         test_data = {
             "subject": subject,
@@ -1291,7 +1291,7 @@ class groundTruthSpotify():
         
         subject = "http://example.com/test" 
         predicate = {"value": {"description": "like"}} 
-        object = {"value": {"description": "the song All The Stars (with SZA) by Kendrick Lamar, and SZA", # All The Stars
+        object = {"value": {"description": "the song All The Stars by Kendrick Lamar, and SZA", # All The Stars
                              "related_entities": ["https://schema.org/artist", "https://musicbrainz.org/artist/381086ea-f511-4aba-bdf9-71c753dc5077", 
                                                   "https://schema.org/artist", "https://musicbrainz.org/artist/272989c8-5535-492d-a25c-9f58803e027f", 
                                                   "https://schema.org/song", "https://musicbrainz.org/recording/a0a38516-c9c3-4a05-a2bf-523b6ca219ab"]}}
@@ -1400,9 +1400,9 @@ class groundTruthSpotify():
         
         subject = "http://example.com/test" 
         predicate = {"value": {"description": "like"}} 
-        object = {"value": {"description": "the song I'll Be Seeing You by Billie Holiday", 
+        object = {"value": {"description": "the song I’ll Be Seeing You by Billie Holiday", 
                              "related_entities": ["https://schema.org/artist", "https://musicbrainz.org/artist/d59c4cda-11d9-48db-8bfe-b557ee602aed", 
-                                                  "https://schema.org/song", "https://musicbrainz.org/recording/ea7e0d22-2b7c-4175-924b-9d24e05f2c0f"]}}
+                                                  "https://schema.org/song", "https://musicbrainz.org/recording/9b6a919e-b3cb-44ed-a777-c8fe716880a9"]}}
         
         test_data = {
             "subject": subject,

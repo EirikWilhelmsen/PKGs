@@ -17,24 +17,24 @@ class NetflixFunctions:
     
     def load_actors_id(self):
         try:
-            with open("data/cache_files/actors.json", 'r') as file:
+            with open(os.path.join(os.path.dirname(__file__), "data/cache_files/actors.json"), 'r', encoding='utf-8') as file:
                 self.actors = json.load(file)
         except FileNotFoundError:
             self.actors = []
     
     def load_movies(self):
         try:
-            with open("data/cache_files/movies.json", 'r') as file:
+            with open(os.path.join(os.path.dirname(__file__), "data/cache_files/movies.json"), 'r', encoding='utf-8') as file:
                 self.movies = json.load(file)
         except FileNotFoundError:
             self.movies = []
     
     def save_actors_id(self):
-        with open("data/cache_files/actors.json", 'w') as file:
+        with open(os.path.join(os.path.dirname(__file__), "data/cache_files/actors.json"), 'w', encoding='utf-8') as file:
             json.dump(self.actors, file)
     
     def save_movies(self):
-        with open("data/cache_files/movies.json", 'w') as file:
+        with open(os.path.join(os.path.dirname(__file__), "data/cache_files/movies.json"), 'w', encoding='utf-8') as file:
             json.dump(self.movies, file)
 
     def get_actor_imdb_id(self,actor_name):
@@ -117,8 +117,9 @@ class NetflixFunctions:
 
         for movie in self.movies:
             if movie['Movie'] == query:
-                print("fant film i cache")
                 return movie
+        
+        print(f"søker {query}")
         
         url = 'http://www.omdbapi.com/'
         params = {
@@ -129,6 +130,7 @@ class NetflixFunctions:
         response = requests.get(url, params=params)
         data = response.json()
         if data.get('Response') == 'False':
+            print("fant ikke film")
             response = data.get('Response')
             info = {
                 'Response': response
@@ -136,6 +138,7 @@ class NetflixFunctions:
             return info
         elif data.get('Response') == 'True':
             movie = data.get('Title')
+            print("fant film", movie)
             actors = data.get('Actors')
             actor_list = actors.split(',')
             imdbID = data.get('imdbID')
@@ -149,6 +152,9 @@ class NetflixFunctions:
             self.movies.append(info)
             self.save_movies()
             return info
+        else:
+            print("fikk ikke respons")
+            return None
         
     def link_entities(self, reference):
         """sumary_line

@@ -1,20 +1,10 @@
-test = []
-
-movie = 'The Matrix'
-actors = 'Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss, Hugo Weaving'
-actor_list = actors.split(',')
-imdbID = 'tt0133093'
-response = 'True'
-
-info = {
-    'Movie': movie,
-    'Actors': actor_list,
-    'ImdbID': imdbID,
-    'Response': response
-}
-test.append(info)
-
-for movie in test:
-    if movie['Movie'] == 'The Matrix':
-        print(movie)
-        break
+a = 0.89+0.87+0.88+0.86+0.88+0.89+0.89+0.86+0.86+0.86
+b = a/10
+print(b)
+x = 0.96*8
+xa = x+0.94+0.95
+xb = xa/10
+print(xb)
+y = 0.94+0.9+0.92+0.9+0.92+0.93+0.93+0.9+0.89+0.9
+z = y/10
+print(z)

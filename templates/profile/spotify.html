@@ -50,7 +50,7 @@
                         <td class="track-info">
                             <img src="{{ track['album']['images'][0]['url'] }}" alt="Album Cover" class="index_img">
                             <div>
-                                <strong>Track Name:</strong> {{ track['name'] }}<br>
+                                <strong>Track Name:</strong> {{ song_names[loop.index0] }}<br>
                                 {% if track['artists']|length > 1 %}
                                     <strong>Artists:</strong><br>
                                     {% set j = loop.index0 %}
@@ -78,7 +78,7 @@
                     <td class="track-info">
                         <img src="{{ track['album']['images'][0]['url'] }}" alt="Album Cover" class="index_img">
                         <div>
-                            <strong>Track Name:</strong> {{ track['name'] }}<br>
+                            <strong>Track Name:</strong> {{ song_names[loop.index0] }}<br>
                             {% if track['artists']|length > 1 %}
                                 <strong>Artists:</strong><br>
                                 {% set j = loop.index0 %}
@@ -103,7 +103,7 @@
                     <td class="track-info">
                         <img src="{{ track['album']['images'][0]['url'] }}" alt="Album Cover" class="index_img">
                         <div>
-                            <strong>Track Name:</strong> {{ track['name'] }}<br>
+                            <strong>Track Name:</strong> {{ song_names[loop.index0] }}<br>
                             {% if track['artists']|length > 1 %}
                                 <strong>Artists:</strong><br>
                                 {% set j = loop.index0 %}

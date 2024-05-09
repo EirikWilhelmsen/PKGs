@@ -11,15 +11,16 @@ url = "http://127.0.0.1:5000/statements"
 class statements:
     def __init__(self):
         pass
-    def create_spotify_statement(self, top_tracks_short, track_URI_list, artist_URI_list):
+    def create_spotify_statement(self, top_tracks_short, track_URI_list, artist_URI_list, song_names):
         test_data_list = []
         i = 0
         for track in top_tracks_short:
-            print(track['name'], "by", track['artists'][0]['name'])
+            print("før",track['name'], "by", track['artists'][0]['name'])
+            print("etter",song_names[i], "by", track['artists'][0]['name'],"\n")
             if len(track['artists']) == 3:
                 subject = "http://example.com/test"
                 predicate = {"value": {"description": "like"}}
-                object = {"value": {"description": f"the song {track['name']} by {track['artists'][0]['name']}, {track['artists'][1]['name']}, and {track['artists'][2]['name']}",
+                object = {"value": {"description": f"the song {song_names[i]} by {track['artists'][0]['name']}, {track['artists'][1]['name']}, and {track['artists'][2]['name']}",
                                     "related_entities": ["https://schema.org/artist", f"{artist_URI_list[i][0]}",
                                                         "https://schema.org/artist", f"{artist_URI_list[i][1]}",
                                                         "https://schema.org/artist", f"{artist_URI_list[i][2]}",
@@ -27,20 +28,20 @@ class statements:
             elif len(track['artists']) == 2:
                 subject = "http://example.com/test"
                 predicate = {"value": {"description": "like"}}
-                object = {"value": {"description": f"the song {track['name']} by {track['artists'][0]['name']}, and {track['artists'][1]['name']}",
+                object = {"value": {"description": f"the song {song_names[i]} by {track['artists'][0]['name']}, and {track['artists'][1]['name']}",
                                     "related_entities": ["https://schema.org/artist", f"{artist_URI_list[i][0]}",
                                                         "https://schema.org/artist", f"{artist_URI_list[i][1]}",
                                                         "https://schema.org/song", f"{track_URI_list[i][0]}"]}}
             else:
                 subject = "http://example.com/test"
                 predicate = {"value": {"description": "like"}}
-                object = {"value": {"description": f"the song {track['name']} by {track['artists'][0]['name']}",
+                object = {"value": {"description": f"the song {song_names[i]} by {track['artists'][0]['name']}",
                                     "related_entities": ["https://schema.org/artist", f"{artist_URI_list[i][0]}",
                                                         "https://schema.org/song", f"{track_URI_list[i][0]}"]}}
             data = {
                     "owner_uri": "http://example.com/test",
                     "owner_username": "test",
-                    "description": f"I like the song {track['name']} by {track['artists'][0]['name']}",
+                    "description": f"I like the song {song_names[i]} by {track['artists'][0]['name']}",
                     "subject": subject,
                     "predicate": predicate,
                     "object": object,

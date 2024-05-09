@@ -103,6 +103,7 @@ class PKGFunctions:
                         match_found = True
                         break
                 if not match_found:
+                    print("FP: ", test_item["object"]["value"]["related_entities"])
                     false_positives += 1
 
             false_negatives = len(ground_truth_data) - true_positives
@@ -117,6 +118,7 @@ class PKGFunctions:
                         match_found = True
                         break
                 if not match_found:
+                    print("FP: ", test_item["object"]["value"]["description"])
                     false_positives += 1
             false_negatives = len(ground_truth_data) - true_positives
         
@@ -129,6 +131,7 @@ class PKGFunctions:
                         match_found = True
                         break
                 if not match_found:
+                    print("FP: ", test_item["object"]["value"]["related_entities"][-1])
                     false_positives += 1
             false_negatives = len(ground_truth_data) - true_positives
         
@@ -138,7 +141,7 @@ class PKGFunctions:
         F_measure = 2 * (precision * recall) / (precision + recall) if (precision + recall) > 0 else 0
 
         print("-------------------------------------------")
-        print("Precision and recall for Related Entities:")
+        print(f"Precision and recall for : {test_type}")
         print("Precision:", precision)
         print("Recall:", recall)
         print("F-measure:", F_measure)

@@ -349,9 +349,9 @@ def test(platform):
     if platform == 'spotify-TEST':
         file_path = os.path.join(os.path.dirname(__file__), 'test_files', 'spotify_test_file.json')
 
-        top_tracks_short, track_URI_list, artist_URI_list = spotify_functions.assign_URI(file_path)
+        top_tracks_short, track_URI_list, artist_URI_list, song_names = spotify_functions.assign_URI(file_path)
 
-        test_data = pkg_statements.create_spotify_statement(top_tracks_short, track_URI_list, artist_URI_list)
+        test_data = pkg_statements.create_spotify_statement(top_tracks_short, track_URI_list, artist_URI_list, song_names)
         
         combined_artists = []
         combined_artists.append(artist_URI_list)
@@ -366,7 +366,7 @@ def test(platform):
          
         pkg_functions.compute_precision_recall(ground_truth_data, test_data, "song_URI")          
             
-        return render_template('/profile/spotify.html', top_tracks_short=top_tracks_short, track_URI_list=combined_tracks, artist_URI_list=combined_artists)
+        return render_template('/profile/spotify.html', top_tracks_short=top_tracks_short, track_URI_list=combined_tracks, artist_URI_list=combined_artists, song_names=song_names)
     
     elif platform == 'netflix-TEST':
         file_path = os.path.join(os.path.dirname(__file__), 'test_files', 'test.csv')
