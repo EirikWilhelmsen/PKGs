@@ -114,7 +114,7 @@ class NetflixFunctions:
         Return: 
         info -- dictionary with additional OMDb movie information
         """
-
+        
         for movie in self.movies:
             if movie['Movie'] == query:
                 return movie

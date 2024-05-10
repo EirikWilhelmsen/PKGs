@@ -6,19 +6,7 @@ class groundTruthNetflix:
     def create_statement(self):
         test_data_list = []
 
-        subject = "http://example.com/test"
-        predicate = {"value": {"description": "like"}}
-        object = {"value": {"description": "the movie 10½ starring Claude Legault, Robert Naylor, Eugénie Beaudry",
-                "related_entities": ["https://schema.org/actor", "https://www.imdb.com/name/nm0499218/",
-                                    "https://schema.org/actor", "https://www.imdb.com/name/nm2316151/",
-                                    "https://schema.org/actor", "https://www.imdb.com/name/nm1799076/",
-                                    "https://schema.org/Movie", "https://www.imdb.com/title/tt1591622/"]}}
-        test_data = {
-            "subject": subject,
-            "predicate": predicate,
-            "object": object
-        }
-        test_data_list.append(test_data)
+        
 
         ############################################################################################################
 

@@ -15,8 +15,6 @@ class statements:
         test_data_list = []
         i = 0
         for track in top_tracks_short:
-            print("før",track['name'], "by", track['artists'][0]['name'])
-            print("etter",song_names[i], "by", track['artists'][0]['name'],"\n")
             if len(track['artists']) == 3:
                 subject = "http://example.com/test"
                 predicate = {"value": {"description": "like"}}

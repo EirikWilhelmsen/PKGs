@@ -228,12 +228,14 @@ def profile(platform):
 
             track_URI_list_combined = []
             artist_URI_list_combined = []
+            song_names_combined = []
             songs_checked = []
+             
             
             for track_data in list_of_ranges:
                 track_URI_list = []
                 artist_URI_list = []
-                
+                song_names = []
                 songs_checked = []
                 track_URI_list = []
                 artist_URI_list = []
@@ -241,18 +243,25 @@ def profile(platform):
                 for track in track_data:
                     artist_uri_list = []
                     track_uri_list = []
+                    spotify_functions.artist_index = 0
+                    song_name = spotify_functions.remove_feat_part(track['name'])
                     for artist in track["artists"]: # in case of multiple artists
                         artist_name = artist['name']
-                        song_name = track['name']
-                        artist_URI, song_URI = spotify_functions.search_artist(artist_name, song_name)
+                        artist_URI, song_URI, new_song_name = spotify_functions.search_artist(artist_name, song_name)
                         if artist_URI is None and song_URI is None:
                             artist_uri_list.append("No:URI:found")
                             track_uri_list.append("No:URI:found")
+                        elif artist_URI == "No response" and song_URI == "No response":
+                            artist_uri_list.append("No response")
+                            track_uri_list.append("No response")
                         else:
                             artist_uri_list.append(artist_URI)
                             track_uri_list.append(song_URI)
+                            spotify_functions.current_song_name = new_song_name
+                            song_name = new_song_name
                     artist_URI_list.append(artist_uri_list)
                     track_URI_list.append(track_uri_list)
+                    song_names.append(song_name)
 
                 for i in range(len(track_URI_list)):
                     if len(track_URI_list[i]) > 1:
@@ -260,16 +269,11 @@ def profile(platform):
                             if track_URI_list[i][j] == "No:URI:found":
                                 track_URI_list[i].pop(j)
 
-                test_data = pkg_statements.create_spotify_statement(track_data, track_URI_list, artist_URI_list)
+                pkg_statements.create_spotify_statement(track_data, track_URI_list, artist_URI_list, song_names)
                 track_URI_list_combined.append(track_URI_list)
                 artist_URI_list_combined.append(artist_URI_list)
-                
-
-                print("artist_URI_list", artist_URI_list_combined)
-                print("track_URI_list", track_URI_list_combined)
-
-            
-            
+                song_names_combined.append(song_names)
+                            
 
 
         if username_checked:
@@ -297,7 +301,8 @@ def profile(platform):
                                 playlists=playlists,
                                 following_users=following_users,
                                 track_URI_list=track_URI_list_combined, 
-                                artist_URI_list=artist_URI_list_combined
+                                artist_URI_list=artist_URI_list_combined,
+                                song_names=song_names_combined
                                 )        
     ###############
     ### Netflix ###    
@@ -357,6 +362,8 @@ def test(platform):
         combined_artists.append(artist_URI_list)
         combined_tracks = []
         combined_tracks.append(track_URI_list)
+        combined_songs = []
+        combined_songs.append(song_names)
         
         ground_truth_data = ground_truth_Spotify_statements.create_statement()
 
@@ -368,7 +375,7 @@ def test(platform):
 
         pkg_functions.compute_precision_recall(ground_truth_data, test_data, "artists_actors")          
             
-        return render_template('/profile/spotify.html', top_tracks_short=top_tracks_short, track_URI_list=combined_tracks, artist_URI_list=combined_artists, song_names=song_names)
+        return render_template('/profile/spotify.html', top_tracks_short=top_tracks_short, track_URI_list=combined_tracks, artist_URI_list=combined_artists, song_names=combined_songs)
     
     elif platform == 'netflix-TEST':
         file_path = os.path.join(os.path.dirname(__file__), 'test_files', 'test.csv')

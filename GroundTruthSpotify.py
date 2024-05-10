@@ -54,7 +54,7 @@ class groundTruthSpotify():
         
         subject = "http://example.com/test" 
         predicate = {"value": {"description": "like"}} 
-        object = {"value": {"description": "the song Sweet Child O' Mine by Guns N' Roses", # Sweet Child o' Mine
+        object = {"value": {"description": "the song Sweet Child O’ Mine by Guns N' Roses", # Sweet Child o' Mine
                              "related_entities": ["https://schema.org/artist", "https://musicbrainz.org/artist/eeb1195b-f213-4ce1-b28c-8565211f8e43", 
                                                   "https://schema.org/song", "https://musicbrainz.org/recording/1a8b5f7c-58ed-4757-a8d3-47bf7f77a32f"]}}
         
@@ -204,7 +204,7 @@ class groundTruthSpotify():
         
         subject = "http://example.com/test" 
         predicate = {"value": {"description": "like"}} 
-        object = {"value": {"description": "the song Don’t Matter To Me by Drake, and Michael Jackson", # Don't Matter to Me
+        object = {"value": {"description": "the song Don`t Matter To Me by Drake, and Michael Jackson", # Don't Matter to Me
                              "related_entities": ["https://schema.org/artist", "https://musicbrainz.org/artist/9fff2f8a-21e6-47de-a2b8-7f449929d43f", 
                                                   "https://schema.org/artist", "https://musicbrainz.org/artist/f27ec8db-af05-4f36-916e-3d57f91ecf5e", 
                                                   "https://schema.org/song", "https://musicbrainz.org/recording/5b4e4136-b739-4771-825d-7ec39558fc09"]}}
@@ -340,7 +340,7 @@ class groundTruthSpotify():
         
         subject = "http://example.com/test" 
         predicate = {"value": {"description": "like"}} 
-        object = {"value": {"description": "the song It’s a Man’s Man’s World by James Brown", 
+        object = {"value": {"description": "the song It’s A Man’s, Man’s, Man’s World by James Brown", 
                              "related_entities": ["https://schema.org/artist", "https://musicbrainz.org/artist/20ff3303-4fe2-4a47-a1b6-291e26aa3438", 
                                                   "https://schema.org/song", "https://musicbrainz.org/recording/cb9e4e4a-f6d3-470b-9f40-f110945165c6"]}}
         
