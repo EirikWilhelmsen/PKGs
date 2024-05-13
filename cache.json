@@ -1,0 +1,1010 @@
+{
+    "2U (feat. Justin Bieber)David Guetta": {
+        "main_artist_name": "David Guetta",
+        "entity_link_artist": "https://musicbrainz.org/artist/302bd7b9-d012-4360-897a-93b00c855680",
+        "entity_link_track": "https://musicbrainz.org/recording/e8d472d2-23b5-41b8-86a2-8d9867f28c54",
+        "cleaned_song": "2U",
+        "artist_queries": "David Guetta, Justin Bieber"
+    },
+    "Changes (feat. Talent) [1998 Greatest Hits]2Pac": {
+        "main_artist_name": "2Pac",
+        "entity_link_artist": "https://musicbrainz.org/artist/382f1005-e9ab-4684-afd4-0bdae4ee37f2",
+        "entity_link_track": "https://musicbrainz.org/recording/6b0df588-686d-4c89-97ce-ba1db77f5e56",
+        "cleaned_song": "Changes",
+        "artist_queries": "2Pac, Talent"
+    },
+    "CreatureKSI": {
+        "main_artist_name": "KSI",
+        "entity_link_artist": "https://musicbrainz.org/artist/7b24231e-faa5-4838-b6a8-6a2eb2727b37",
+        "entity_link_track": "https://musicbrainz.org/recording/fa32582d-cc00-4b1c-9c95-07662684b4e3",
+        "cleaned_song": "Creature",
+        "artist_queries": "KSI"
+    },
+    "Its Every Night Sis (feat. Alissa Violet)Ricegum": {
+        "main_artist_name": "Ricegum",
+        "entity_link_artist": "https://musicbrainz.org/artist/e150f414-8b11-433d-bd2b-1e37e1cfc5c0",
+        "entity_link_track": "https://musicbrainz.org/recording/5e19cec4-44e9-4cf2-9f51-7b790ea37a2d",
+        "cleaned_song": "Its Every Night Sis",
+        "artist_queries": "Ricegum, Alissa Violet"
+    },
+    "For the LoveHearts & Colors": {
+        "main_artist_name": "Wrong artist found",
+        "entity_link_artist": "Artist link not found",
+        "entity_link_track": "Track link not found",
+        "cleaned_song": "For the Love",
+        "artist_queries": "Hearts & Colors"
+    },
+    "MalibuMiley Cyrus": {
+        "main_artist_name": "Miley Cyrus",
+        "entity_link_artist": "https://musicbrainz.org/artist/7e9bd05a-117f-4cce-87bc-e011527a8b18",
+        "entity_link_track": "https://musicbrainz.org/recording/53612011-a3b3-4ec7-8bd6-650a875a6d32",
+        "cleaned_song": "Malibu",
+        "artist_queries": "Miley Cyrus"
+    },
+    "TransformingKSI": {
+        "main_artist_name": "KSI",
+        "entity_link_artist": "https://musicbrainz.org/artist/7b24231e-faa5-4838-b6a8-6a2eb2727b37",
+        "entity_link_track": "https://musicbrainz.org/recording/a269d823-e95e-4b1b-8e73-b44627c6a2d4",
+        "cleaned_song": "Transforming",
+        "artist_queries": "KSI"
+    },
+    "Leave Me AloneKSI": {
+        "main_artist_name": "KSI",
+        "entity_link_artist": "https://musicbrainz.org/artist/7b24231e-faa5-4838-b6a8-6a2eb2727b37",
+        "entity_link_track": "https://musicbrainz.org/recording/ef82acf8-4803-4e0b-8e2a-356e966db77e",
+        "cleaned_song": "Leave Me Alone",
+        "artist_queries": "KSI"
+    },
+    "64 ImpalaKSI": {
+        "main_artist_name": "KSI",
+        "entity_link_artist": "https://musicbrainz.org/artist/7b24231e-faa5-4838-b6a8-6a2eb2727b37",
+        "entity_link_track": "https://musicbrainz.org/recording/37a51ce4-ed50-4878-9432-04730aedf30c",
+        "cleaned_song": "64 Impala",
+        "artist_queries": "KSI"
+    },
+    "Right There (feat. Big Sean)Ariana Grande": {
+        "main_artist_name": "Wrong artist found",
+        "entity_link_artist": "Artist not found",
+        "entity_link_track": "Track not found",
+        "cleaned_song": "Right There",
+        "artist_queries": "Ariana Grande, Big Sean"
+    },
+    "I Didn't Hit HerRicegum": {
+        "main_artist_name": "Wrong artist found",
+        "entity_link_artist": "Artist link not found",
+        "entity_link_track": "Track link not found",
+        "cleaned_song": "I Didn't Hit Her",
+        "artist_queries": "Ricegum"
+    },
+    "Tommy GunKSI": {
+        "main_artist_name": "KSI",
+        "entity_link_artist": "https://musicbrainz.org/artist/7b24231e-faa5-4838-b6a8-6a2eb2727b37",
+        "entity_link_track": "https://musicbrainz.org/recording/cdde767d-556e-42aa-898e-5dea1d19179d",
+        "cleaned_song": "Tommy Gun",
+        "artist_queries": "KSI"
+    },
+    "IdgafKSI": {
+        "main_artist_name": "KSI",
+        "entity_link_artist": "https://musicbrainz.org/artist/7b24231e-faa5-4838-b6a8-6a2eb2727b37",
+        "entity_link_track": "https://musicbrainz.org/recording/5ff11456-aa2a-4369-afe5-7921691d3a23",
+        "cleaned_song": "Idgaf",
+        "artist_queries": "KSI"
+    },
+    "Into YouAriana Grande": {
+        "main_artist_name": "Ariana Grande",
+        "entity_link_artist": "https://musicbrainz.org/artist/f4fdbb4c-e4b7-47a0-b83b-d91bbfcfa387",
+        "entity_link_track": "https://musicbrainz.org/recording/6e1ca317-8201-47dd-a882-1c29e33437c5",
+        "cleaned_song": "Into You",
+        "artist_queries": "Ariana Grande"
+    },
+    "Be AlrightAriana Grande": {
+        "main_artist_name": "Ariana Grande",
+        "entity_link_artist": "https://musicbrainz.org/artist/f4fdbb4c-e4b7-47a0-b83b-d91bbfcfa387",
+        "entity_link_track": "https://musicbrainz.org/recording/25c44ebb-9743-45a3-b873-14413046a819",
+        "cleaned_song": "Be Alright",
+        "artist_queries": "Ariana Grande"
+    },
+    "All My Love (feat. Ariana Grande)Major Lazer": {
+        "main_artist_name": "Major Lazer",
+        "entity_link_artist": "https://musicbrainz.org/artist/75be165a-ad83-4d12-bd28-f589a15c479f",
+        "entity_link_track": "https://musicbrainz.org/recording/167e728d-3bda-4ac2-acf4-9745bb8b3484",
+        "cleaned_song": "All My Love",
+        "artist_queries": "Major Lazer, Ariana Grande"
+    },
+    "Love Me HarderAriana Grande & The Weeknd": {
+        "main_artist_name": "Ariana Grande",
+        "entity_link_artist": "https://musicbrainz.org/artist/f4fdbb4c-e4b7-47a0-b83b-d91bbfcfa387",
+        "entity_link_track": "https://musicbrainz.org/recording/98552b63-1577-4866-bf62-3982499f5c0e",
+        "cleaned_song": "Love Me Harder",
+        "artist_queries": "Ariana Grande, The Weeknd"
+    },
+    "Fast Car (feat. Dakota) [Radio Edit]Jonas Blue": {
+        "main_artist_name": "Jonas Blue",
+        "entity_link_artist": "https://musicbrainz.org/artist/17678771-5799-4017-851a-319f25b6948d",
+        "entity_link_track": "https://musicbrainz.org/recording/c8385a43-7ef7-48af-975f-11ee15cca31a",
+        "cleaned_song": "Fast Car",
+        "artist_queries": "Jonas Blue, Dakota"
+    },
+    "Dangerous WomanAriana Grande": {
+        "main_artist_name": "Wrong artist found",
+        "entity_link_artist": "Artist link not found",
+        "entity_link_track": "Track link not found",
+        "cleaned_song": "Dangerous Woman",
+        "artist_queries": "Ariana Grande"
+    },
+    "Side to Side (feat. Nicki Minaj)Ariana Grande": {
+        "main_artist_name": "Ariana Grande",
+        "entity_link_artist": "https://musicbrainz.org/artist/f4fdbb4c-e4b7-47a0-b83b-d91bbfcfa387",
+        "entity_link_track": "https://musicbrainz.org/recording/5533ebae-a478-417a-868c-b9cd2d53aef9",
+        "cleaned_song": "Side to Side",
+        "artist_queries": "Ariana Grande, Nicki Minaj"
+    },
+    "ParisThe Chainsmokers": {
+        "main_artist_name": "The Chainsmokers",
+        "entity_link_artist": "https://musicbrainz.org/artist/91a81925-92f9-4fc9-b897-93cf01226282",
+        "entity_link_track": "https://musicbrainz.org/recording/ac923055-030d-4829-a994-c50b256ef4a0",
+        "cleaned_song": "Paris",
+        "artist_queries": "The Chainsmokers"
+    },
+    "Despacito (feat. Daddy Yankee)Luis Fonsi": {
+        "main_artist_name": "Luis Fonsi",
+        "entity_link_artist": "https://musicbrainz.org/artist/d68fda90-ab8d-4799-be56-317ba4ae700f",
+        "entity_link_track": "https://musicbrainz.org/recording/683bb568-5275-4b7e-adee-320dc057175f",
+        "cleaned_song": "Despacito",
+        "artist_queries": "Luis Fonsi, Daddy Yankee"
+    },
+    "Amazing (feat. Kurt Nilsen)Broiler": {
+        "main_artist_name": "Wrong artist found",
+        "entity_link_artist": "Artist link not found",
+        "entity_link_track": "Track link not found",
+        "cleaned_song": "Amazing",
+        "artist_queries": "Broiler, Kurt Nilsen"
+    },
+    "Break Free (feat. Zedd)Ariana Grande": {
+        "main_artist_name": "Ariana Grande",
+        "entity_link_artist": "https://musicbrainz.org/artist/f4fdbb4c-e4b7-47a0-b83b-d91bbfcfa387",
+        "entity_link_track": "https://musicbrainz.org/recording/fb4cac5c-6576-48b4-a614-9325d8f07b20",
+        "cleaned_song": "Break Free",
+        "artist_queries": "Ariana Grande, Zedd"
+    },
+    "The Way (feat. Mac Miller) [Spanglish Version]Ariana Grande": {
+        "main_artist_name": "Ariana Grande",
+        "entity_link_artist": "https://musicbrainz.org/artist/f4fdbb4c-e4b7-47a0-b83b-d91bbfcfa387",
+        "entity_link_track": "https://musicbrainz.org/recording/80569bdd-a11e-4a05-bea7-6afcd7c744fa",
+        "cleaned_song": "The Way",
+        "artist_queries": "Ariana Grande, Mac Miller"
+    },
+    "Everyday (feat. Future)Ariana Grande": {
+        "main_artist_name": "Ariana Grande",
+        "entity_link_artist": "https://musicbrainz.org/artist/f4fdbb4c-e4b7-47a0-b83b-d91bbfcfa387",
+        "entity_link_track": "https://musicbrainz.org/recording/9c2f4754-32c6-4150-8127-645c17fe278a",
+        "cleaned_song": "Everyday",
+        "artist_queries": "Ariana Grande, Future"
+    },
+    "Problem (feat. Iggy Azalea)Ariana Grande": {
+        "main_artist_name": "Ariana Grande",
+        "entity_link_artist": "https://musicbrainz.org/artist/f4fdbb4c-e4b7-47a0-b83b-d91bbfcfa387",
+        "entity_link_track": "https://musicbrainz.org/recording/82a53824-4486-4676-b4d5-e0b47cdb3b0b",
+        "cleaned_song": "Problem",
+        "artist_queries": "Ariana Grande, Iggy Azalea"
+    },
+    "Hit 'Em Up (feat. Outlawz)2Pac": {
+        "main_artist_name": "2Pac",
+        "entity_link_artist": "https://musicbrainz.org/artist/382f1005-e9ab-4684-afd4-0bdae4ee37f2",
+        "entity_link_track": "https://musicbrainz.org/recording/7fcd8b36-7448-45a9-bb0f-244d36c97f39",
+        "cleaned_song": "Hit 'Em Up",
+        "artist_queries": "2Pac, Outlawz"
+    },
+    "Cruise (feat. Andrew Jackson)Kygo": {
+        "main_artist_name": "Kygo",
+        "entity_link_artist": "https://musicbrainz.org/artist/ba0e7638-0cd6-4ff4-8987-c3e224d22c23",
+        "entity_link_track": "https://musicbrainz.org/recording/1754b510-7a12-4a05-9386-6717172e6709",
+        "cleaned_song": "Cruise",
+        "artist_queries": "Kygo, Andrew Jackson"
+    },
+    "One Last TimeAriana Grande": {
+        "main_artist_name": "Ariana Grande",
+        "entity_link_artist": "https://musicbrainz.org/artist/f4fdbb4c-e4b7-47a0-b83b-d91bbfcfa387",
+        "entity_link_track": "https://musicbrainz.org/recording/1bbef687-4557-4b97-a1e8-e907fbf0d02b",
+        "cleaned_song": "One Last Time",
+        "artist_queries": "Ariana Grande"
+    },
+    "Bang BangJessie J, Ariana Grande & Nicki Minaj": {
+        "main_artist_name": "Jessie J",
+        "entity_link_artist": "https://musicbrainz.org/artist/d24fb461-dee8-41fc-bb15-2f13bb2644a6",
+        "entity_link_track": "https://musicbrainz.org/recording/146707fc-924f-48ce-b56e-fff3a6a19c06",
+        "cleaned_song": "Bang Bang",
+        "artist_queries": "Jessie J, Ariana Grande, Nicki Minaj"
+    },
+    "On & On (feat. Daniel Levi)Cartoon": {
+        "main_artist_name": "Wrong artist found",
+        "entity_link_artist": "Artist link not found",
+        "entity_link_track": "Track link not found",
+        "cleaned_song": "On & On",
+        "artist_queries": "Cartoon, Daniel Levi"
+    },
+    "Sign of the TimesHarry Styles": {
+        "main_artist_name": "Harry Styles",
+        "entity_link_artist": "https://musicbrainz.org/artist/7eb1ce54-a355-41f9-8d68-e018b096d427",
+        "entity_link_track": "https://musicbrainz.org/recording/4d02b763-64b5-44f3-9593-be9513f1db89",
+        "cleaned_song": "Sign of the Times",
+        "artist_queries": "Harry Styles"
+    },
+    "FocusAriana Grande": {
+        "main_artist_name": "Ariana Grande",
+        "entity_link_artist": "https://musicbrainz.org/artist/f4fdbb4c-e4b7-47a0-b83b-d91bbfcfa387",
+        "entity_link_track": "https://musicbrainz.org/recording/846a4b00-218f-4939-8131-684108b05dcd",
+        "cleaned_song": "Focus",
+        "artist_queries": "Ariana Grande"
+    },
+    "Good LifeG-Eazy & Kehlani": {
+        "main_artist_name": "G-Eazy",
+        "entity_link_artist": "https://musicbrainz.org/artist/db48610c-6d8f-4d10-90ca-c4d14bb1a8b1",
+        "entity_link_track": "https://musicbrainz.org/recording/f85cde2d-abbc-43c3-8447-4070007580c7",
+        "cleaned_song": "Good Life",
+        "artist_queries": "G-Eazy, Kehlani"
+    },
+    "Closer (feat. Halsey)The Chainsmokers": {
+        "main_artist_name": "The Chainsmokers",
+        "entity_link_artist": "https://musicbrainz.org/artist/91a81925-92f9-4fc9-b897-93cf01226282",
+        "entity_link_track": "https://musicbrainz.org/recording/fb7963d0-d06f-45ca-a647-2b00a963179f",
+        "cleaned_song": "Closer",
+        "artist_queries": "The Chainsmokers, Halsey"
+    },
+    "All Time LowJon Bellion": {
+        "main_artist_name": "Jon Bellion",
+        "entity_link_artist": "https://musicbrainz.org/artist/2bd8101a-11c3-42d5-a9bd-6a3b26445f7e",
+        "entity_link_track": "https://musicbrainz.org/recording/85d1cda8-04b1-4b3a-a12b-e26b1599e7cc",
+        "cleaned_song": "All Time Low",
+        "artist_queries": "Jon Bellion"
+    },
+    "Don't Let Me Down (feat. Daya)The Chainsmokers": {
+        "main_artist_name": "The Chainsmokers",
+        "entity_link_artist": "https://musicbrainz.org/artist/91a81925-92f9-4fc9-b897-93cf01226282",
+        "entity_link_track": "https://musicbrainz.org/recording/06dd7f76-f905-4ec1-8ad7-62a5a308265b",
+        "cleaned_song": "Don't Let Me Down",
+        "artist_queries": "The Chainsmokers, Daya"
+    },
+    "All Eyez On Me (feat. Syke)2Pac": {
+        "main_artist_name": "2Pac",
+        "entity_link_artist": "https://musicbrainz.org/artist/382f1005-e9ab-4684-afd4-0bdae4ee37f2",
+        "entity_link_track": "https://musicbrainz.org/recording/6dcca6d5-0905-4c75-ad85-5cd259595296",
+        "cleaned_song": "All Eyez On Me",
+        "artist_queries": "2Pac, Syke"
+    },
+    "Sunset LoverPetit Biscuit": {
+        "main_artist_name": "Petit Biscuit",
+        "entity_link_artist": "https://musicbrainz.org/artist/30ae6581-15ec-407b-b192-5f7b7ea214b2",
+        "entity_link_track": "https://musicbrainz.org/recording/94398e59-d7bb-462a-8023-e4d9bc30ec7b",
+        "cleaned_song": "Sunset Lover",
+        "artist_queries": "Petit Biscuit"
+    },
+    "Something Just Like ThisThe Chainsmokers & Coldplay": {
+        "main_artist_name": "The Chainsmokers",
+        "entity_link_artist": "https://musicbrainz.org/artist/91a81925-92f9-4fc9-b897-93cf01226282",
+        "entity_link_track": "https://musicbrainz.org/recording/9f94e4d4-7df5-407b-bc03-ee59300857a9",
+        "cleaned_song": "Something Just Like This",
+        "artist_queries": "The Chainsmokers, Coldplay"
+    },
+    "Dear Mama2Pac": {
+        "main_artist_name": "2Pac",
+        "entity_link_artist": "https://musicbrainz.org/artist/382f1005-e9ab-4684-afd4-0bdae4ee37f2",
+        "entity_link_track": "https://musicbrainz.org/recording/00cde7f9-61c6-4d03-ac4f-4c9e5168e6f3",
+        "cleaned_song": "Dear Mama",
+        "artist_queries": "2Pac"
+    },
+    "Grab the MomentJOWST": {
+        "main_artist_name": "JOWST",
+        "entity_link_artist": "https://musicbrainz.org/artist/3c0d31e7-ba69-4b61-bcce-9c447d2def23",
+        "entity_link_track": "https://musicbrainz.org/recording/d08dc2f8-61ce-4404-94a7-b5c58ab67020",
+        "cleaned_song": "Grab the Moment",
+        "artist_queries": "JOWST"
+    },
+    "The OneThe Chainsmokers": {
+        "main_artist_name": "The Chainsmokers",
+        "entity_link_artist": "https://musicbrainz.org/artist/91a81925-92f9-4fc9-b897-93cf01226282",
+        "entity_link_track": "https://musicbrainz.org/recording/6b02334f-383f-4874-add5-a50726f35f2d",
+        "cleaned_song": "The One",
+        "artist_queries": "The Chainsmokers"
+    },
+    "Cold (feat. Future)Maroon 5": {
+        "main_artist_name": "Maroon 5",
+        "entity_link_artist": "https://musicbrainz.org/artist/0ab49580-c84f-44d4-875f-d83760ea2cfe",
+        "entity_link_track": "https://musicbrainz.org/recording/c9a6166a-bfc7-449e-b423-9430eb2e4770",
+        "cleaned_song": "Cold",
+        "artist_queries": "Maroon 5, Future"
+    },
+    "BelieverImagine Dragons": {
+        "main_artist_name": "Imagine Dragons",
+        "entity_link_artist": "https://musicbrainz.org/artist/012151a8-0f9a-44c9-997f-ebd68b5389f9",
+        "entity_link_track": "https://musicbrainz.org/recording/e5c7a324-cca2-4ccb-ab9c-6d3a390b9d0a",
+        "cleaned_song": "Believer",
+        "artist_queries": "Imagine Dragons"
+    },
+    "Baby IAriana Grande": {
+        "main_artist_name": "Ariana Grande",
+        "entity_link_artist": "https://musicbrainz.org/artist/f4fdbb4c-e4b7-47a0-b83b-d91bbfcfa387",
+        "entity_link_track": "https://musicbrainz.org/recording/f1e69254-7db2-4b9a-97dd-a98ffe224e89",
+        "cleaned_song": "Baby I",
+        "artist_queries": "Ariana Grande"
+    },
+    "Symphony (feat. Zara Larsson)Clean Bandit": {
+        "main_artist_name": "Wrong artist found",
+        "entity_link_artist": "Artist link not found",
+        "entity_link_track": "Track link not found",
+        "cleaned_song": "Symphony",
+        "artist_queries": "Clean Bandit, Zara Larsson"
+    },
+    "Obsession (feat. Jon Bellion)Vice": {
+        "main_artist_name": "Wrong artist found",
+        "entity_link_artist": "Artist link not found",
+        "entity_link_track": "Track link not found",
+        "cleaned_song": "Obsession",
+        "artist_queries": "Vice, Jon Bellion"
+    },
+    "There's Nothing Holdin' Me BackShawn Mendes": {
+        "main_artist_name": "Shawn Mendes",
+        "entity_link_artist": "https://musicbrainz.org/artist/b7d92248-97e3-4450-8057-6fe06738f735",
+        "entity_link_track": "https://musicbrainz.org/recording/89e3f307-e61b-4cd9-a163-7504731f21b0",
+        "cleaned_song": "There's Nothing Holdin' Me Back",
+        "artist_queries": "Shawn Mendes"
+    },
+    "StyleTaylor Swift": {
+        "main_artist_name": "Wrong artist found",
+        "entity_link_artist": "Artist link not found",
+        "entity_link_track": "Track link not found",
+        "cleaned_song": "Style",
+        "artist_queries": "Taylor Swift"
+    },
+    "Scared to Be LonelyMartin Garrix & Dua Lipa": {
+        "main_artist_name": "Martin Garrix",
+        "entity_link_artist": "https://musicbrainz.org/artist/3e1f2ee4-16be-4406-bf18-6173840cf2b1",
+        "entity_link_track": "https://musicbrainz.org/recording/3ac236fa-e4b1-46e3-80b4-0259c23ece2a",
+        "cleaned_song": "Scared to Be Lonely",
+        "artist_queries": "Martin Garrix, Dua Lipa"
+    },
+    "Quit (feat. Ariana Grande)Cashmere Cat": {
+        "main_artist_name": "Cashmere Cat",
+        "entity_link_artist": "https://musicbrainz.org/artist/8fbcd70f-bf1e-4624-b94a-fcff6b0c637e",
+        "entity_link_track": "https://musicbrainz.org/recording/fad2ac87-ae7d-464c-b582-a34858c0d811",
+        "cleaned_song": "Quit",
+        "artist_queries": "Cashmere Cat, Ariana Grande"
+    },
+    "Lighthouse (Acoustic Version)Hearts & Colors": {
+        "main_artist_name": "Wrong artist found",
+        "entity_link_artist": "Artist link not found",
+        "entity_link_track": "Track link not found",
+        "cleaned_song": "Lighthouse (Acoustic Version)",
+        "artist_queries": "Hearts & Colors"
+    },
+    "Roses (feat. ROZES)The Chainsmokers": {
+        "main_artist_name": "The Chainsmokers",
+        "entity_link_artist": "https://musicbrainz.org/artist/91a81925-92f9-4fc9-b897-93cf01226282",
+        "entity_link_track": "https://musicbrainz.org/recording/51aa45c9-54ee-4b9c-ac03-452786c4ba7a",
+        "cleaned_song": "Roses",
+        "artist_queries": "The Chainsmokers, ROZES"
+    },
+    "Rap GodEminem": {
+        "main_artist_name": "Eminem",
+        "entity_link_artist": "https://musicbrainz.org/artist/b95ce3ff-3d05-4e87-9e01-c97b66af13d4",
+        "entity_link_track": "https://musicbrainz.org/recording/368cd782-4982-4908-ad9f-46f05b1321ed",
+        "cleaned_song": "Rap God",
+        "artist_queries": "Eminem"
+    },
+    "'Till I Collapse (feat. Nate Dogg)Eminem": {
+        "main_artist_name": "Eminem",
+        "entity_link_artist": "https://musicbrainz.org/artist/b95ce3ff-3d05-4e87-9e01-c97b66af13d4",
+        "entity_link_track": "https://musicbrainz.org/recording/d1c1a725-dfb6-408c-bc9d-6f9359adc862",
+        "cleaned_song": "'Till I Collapse",
+        "artist_queries": "Eminem, Nate Dogg"
+    },
+    "No Promises (feat. Demi Lovato)Cheat Codes": {
+        "main_artist_name": "Cheat Codes",
+        "entity_link_artist": "https://musicbrainz.org/artist/8b579b9a-84ef-4975-884f-19e988cfc181",
+        "entity_link_track": "https://musicbrainz.org/recording/0d3c3a20-9b44-4436-a818-b52d4ecd10f6",
+        "cleaned_song": "No Promises",
+        "artist_queries": "Cheat Codes, Demi Lovato"
+    },
+    "Body to Body (feat. Imani Williams)Mike Perry": {
+        "main_artist_name": "Mike Perry",
+        "entity_link_artist": "https://musicbrainz.org/artist/54f04111-4aa6-4095-9497-eb74fc47c0dd",
+        "entity_link_track": "https://musicbrainz.org/recording/81421292-38f0-47f4-afeb-0d28d7bcc7d7",
+        "cleaned_song": "Body to Body",
+        "artist_queries": "Mike Perry, Imani Williams"
+    },
+    "Such a BoyAstrid S": {
+        "main_artist_name": "Astrid S",
+        "entity_link_artist": "https://musicbrainz.org/artist/be389638-e74f-46a9-83d2-91ee3ce1fb0c",
+        "entity_link_track": "https://musicbrainz.org/recording/213fe829-0bb0-48af-9280-8627d6e5746a",
+        "cleaned_song": "Such a Boy",
+        "artist_queries": "Astrid S"
+    },
+    "Tired (feat. Gavin James)Alan Walker": {
+        "main_artist_name": "Alan Walker",
+        "entity_link_artist": "https://musicbrainz.org/artist/b0e4bc50-3062-4d31-afad-def6a6b7a8e9",
+        "entity_link_track": "https://musicbrainz.org/recording/4a0009b8-ecc6-440f-a798-cf1c49dce756",
+        "cleaned_song": "Tired",
+        "artist_queries": "Alan Walker, Gavin James"
+    },
+    "Feels (feat. Pharrell Williams, Katy Perry & Big Sean)Calvin Harris": {
+        "main_artist_name": "Wrong artist found",
+        "entity_link_artist": "Artist link not found",
+        "entity_link_track": "Track link not found",
+        "cleaned_song": "Feels",
+        "artist_queries": "Calvin Harris, Pharrell Williams, Katy Perry, Big Sean"
+    },
+    "The Monster (feat. Rihanna)Eminem": {
+        "main_artist_name": "Eminem",
+        "entity_link_artist": "https://musicbrainz.org/artist/b95ce3ff-3d05-4e87-9e01-c97b66af13d4",
+        "entity_link_track": "https://musicbrainz.org/recording/28271155-de29-460f-9b12-fab6f76a3bad",
+        "cleaned_song": "The Monster",
+        "artist_queries": "Eminem, Rihanna"
+    },
+    "Lose YourselfEminem": {
+        "main_artist_name": "Eminem",
+        "entity_link_artist": "https://musicbrainz.org/artist/b95ce3ff-3d05-4e87-9e01-c97b66af13d4",
+        "entity_link_track": "https://musicbrainz.org/recording/5cf2a6e8-8643-4ab0-8e00-f4d0f749b25c",
+        "cleaned_song": "Lose Yourself",
+        "artist_queries": "Eminem"
+    },
+    "MockingbirdEminem": {
+        "main_artist_name": "Eminem",
+        "entity_link_artist": "https://musicbrainz.org/artist/b95ce3ff-3d05-4e87-9e01-c97b66af13d4",
+        "entity_link_track": "https://musicbrainz.org/recording/88f80e62-efb4-4bfb-8eeb-c1f733d78f66",
+        "cleaned_song": "Mockingbird",
+        "artist_queries": "Eminem"
+    },
+    "Summer AirItaloBrothers": {
+        "main_artist_name": "ItaloBrothers",
+        "entity_link_artist": "https://musicbrainz.org/artist/256fc691-ae7b-4565-923d-26f69eb95ce2",
+        "entity_link_track": "https://musicbrainz.org/recording/d4c2299f-01e2-477b-9cb5-c4da36803be6",
+        "cleaned_song": "Summer Air",
+        "artist_queries": "ItaloBrothers"
+    },
+    "Crying in the ClubCamila Cabello": {
+        "main_artist_name": "Camila Cabello",
+        "entity_link_artist": "https://musicbrainz.org/artist/01b8b5bf-06cb-45da-85fb-61ada72fcd69",
+        "entity_link_track": "https://musicbrainz.org/recording/0dd10e43-5e5c-42a6-a827-53580b047992",
+        "cleaned_song": "Crying in the Club",
+        "artist_queries": "Camila Cabello"
+    },
+    "Renegade (feat. Eminem)JAY-Z": {
+        "main_artist_name": "JAY-Z",
+        "entity_link_artist": "https://musicbrainz.org/artist/f82bcf78-5b69-4622-a5ef-73800768d9ac",
+        "entity_link_track": "https://musicbrainz.org/recording/a56b5bc0-73e5-4e22-a2b3-6a7a9b879c35",
+        "cleaned_song": "Renegade",
+        "artist_queries": "JAY-Z, Eminem"
+    },
+    "Talkin' 2 Myself (feat. Kobe)Eminem": {
+        "main_artist_name": "Eminem",
+        "entity_link_artist": "https://musicbrainz.org/artist/b95ce3ff-3d05-4e87-9e01-c97b66af13d4",
+        "entity_link_track": "https://musicbrainz.org/recording/0766a822-2db5-49cf-9859-eaf18c9b9c29",
+        "cleaned_song": "Talkin' 2 Myself",
+        "artist_queries": "Eminem, Kobe"
+    },
+    "Not AfraidEminem": {
+        "main_artist_name": "Eminem",
+        "entity_link_artist": "https://musicbrainz.org/artist/b95ce3ff-3d05-4e87-9e01-c97b66af13d4",
+        "entity_link_track": "https://musicbrainz.org/recording/9225082f-06a4-4585-ba23-b8edcb9ab7bd",
+        "cleaned_song": "Not Afraid",
+        "artist_queries": "Eminem"
+    },
+    "Mama (feat. William Singe)Jonas Blue": {
+        "main_artist_name": "Jonas Blue",
+        "entity_link_artist": "https://musicbrainz.org/artist/17678771-5799-4017-851a-319f25b6948d",
+        "entity_link_track": "https://musicbrainz.org/recording/1f94497b-757b-4f74-9fa0-e79a0df0c0b4",
+        "cleaned_song": "Mama",
+        "artist_queries": "Jonas Blue, William Singe"
+    },
+    "The Way I AmEminem": {
+        "main_artist_name": "Eminem",
+        "entity_link_artist": "https://musicbrainz.org/artist/b95ce3ff-3d05-4e87-9e01-c97b66af13d4",
+        "entity_link_track": "https://musicbrainz.org/recording/25d81b5f-ac5e-4e1a-bbc1-538ae09e2afc",
+        "cleaned_song": "The Way I Am",
+        "artist_queries": "Eminem"
+    },
+    "Stan (feat. Dido)Eminem": {
+        "main_artist_name": "Eminem",
+        "entity_link_artist": "https://musicbrainz.org/artist/b95ce3ff-3d05-4e87-9e01-c97b66af13d4",
+        "entity_link_track": "https://musicbrainz.org/recording/d8702718-1663-4cfb-9a7f-4b64e2902092",
+        "cleaned_song": "Stan",
+        "artist_queries": "Eminem, Dido"
+    },
+    "Brain DamageEminem": {
+        "main_artist_name": "Eminem",
+        "entity_link_artist": "https://musicbrainz.org/artist/b95ce3ff-3d05-4e87-9e01-c97b66af13d4",
+        "entity_link_track": "https://musicbrainz.org/recording/513df7d2-00c7-480c-bb57-ebc64392d3d2",
+        "cleaned_song": "Brain Damage",
+        "artist_queries": "Eminem"
+    },
+    "Cleanin' out My ClosetEminem": {
+        "main_artist_name": "Eminem",
+        "entity_link_artist": "https://musicbrainz.org/artist/b95ce3ff-3d05-4e87-9e01-c97b66af13d4",
+        "entity_link_track": "https://musicbrainz.org/recording/d04f5bdc-d131-495f-980d-bbdf57355a7f",
+        "cleaned_song": "Cleanin' out My Closet",
+        "artist_queries": "Eminem"
+    },
+    "Ambitionz Az a Ridah2Pac": {
+        "main_artist_name": "2Pac",
+        "entity_link_artist": "https://musicbrainz.org/artist/382f1005-e9ab-4684-afd4-0bdae4ee37f2",
+        "entity_link_track": "https://musicbrainz.org/recording/2b5ea6b7-3192-445d-ac96-22d5482ec50e",
+        "cleaned_song": "Ambitionz Az a Ridah",
+        "artist_queries": "2Pac"
+    },
+    "The Real Slim ShadyEminem": {
+        "main_artist_name": "Eminem",
+        "entity_link_artist": "https://musicbrainz.org/artist/b95ce3ff-3d05-4e87-9e01-c97b66af13d4",
+        "entity_link_track": "https://musicbrainz.org/recording/c2245b3c-c453-4c98-a414-45806f42694b",
+        "cleaned_song": "The Real Slim Shady",
+        "artist_queries": "Eminem"
+    },
+    "Fast LaneBad Meets Evil": {
+        "main_artist_name": "Bad Meets Evil",
+        "entity_link_artist": "https://musicbrainz.org/artist/87f27b14-cbd0-44ea-93a3-6fead5cb45e7",
+        "entity_link_track": "https://musicbrainz.org/recording/ded07e2f-96c8-4c4f-bf0c-1cfedd2c8b40",
+        "cleaned_song": "Fast Lane",
+        "artist_queries": "Bad Meets Evil"
+    },
+    "We Can't StopMiley Cyrus": {
+        "main_artist_name": "Miley Cyrus",
+        "entity_link_artist": "https://musicbrainz.org/artist/7e9bd05a-117f-4cce-87bc-e011527a8b18",
+        "entity_link_track": "https://musicbrainz.org/recording/6feeab77-7ba4-48ac-b992-b2d7ad2f3f88",
+        "cleaned_song": "We Can't Stop",
+        "artist_queries": "Miley Cyrus"
+    },
+    "No Love (feat. Lil Wayne)Eminem": {
+        "main_artist_name": "Eminem",
+        "entity_link_artist": "https://musicbrainz.org/artist/b95ce3ff-3d05-4e87-9e01-c97b66af13d4",
+        "entity_link_track": "https://musicbrainz.org/recording/a580fccc-c9ed-4298-a2f6-158f23017302",
+        "cleaned_song": "No Love",
+        "artist_queries": "Eminem, Lil Wayne"
+    },
+    "Role ModelEminem": {
+        "main_artist_name": "Eminem",
+        "entity_link_artist": "https://musicbrainz.org/artist/b95ce3ff-3d05-4e87-9e01-c97b66af13d4",
+        "entity_link_track": "https://musicbrainz.org/recording/671c7135-c7a7-43f3-9973-a07698631f54",
+        "cleaned_song": "Role Model",
+        "artist_queries": "Eminem"
+    },
+    "If I Get Locked UpFunk Flex & Big Kap": {
+        "main_artist_name": "Funk Flex",
+        "entity_link_artist": "https://musicbrainz.org/artist/de9e1687-377f-4559-8133-6fe5986dd95c",
+        "entity_link_track": "https://musicbrainz.org/recording/210cc4da-2947-44b4-aa4b-5cfc4433034f",
+        "cleaned_song": "If I Get Locked Up",
+        "artist_queries": "Funk Flex, Big Kap"
+    },
+    "Forgot About DreDr. Dre": {
+        "main_artist_name": "Dr. Dre",
+        "entity_link_artist": "https://musicbrainz.org/artist/5f6ab597-f57a-40da-be9e-adad48708203",
+        "entity_link_track": "https://musicbrainz.org/recording/c9a5a9b4-b9f0-44d7-b515-a45aa79834a1",
+        "cleaned_song": "Forgot About Dre",
+        "artist_queries": "Dr. Dre"
+    },
+    "8 MileEminem": {
+        "main_artist_name": "Eminem",
+        "entity_link_artist": "https://musicbrainz.org/artist/b95ce3ff-3d05-4e87-9e01-c97b66af13d4",
+        "entity_link_track": "https://musicbrainz.org/recording/0a9cf5c3-d2c3-47a2-9e39-1d5c1fcc0ce9",
+        "cleaned_song": "8 Mile",
+        "artist_queries": "Eminem"
+    },
+    "Without MeEminem": {
+        "main_artist_name": "Wrong artist found",
+        "entity_link_artist": "Artist link not found",
+        "entity_link_track": "Track link not found",
+        "cleaned_song": "Without Me",
+        "artist_queries": "Eminem"
+    },
+    "Hailie's SongEminem": {
+        "main_artist_name": "Eminem",
+        "entity_link_artist": "https://musicbrainz.org/artist/b95ce3ff-3d05-4e87-9e01-c97b66af13d4",
+        "entity_link_track": "https://musicbrainz.org/recording/faccd2dc-68a2-4b53-a059-b824ace74417",
+        "cleaned_song": "Hailie's Song",
+        "artist_queries": "Eminem"
+    },
+    "Love the Way You Lie (feat. Rihanna)Eminem": {
+        "main_artist_name": "Eminem",
+        "entity_link_artist": "https://musicbrainz.org/artist/b95ce3ff-3d05-4e87-9e01-c97b66af13d4",
+        "entity_link_track": "https://musicbrainz.org/recording/2045d46c-b25d-488c-919e-ea2af80c30ac",
+        "cleaned_song": "Love the Way You Lie",
+        "artist_queries": "Eminem, Rihanna"
+    },
+    "My Name IsEminem": {
+        "main_artist_name": "Eminem",
+        "entity_link_artist": "https://musicbrainz.org/artist/b95ce3ff-3d05-4e87-9e01-c97b66af13d4",
+        "entity_link_track": "https://musicbrainz.org/recording/3ca0be9d-dce9-486c-a5a0-9e4738a7563b",
+        "cleaned_song": "My Name Is",
+        "artist_queries": "Eminem"
+    },
+    "Guilty Conscience (feat. Dr. Dre)Eminem": {
+        "main_artist_name": "Eminem",
+        "entity_link_artist": "https://musicbrainz.org/artist/b95ce3ff-3d05-4e87-9e01-c97b66af13d4",
+        "entity_link_track": "https://musicbrainz.org/recording/8b357ec4-f4dd-4e9b-820a-51e3f68e9b80",
+        "cleaned_song": "Guilty Conscience",
+        "artist_queries": "Eminem, Dr. Dre"
+    },
+    "Ain't Hard 2 Find (feat. B-Legit, C-BO, E-40 & Richie Rich)2Pac & D-Shot": {
+        "main_artist_name": "2Pac",
+        "entity_link_artist": "https://musicbrainz.org/artist/382f1005-e9ab-4684-afd4-0bdae4ee37f2",
+        "entity_link_track": "https://musicbrainz.org/recording/6ac60d29-2a75-43c0-a02f-6ded45380bbd",
+        "cleaned_song": "Ain't Hard 2 Find",
+        "artist_queries": "2Pac, D-Shot, B-Legit, C-BO, E-40, Richie Rich"
+    },
+    "Pour Out a Little Liquor2Pac & Thug Life": {
+        "main_artist_name": "Wrong artist found",
+        "entity_link_artist": "Artist link not found",
+        "entity_link_track": "Track link not found",
+        "cleaned_song": "Pour Out a Little Liquor",
+        "artist_queries": "2Pac, Thug Life"
+    },
+    "2 Gangsta2Pac": {
+        "main_artist_name": "2Pac",
+        "entity_link_artist": "https://musicbrainz.org/artist/382f1005-e9ab-4684-afd4-0bdae4ee37f2",
+        "entity_link_track": "https://musicbrainz.org/recording/9e721e10-4ae3-4cba-8434-a3a7a84e7cc4",
+        "cleaned_song": "2 Gangsta",
+        "artist_queries": "2Pac"
+    },
+    "2 Of Amerikaz Most Wanted (feat. Snoop Doggy Dogg & Snoop Dogg)2Pac": {
+        "main_artist_name": "2Pac",
+        "entity_link_artist": "https://musicbrainz.org/artist/382f1005-e9ab-4684-afd4-0bdae4ee37f2",
+        "entity_link_track": "https://musicbrainz.org/recording/f9319b36-b490-4b2a-b031-250451616b47",
+        "cleaned_song": "2 Of Amerikaz Most Wanted",
+        "artist_queries": "2Pac, Snoop Doggy Dogg, Snoop Dogg"
+    },
+    "All About U (feat. Snoop Dogg, Snoop Doggy Dogg, Nate Dogg & Dru Down)2Pac": {
+        "main_artist_name": "Wrong artist found",
+        "entity_link_artist": "Artist link not found",
+        "entity_link_track": "Track link not found",
+        "cleaned_song": "All About U",
+        "artist_queries": "2Pac, Snoop Dogg, Snoop Doggy Dogg, Nate Dogg, Dru Down"
+    },
+    "Brenda's Got a Baby2Pac": {
+        "main_artist_name": "2Pac",
+        "entity_link_artist": "https://musicbrainz.org/artist/382f1005-e9ab-4684-afd4-0bdae4ee37f2",
+        "entity_link_track": "https://musicbrainz.org/recording/a64f3036-2622-4f25-b3cd-c89455acba61",
+        "cleaned_song": "Brenda's Got a Baby",
+        "artist_queries": "2Pac"
+    },
+    "California Love2Pac": {
+        "main_artist_name": "2Pac",
+        "entity_link_artist": "https://musicbrainz.org/artist/382f1005-e9ab-4684-afd4-0bdae4ee37f2",
+        "entity_link_track": "https://musicbrainz.org/recording/1a736a96-8af9-468b-8493-8c77e7f523b0",
+        "cleaned_song": "California Love",
+        "artist_queries": "2Pac"
+    },
+    "California Love (feat. Roger Troutman & Dr. Dre)2Pac": {
+        "main_artist_name": "2Pac",
+        "entity_link_artist": "https://musicbrainz.org/artist/382f1005-e9ab-4684-afd4-0bdae4ee37f2",
+        "entity_link_track": "https://musicbrainz.org/recording/3bfbecf3-5c40-456b-9e73-88627e8e3724",
+        "cleaned_song": "California Love",
+        "artist_queries": "2Pac, Roger Troutman, Dr. Dre"
+    },
+    "Do for Love2Pac": {
+        "main_artist_name": "2Pac",
+        "entity_link_artist": "https://musicbrainz.org/artist/382f1005-e9ab-4684-afd4-0bdae4ee37f2",
+        "entity_link_track": "https://musicbrainz.org/recording/0e49f077-0700-4fa2-a3f7-45c3d990426a",
+        "cleaned_song": "Do for Love",
+        "artist_queries": "2Pac"
+    },
+    "Heaven Ain't Hard 2 Find2Pac": {
+        "main_artist_name": "2Pac",
+        "entity_link_artist": "https://musicbrainz.org/artist/382f1005-e9ab-4684-afd4-0bdae4ee37f2",
+        "entity_link_track": "https://musicbrainz.org/recording/d6e21e1a-87c1-4cb5-8414-8541fe576616",
+        "cleaned_song": "Heaven Ain't Hard 2 Find",
+        "artist_queries": "2Pac"
+    },
+    "How Do U Want It (feat. K-Ci & JoJo)2Pac": {
+        "main_artist_name": "2Pac",
+        "entity_link_artist": "https://musicbrainz.org/artist/382f1005-e9ab-4684-afd4-0bdae4ee37f2",
+        "entity_link_track": "https://musicbrainz.org/recording/0b4acd2a-5c3e-41aa-9c60-0df4e6b5bc52",
+        "cleaned_song": "How Do U Want It",
+        "artist_queries": "2Pac, K-Ci & JoJo"
+    },
+    "I Ain't Mad At Cha2Pac": {
+        "main_artist_name": "2Pac",
+        "entity_link_artist": "https://musicbrainz.org/artist/382f1005-e9ab-4684-afd4-0bdae4ee37f2",
+        "entity_link_track": "https://musicbrainz.org/recording/2a27dc86-1fdd-4768-8bda-9584b8f3fe09",
+        "cleaned_song": "I Ain't Mad At Cha",
+        "artist_queries": "2Pac"
+    },
+    "I Ain't Mad At Cha (feat. Danny Boy)2Pac": {
+        "main_artist_name": "2Pac",
+        "entity_link_artist": "https://musicbrainz.org/artist/382f1005-e9ab-4684-afd4-0bdae4ee37f2",
+        "entity_link_track": "https://musicbrainz.org/recording/3d81c5a7-82e9-481f-9b5d-109a4181224e",
+        "cleaned_song": "I Ain't Mad At Cha",
+        "artist_queries": "2Pac, Danny Boy"
+    },
+    "I Get Around (feat. Digital Underground)2Pac": {
+        "main_artist_name": "2Pac",
+        "entity_link_artist": "https://musicbrainz.org/artist/382f1005-e9ab-4684-afd4-0bdae4ee37f2",
+        "entity_link_track": "https://musicbrainz.org/recording/f88e06d1-450f-4b7c-866a-b5b3b8fd7b96",
+        "cleaned_song": "I Get Around",
+        "artist_queries": "2Pac, Digital Underground"
+    },
+    "Keep Ya Head Up2Pac": {
+        "main_artist_name": "2Pac",
+        "entity_link_artist": "https://musicbrainz.org/artist/382f1005-e9ab-4684-afd4-0bdae4ee37f2",
+        "entity_link_track": "https://musicbrainz.org/recording/c83b35ed-9996-475f-b002-5b746a54cec8",
+        "cleaned_song": "Keep Ya Head Up",
+        "artist_queries": "2Pac"
+    },
+    "Life Goes On2Pac": {
+        "main_artist_name": "Wrong artist found",
+        "entity_link_artist": "Artist link not found",
+        "entity_link_track": "Track link not found",
+        "cleaned_song": "Life Goes On",
+        "artist_queries": "2Pac"
+    },
+    "Me & My Homies2Pac": {
+        "main_artist_name": "2Pac",
+        "entity_link_artist": "https://musicbrainz.org/artist/382f1005-e9ab-4684-afd4-0bdae4ee37f2",
+        "entity_link_track": "https://musicbrainz.org/recording/50ce52f9-2518-4b61-a873-e79cf019f6c0",
+        "cleaned_song": "Me & My Homies",
+        "artist_queries": "2Pac"
+    },
+    "Me Against the World (feat. Dramacydal)2Pac": {
+        "main_artist_name": "2Pac",
+        "entity_link_artist": "https://musicbrainz.org/artist/382f1005-e9ab-4684-afd4-0bdae4ee37f2",
+        "entity_link_track": "https://musicbrainz.org/recording/69d1d9e0-1d0c-4f0f-b149-b987ba4ae8ca",
+        "cleaned_song": "Me Against the World",
+        "artist_queries": "2Pac, Dramacydal"
+    },
+    "One Night Stand2Pac": {
+        "main_artist_name": "2Pac",
+        "entity_link_artist": "https://musicbrainz.org/artist/382f1005-e9ab-4684-afd4-0bdae4ee37f2",
+        "entity_link_track": "https://musicbrainz.org/recording/9d68a4ad-b3a6-47e7-898e-b3eebce474f2",
+        "cleaned_song": "One Night Stand",
+        "artist_queries": "2Pac"
+    },
+    "Ride or Die2Pac": {
+        "main_artist_name": "2Pac",
+        "entity_link_artist": "https://musicbrainz.org/artist/382f1005-e9ab-4684-afd4-0bdae4ee37f2",
+        "entity_link_track": "https://musicbrainz.org/recording/98e21b21-2a2d-45a4-a8d6-25e90b567621",
+        "cleaned_song": "Ride or Die",
+        "artist_queries": "2Pac"
+    },
+    "Run tha Streetz (feat. Michel'le, The Storm & Mutah)2Pac": {
+        "main_artist_name": "2Pac",
+        "entity_link_artist": "https://musicbrainz.org/artist/382f1005-e9ab-4684-afd4-0bdae4ee37f2",
+        "entity_link_track": "https://musicbrainz.org/recording/7eaf7750-4a85-484e-948c-bf51a1d07319",
+        "cleaned_song": "Run tha Streetz",
+        "artist_queries": "2Pac, Michel'le, The Storm, Mutah"
+    },
+    "Runnin' (Stone Radio Remix)2Pac": {
+        "main_artist_name": "Wrong artist found",
+        "entity_link_artist": "Artist link not found",
+        "entity_link_track": "Track link not found",
+        "cleaned_song": "Runnin' (Stone Radio Remix)",
+        "artist_queries": "2Pac"
+    },
+    "Slippin' Into Darkness2Pac": {
+        "main_artist_name": "2Pac",
+        "entity_link_artist": "https://musicbrainz.org/artist/382f1005-e9ab-4684-afd4-0bdae4ee37f2",
+        "entity_link_track": "https://musicbrainz.org/recording/391cdeb2-38ca-4974-9cee-aecbddcf68cc",
+        "cleaned_song": "Slippin' Into Darkness",
+        "artist_queries": "2Pac"
+    },
+    "So Many Tears2Pac": {
+        "main_artist_name": "2Pac",
+        "entity_link_artist": "https://musicbrainz.org/artist/382f1005-e9ab-4684-afd4-0bdae4ee37f2",
+        "entity_link_track": "https://musicbrainz.org/recording/fb9407d0-3f44-470d-a3ac-a630ad1ebeb0",
+        "cleaned_song": "So Many Tears",
+        "artist_queries": "2Pac"
+    },
+    "Static I (Remix 1)2Pac": {
+        "main_artist_name": "Wrong artist found",
+        "entity_link_artist": "Artist link not found",
+        "entity_link_track": "Track link not found",
+        "cleaned_song": "Static I (Remix 1)",
+        "artist_queries": "2Pac"
+    },
+    "Temptations2Pac": {
+        "main_artist_name": "2Pac",
+        "entity_link_artist": "https://musicbrainz.org/artist/382f1005-e9ab-4684-afd4-0bdae4ee37f2",
+        "entity_link_track": "https://musicbrainz.org/recording/5a3a8287-b105-4a56-a0e9-854cf30728ae",
+        "cleaned_song": "Temptations",
+        "artist_queries": "2Pac"
+    },
+    "Tradin War Stories (feat. C-BO, CPO, Outlawz & The Storm)2Pac": {
+        "main_artist_name": "2Pac",
+        "entity_link_artist": "https://musicbrainz.org/artist/382f1005-e9ab-4684-afd4-0bdae4ee37f2",
+        "entity_link_track": "https://musicbrainz.org/recording/218c8f78-5871-41b3-8f36-814e71180659",
+        "cleaned_song": "Tradin War Stories",
+        "artist_queries": "2Pac, C-BO, CPO, Outlawz, The Storm"
+    },
+    "Side To Side (feat. Nicki Minaj)Ariana Grande": {
+        "main_artist_name": "Ariana Grande",
+        "entity_link_artist": "https://musicbrainz.org/artist/f4fdbb4c-e4b7-47a0-b83b-d91bbfcfa387",
+        "entity_link_track": "https://musicbrainz.org/recording/19a83933-4000-4bfb-834d-baa21aac4f9f",
+        "cleaned_song": "Side To Side",
+        "artist_queries": "Ariana Grande, Nicki Minaj"
+    },
+    "AttentionCharlie Puth": {
+        "main_artist_name": "Charlie Puth",
+        "entity_link_artist": "https://musicbrainz.org/artist/525f1f1c-03f0-4bc8-8dfd-e7521f87631b",
+        "entity_link_track": "https://musicbrainz.org/recording/318d12f7-4e91-4583-936a-3693041fe5dc",
+        "cleaned_song": "Attention",
+        "artist_queries": "Charlie Puth"
+    },
+    "Medicine Man (feat. Eminem, Candice Pillay & Anderson .Paak)Dr. Dre": {
+        "main_artist_name": "Dr. Dre",
+        "entity_link_artist": "https://musicbrainz.org/artist/5f6ab597-f57a-40da-be9e-adad48708203",
+        "entity_link_track": "https://musicbrainz.org/recording/95520270-b4a7-4aa8-b991-8c5b93ebdcc4",
+        "cleaned_song": "Medicine Man",
+        "artist_queries": "Dr. Dre, Eminem, Candice Pillay, Anderson .Paak"
+    },
+    "BerzerkEminem": {
+        "main_artist_name": "Eminem",
+        "entity_link_artist": "https://musicbrainz.org/artist/b95ce3ff-3d05-4e87-9e01-c97b66af13d4",
+        "entity_link_track": "https://musicbrainz.org/recording/eecfa020-2833-4cd4-bb5c-4b235f41d1dc",
+        "cleaned_song": "Berzerk",
+        "artist_queries": "Eminem"
+    },
+    "Just Don't Give a F**Eminem": {
+        "main_artist_name": "Eminem",
+        "entity_link_artist": "https://musicbrainz.org/artist/b95ce3ff-3d05-4e87-9e01-c97b66af13d4",
+        "entity_link_track": "https://musicbrainz.org/recording/d57805dc-c326-45d7-a544-58d74e4e7ff1",
+        "cleaned_song": "Just Don't Give a F**",
+        "artist_queries": "Eminem"
+    },
+    "Love the Way You LieEminem": {
+        "main_artist_name": "Eminem",
+        "entity_link_artist": "https://musicbrainz.org/artist/b95ce3ff-3d05-4e87-9e01-c97b66af13d4",
+        "entity_link_track": "https://musicbrainz.org/recording/2045d46c-b25d-488c-919e-ea2af80c30ac",
+        "cleaned_song": "Love the Way You Lie",
+        "artist_queries": "Eminem"
+    },
+    "Unforgettable (feat. Swae Lee)French Montana": {
+        "main_artist_name": "French Montana",
+        "entity_link_artist": "https://musicbrainz.org/artist/45dc5f07-6609-4760-a933-8c9e0f858d05",
+        "entity_link_track": "https://musicbrainz.org/recording/ed937929-eaa5-4dcb-80ce-42ae0aafce52",
+        "cleaned_song": "Unforgettable",
+        "artist_queries": "French Montana, Swae Lee"
+    },
+    "Rich ManHearts & Colors": {
+        "main_artist_name": "Wrong artist found",
+        "entity_link_artist": "Artist link not found",
+        "entity_link_track": "Track link not found",
+        "cleaned_song": "Rich Man",
+        "artist_queries": "Hearts & Colors"
+    },
+    "Lambo Refuelled (feat. Youngs Teflon, Sway & Scrufizzer)KSI": {
+        "main_artist_name": "KSI",
+        "entity_link_artist": "https://musicbrainz.org/artist/7b24231e-faa5-4838-b6a8-6a2eb2727b37",
+        "entity_link_track": "https://musicbrainz.org/recording/943fc574-e232-4d8b-8c64-f876cfbebbcb",
+        "cleaned_song": "Lambo Refuelled",
+        "artist_queries": "KSI, Youngs Teflon, Sway, Scrufizzer"
+    },
+    "First TimeKygo & Ellie Goulding": {
+        "main_artist_name": "Kygo",
+        "entity_link_artist": "https://musicbrainz.org/artist/ba0e7638-0cd6-4ff4-8987-c3e224d22c23",
+        "entity_link_track": "https://musicbrainz.org/recording/af3cd5ea-8776-48e1-a06d-75e5e27963fc",
+        "cleaned_song": "First Time",
+        "artist_queries": "Kygo, Ellie Goulding"
+    },
+    "The Night We MetLord Huron": {
+        "main_artist_name": "Lord Huron",
+        "entity_link_artist": "https://musicbrainz.org/artist/51c76d97-0635-433c-b26d-66beb81657f8",
+        "entity_link_track": "https://musicbrainz.org/recording/7ac1fd63-d7d5-4244-8d0c-4ae0dcbcee7e",
+        "cleaned_song": "The Night We Met",
+        "artist_queries": "Lord Huron"
+    },
+    "Hail MaryMakaveli": {
+        "main_artist_name": "Wrong artist found",
+        "entity_link_artist": "Artist link not found",
+        "entity_link_track": "Track link not found",
+        "cleaned_song": "Hail Mary",
+        "artist_queries": "Makaveli"
+    },
+    "Adore YouMiley Cyrus": {
+        "main_artist_name": "Miley Cyrus",
+        "entity_link_artist": "https://musicbrainz.org/artist/7e9bd05a-117f-4cce-87bc-e011527a8b18",
+        "entity_link_track": "https://musicbrainz.org/recording/d5952d50-ba5b-4d17-bc39-3a38b11d226f",
+        "cleaned_song": "Adore You",
+        "artist_queries": "Miley Cyrus"
+    },
+    "Can't Be TamedMiley Cyrus": {
+        "main_artist_name": "Miley Cyrus",
+        "entity_link_artist": "https://musicbrainz.org/artist/7e9bd05a-117f-4cce-87bc-e011527a8b18",
+        "entity_link_track": "https://musicbrainz.org/recording/fb080cbf-7a80-411c-b8f1-d76abd88fd45",
+        "cleaned_song": "Can't Be Tamed",
+        "artist_queries": "Miley Cyrus"
+    },
+    "Every Rose Has Its ThornMiley Cyrus": {
+        "main_artist_name": "Miley Cyrus",
+        "entity_link_artist": "https://musicbrainz.org/artist/7e9bd05a-117f-4cce-87bc-e011527a8b18",
+        "entity_link_track": "https://musicbrainz.org/recording/16838f42-3796-4aa7-b25e-8e93caf365b2",
+        "cleaned_song": "Every Rose Has Its Thorn",
+        "artist_queries": "Miley Cyrus"
+    },
+    "Hands of LoveMiley Cyrus": {
+        "main_artist_name": "Miley Cyrus",
+        "entity_link_artist": "https://musicbrainz.org/artist/7e9bd05a-117f-4cce-87bc-e011527a8b18",
+        "entity_link_track": "https://musicbrainz.org/recording/e21eb327-faa5-4a55-a91e-53ce6db512be",
+        "cleaned_song": "Hands of Love",
+        "artist_queries": "Miley Cyrus"
+    },
+    "Liberty WalkMiley Cyrus": {
+        "main_artist_name": "Miley Cyrus",
+        "entity_link_artist": "https://musicbrainz.org/artist/7e9bd05a-117f-4cce-87bc-e011527a8b18",
+        "entity_link_track": "https://musicbrainz.org/recording/2ab98d4f-9e7b-4dd5-8489-55f4516a2f3d",
+        "cleaned_song": "Liberty Walk",
+        "artist_queries": "Miley Cyrus"
+    },
+    "Party In the U.S.A.Miley Cyrus": {
+        "main_artist_name": "Miley Cyrus",
+        "entity_link_artist": "https://musicbrainz.org/artist/7e9bd05a-117f-4cce-87bc-e011527a8b18",
+        "entity_link_track": "https://musicbrainz.org/recording/13ebfef2-e28e-4878-a94e-1324bd3e8f19",
+        "cleaned_song": "Party In the U.S.A.",
+        "artist_queries": "Miley Cyrus"
+    },
+    "RobotMiley Cyrus": {
+        "main_artist_name": "Miley Cyrus",
+        "entity_link_artist": "https://musicbrainz.org/artist/7e9bd05a-117f-4cce-87bc-e011527a8b18",
+        "entity_link_track": "https://musicbrainz.org/recording/a83c5119-52cb-4100-b920-e977be50b807",
+        "cleaned_song": "Robot",
+        "artist_queries": "Miley Cyrus"
+    },
+    "See You AgainMiley Cyrus": {
+        "main_artist_name": "Miley Cyrus",
+        "entity_link_artist": "https://musicbrainz.org/artist/7e9bd05a-117f-4cce-87bc-e011527a8b18",
+        "entity_link_track": "https://musicbrainz.org/recording/640c727c-6ab1-4f29-a715-e3579666f966",
+        "cleaned_song": "See You Again",
+        "artist_queries": "Miley Cyrus"
+    },
+    "The ClimbMiley Cyrus": {
+        "main_artist_name": "Wrong artist found",
+        "entity_link_artist": "Artist link not found",
+        "entity_link_track": "Track link not found",
+        "cleaned_song": "The Climb",
+        "artist_queries": "Miley Cyrus"
+    },
+    "Who Owns My HeartMiley Cyrus": {
+        "main_artist_name": "Miley Cyrus",
+        "entity_link_artist": "https://musicbrainz.org/artist/7e9bd05a-117f-4cce-87bc-e011527a8b18",
+        "entity_link_track": "https://musicbrainz.org/recording/9ee0802b-3ae3-4938-a5f9-8371d6064531",
+        "cleaned_song": "Who Owns My Heart",
+        "artist_queries": "Miley Cyrus"
+    },
+    "Wrecking BallMiley Cyrus": {
+        "main_artist_name": "Miley Cyrus",
+        "entity_link_artist": "https://musicbrainz.org/artist/7e9bd05a-117f-4cce-87bc-e011527a8b18",
+        "entity_link_track": "https://musicbrainz.org/recording/6e1e02b2-10b3-45d0-afbe-737aaa357b3b",
+        "cleaned_song": "Wrecking Ball",
+        "artist_queries": "Miley Cyrus"
+    },
+    "Style (Taylor's Version)Taylor Swift": {
+        "main_artist_name": "Taylor Swift",
+        "entity_link_artist": "https://musicbrainz.org/artist/20244d07-534f-4eff-b4d4-930878889970",
+        "entity_link_track": "https://musicbrainz.org/recording/0f3c49e4-3a55-4a7c-b63e-3a1dbf488af6",
+        "cleaned_song": "Style (Taylor's Version)",
+        "artist_queries": "Taylor Swift"
+    },
+    "BloodstreamThe Chainsmokers": {
+        "main_artist_name": "The Chainsmokers",
+        "entity_link_artist": "https://musicbrainz.org/artist/91a81925-92f9-4fc9-b897-93cf01226282",
+        "entity_link_track": "https://musicbrainz.org/recording/7e09d073-262a-478b-94cf-697ba98b38ec",
+        "cleaned_song": "Bloodstream",
+        "artist_queries": "The Chainsmokers"
+    },
+    "Break Up Every NightThe Chainsmokers": {
+        "main_artist_name": "The Chainsmokers",
+        "entity_link_artist": "https://musicbrainz.org/artist/91a81925-92f9-4fc9-b897-93cf01226282",
+        "entity_link_track": "https://musicbrainz.org/recording/4ae1fbba-9519-48f5-968d-f0f4132accbf",
+        "cleaned_song": "Break Up Every Night",
+        "artist_queries": "The Chainsmokers"
+    },
+    "Don't Say (feat. Emily Warren)The Chainsmokers": {
+        "main_artist_name": "The Chainsmokers",
+        "entity_link_artist": "https://musicbrainz.org/artist/91a81925-92f9-4fc9-b897-93cf01226282",
+        "entity_link_track": "https://musicbrainz.org/recording/821e1eec-84d5-425c-800a-716289ab92ce",
+        "cleaned_song": "Don't Say",
+        "artist_queries": "The Chainsmokers, Emily Warren"
+    },
+    "Inside Out (feat. Charlee)The Chainsmokers": {
+        "main_artist_name": "The Chainsmokers",
+        "entity_link_artist": "https://musicbrainz.org/artist/91a81925-92f9-4fc9-b897-93cf01226282",
+        "entity_link_track": "https://musicbrainz.org/recording/e609c9f4-3812-45e8-8601-7701e64234db",
+        "cleaned_song": "Inside Out",
+        "artist_queries": "The Chainsmokers, Charlee"
+    }
+}
