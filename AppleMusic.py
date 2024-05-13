@@ -45,12 +45,14 @@ class AppleMusic:
 
         Song_Names = []
         Artists_and_Groups = []
+        Songs_ignored=0
         for description in skipped_more_than_played['Track Description']:
             parts = description.split(" - ")
             if len(parts) == 2:
                 artist_or_group, song_name = parts
                 Song_Names.append(song_name.strip())
                 Artists_and_Groups.append(artist_or_group.strip())
+            else: Songs_ignored+=1
         
         return Song_Names, Artists_and_Groups
 
@@ -76,12 +78,12 @@ class AppleMusic:
         sorted_total_play_count_filtered = sorted_total_play_count
         play_count_by_year_filtered= play_count_by_year
         
-        sorted_total_play_count_filtered = sorted_total_play_count[sorted_total_play_count['Play Count'] >= 30]
-        play_count_by_year_filtered= play_count_by_year[play_count_by_year['Play Count'] >= 30]
+        # sorted_total_play_count_filtered = sorted_total_play_count[sorted_total_play_count['Play Count'] >= 30]
+        # play_count_by_year_filtered= play_count_by_year[play_count_by_year['Play Count'] >= 30]
 
         if len(play_count_by_year_filtered) == 0:
             return "Not enough data"
-        elif 0 < len(play_count_by_year_filtered) < 37:
+        elif 0 < len(play_count_by_year_filtered):# < 37:
             # Filters out the songs with play counts lower than 30 
             merged_df = pd.merge(sorted_total_play_count_filtered, play_count_by_year_filtered[['Track Identifier', 'Year']], on='Track Identifier', how='left')
             # Fills NaN values in 'Year' with empty strings
@@ -91,32 +93,49 @@ class AppleMusic:
             merged_df['Year'] = merged_df.groupby('Track Identifier')['Year'].transform(lambda x: ','.join(x.astype(str)))
 
             # Gets rid of duplicates
-            enjoyed_songs_df = merged_df.drop_duplicates()
-            # return enjoyed_songs_df
 
-        elif len(play_count_by_year_filtered)>=37:
+            enjoyed_songs_df = merged_df.drop_duplicates()
+            
+            # print(enjoyed_songs_df)
+
+            result = enjoyed_songs_df.groupby('Track Description').agg({
+                'Year': lambda x: ', '.join(map(str, sorted(set(x))))  # Removes duplicates and sorts the years
+            }).reset_index()
+
+
+            # print(result)
+
+            duplicates = enjoyed_songs_df[enjoyed_songs_df.duplicated('Track Description', keep=False)]
+            # print(duplicates)
+            # return enjoyed_songs_df
         
-            #The top 5 percent of songs for the user: 
-            top_5_percent=math.ceil(unique_songs/20)
-            top_20_percent=math.ceil(unique_songs/5)
 
-            # Gets the relative top songs  
-            top_5_percent_songs = sorted_total_play_count.head(top_5_percent)
-            play_count_by_year_top_20_percent = play_count_by_year.head(top_20_percent)
 
-            # Merges 
-            merged_df = pd.merge(top_5_percent_songs, play_count_by_year_top_20_percent[['Track Identifier', 'Year']], on='Track Identifier', how='left')
+        # elif len(play_count_by_year_filtered)>=37:
+        
+        #     #The top 5 percent of songs for the user: 
+        #     top_5_percent=math.ceil(unique_songs/20)
+        #     top_20_percent=math.ceil(unique_songs/5)
 
-            # Fills NaN values in 'Year' with empty strings
-            merged_df['Year'] = merged_df['Year'].fillna('')
+        #     # Gets the relative top songs  
+        #     top_5_percent_songs = sorted_total_play_count.head(top_5_percent)
+        #     play_count_by_year_top_20_percent = play_count_by_year.head(top_20_percent)
 
-            # Groups the dataframe by 'Track Identifier' and adds the 'Year' column values into single strings. Separates years within with commas
-            merged_df['Year'] = merged_df.groupby('Track Identifier')['Year'].transform(lambda x: ','.join(x.astype(str)))
+        #     # Merges 
+        #     merged_df = pd.merge(top_5_percent_songs, play_count_by_year_top_20_percent[['Track Identifier', 'Year']], on='Track Identifier', how='left')
 
-            # Gets rid of duplicates
-            enjoyed_songs_df = merged_df.drop_duplicates()
+        #     # Fills NaN values in 'Year' with empty strings
+        #     merged_df['Year'] = merged_df['Year'].fillna('')
 
-            # return enjoyed_songs_df
+        #     # Groups the dataframe by 'Track Identifier' and adds the 'Year' column values into single strings. Separates years within with commas
+        #     merged_df['Year'] = merged_df.groupby('Track Identifier')['Year'].transform(lambda x: ','.join(x.astype(str)))
+
+        #     # Gets rid of duplicates
+        #     enjoyed_songs_df = merged_df.drop_duplicates()
+            # result = enjoyed_songs_df.groupby('Track Description').agg({
+            #     'Year': lambda x: ', '.join(map(str, sorted(set(x))))  # Removes duplicates and sorts the years
+            # }).reset_index()
+        #     # return enjoyed_songs_df
         
         Year = []
         # Splitting song names from artists:
@@ -124,7 +143,9 @@ class AppleMusic:
         Artists_and_Groups = []
         # Artists_and_Groups_Underscore=[]
         i=0
-        for description in enjoyed_songs_df['Track Description']:
+        Songs_ignored=0
+
+        for description in result['Track Description']:
             parts = description.split(" - ")
             if len(parts) == 2:
                 artist_or_group, song_name = parts
@@ -134,8 +155,16 @@ class AppleMusic:
                 # artist_or_group = artist_or_group.replace(" ", "_")
                 # Artists_and_Groups_Underscore.append(artist_or_group.strip())
                 Year.append(enjoyed_songs_df['Year'][i])
-                
+            else: 
+                print(parts)
+                Songs_ignored+=1    
             i+=1
+        Songs_ignored=str(Songs_ignored)
+        print("Songs ignored: "+Songs_ignored)
+        print("Song name length: "+str(len(Song_Names)))
+        for song in Song_Names:
+            print(song)
+        # print(Song_Names)
         return Year, Song_Names, Artists_and_Groups
 
 
@@ -214,12 +243,13 @@ class AppleMusic:
         entity_links_musicbrainz_artists = []
         Cleaned_Songs=[]
         Queries=[]
+        artist_queries=[]
         
         cache_path='cache.json'
         # render_template('..\\static\\templates\\profile\\loading.html')
         for song_name, artists in zip(song_names, artists_and_groups):
 
-
+            # print(song_name)
             
             if os.path.exists(cache_path):
                 with open(cache_path, 'r') as file:
@@ -232,50 +262,58 @@ class AppleMusic:
             if key not in cache:
                 song_cleaned, featured_artists, tags = AppleMusic.extract_and_clean_name(song_name)
                 # Takes out what's most likely the main artist (leftmost artist in the title) 
-                main_artist_name = artists.split(', ')[0]
-                
             
                 Cleaned_Songs.append(song_cleaned)
                 # print(main_artist_data)
                 # Print check
                 
-                main_artist_data = AppleMusic.artist_check_musicbrainz(main_artist_name)
+
+                # Combines main and featured artists
+
+                
+                artists = AppleMusic.handle_artists(artists.strip(', '))
+
+                main_artist_data = AppleMusic.artist_check_musicbrainz(artists[0])
                 if main_artist_data is None:
                     # print(f"Main artist not found: {main_artist_name}")
                     main_artist_names.append('Artist not found')
                     pass
                 else:
                     # print("Main artist found")
-                    main_artist_names.append(main_artist_name)
-
-                # Combines main and featured artists
-                extra_artists = AppleMusic.handle_artists(artists.replace(main_artist_name, '').strip(', '))
+                    main_artist_names.append(artists[0])
                 
-                if extra_artists!=[]:
-                    artist_list = [main_artist_name]+extra_artists
-                else: 
-                    artist_list = [main_artist_name]
+                featured_artists=str(featured_artists)
+                
+                featured_artists=featured_artists.strip("'[]\"")
+                featured_artists = AppleMusic.handle_artists(featured_artists.strip(', '))
+                
+                
                 # Adds featured artists to the list
-                if len(featured_artists)>0:
-                    artist_list += featured_artists
-
+            
+                if featured_artists!=[]:
+                    
+                    artists += featured_artists
+                
                 # Forms the query with the song title, all artists, and tags
                 # query = f'"{song_cleaned}" ' + ' '.join(artist_list) + ' ' + ' '.join(tags)
                 
 
                 # if len(artist_list) > 0:
                 # Strings artists from a list and adds them to a var
-                artist_query_part = ' '.join(f'"{artist}"' for artist in artist_list)
-                # Constructs the query with all artists, song name, and tags (if any)           
+                artist_query_part = ' '.join(f'"{artist}"' for artist in artists)
+                # Constructs the query with all artists, song name, and tags (if any)  
+                      
                 if tags==[]:
                     query = f'"{song_cleaned}" {artist_query_part}'
-                else: query = f'"{song_cleaned}" {artist_query_part} {tags}'
+                else: 
+                    tags=str(tags).strip("'[]\"")
+                    query = f'"{song_cleaned}" {artist_query_part} {tags}'
                 params = {'query': query, 'fmt': 'json'}
                 Queries.append(query)
-                print("Query:", query)
-              
-
-
+                artist_query_part=artist_query_part.split('" "')
+                artist_query_part='", "'.join(artist_query_part)
+                artist_query_part=artist_query_part.replace('"','')
+                artist_queries.append(artist_query_part)   
 
           
 
@@ -304,41 +342,43 @@ class AppleMusic:
                             # print(recording)
                         else:
                             # print(f"Artist ID mismatch for {song_name}: {recording_main_artist_id} != {main_artist_data['id']}")
-                            entity_links_musicbrainz_tracks.append("Track not found")
-                            entity_links_musicbrainz_artists.append("Artist not found")
+                            entity_links_musicbrainz_tracks.append("Track link not found")
+                            entity_links_musicbrainz_artists.append("Artist link not found")
                             main_artist_names=main_artist_names[0:-1]
-                            main_artist_names.append("Artist not found")
+                            main_artist_names.append("Wrong artist found")
 
                     except:
                         # print(f"Artist ID mismatch for {song_name}: {recording_main_artist_id} != {main_artist_data['id']}")
-                        entity_links_musicbrainz_tracks.append("Track not found")
-                        entity_links_musicbrainz_artists.append("Artist not found")
+                        entity_links_musicbrainz_tracks.append("Track link not found")
+                        entity_links_musicbrainz_artists.append("Artist link not found")
                         main_artist_names=main_artist_names[0:-1]
-                        main_artist_names.append("Artist not found")
+                        main_artist_names.append("Wrong artist found")
                 else:
                     # print('No recordings found for', song_name)
                     entity_links_musicbrainz_tracks.append("Track not found")
                     entity_links_musicbrainz_artists.append("Artist not found")
                     main_artist_names=main_artist_names[0:-1]
-                    main_artist_names.append("Artist not found")
+                    main_artist_names.append("Wrong artist found")
                          
                 cache[key] = {
                     'main_artist_name': main_artist_names[-1],
                     'entity_link_artist': entity_links_musicbrainz_artists[-1],
                     'entity_link_track': entity_links_musicbrainz_tracks[-1],
-                    'cleaned_song': Cleaned_Songs[-1]
+                    'cleaned_song': Cleaned_Songs[-1],
+                    'artist_queries': artist_queries[-1]
                 }
                 with open(cache_path, 'w') as file:
                     json.dump(cache, file, indent=4)
                 
             else: 
-                print(cache[key])
+                # print(cache[key])
                 main_artist_names.append(cache[key]['main_artist_name'])
                 entity_links_musicbrainz_artists.append(cache[key]['entity_link_artist'])
                 entity_links_musicbrainz_tracks.append(cache[key]['entity_link_track'])
                 Cleaned_Songs.append(cache[key]['cleaned_song'])
+                artist_queries.append(cache[key]['artist_queries'])
         
-        return main_artist_names, entity_links_musicbrainz_artists, entity_links_musicbrainz_tracks, Cleaned_Songs, Queries
+        return main_artist_names, entity_links_musicbrainz_artists, entity_links_musicbrainz_tracks, Cleaned_Songs, Queries, artist_queries
 
 
 

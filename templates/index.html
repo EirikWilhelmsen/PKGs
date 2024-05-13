@@ -63,8 +63,10 @@
     </div>
     <div class="options" id="appleOptions" style="display: none;">
         <form action="/proceed" method="post" enctype="multipart/form-data">
-            <h2>Select Apple Options</h2>
-            <label><input type="checkbox" name="viewCheckbox" onclick="togglePercentOfHistory()">Give access to Apple Music listening history</label> <!-- Added onclick attribute -->
+            <h2>Select the data from Apple Music you let us get access to</h2>
+            <label><input type="checkbox" name="viewCheckbox" onclick="togglePercentOfHistory()">Give access to Apple Music daily listening history</label> 
+            <p>The file that can be processed is: 'Apple Music - Play History Daily Tracks.csv' 
+                To get the file, request the privacy data 'Apple Media Services Information' from <a href="privacy.apple.com">privacy.apple.com</a> using your Apple account. After receiving the data, go into part 1, Apple_Media_Services and then Apple Music Activity to find the file.</p>
             <div id="PrecentageDiv" style="display: none;">
                 <input type="file" name="file" accept=".csv">
             </div>

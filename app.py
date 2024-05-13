@@ -358,11 +358,18 @@ def profile(platform):
     elif platform == 'applemusic':
 
         print(platform)
-        df=pd.read_csv('.\\uploads\\Apple_Music_-_Play_History_Daily_Tracks.csv')
+        file_path='.\\uploads\\Apple_Music_-_Play_History_Daily_Tracks.csv'
+        df=pd.read_csv(file_path)
+        if os.path.exists(file_path):
+            os.remove(file_path)
+            print("File has been deleted.")
+        else:
+            print("The file does not exist.")
         Year, Song_Names, Artists_and_Groups = AppleMusic.liked_songs(df)    
-        main_artist_names, entity_links_musicbrainz_artists, entity_links_musicbrainz_tracks, Cleaned_Songs, Queries = AppleMusic.search_track_musicbrainz(Song_Names, Artists_and_Groups)
+        main_artist_names, entity_links_musicbrainz_artists, entity_links_musicbrainz_tracks, Cleaned_Songs, Queries, artist_queries = AppleMusic.search_track_musicbrainz(Song_Names, Artists_and_Groups)
 
-        statements.create_apple_music_like_statement(Year, main_artist_names, entity_links_musicbrainz_artists, entity_links_musicbrainz_tracks, Cleaned_Songs)
+        statements.create_apple_music_like_statement(Year, main_artist_names, entity_links_musicbrainz_artists, entity_links_musicbrainz_tracks, Cleaned_Songs, artist_queries)
+        
         
         if main_artist_names:
             return render_template('/profile/applemusic.html', Cleaned_Songs=Cleaned_Songs,
