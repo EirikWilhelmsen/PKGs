@@ -375,27 +375,27 @@ def profile(platform):
         
         
         # unit tests
-        df = {
-    'Country': ['Norway', 'Norway', 'Norway', 'Norway', 'Norway'],
-    'Track Identifier': [1208759373, 1207120448, 1207120538, 1210094302, 1210094305],
-    'Media type': ['AUDIO', 'AUDIO', 'AUDIO', 'AUDIO', 'AUDIO'],
-    'Date Played': ['20170419', '20170419', '20170419', '20170419', '20170419'],
-    'Hours': ['16, 21', '16, 21', '16, 21', '17, 21', '12'],
-    'Play Duration Milliseconds': [497602, 494444, 443128, 425018, 555555],
-    'Source Type': ['IPHONE', 'IPHONE', 'IPHONE', 'IPHONE', 'IPHONE'],
-    'Play Count': [2, 2, 2, 2, 3],
-    'Skip Count': [0, 0, 0, 0, 1],
-    'Ignore For Recommendations': [None, None, None, None, None],
-    'Track Reference': [1.208759e+09, 1.207120e+09, 1.207121e+09, 1.210094e+09, 1210094e+09],
-    'Track Description': [
-        'Symphony by Clean Bandit',  # No dashes
-        'Coldplay - Viva la Vida - Live Version',  # Two dashes
-        'John Cena - Pippi Langstrømpe the anthem',  # Fake song
-        'Maroon 5 - Cold (feat. Future)',  # feat.
-        '0 - ' # one dash without right element 
-    ]
-}
-        df=pd.DataFrame(df)
+#         df = {
+#     'Country': ['Norway', 'Norway', 'Norway', 'Norway', 'Norway'],
+#     'Track Identifier': [1208759373, 1207120448, 1207120538, 1210094302, 1210094305],
+#     'Media type': ['AUDIO', 'AUDIO', 'AUDIO', 'AUDIO', 'AUDIO'],
+#     'Date Played': ['20170419', '20170419', '20170419', '20170419', '20170419'],
+#     'Hours': ['16, 21', '16, 21', '16, 21', '17, 21', '12'],
+#     'Play Duration Milliseconds': [497602, 494444, 443128, 425018, 555555],
+#     'Source Type': ['IPHONE', 'IPHONE', 'IPHONE', 'IPHONE', 'IPHONE'],
+#     'Play Count': [2, 2, 2, 2, 3],
+#     'Skip Count': [0, 0, 0, 0, 1],
+#     'Ignore For Recommendations': [None, None, None, None, None],
+#     'Track Reference': [1.208759e+09, 1.207120e+09, 1.207121e+09, 1.210094e+09, 1210094e+09],
+#     'Track Description': [
+#         'Symphony by Clean Bandit',  # No dashes
+#         'Coldplay - Viva la Vida - Live Version',  # Two dashes
+#         'John Cena - Pippi Langstrømpe the anthem',  # Fake song
+#         'Maroon 5 - Cold (feat. Future)',  # feat.
+#         '0 - ' # one dash without right element 
+#     ]
+# }
+        # df=pd.DataFrame(df)
         Year, Song_Names, Artists_and_Groups = AppleMusic.liked_songs(df)    
         main_artist_names, entity_links_musicbrainz_artists, entity_links_musicbrainz_tracks, Cleaned_Songs, Queries, artist_queries = AppleMusic.search_track_musicbrainz(Song_Names, Artists_and_Groups)
 
