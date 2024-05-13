@@ -97,7 +97,7 @@ class statements:
             
             if entity_links_musicbrainz_artists[i] == "Artist link not found" or entity_links_musicbrainz_artists[i] == "Artist not found":
                 data_list.append("No data")
-                i+=1
+                
                 if Year[i]==None:
                 
                     data={
@@ -110,6 +110,8 @@ class statements:
                                 }},
                                 "preference": 1.0
                             }
+                    data_list.append(data) 
+                    i+=1
                 else:
 
                     data={
@@ -122,6 +124,8 @@ class statements:
                                 }, "additional_info": {"primary_listening_years": year}},
                                 "preference": 1.0
                             }
+                    data_list.append(data) 
+                    i+=1
                 
             else:
                 if Year[i]==None:
