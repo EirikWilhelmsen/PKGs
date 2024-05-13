@@ -83,7 +83,7 @@ class AppleMusic:
 
         if len(play_count_by_year_filtered) == 0:
             return "Not enough data"
-        elif 0 < len(play_count_by_year_filtered):# < 37:
+        elif 0 < len(play_count_by_year_filtered)< 37:
             # Filters out the songs with play counts lower than 30 
             merged_df = pd.merge(sorted_total_play_count_filtered, play_count_by_year_filtered[['Track Identifier', 'Year']], on='Track Identifier', how='left')
             # Fills NaN values in 'Year' with empty strings
@@ -101,40 +101,33 @@ class AppleMusic:
             result = enjoyed_songs_df.groupby('Track Description').agg({
                 'Year': lambda x: ', '.join(map(str, sorted(set(x))))  # Removes duplicates and sorts the years
             }).reset_index()
+            print(len(play_count_by_year_filtered))
 
-
-            # print(result)
-
-            duplicates = enjoyed_songs_df[enjoyed_songs_df.duplicated('Track Description', keep=False)]
-            # print(duplicates)
-            # return enjoyed_songs_df
+        elif len(play_count_by_year_filtered)>=37:
         
+            #The top 5 percent of songs for the user: 
+            top_5_percent=math.ceil(unique_songs/20)
+            top_20_percent=math.ceil(unique_songs/5)
 
+            # Gets the relative top songs  
+            top_5_percent_songs = sorted_total_play_count.head(top_5_percent)
+            play_count_by_year_top_20_percent = play_count_by_year.head(top_20_percent)
 
-        # elif len(play_count_by_year_filtered)>=37:
-        
-        #     #The top 5 percent of songs for the user: 
-        #     top_5_percent=math.ceil(unique_songs/20)
-        #     top_20_percent=math.ceil(unique_songs/5)
+            # Merges 
+            merged_df = pd.merge(top_5_percent_songs, play_count_by_year_top_20_percent[['Track Identifier', 'Year']], on='Track Identifier', how='left')
 
-        #     # Gets the relative top songs  
-        #     top_5_percent_songs = sorted_total_play_count.head(top_5_percent)
-        #     play_count_by_year_top_20_percent = play_count_by_year.head(top_20_percent)
+            # Fills NaN values in 'Year' with empty strings
+            merged_df['Year'] = merged_df['Year'].fillna('')
 
-        #     # Merges 
-        #     merged_df = pd.merge(top_5_percent_songs, play_count_by_year_top_20_percent[['Track Identifier', 'Year']], on='Track Identifier', how='left')
+            # Groups the dataframe by 'Track Identifier' and adds the 'Year' column values into single strings. Separates years within with commas
+            merged_df['Year'] = merged_df.groupby('Track Identifier')['Year'].transform(lambda x: ','.join(x.astype(str)))
 
-        #     # Fills NaN values in 'Year' with empty strings
-        #     merged_df['Year'] = merged_df['Year'].fillna('')
-
-        #     # Groups the dataframe by 'Track Identifier' and adds the 'Year' column values into single strings. Separates years within with commas
-        #     merged_df['Year'] = merged_df.groupby('Track Identifier')['Year'].transform(lambda x: ','.join(x.astype(str)))
-
-        #     # Gets rid of duplicates
-        #     enjoyed_songs_df = merged_df.drop_duplicates()
-            # result = enjoyed_songs_df.groupby('Track Description').agg({
-            #     'Year': lambda x: ', '.join(map(str, sorted(set(x))))  # Removes duplicates and sorts the years
-            # }).reset_index()
+            # Gets rid of duplicates
+            enjoyed_songs_df = merged_df.drop_duplicates()
+            result = enjoyed_songs_df.groupby('Track Description').agg({
+                'Year': lambda x: ', '.join(map(str, sorted(set(x))))  # Removes duplicates and sorts the years
+            }).reset_index()
+            print("hello")
         #     # return enjoyed_songs_df
         
         Year = []
