@@ -16,7 +16,30 @@ url = "http://127.0.0.1:5000/statements"
 
 
 # Reads the CSV file into a DataFrame:
-df = pd.read_csv('C:\\UIS\\BAC\\testFolder\\Apple Music Activity\\Apple Music - Play History Daily Tracks.csv')
+# df = pd.read_csv('C:\\UIS\\BAC\\testFolder\\Apple Music Activity\\Apple Music - Play History Daily Tracks.csv')
+
+# unit test:
+# df = {
+#     'Country': ['Norway', 'Norway', 'Norway', 'Norway', 'Norway'],
+#     'Track Identifier': [1208759373, 1207120448, 1207120538, 1210094302, 1210094305],
+#     'Media type': ['AUDIO', 'AUDIO', 'AUDIO', 'AUDIO', 'AUDIO'],
+#     'Date Played': ['20170419', '20170419', '20170419', '20170419', '20170419'],
+#     'Hours': ['16, 21', '16, 21', '16, 21', '17, 21', '12'],
+#     'Play Duration Milliseconds': [497602, 494444, 443128, 425018, 555555],
+#     'Source Type': ['IPHONE', 'IPHONE', 'IPHONE', 'IPHONE', 'IPHONE'],
+#     'Play Count': [2, 2, 2, 2, 3],
+#     'Skip Count': [0, 0, 0, 0, 1],
+#     'Ignore For Recommendations': [None, None, None, None, None],
+#     'Track Reference': [1.208759e+09, 1.207120e+09, 1.207121e+09, 1.210094e+09, 1210094e+09],
+#     'Track Description': [
+#         'Symphony by Clean Bandit',  # No dashes
+#         'Coldplay - Viva la Vida - Live Version',  # Two dashes
+#         'John Cena - Pippi Langstrømpe the anthem',  # Fake song
+#         'Maroon 5 - Cold (feat. Future)',  # feat.
+#         '0 - ' # one dash without right element 
+#     ]
+# }
+
 
 pd.options.mode.copy_on_write = True
 pd.set_option('display.max_rows', None)
@@ -50,8 +73,10 @@ class AppleMusic:
             parts = description.split(" - ")
             if len(parts) == 2:
                 artist_or_group, song_name = parts
-                Song_Names.append(song_name.strip())
-                Artists_and_Groups.append(artist_or_group.strip())
+                if song_name != None and artist_or_group != None:
+                    Song_Names.append(song_name.strip())
+                    Artists_and_Groups.append(artist_or_group.strip())
+                else: Songs_ignored+=1        
             else: Songs_ignored+=1
         
         return Song_Names, Artists_and_Groups
@@ -238,7 +263,7 @@ class AppleMusic:
         Queries=[]
         artist_queries=[]
         
-        cache_path='cache.json'
+        cache_path='data/cache_files/AppleMcache.json'
         # render_template('..\\static\\templates\\profile\\loading.html')
         for song_name, artists in zip(song_names, artists_and_groups):
 

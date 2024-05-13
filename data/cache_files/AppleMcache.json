@@ -1006,5 +1006,19 @@
         "entity_link_track": "https://musicbrainz.org/recording/e609c9f4-3812-45e8-8601-7701e64234db",
         "cleaned_song": "Inside Out",
         "artist_queries": "The Chainsmokers, Charlee"
+    },
+    "Pippi Langstr\u00f8mpe the anthemJohn Cena": {
+        "main_artist_name": "Wrong artist found",
+        "entity_link_artist": "Artist link not found",
+        "entity_link_track": "Track link not found",
+        "cleaned_song": "Pippi Langstr\u00f8mpe the anthem",
+        "artist_queries": "John Cena"
+    },
+    "0": {
+        "main_artist_name": "Wrong artist found",
+        "entity_link_artist": "Artist link not found",
+        "entity_link_track": "Track link not found",
+        "cleaned_song": "",
+        "artist_queries": "0"
     }
 }
