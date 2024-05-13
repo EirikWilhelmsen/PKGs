@@ -88,11 +88,12 @@ class statements:
         return test_data_list
 
 
+
     def create_apple_music_like_statement(Year, main_artist_names, entity_links_musicbrainz_artists, entity_links_musicbrainz_tracks, Cleaned_Songs, artist_queries):
-        #To increase the number of correct statements, only the main artist and song is entity linked. This way it's avoided that individual, less known, feature artists ruin the data by creating a false positive. 
+        #To increase the number of correct statements, only the main artist and song is entity linked. This way it's avoided that individual, less known, feature artists ruin the data by creating false positives.  
         i=0
         data_list=[]
-        print(entity_links_musicbrainz_artists)
+        # print(entity_links_musicbrainz_artists)
         for year in Year:
             
             if entity_links_musicbrainz_artists[i] == "Artist link not found" or entity_links_musicbrainz_artists[i] == "Artist not found":
@@ -124,7 +125,7 @@ class statements:
                                 }, "additional_info": {"primary_listening_years": year}},
                                 "preference": 1.0
                             }
-                    data_list.append(data) 
+                    data_list.append(data)
                     i+=1
                 
             else:
@@ -167,7 +168,7 @@ class statements:
 
 
 
-
+    # Statements to be called if we want to populate the PKG with disliked songs
     def create_apple_music_dislike_statement(main_artist_names, entity_links_musicbrainz_artists, entity_links_musicbrainz_tracks, Cleaned_Songs, artist_queries):
         i=0
         data_list=[]
