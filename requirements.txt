@@ -1,0 +1,6 @@
+requests
+rfc3987
+csv
+imdbpy
+werkzeug
+flask
