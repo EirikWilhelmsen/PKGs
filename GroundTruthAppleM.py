@@ -78,7 +78,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song Malibu by Miley Cyrus", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/7e9bd05a-117f-4cce-87bc-e011527a8b18", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/5b4b8074-349b-4a62-bcbd-f063700f64d5"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/53612011-a3b3-4ec7-8bd6-650a875a6d32"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -218,7 +218,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song Be Alright by Ariana Grande", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/f4fdbb4c-e4b7-47a0-b83b-d91bbfcfa387", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/6061506b-1e9c-473c-b618-a829c080d397"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/25c44ebb-9743-45a3-b873-14413046a819"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -269,7 +269,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song Fast Car by Jonas Blue, Dakota", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/17678771-5799-4017-851a-319f25b6948d", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/0f5656f8-4650-4147-a971-6aa1eaab521a"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/c8385a43-7ef7-48af-975f-11ee15cca31a"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -303,7 +303,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song Despacito by Luis Fonsi, Daddy Yankee", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/d68fda90-ab8d-4799-be56-317ba4ae700f", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/1109d8da-ce4a-4739-9414-242dc3e9b81c"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/ac923055-030d-4829-a994-c50b256ef4a0"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -341,7 +341,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song Everyday by Ariana Grande, Future", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/f4fdbb4c-e4b7-47a0-b83b-d91bbfcfa387", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/898f07ba-5c91-4423-b182-8becdbccdbcc"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/9c2f4754-32c6-4150-8127-645c17fe278a"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -375,7 +375,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song Hit 'Em Up by 2Pac, Outlawz", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/382f1005-e9ab-4684-afd4-0bdae4ee37f2", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/f82bf67c-1bbb-4932-90e9-68f335e2e255"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/7fcd8b36-7448-45a9-bb0f-244d36c97f39"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -409,7 +409,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song One Last Time by Ariana Grande", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/f4fdbb4c-e4b7-47a0-b83b-d91bbfcfa387", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/9f24c0f7-a644-4074-8fbd-a1dba03de129"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/1bbef687-4557-4b97-a1e8-e907fbf0d02b"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -460,7 +460,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song Focus by Ariana Grande", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/f4fdbb4c-e4b7-47a0-b83b-d91bbfcfa387", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/f60df758-7f71-4b17-9c34-b6f663f3df25"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/846a4b00-218f-4939-8131-684108b05dcd"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -511,7 +511,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song All Time Low by Jon Bellion", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/2bd8101a-11c3-42d5-a9bd-6a3b26445f7e", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/52534f30-d1c6-4313-b7e5-d58a171c7036"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/85d1cda8-04b1-4b3a-a12b-e26b1599e7cc"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -528,7 +528,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song Don't Let Me Down by The Chainsmokers, Daya", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/91a81925-92f9-4fc9-b897-93cf01226282", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/c02e64c8-c4fa-4e46-9a1c-73343717b32e"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/06dd7f76-f905-4ec1-8ad7-62a5a308265b"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -545,7 +545,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song All Eyez On Me by 2Pac, Syke", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/382f1005-e9ab-4684-afd4-0bdae4ee37f2", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/506cb3e3-7dc7-4534-b0bc-2adc4a464b34"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/6dcca6d5-0905-4c75-ad85-5cd259595296"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -562,7 +562,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song Sunset Lover by Petit Biscuit", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/30ae6581-15ec-407b-b192-5f7b7ea214b2", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/9277f846-253f-498b-af95-8631e2ea4cc4"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/94398e59-d7bb-462a-8023-e4d9bc30ec7b"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -579,7 +579,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song Something Just Like This by The Chainsmokers, Coldplay", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/91a81925-92f9-4fc9-b897-93cf01226282", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/6fdd95d6-9837-4d95-91f4-b123d0696a2a"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/9f94e4d4-7df5-407b-bc03-ee59300857a9"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -596,7 +596,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song Dear Mama by 2Pac", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/382f1005-e9ab-4684-afd4-0bdae4ee37f2", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/90851363-85ec-4649-ae15-47547a1eb3db"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/00cde7f9-61c6-4d03-ac4f-4c9e5168e6f3"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -630,7 +630,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song The One by The Chainsmokers", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/91a81925-92f9-4fc9-b897-93cf01226282", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/383bf431-7df2-42aa-8fac-60ccf5124d39"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/6b02334f-383f-4874-add5-a50726f35f2d"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -664,7 +664,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song Believer by Imagine Dragons", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/012151a8-0f9a-44c9-997f-ebd68b5389f9", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/839a1658-53f7-4b2a-86d9-3e52d929d5a2"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/e5c7a324-cca2-4ccb-ab9c-6d3a390b9d0a"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -681,7 +681,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song Baby I by Ariana Grande", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/f4fdbb4c-e4b7-47a0-b83b-d91bbfcfa387", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/4e303be7-2e84-4617-8303-030792141159"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/f1e69254-7db2-4b9a-97dd-a98ffe224e89"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -731,7 +731,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song There's Nothing Holdin' Me Back by Shawn Mendes", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/b7d92248-97e3-4450-8057-6fe06738f735", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/d2555d82-571d-406c-8e96-21562753cebc"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/89e3f307-e61b-4cd9-a163-7504731f21b0"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -803,7 +803,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song Roses by The Chainsmokers, ROZES", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/91a81925-92f9-4fc9-b897-93cf01226282", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/64ded792-ed8f-45ac-aa44-f207274a9dc9"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/51aa45c9-54ee-4b9c-ac03-452786c4ba7a"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -820,7 +820,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song Rap God by Eminem", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/b95ce3ff-3d05-4e87-9e01-c97b66af13d4", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/663df884-982e-4959-9cc8-6845969a2749"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/368cd782-4982-4908-ad9f-46f05b1321ed"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -837,7 +837,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song 'Till I Collapse by Eminem, Nate Dogg", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/b95ce3ff-3d05-4e87-9e01-c97b66af13d4", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/58ba910b-4762-4c76-99bf-02031e11dd94"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/d1c1a725-dfb6-408c-bc9d-6f9359adc862"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -854,7 +854,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song No Promises by Cheat Codes, Demi Lovato", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/8b579b9a-84ef-4975-884f-19e988cfc181", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/fafda913-cf9d-453f-a458-53f449c0a75a"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/0d3c3a20-9b44-4436-a818-b52d4ecd10f6"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -905,7 +905,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song Tired by Alan Walker, Gavin James", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/b0e4bc50-3062-4d31-afad-def6a6b7a8e9", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/cfd3a732-673a-488d-8392-a401860a95f2"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/4a0009b8-ecc6-440f-a798-cf1c49dce756"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -939,7 +939,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song The Monster by Eminem, Rihanna", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/b95ce3ff-3d05-4e87-9e01-c97b66af13d4", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/7e9e29c6-c643-41bb-bd1c-f77e4a453719"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/28271155-de29-460f-9b12-fab6f76a3bad"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -956,7 +956,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song Mockingbird by Eminem", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/b95ce3ff-3d05-4e87-9e01-c97b66af13d4", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/bd4b9255-5334-4e1e-9198-cba147467401"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/88f80e62-efb4-4bfb-8eeb-c1f733d78f66"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -973,7 +973,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song Summer Air by ItaloBrothers", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/256fc691-ae7b-4565-923d-26f69eb95ce2", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/16e0325f-926d-4ead-b21e-b97aefa81f9f"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/d4c2299f-01e2-477b-9cb5-c4da36803be6"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -1007,7 +1007,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song Renegade by JAY-Z, Eminem", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/f82bcf78-5b69-4622-a5ef-73800768d9ac", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/cf262239-b2cd-4a6a-870e-e1153a71c8c3"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/a56b5bc0-73e5-4e22-a2b3-6a7a9b879c35"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -1024,7 +1024,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song Talkin' 2 Myself by Eminem, Kobe", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/b95ce3ff-3d05-4e87-9e01-c97b66af13d4", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/5d40aeed-a913-4b71-a3bc-9794922d3d03"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/0766a822-2db5-49cf-9859-eaf18c9b9c29"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -1058,7 +1058,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song The Way I Am by Eminem", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/b95ce3ff-3d05-4e87-9e01-c97b66af13d4", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/365f2bb7-7a93-44cc-9d5c-7c789a5e31a4"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/25d81b5f-ac5e-4e1a-bbc1-538ae09e2afc"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -1075,7 +1075,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song Stan by Eminem, Dido", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/b95ce3ff-3d05-4e87-9e01-c97b66af13d4", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/60d2246d-2761-4e1f-b30b-2784f00565b1"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/d8702718-1663-4cfb-9a7f-4b64e2902092"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -1092,7 +1092,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song Brain Damage by Eminem", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/b95ce3ff-3d05-4e87-9e01-c97b66af13d4", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/30b2a987-47a6-4337-8bea-98853131d371"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/513df7d2-00c7-480c-bb57-ebc64392d3d2"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -1109,7 +1109,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song Cleanin' out My Closet by Eminem", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/b95ce3ff-3d05-4e87-9e01-c97b66af13d4", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/5911195e-9b05-4a47-aa2b-bc69eac74226"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/d04f5bdc-d131-495f-980d-bbdf57355a7f"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -1160,7 +1160,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song The Real Slim Shady by Eminem", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/b95ce3ff-3d05-4e87-9e01-c97b66af13d4", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/684ca01c-9775-42fe-9cdb-28fa37c27851"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/c2245b3c-c453-4c98-a414-45806f42694b"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -1194,7 +1194,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song We Can't Stop by Miley Cyrus", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/7e9bd05a-117f-4cce-87bc-e011527a8b18", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/da333e71-ccb1-4d07-826e-b182426e362b"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/6feeab77-7ba4-48ac-b992-b2d7ad2f3f88"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -1211,7 +1211,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song No Love by Eminem, Lil Wayne", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/b95ce3ff-3d05-4e87-9e01-c97b66af13d4", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/f33166a8-dc47-4e36-b972-1a128ea12708"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/a580fccc-c9ed-4298-a2f6-158f23017302"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -1228,7 +1228,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song Break Free by Ariana Grande, Zedd", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/f4fdbb4c-e4b7-47a0-b83b-d91bbfcfa387", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/c97fba6d-198d-4357-b5ce-83f6fb721596"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/fb4cac5c-6576-48b4-a614-9325d8f07b20"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -1245,7 +1245,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song Role Model by Eminem", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/b95ce3ff-3d05-4e87-9e01-c97b66af13d4", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/e5af393e-33c0-472e-b5c9-faf9fec9ef54"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/671c7135-c7a7-43f3-9973-a07698631f54"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -1262,7 +1262,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song Not Afraid by Eminem", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/b95ce3ff-3d05-4e87-9e01-c97b66af13d4", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/7b898b31-3bf6-4048-a690-f33ba0cdb324"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/9225082f-06a4-4585-ba23-b8edcb9ab7bd"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -1296,7 +1296,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song Forgot About Dre by Dr. Dre", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/5f6ab597-f57a-40da-be9e-adad48708203", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/df5996f3-8b2e-4787-b147-fe287c50e295"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/c9a5a9b4-b9f0-44d7-b515-a45aa79834a1"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -1313,7 +1313,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song 8 Mile by Eminem", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/b95ce3ff-3d05-4e87-9e01-c97b66af13d4", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/377302ec-4126-40a2-a8bd-8f8d722131f8"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/0a9cf5c3-d2c3-47a2-9e39-1d5c1fcc0ce9"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -1347,7 +1347,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song Hailie's Song by Eminem", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/b95ce3ff-3d05-4e87-9e01-c97b66af13d4", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/0565e96d-aca2-4369-8362-d6b145d27ea9"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/faccd2dc-68a2-4b53-a059-b824ace74417"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -1363,7 +1363,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song Love the Way You Lie by Eminem, Rihanna", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/b95ce3ff-3d05-4e87-9e01-c97b66af13d4", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/29d6a30b-b911-475c-808c-8b289844ca75"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/2045d46c-b25d-488c-919e-ea2af80c30ac"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -1379,7 +1379,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song My Name Is by Eminem", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/b95ce3ff-3d05-4e87-9e01-c97b66af13d4", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/b4631d9c-176f-4abb-8013-e3dafb1c5ecb"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/3ca0be9d-dce9-486c-a5a0-9e4738a7563b"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -1395,7 +1395,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song Lose Yourself by Eminem", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/b95ce3ff-3d05-4e87-9e01-c97b66af13d4", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/f207eac0-829f-41e5-9dc9-d7c3263de3ed"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/5cf2a6e8-8643-4ab0-8e00-f4d0f749b25c"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -1411,7 +1411,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song Guilty Conscience by Eminem, Dr. Dre", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/b95ce3ff-3d05-4e87-9e01-c97b66af13d4", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/57395e69-1cb9-4de0-987b-1915d7ae9977"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/8b357ec4-f4dd-4e9b-820a-51e3f68e9b80"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -1427,7 +1427,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song Party In the U.S.A. by Miley Cyrus", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/7e9bd05a-117f-4cce-87bc-e011527a8b18", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/c2656d9f-ed39-46a6-ae6c-9a1cadd48ebc"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/13ebfef2-e28e-4878-a94e-1324bd3e8f19"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -1473,7 +1473,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song Just Don't Give a F** by Eminem", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/b95ce3ff-3d05-4e87-9e01-c97b66af13d4", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/82f8d059-f9fd-4177-8a1d-2316eb294766"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/d57805dc-c326-45d7-a544-58d74e4e7ff1"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -1488,7 +1488,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song The Night We Met by Lord Huron", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/51c76d97-0635-433c-b26d-66beb81657f8", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/3d3342ea-8c03-4fb9-976f-eb151bd68365"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/7ac1fd63-d7d5-4244-8d0c-4ae0dcbcee7e"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -1503,7 +1503,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song Bloodstream by The Chainsmokers", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/91a81925-92f9-4fc9-b897-93cf01226282", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/a0eeee05-538c-4d8f-a03e-8eb7efa8cf50"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/7e09d073-262a-478b-94cf-697ba98b38ec"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -1518,7 +1518,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song See You Again by Miley Cyrus", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/7e9bd05a-117f-4cce-87bc-e011527a8b18", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/38b6d50c-46b0-40c6-ac0e-d0029ebfeb4d"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/640c727c-6ab1-4f29-a715-e3579666f966"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -1533,7 +1533,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song Berzerk by Eminem", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/b95ce3ff-3d05-4e87-9e01-c97b66af13d4", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/553ea53d-7a60-42b5-951d-43c11a6d9cc6"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/eecfa020-2833-4cd4-bb5c-4b235f41d1dc"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -1578,7 +1578,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song Unforgettable by French Montana, Swae Lee", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/45dc5f07-6609-4760-a933-8c9e0f858d05", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/cdef65b7-4a44-407f-b962-2315e40142d0"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/ed937929-eaa5-4dcb-80ce-42ae0aafce52"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -1608,7 +1608,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song Attention by Charlie Puth", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/525f1f1c-03f0-4bc8-8dfd-e7521f87631b", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/19b6d048-f981-40e9-8235-a5acf969e5df"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/318d12f7-4e91-4583-936a-3693041fe5dc"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -1731,7 +1731,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song I Ain't Mad At Cha by 2Pac, Danny Boy", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/382f1005-e9ab-4684-afd4-0bdae4ee37f2", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/fb0173af-e412-43b6-960e-6d7f36b515b8"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/3d81c5a7-82e9-481f-9b5d-109a4181224e"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -1748,7 +1748,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song How Do U Want It by 2Pac, K-Ci & JoJo", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/382f1005-e9ab-4684-afd4-0bdae4ee37f2", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/53fc4524-0733-49f1-813b-52b64355a0f3"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/0b4acd2a-5c3e-41aa-9c60-0df4e6b5bc52"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -1816,7 +1816,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song Me & My Homies by 2Pac", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/382f1005-e9ab-4684-afd4-0bdae4ee37f2", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/691ff704-64ff-4c0f-9a89-762867a667e9"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/50ce52f9-2518-4b61-a873-e79cf019f6c0"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -1833,7 +1833,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song Keep Ya Head Up by 2Pac", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/382f1005-e9ab-4684-afd4-0bdae4ee37f2", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/da3bb7bc-f9cc-4f29-8cd5-67ac3cff7503"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/c83b35ed-9996-475f-b002-5b746a54cec8"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -1867,7 +1867,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song Ride or Die by 2Pac", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/382f1005-e9ab-4684-afd4-0bdae4ee37f2", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/97fb260e-1f02-466e-acf3-1d804ee0b951"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/98e21b21-2a2d-45a4-a8d6-25e90b567621"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -1935,7 +1935,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song Run tha Streetz by 2Pac, Michel'le, The Storm, Mutah", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/382f1005-e9ab-4684-afd4-0bdae4ee37f2", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/eaf65ad4-c616-490f-ba9f-e1d1dcec96e9"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/7eaf7750-4a85-484e-948c-bf51a1d07319"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -1952,7 +1952,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song Tradin War Stories by 2Pac, C-BO, CPO, Outlawz, The Storm", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/382f1005-e9ab-4684-afd4-0bdae4ee37f2", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/33a42a81-7fe0-45b3-a9c4-180d8dab223b"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/218c8f78-5871-41b3-8f36-814e71180659"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -1969,7 +1969,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song Robot by Miley Cyrus", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/7e9bd05a-117f-4cce-87bc-e011527a8b18", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/c05a3c15-4986-4100-97ab-c378f0aac02c"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/a83c5119-52cb-4100-b920-e977be50b807"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -1986,7 +1986,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song Style (Taylor's Version) by Taylor Swift", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/20244d07-534f-4eff-b4d4-930878889970", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/9ec36523-a3c2-4e3e-876d-ac1f620082fc"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/0f3c49e4-3a55-4a7c-b63e-3a1dbf488af6"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -2003,7 +2003,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song I Get Around by 2Pac, Digital Underground", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/382f1005-e9ab-4684-afd4-0bdae4ee37f2", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/75b73f5a-23fc-47f7-8c9b-22b11632cb8d"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/f88e06d1-450f-4b7c-866a-b5b3b8fd7b96"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -2020,7 +2020,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song Adore You by Miley Cyrus", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/7e9bd05a-117f-4cce-87bc-e011527a8b18", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/14799a23-302f-48a8-941f-9281b0f3b4c5"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/d5952d50-ba5b-4d17-bc39-3a38b11d226f"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -2037,7 +2037,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song Side To Side by Ariana Grande, Nicki Minaj", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/f4fdbb4c-e4b7-47a0-b83b-d91bbfcfa387", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/41c134b2-01ac-4e6f-b7bd-5b022cf2f737"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/19a83933-4000-4bfb-834d-baa21aac4f9f"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -2054,7 +2054,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song Into You by Ariana Grande", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/f4fdbb4c-e4b7-47a0-b83b-d91bbfcfa387", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/d64c6f5a-f529-468c-9a23-6bcdb213d14f"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/6e1ca317-8201-47dd-a882-1c29e33437c5"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -2105,7 +2105,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song Bang Bang by Jessie J, Ariana Grande, Nicki Minaj", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/d24fb461-dee8-41fc-bb15-2f13bb2644a6", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/41c134b2-01ac-4e6f-b7bd-5b022cf2f737"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/146707fc-924f-48ce-b56e-fff3a6a19c06"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -2122,7 +2122,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song Me Against the World by 2Pac, Dramacydal", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/382f1005-e9ab-4684-afd4-0bdae4ee37f2", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/5f2b51b1-eee9-4c5f-b3fe-5ada85237e54"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/69d1d9e0-1d0c-4f0f-b149-b987ba4ae8ca"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -2139,7 +2139,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song Wrecking Ball by Miley Cyrus", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/7e9bd05a-117f-4cce-87bc-e011527a8b18", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/8c8b2d45-6043-47c5-8c12-16fb8050817b"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/6e1e02b2-10b3-45d0-afbe-737aaa357b3b"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -2156,7 +2156,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song Don't Say by The Chainsmokers, Emily Warren", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/91a81925-92f9-4fc9-b897-93cf01226282", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/0573fc15-fcec-4edc-90ff-623f63a9dbb5"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/821e1eec-84d5-425c-800a-716289ab92ce"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -2190,7 +2190,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song Break Up Every Night by The Chainsmokers", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/91a81925-92f9-4fc9-b897-93cf01226282", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/c2485be4-02ef-4eac-99dc-fc3c96505611"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/4ae1fbba-9519-48f5-968d-f0f4132accbf"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -2258,7 +2258,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song Temptations by 2Pac", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/382f1005-e9ab-4684-afd4-0bdae4ee37f2", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/491f1c2c-b551-477a-9555-56968601ce6a"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/5a3a8287-b105-4a56-a0e9-854cf30728ae"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -2275,7 +2275,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song So Many Tears by 2Pac", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/382f1005-e9ab-4684-afd4-0bdae4ee37f2", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/d4088469-6d38-47b6-99b4-67a34ea75704"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/fb9407d0-3f44-470d-a3ac-a630ad1ebeb0"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
@@ -2292,7 +2292,7 @@ class groundTruthAppleM:
         predicate = {"value": {"description": "like"}} 
         object = {"value": {"description": "the song Can't Be Tamed by Miley Cyrus", 
         "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/artist/7e9bd05a-117f-4cce-87bc-e011527a8b18", 
-        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/0b7e7c12-e8cb-4ae4-8413-5c1220adbd8e"]}}
+        "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/fb080cbf-7a80-411c-b8f1-d76abd88fd45"]}}
         test_data = {
             "subject": subject,
             "predicate": predicate,
