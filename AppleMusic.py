@@ -132,7 +132,7 @@ class AppleMusicFunctions:
 
         if len(play_count_by_year_filtered) == 0:
             return "Not enough data"
-        elif 0 < len(play_count_by_year_filtered)< 37:
+        elif 0 < len(play_count_by_year_filtered):#< 37:
             # Filters out the songs with play counts lower than 30 
             merged_df = pd.merge(sorted_total_play_count_filtered, play_count_by_year_filtered[['Track Identifier', 'Year']], on='Track Identifier', how='left')
             # Fills NaN values in 'Year' with empty strings

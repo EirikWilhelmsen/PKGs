@@ -9,6 +9,7 @@ import urllib.parse
 from PKGClass import PKGFunctions
 import requests
 from Statements import statements
+import pandas as pd
 
 from GroundTruthNetflix import groundTruthNetflix
 from NetflixClass import NetflixFunctions
@@ -16,9 +17,8 @@ from NetflixClass import NetflixFunctions
 from GroundTruthSpotify import groundTruthSpotify
 from SpotifyClass import SpotifyFunctions
 
-import pandas as pd
 #from AppleMusic import AppleMusic
-
+from GroundTruthAppleM import groundTruthAppleM
 from AppleMusic import AppleMusicFunctions
 
 pkg_functions = PKGFunctions()
@@ -522,8 +522,21 @@ def test(platform):
         Year, Song_Names, Artists_and_Groups = applemusic_functions.liked_songs(df)    
         main_artist_names, entity_links_musicbrainz_artists, entity_links_musicbrainz_tracks, Cleaned_Songs, Queries, artist_queries = applemusic_functions.search_track_musicbrainz(Song_Names, Artists_and_Groups)
 
+
+        system_output = pkg_statements.create_apple_music_like_statement(Year, main_artist_names, entity_links_musicbrainz_artists, entity_links_musicbrainz_tracks, Cleaned_Songs, artist_queries)
         ground_truth_data = ground_truth_AppleM_statements.create_statement()
 
+        print("system_output", system_output[0]['object'])
+        print("ground_truth_data", ground_truth_data[0]['object'])
+
+
+        pkg_functions.compute_precision_recall(ground_truth_data, system_output, "Related_entities")
+            
+        # test all descriptions
+        pkg_functions.compute_precision_recall(ground_truth_data, system_output, "Description")
+        # test all movies
+        pkg_functions.compute_precision_recall(ground_truth_data, system_output, "songs_movies")
+        pkg_functions.compute_precision_recall(ground_truth_data, system_output, "artists_actors")
         
         
         if main_artist_names:

@@ -89,7 +89,7 @@ class statements:
 
 
 
-    def create_apple_music_like_statement(Year, main_artist_names, entity_links_musicbrainz_artists, entity_links_musicbrainz_tracks, Cleaned_Songs, artist_queries):
+    def create_apple_music_like_statement(self, Year, main_artist_names, entity_links_musicbrainz_artists, entity_links_musicbrainz_tracks, Cleaned_Songs, artist_queries):
         #To increase the number of correct statements, only the main artist and song is entity linked. This way it's avoided that individual, less known, feature artists ruin the data by creating false positives.  
         i=0
         data_list=[]
@@ -97,73 +97,68 @@ class statements:
         for year in Year:
             
             if entity_links_musicbrainz_artists[i] == "Artist link not found" or entity_links_musicbrainz_artists[i] == "Artist not found":
-                data_list.append("No data")
-                
-                if Year[i]==None:
-                
-                    data={
-                            "owner_uri": "http://example.com/test",
-                                "owner_username": "test",
-                                "description": f"I like the song {Cleaned_Songs[i]} by {artist_queries[i]}",
-                                "subject": "http://example.com/test",  
-                                "predicate": {"value": {"description": "like"}},    
-                                "object": {"value": {"description": f"the song {Cleaned_Songs[i]} by {artist_queries[i]}" 
-                                }},
-                                "preference": 1.0
-                            }
-                    data_list.append(data) 
-                    i+=1
-                else:
+                #data_list.append("No data")
 
-                    data={
-                            "owner_uri": "http://example.com/test",
-                                "owner_username": "test",
-                                "description": f"I like the song {Cleaned_Songs[i]} by {artist_queries[i]}",
-                                "subject": "http://example.com/test",  
-                                "predicate": {"value": {"description": "like"}}, 
-                                "object": {"value": {"description": f"the song {Cleaned_Songs[i]} by {artist_queries[i]}" 
-                                }, "additional_info": {"primary_listening_years": year}},
-                                "preference": 1.0
-                            }
-                    data_list.append(data)
-                    i+=1
+                i += 1
+
+                pass
+                
+            #    if Year[i]==None:
+#
+            #        subject = "http://example.com/test"
+            #        predicate = {"value": {"description": "like"}}
+            #        object = {"value": {"description": f"the song {Cleaned_Songs[i]} by {artist_queries[i]}"}}
+            #    
+            #        data={
+            #                "owner_uri": "http://example.com/test",
+            #                "owner_username": "test",
+            #                "description": f"I like the song {Cleaned_Songs[i]} by {artist_queries[i]}",
+            #                "subject": "http://example.com/test",  
+            #                "predicate": {"value": {"description": "like"}},    
+            #                "object": {"value": {"description": f"the song {Cleaned_Songs[i]} by {artist_queries[i]}" 
+            #                }},
+            #                "preference": 1.0
+            #                }
+            #        data_list.append(data) 
+            #        i+=1
+            #    else:
+#
+            #        data={
+            #                "owner_uri": "http://example.com/test",
+            #                    "owner_username": "test",
+            #                    "description": f"I like the song {Cleaned_Songs[i]} by {artist_queries[i]}",
+            #                    "subject": "http://example.com/test",  
+            #                    "predicate": {"value": {"description": "like"}}, 
+            #                    "object": {"value": {"description": f"the song {Cleaned_Songs[i]} by {artist_queries[i]}" 
+            #                    }, "additional_info": {"primary_listening_years": year}},
+            #                    "preference": 1.0
+            #                }
+            #        data_list.append(data)
+            #        i+=1
                 
             else:
-                if Year[i]==None:
-                    data={
+                subject = "http://example.com/test"
+                predicate = {"value": {"description": "like"}}
+                object = {"value": {"description": f"the song {Cleaned_Songs[i]} by {artist_queries[i]}",
+                                    "related_entities": ["https://schema.org/MusicGroup", f"{entity_links_musicbrainz_artists[i]}", 
+                                                        "https://schema.org/MusicRecording", f"{entity_links_musicbrainz_tracks[i]}"]}}
+                data={
                         "owner_uri": "http://example.com/test",
-                            "owner_username": "test",
-                            "description": f"I like the song {Cleaned_Songs[i]} by {artist_queries[i]}",
-                            "subject": "http://example.com/test",   
-                            "predicate": {"value": {"description": "like"}},   
-                            "object": {"value": {"description": f"the song {Cleaned_Songs[i]} by {artist_queries[i]}", 
-                                                "related_entities": ["https://schema.org/MusicGroup", f"{entity_links_musicbrainz_artists[i]}", 
-                                                                    "https://schema.org/MusicRecording", f"{entity_links_musicbrainz_tracks[i]}"]}},
-                            "preference": 1.0
-                        }
-                    i+=1
-                    
+                        "owner_username": "test",
+                        "description": f"I like the song {Cleaned_Songs[i]} by {artist_queries[i]}",
+                        "subject": subject,
+                        "predicate": predicate,
+                        "object": object,
+                        "preference": 1.0
+                    }
+                test_sample = {
+                "subject": subject,
+                "predicate": predicate,
+                "object": object 
+                }
+                data_list.append(test_sample)
 
-                    # pprint.pprint(data)
-                    data_list.append(data)
-                else:
-                    data={
-                        "owner_uri": "http://example.com/test",
-                            "owner_username": "test",
-                            "description": f"I like the song {Cleaned_Songs[i]} by {artist_queries[i]}",
-                            "subject": "http://example.com/test",   
-                            "predicate": {"value": {"description": "like"}},  
-                            "object": {"value": {"description": f"the song {Cleaned_Songs[i]} by {artist_queries[i]}", 
-                                                "related_entities": ["https://schema.org/MusicGroup", f"{entity_links_musicbrainz_artists[i]}", 
-                                                                    "https://schema.org/MusicRecording", f"{entity_links_musicbrainz_tracks[i]}"]},
-                                                                    "additional_info": {"primary_listening_years": year}},
-                            "preference": 1.0
-                        }
-                    # print(data)
-                    i+=1
-                    data_list.append(data)
-        data_list
-        # print(data_list)
+                i+=1
         return data_list
 
 

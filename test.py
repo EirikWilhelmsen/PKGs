@@ -1,9 +1,19 @@
-a = 0.81+0.81+0.8+0.81+0.8+0.84+0.78+0.79+0.8+0.82
-b = 0.97*10
-d = 0.93+0.93+0.92+0.93+0.92+0.96+0.90+0.91+0.92+0.94
-c = 0.89+0.89+0.89+0.89+0.89+0.89+0.88+0.88+0.88+0.88
+import requests
 
-print(a/10)
-print(b/10)
-print(d/10)
-print(c/10)
+url = "http://127.0.0.1:5000/statements"
+
+data={
+    "owner_uri": "http://example.com/test",
+    "owner_username": "test",
+    "description": "I like the song ee by aaa",
+    "subject": "http://example.com/test",   
+    "predicate": {"value": {"description": "like"}},  
+    "object": {"value": {"description": f"the song ee by aaa", 
+                        "related_entities": ["https://schema.org/MusicGroup", "https://musicbrainz.org/recording/ee",
+                                            "https://schema.org/MusicRecording", "https://musicbrainz.org/recording/ee"]}},
+    "additional_info": {"primary_listening_years": 2222},
+    "preference": 1.0
+}
+
+response = requests.post(url, json=data)
+assert response.status_code == 200
