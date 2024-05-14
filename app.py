@@ -10,6 +10,7 @@ from PKGClass import PKGFunctions
 import requests
 from Statements import statements
 import pandas as pd
+import pprint
 
 from GroundTruthNetflix import groundTruthNetflix
 from NetflixClass import NetflixFunctions
@@ -524,10 +525,11 @@ def test(platform):
 
 
         system_output = pkg_statements.create_apple_music_like_statement(Year, main_artist_names, entity_links_musicbrainz_artists, entity_links_musicbrainz_tracks, Cleaned_Songs, artist_queries)
+        pprint.pprint(system_output)
         ground_truth_data = ground_truth_AppleM_statements.create_statement()
 
         print("system_output", system_output[0]['object'])
-        print("ground_truth_data", ground_truth_data[0]['object'])
+        # print("ground_truth_data", ground_truth_data[0]['object'])
 
 
         pkg_functions.compute_precision_recall(ground_truth_data, system_output, "Related_entities")

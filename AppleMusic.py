@@ -189,16 +189,19 @@ class AppleMusicFunctions:
         Songs_ignored=0
         # Splits on ( - ) and puts the parts in two lists
         for description in result['Track Description']:
+
             parts = description.split(" - ")
             if len(parts) == 2:
                 artist_or_group, song_name = parts
                 Song_Names.append(song_name.strip())
                 Artists_and_Groups.append(artist_or_group.strip())
                 Year.append(enjoyed_songs_df['Year'][i])
+                
             else: 
                 print(parts)
                 Songs_ignored+=1    
             i+=1
+
 
         # Code for checking the ignored songs 
         # Songs_ignored=str(Songs_ignored)
@@ -335,7 +338,7 @@ class AppleMusicFunctions:
                     query = f'"{song_cleaned}" {artist_query_part}'
                 else: 
                     tags=str(tags).strip("'[]\"")
-                    query = f'"{song_cleaned}" {artist_query_part} {tags}'
+                    query = f'"{song_cleaned}"{artist_query_part} {tags}'
                 params = {'query': query, 'fmt': 'json'}
                 Queries.append(query)
                 # Makes the artists ready to be put in the statement
