@@ -17,16 +17,19 @@ from GroundTruthSpotify import groundTruthSpotify
 from SpotifyClass import SpotifyFunctions
 
 import pandas as pd
-from AppleMusic import AppleMusic
+#from AppleMusic import AppleMusic
+
+from AppleMusic import AppleMusicFunctions
 
 pkg_functions = PKGFunctions()
 netflix_functions = NetflixFunctions()
-
 spotify_functions = SpotifyFunctions()
+applemusic_functions = AppleMusicFunctions()
 
 pkg_statements = statements()
 ground_truth_Netflix_statements = groundTruthNetflix()
 ground_truth_Spotify_statements = groundTruthSpotify()
+ground_truth_AppleM_statements = groundTruthAppleM()
 
 url = "http://127.0.0.1:5000/statements"
 
@@ -68,6 +71,8 @@ def login(platform):
         return redirect(url_for('index'))
     elif platform == 'netflix':
         return redirect(url_for('profile', platform='netflix'))
+    elif platform == 'applemusic':
+        return redirect(url_for('profile', platform='applemusic'))
     elif platform == 'Entity_Linking':
         return redirect(url_for('profile', platform='Entity_Linking'))
     else:
@@ -151,11 +156,12 @@ def proceed_test():
             return redirect(url_for('test', platform='spotify-TEST'))
         elif platform == 'netflix-TEST':
             return redirect(url_for('test', platform='netflix-TEST'))
+        elif platform == 'applemusic-TEST':
+            return redirect(url_for('test', platform='applemusic-TEST'))
     return redirect(url_for('index'))
 
 @app.route('/progress-spotify')
 def progress_spotify():
-    print(spotify_functions.processed_tracks, spotify_functions.total_tracks)
     return jsonify(
         {
             'processed': spotify_functions.processed_tracks,
@@ -166,11 +172,19 @@ def progress_spotify():
 
 @app.route('/progress-netflix')
 def progress_netflix():
-    print(netflix_functions.processed_movies, netflix_functions.total_movies)
     return jsonify(
         {
             'processed': netflix_functions.processed_movies,
             'total': netflix_functions.total_movies
+        }
+    )
+
+@app.route('/progress-applemusic')
+def progress_applemusic():
+    return jsonify(
+        {
+            'processed': AppleMusic.processed_songs,
+            'total': AppleMusic.total_songs
         }
     )
             
@@ -364,7 +378,7 @@ def profile(platform):
 
         print(platform)
         file_path='.\\uploads\\Apple_Music_-_Play_History_Daily_Tracks.csv'
-        df=pd.read_csv(file_path)
+        df = applemusic_functions.read_csv(file_path)
 
 
         if os.path.exists(file_path):
@@ -396,8 +410,8 @@ def profile(platform):
 #     ]
 # }
         # df=pd.DataFrame(df)
-        Year, Song_Names, Artists_and_Groups = AppleMusic.liked_songs(df)    
-        main_artist_names, entity_links_musicbrainz_artists, entity_links_musicbrainz_tracks, Cleaned_Songs, Queries, artist_queries = AppleMusic.search_track_musicbrainz(Song_Names, Artists_and_Groups)
+        Year, Song_Names, Artists_and_Groups = applemusic_functions.liked_songs(df)    
+        main_artist_names, entity_links_musicbrainz_artists, entity_links_musicbrainz_tracks, Cleaned_Songs, Queries, artist_queries = applemusic_functions.search_track_musicbrainz(Song_Names, Artists_and_Groups)
 
 
         statements.create_apple_music_like_statement(Year, main_artist_names, entity_links_musicbrainz_artists, entity_links_musicbrainz_tracks, Cleaned_Songs, artist_queries)
@@ -499,8 +513,30 @@ def test(platform):
                                         )
         else: 
             return redirect(url_for('error', error = 'Does not seem like you have watched any movies on Netflix twice'))
-            
+    elif platform == 'applemusic-TEST':
+        file_path = os.path.join(os.path.dirname(__file__), 'test_files', 'Apple_Music_-_Play_History_Daily_Tracks.csv')
+
+        #file_path='.\\test_files\\Apple_Music_-_Play_History_Daily_Tracks.csv'
+        df = applemusic_functions.read_csv(file_path)
+
+        Year, Song_Names, Artists_and_Groups = applemusic_functions.liked_songs(df)    
+        main_artist_names, entity_links_musicbrainz_artists, entity_links_musicbrainz_tracks, Cleaned_Songs, Queries, artist_queries = applemusic_functions.search_track_musicbrainz(Song_Names, Artists_and_Groups)
+
+        ground_truth_data = ground_truth_AppleM_statements.create_statement()
+
         
+        
+        if main_artist_names:
+            return render_template('/profile/applemusic.html', Cleaned_Songs=Cleaned_Songs,
+                                main_artist_names=main_artist_names,
+                                artist_queries = artist_queries,
+                                entity_links_musicbrainz_artists=entity_links_musicbrainz_artists,
+                                entity_links_musicbrainz_tracks=entity_links_musicbrainz_tracks
+                                # ,
+                                # Year=Year
+                                )
+        else: 
+            return redirect(url_for('error'))
 
 
 if __name__ == '__main__':

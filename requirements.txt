@@ -3,3 +3,4 @@ rfc3987
 imdbpy
 werkzeug
 flask
+pandas

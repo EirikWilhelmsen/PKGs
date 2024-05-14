@@ -45,14 +45,34 @@ pd.options.mode.copy_on_write = True
 pd.set_option('display.max_rows', None)
 
 
-class AppleMusic:
+class AppleMusicFunctions:
     
 ######################
 ## Song Extraction ###
 ######################
 
 # FINDS DISLIKED SONGS, AND MAKES THEM READY FOR THE ENTITY LINKER
-    def disliked_songs(df):
+    def __init__(self):
+        self.processed_track = 0
+        self.total_tracks = 0
+        self.load_cache()
+    
+    def load_cache(self):
+        try:
+            with open(os.path.join(os.path.dirname(__file__), "data/cache_files/AppleMcache.json"), 'r', encoding='utf-8') as file:
+                self.cache = json.load(file)
+        except FileNotFoundError:
+            self.cache = {}
+    
+    def save_cache(self, cache, file_path):
+        with open(file_path, 'w') as file:
+            json.dump(cache, file, indent=4)
+
+    def read_csv(self, file_path):
+        df = pd.read_csv(file_path)
+        return df
+
+    def disliked_songs(self, df):
         # Checks for songs played shorter than 30 seconds:
         df_less_than_30000ms = df[df['Play Duration Milliseconds']<=30000]
         # Checks for skipped songs played shorter than 30 seconds:
@@ -86,7 +106,7 @@ class AppleMusic:
 
 
 
-    def liked_songs(df):
+    def liked_songs(self, df):
         # Gets total playcount for each song
         total_play_count = df.groupby(['Track Identifier', 'Track Description'])['Play Count'].sum().reset_index()
         # Sorts total_play_count in descending order
@@ -199,7 +219,7 @@ class AppleMusic:
 ###################################
 
 
-    def extract_and_clean_name(song_name):
+    def extract_and_clean_name(self, song_name):
         # featured_artists=[]
         # Regular expressions to find featured artists within parentheses
         featured_artists = re.findall(r'\(feat\.? ([^)]+)\)', song_name)
@@ -228,34 +248,34 @@ class AppleMusic:
             return data['artists'][0]
         return None
 
-    def handle_artists(artist_string):
+    def handle_artists(self, artist_string):
         # Tries combinations of artist names to find a match
 
-        if AppleMusic.artist_check_musicbrainz(artist_string):
+        if self.artist_check_musicbrainz(artist_string):
             return [artist_string]
         parts = artist_string.split(', ')
         artists_listed = []
         
         for part in parts:
             # Tests each part individually first
-            if AppleMusic.artist_check_musicbrainz(part):
+            if self.artist_check_musicbrainz(part):
                 artists_listed.append(part)
             elif '&' in part:
                 # If the part contains '&', splits again
                 subparts = part.split(' & ')
                 
                 # Checks the combined form "Artist1 & Artist2"
-                if not AppleMusic.artist_check_musicbrainz(part):
+                if not self.artist_check_musicbrainz(part):
                     # Checks each artist individually if combined fails
                     for subpart in subparts:
-                        if AppleMusic.artist_check_musicbrainz(subpart):
+                        if self.artist_check_musicbrainz(subpart):
                             artists_listed.append(subpart)
                 else:
                     artists_listed.append(part)
                     
         return artists_listed
 
-    def search_track_musicbrainz(song_names, artists_and_groups):
+    def search_track_musicbrainz(self, song_names, artists_and_groups):
         # Searches for the songs in the cache, and if there's no entry of it, to the MusicBrainz API
         url = 'https://musicbrainz.org/ws/2/recording'
         url_musicbrainz_track = 'https://musicbrainz.org/recording/'
@@ -268,32 +288,26 @@ class AppleMusic:
         Queries=[]
         artist_queries=[]
         
-        cache_path='data/cache_files/AppleMcache.json'
+        
         for song_name, artists in zip(song_names, artists_and_groups):
 
             # print(song_name)
             
             # Loads the cache (creates the cache if it's not there)
-            if os.path.exists(cache_path):
-                with open(cache_path, 'r') as file:
-                    cache = json.load(file)
-            else:
-                cache = {}
-
-
+            
             key=song_name+artists
             # Checks for entry in the cache
-            if key not in cache:
+            if key not in self.cache:
                 # Gets the song name, artists from the song part, and any tags.
-                song_cleaned, featured_artists, tags = AppleMusic.extract_and_clean_name(song_name)
+                song_cleaned, featured_artists, tags = self.extract_and_clean_name(song_name)
                 
 
                 Cleaned_Songs.append(song_cleaned)
 
-                artists = AppleMusic.handle_artists(artists.strip(', '))
+                artists = self.handle_artists(artists.strip(', '))
                 
                 # Takes out what's most likely the main artist (leftmost artist in the title) 
-                main_artist_data = AppleMusic.artist_check_musicbrainz(artists[0])
+                main_artist_data = self.artist_check_musicbrainz(artists[0])
                 if main_artist_data is None:
                     # print(f"Main artist not found: {main_artist_name}")
                     main_artist_names.append('Artist not found')
@@ -305,7 +319,7 @@ class AppleMusic:
                 featured_artists=str(featured_artists)
                 
                 featured_artists=featured_artists.strip("'[]\"")
-                featured_artists = AppleMusic.handle_artists(featured_artists.strip(', '))
+                featured_artists = self.handle_artists(featured_artists.strip(', '))
                 
                 
                 # Adds featured artists to the list
@@ -377,24 +391,25 @@ class AppleMusic:
                     main_artist_names.append("Wrong artist found")
 
                 # Updates the cache  
-                cache[key] = {
+                self.cache[key] = {
                     'main_artist_name': main_artist_names[-1],
                     'entity_link_artist': entity_links_musicbrainz_artists[-1],
                     'entity_link_track': entity_links_musicbrainz_tracks[-1],
                     'cleaned_song': Cleaned_Songs[-1],
                     'artist_queries': artist_queries[-1]
                 }
-                with open(cache_path, 'w') as file:
-                    json.dump(cache, file, indent=4)
+
+                self.save_cache(self.cache, 'data/cache_files/AppleMcache.json')
+                
                 
             else: 
                 # print(cache[key])
                 # Returns the cache data when it's there
-                main_artist_names.append(cache[key]['main_artist_name'])
-                entity_links_musicbrainz_artists.append(cache[key]['entity_link_artist'])
-                entity_links_musicbrainz_tracks.append(cache[key]['entity_link_track'])
-                Cleaned_Songs.append(cache[key]['cleaned_song'])
-                artist_queries.append(cache[key]['artist_queries'])
+                main_artist_names.append(self.cache[key]['main_artist_name'])
+                entity_links_musicbrainz_artists.append(self.cache[key]['entity_link_artist'])
+                entity_links_musicbrainz_tracks.append(self.cache[key]['entity_link_track'])
+                Cleaned_Songs.append(self.cache[key]['cleaned_song'])
+                artist_queries.append(self.cache[key]['artist_queries'])
         
         return main_artist_names, entity_links_musicbrainz_artists, entity_links_musicbrainz_tracks, Cleaned_Songs, Queries, artist_queries
 

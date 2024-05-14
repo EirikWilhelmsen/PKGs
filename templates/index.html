@@ -71,6 +71,10 @@
                 <input type="file" name="file" accept=".csv">
             </div>
             <button type="submit" name="platform" value="applemusic-upload">Proceed</button> 
+            <button id="procced-applemusic" style="display: none;" type="submit" name="platform" value="AppleM-upload">Proceed</button>
+        </form>
+        <form action="/proceed_test" method="post">
+            <button style="margin-top:10px;" type="submit" name="platform" value="applemusic-TEST" onclick="showProgressbar('AppleM')">test</button>
         </div>
     <div class="options" id="EntityOptions" style="display: none;">
         <form action="/proceed" method="post"> <!-- Form starts here -->
@@ -106,6 +110,19 @@
             }
             else if (platform == "Netflix") {
                 fetch('/progress-netflix')
+                    .then(response => response.json())
+                    .then(data => {
+                        var percentage = (data.processed / data.total) * 100;
+                        console.log(percentage);
+                        document.getElementById("progress-bar").style.width = percentage + "%";
+                        
+                        if (percentage === 100) {
+                            clearInterval(intervalId);
+                        }
+                    });
+            }
+            else if (platform == "AppleM") {
+                fetch('/progress-AppleM')
                     .then(response => response.json())
                     .then(data => {
                         var percentage = (data.processed / data.total) * 100;
