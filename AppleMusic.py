@@ -15,32 +15,6 @@ from flask import render_template
 url = "http://127.0.0.1:5000/statements"
 
 
-# Reads the CSV file into a DataFrame:
-# df = pd.read_csv('C:\\UIS\\BAC\\testFolder\\Apple Music Activity\\Apple Music - Play History Daily Tracks.csv')
-
-# UNIT TEST DATA:
-# df = {
-#     'Country': ['Norway', 'Norway', 'Norway', 'Norway', 'Norway'],
-#     'Track Identifier': [1208759373, 1207120448, 1207120538, 1210094302, 1210094305],
-#     'Media type': ['AUDIO', 'AUDIO', 'AUDIO', 'AUDIO', 'AUDIO'],
-#     'Date Played': ['20170419', '20170419', '20170419', '20170419', '20170419'],
-#     'Hours': ['16, 21', '16, 21', '16, 21', '17, 21', '12'],
-#     'Play Duration Milliseconds': [497602, 494444, 443128, 425018, 555555],
-#     'Source Type': ['IPHONE', 'IPHONE', 'IPHONE', 'IPHONE', 'IPHONE'],
-#     'Play Count': [2, 2, 2, 2, 3],
-#     'Skip Count': [0, 0, 0, 0, 1],
-#     'Ignore For Recommendations': [None, None, None, None, None],
-#     'Track Reference': [1.208759e+09, 1.207120e+09, 1.207121e+09, 1.210094e+09, 1210094e+09],
-#     'Track Description': [
-#         'Symphony by Clean Bandit',  # No dashes
-#         'Coldplay - Viva la Vida - Live Version',  # Two dashes
-#         'John Cena - Pippi Langstrømpe the anthem',  # Fake song
-#         'Maroon 5 - Cold (feat. Future)',  # feat.
-#         '0 - ' # one dash without right element 
-#     ]
-# }
-
-
 pd.options.mode.copy_on_write = True
 pd.set_option('display.max_rows', None)
 
@@ -63,16 +37,23 @@ class AppleMusicFunctions:
                 self.cache = json.load(file)
         except FileNotFoundError:
             self.cache = {}
-    
-    def save_cache(self, cache, file_path):
-        with open(file_path, 'w') as file:
-            json.dump(cache, file, indent=4)
+
+    def save_cache(self, cache):
+        with open(os.path.join(os.path.dirname(__file__), "data/cache_files/AppleMcache.json"), 'w', encoding='utf-8') as file:
+            json.dump(self.cache, file, indent=4)
 
     def read_csv(self, file_path):
         df = pd.read_csv(file_path)
         return df
 
     def disliked_songs(self, df):
+        """sumary_line
+        
+        Keyword arguments:
+        df -- dataframe 
+        Return: return_description
+        """
+        
         # Checks for songs played shorter than 30 seconds:
         df_less_than_30000ms = df[df['Play Duration Milliseconds']<=30000]
         # Checks for skipped songs played shorter than 30 seconds:
@@ -107,6 +88,7 @@ class AppleMusicFunctions:
 
 
     def liked_songs(self, df):
+        
         # Gets total playcount for each song
         total_play_count = df.groupby(['Track Identifier', 'Track Description'])['Play Count'].sum().reset_index()
         # Sorts total_play_count in descending order
@@ -210,6 +192,8 @@ class AppleMusicFunctions:
         # for song in Song_Names:
         #     print(song)
         # print(Song_Names)
+        self.total_tracks = len(Song_Names)
+        print("Total tracks: ", self.total_tracks)
         return Year, Song_Names, Artists_and_Groups
 
 
@@ -238,7 +222,7 @@ class AppleMusicFunctions:
         return cleaned_name, featured_artists, tags
 
 
-    def artist_check_musicbrainz(artist):
+    def artist_check_musicbrainz(self, artist):
         # Checks if the artist exists in MusicBrainz
         url_artist = 'https://musicbrainz.org/ws/2/artist'
         params = {'query': f'"{artist}"', 'fmt': 'json'}
@@ -295,7 +279,8 @@ class AppleMusicFunctions:
         for song_name, artists in zip(song_names, artists_and_groups):
 
             # print(song_name)
-            
+            self.processed_track += 1
+            print("processed track: ", self.processed_track)
             # Loads the cache (creates the cache if it's not there)
             
             key=song_name+artists
@@ -304,7 +289,6 @@ class AppleMusicFunctions:
                 # Gets the song name, artists from the song part, and any tags.
                 song_cleaned, featured_artists, tags = self.extract_and_clean_name(song_name)
                 
-
                 Cleaned_Songs.append(song_cleaned)
 
                 artists = self.handle_artists(artists.strip(', '))
@@ -341,6 +325,7 @@ class AppleMusicFunctions:
                     query = f'"{song_cleaned}"{artist_query_part} {tags}'
                 params = {'query': query, 'fmt': 'json'}
                 Queries.append(query)
+                print("hei",query)
                 # Makes the artists ready to be put in the statement
                 artist_query_part=artist_query_part.split('" "')
                 artist_query_part='", "'.join(artist_query_part)
@@ -402,7 +387,7 @@ class AppleMusicFunctions:
                     'artist_queries': artist_queries[-1]
                 }
 
-                self.save_cache(self.cache, 'data/cache_files/AppleMcache.json')
+                self.save_cache(self.cache)
                 
                 
             else: 

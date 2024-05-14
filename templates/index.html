@@ -55,7 +55,7 @@
             <div id="PercentageDiv" style="display: none;">
                 <input type="file" name="file" accept=".csv">
             </div>
-            <button id="procced-netflix" style="display: none;" type="submit" name="platform" value="netflix-upload">Proceed</button>
+            <button id="procced-netflix" style="display: none;" type="submit" name="platform" onclick="showProgressbar('Netflix')" value="netflix-upload">Proceed</button>
         </form>
         <form action="/proceed_test" method="post">
             <button style="margin-top:10px;" type="submit" name="platform" value="netflix-TEST" onclick="showProgressbar('Netflix')">test</button>
@@ -70,7 +70,6 @@
             <div id="PrecentageDiv" style="display: none;">
                 <input type="file" name="file" accept=".csv">
             </div>
-            <button type="submit" name="platform" value="applemusic-upload">Proceed</button> 
             <button id="procced-applemusic" style="display: none;" type="submit" name="platform" value="AppleM-upload">Proceed</button>
         </form>
         <form action="/proceed_test" method="post">
@@ -92,7 +91,7 @@
             progressContainer.style.display = "block";
             var intervalId = setInterval(function() {
                 updateProgress(platform);
-            }, 10000);
+            }, 1000);
         }
         
         function updateProgress(platform) {

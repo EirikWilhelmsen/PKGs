@@ -180,12 +180,12 @@ def progress_netflix():
         }
     )
 
-@app.route('/progress-applemusic')
+@app.route('/progress-AppleM')
 def progress_applemusic():
     return jsonify(
         {
-            'processed': AppleMusic.processed_songs,
-            'total': AppleMusic.total_songs
+            'processed': applemusic_functions.processed_track,
+            'total': applemusic_functions.total_tracks
         }
     )
             
@@ -343,22 +343,8 @@ def profile(platform):
         file_path = request.args.get('file_path')
         csv_file_path = file_path
         hooks, liked_movies= netflix_functions.read_csv_file(csv_file_path)
-        movies_info = []
-        movie_titles = {}
-        movie_actor_list = {}
-        print("found liked movies", len(liked_movies))
-        i = 0
-        for movie_title, _ in liked_movies:
-            print(movie_title)
-            movie_info = netflix_functions.search_OMDb(movie_title, 'movie')
-            if movie_info['Response'] == 'True':
-                movies_info.append(movie_info)
-                movie_titles[movie_title] = movie_info['Movie']
-                movie_actor_list[movie_info['ImdbID']] = {
-                    'Actors': movie_info['Actors']
-                }
-            i += 1
-        movie_actor_uris = netflix_functions.link_entities(movie_actor_list)
+        os.remove(file_path)  # Delete the file
+        movie_actor_uris, movie_titles, movie_actor_list = netflix_functions.find_movie_id_and_actors(liked_movies)
 
         combined_data = list(zip(movie_actor_list.items(), movie_actor_uris.items(), movie_titles.items()))
         if liked_movies:
