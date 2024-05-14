@@ -11,16 +11,17 @@ The method's course of action consists of 3 steps respectively, illustrated in t
         1. Search entities through KBs like Music Brainz and IMDb for corresponding entries
 3. Convert data into a format acceptable for the PKG framework
 
+![Alt Text](static/images/PKG_figure.png)
 
+*The course of action of the proposed method*
 
+## Entity Linking
+<u style="text-decoration: none; -webkit-text-decoration-color: blue; text-decoration-color: blue;"></u>
+Entity linking (EL) is a big part of our development. EL involves searching for corresponding entities in a KB. We use the KBs Music Brainz for songs and OMDb and IMDb for movies. `search_artist()` from SpotifyClass.py shows how the Music Brainz API could search artists and songs to retrieve their respective URIs. `search_OMDb()` shows how the movie IMDb ID could be retrieved as well as three related actors, and `get_actor_imdb_id` shows how to get the URI for those three actors.
 
+### Starting the program
 
-
-Branch out to a premade demo branch and download requirements.txt to run the program correctly. Etter at PKG API'en provided by the IAI group is started in the background. Navigate to PKGs in the terminal and type Python app.py. From there, the index is opened on localhost 7000. 
-
-
-
-
+The requirements must be downloaded to start the program. The program runs on localhost:7000. The PKG API must run in the background; read more about how at https://github.com/iai-group/pkg-api. Branch out to a premade **demo** branch and type `Python app.py` inside the PKGs folder. Using your own files must be the exact files from the services. Otherwise, you can choose the test functionality that automatically uploads from a test file. The test functionality will not populate any PKG and is only for visualization.
 
 
 Note that the Spotify API is unavailable unless a request is sent to Eirik with a Spotify email, and he adds you.
@@ -28,9 +29,12 @@ Note that the Spotify API is unavailable unless a request is sent to Eirik with 
 
 
 Contributors:
+
 Eirik Wilhelmsen created EntityLinking.html, netflix.html, spotify.html, GroundTruthNetflix.py, GroundTruthSpotify.py, NetflixClass.py, PKGClass.py, SpotifyClass.py
-Ottar Jensen created applemusic.html, AppleMusic.py, GroundTruthAppleM.txt, SystemOutputAppleM.txt
+
+Ottar Jensen created applemusic.html, AppleMusic.py, GroundTruthAppleM.py
 
 Worked together on:
-app.py, Statements.py, index.html
+
+app.py, Statements.py, index.html, AppleMusic.py, GroundTruthAppleM.py
 
