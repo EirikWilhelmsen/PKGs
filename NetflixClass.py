@@ -36,6 +36,25 @@ class NetflixFunctions:
     def save_movies(self):
         with open(os.path.join(os.path.dirname(__file__), "data/cache_files/movies.json"), 'w', encoding='utf-8') as file:
             json.dump(self.movies, file)
+    
+    def find_movie_id_and_actors(self, liked_movies):
+        movies_info = []
+        movie_titles = {}
+        movie_actor_list = {}
+        i = 0
+        self.total_movies = len(liked_movies)
+        for movie_title, _ in liked_movies:
+            print(movie_title)
+            movie_info = self.search_OMDb(movie_title, 'movie')
+            if movie_info['Response'] == 'True':
+                movies_info.append(movie_info)
+                movie_titles[movie_title] = movie_info['Movie']
+                movie_actor_list[movie_info['ImdbID']] = {
+                    'Actors': movie_info['Actors']
+                }
+            i += 1
+        movie_actor_uris = self.link_entities(movie_actor_list)
+        return movie_actor_uris, movie_titles, movie_actor_list
 
     def get_actor_imdb_id(self,actor_name):
         """sumary_line
