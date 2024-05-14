@@ -179,12 +179,12 @@ def progress_netflix():
         }
     )
 
-@app.route('/progress-applemusic')
+@app.route('/progress-AppleM')
 def progress_applemusic():
     return jsonify(
         {
-            'processed': AppleMusic.processed_songs,
-            'total': AppleMusic.total_songs
+            'processed': applemusic_functions.processed_track,
+            'total': applemusic_functions.total_tracks
         }
     )
             
