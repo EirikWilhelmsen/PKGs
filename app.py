@@ -130,7 +130,7 @@ def proceed():
                 file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
                 return redirect(url_for('profile', platform='netflix', file_path=file_path))
 
-        elif platform == 'applemusic-upload':
+        elif platform == 'AppleM-upload':
             if 'file' not in request.files:
                 return 'No file part'
             file = request.files['file']
@@ -401,7 +401,7 @@ def profile(platform):
         main_artist_names, entity_links_musicbrainz_artists, entity_links_musicbrainz_tracks, Cleaned_Songs, Queries, artist_queries = applemusic_functions.search_track_musicbrainz(Song_Names, Artists_and_Groups)
 
 
-        statements.create_apple_music_like_statement(Year, main_artist_names, entity_links_musicbrainz_artists, entity_links_musicbrainz_tracks, Cleaned_Songs, artist_queries)
+        pkg_statements.create_apple_music_like_statement(Year=Year, main_artist_names=main_artist_names, entity_links_musicbrainz_artists=entity_links_musicbrainz_artists, entity_links_musicbrainz_tracks=entity_links_musicbrainz_tracks, Cleaned_Songs=Cleaned_Songs, artist_queries=artist_queries)
         
         
         if main_artist_names:

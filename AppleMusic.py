@@ -170,9 +170,13 @@ class AppleMusicFunctions:
         i=0
         Songs_ignored=0
         # Splits on ( - ) and puts the parts in two lists
+        Solo_Songnames=[]
+
         for description in result['Track Description']:
 
             parts = description.split(" - ")
+            if len(parts) == 1:
+                Solo_Songnames.append(parts)
             if len(parts) == 2:
                 artist_or_group, song_name = parts
                 Song_Names.append(song_name.strip())
@@ -238,8 +242,10 @@ class AppleMusicFunctions:
     def handle_artists(self, artist_string):
         # Tries combinations of artist names to find a match
 
-        if self.artist_check_musicbrainz(artist_string):
+        if not "," in artist_string or not "&" in artist_string:#.artist_check_musicbrainz(artist_string):
             return [artist_string]
+        
+
         parts = artist_string.split(', ')
         artists_listed = []
         
@@ -308,22 +314,22 @@ class AppleMusicFunctions:
                 featured_artists=featured_artists.strip("'[]\"")
                 featured_artists = self.handle_artists(featured_artists.strip(', '))
                 
-                
                 # Adds featured artists to the list
-                if featured_artists!=[]:
+                if featured_artists!=[""]:
                     
                     artists += featured_artists
                 
                 # Puts quotes around artists from a list and adds them to a variable
-                artist_query_part = ' '.join(f'"{artist}"' for artist in artists)
+                artist_query_part = ''.join(f'"{artist}"' for artist in artists)  #"The Chainsmokers""Coldplay"
 
                 # Constructs the query with all artists, song name, and tags (if any)        
                 if tags==[]:
-                    query = f'"{song_cleaned}" {artist_query_part}'
+                    query = f'"{song_cleaned}"{artist_query_part}'
                 else: 
                     tags=str(tags).strip("'[]\"")
                     query = f'"{song_cleaned}"{artist_query_part} {tags}'
-                params = {'query': query, 'fmt': 'json'}
+
+                params = {'query': query, 'fmt': 'json'} #, 'limit':8}
                 Queries.append(query)
                 print("hei",query)
                 # Makes the artists ready to be put in the statement
@@ -340,6 +346,13 @@ class AppleMusicFunctions:
                     # Gets the first element in the response
                     recording = data['recordings'][0]
                     recording_main_artist_id = recording['artist-credit'][0]['artist']['id']
+                        
+                # for i in data['recordings']:         
+                #     if artist_name == record['artist-credit'][0]['artist']['name'] and song_name == record['title']
+                #         artist id = record['artist-credit'][0]['artist']['id']
+                #         song id = record['id']    
+                #     recording = data['recordings'][i]
+                #     recording_main_artist_id = recording['artist-credit'][0]['artist']['id']
                     
                     # print(recording_main_artist_id)
                     # print(main_artist_data['id'])
