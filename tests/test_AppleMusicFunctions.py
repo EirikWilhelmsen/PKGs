@@ -1,11 +1,57 @@
 import unittest
 import sys
+import pandas as pd
 sys.path.append('..')
 from AppleMusic import AppleMusicFunctions
 
 class TestAppleMusicClass(unittest.TestCase):
     def setUp(self):
         self.applemusic = AppleMusicFunctions()
+
+
+    def test_double_dash(self):
+        df= {
+        'Country': ['Norway'],
+        'Track Identifier': [1210094305],
+        'Media type': ['AUDIO'],
+        'Date Played': ['20170419'],
+        'Hours': ['12'],
+        'Play Duration Milliseconds': [255555],
+        'Source Type': ['IPHONE'],
+        'Play Count': [3],
+        'Skip Count': [1],
+        'Ignore For Recommendations': [None],
+        'Track Reference': [1.210094e+09],
+        'Track Description': ['Coldplay - Viva la Vida - Live Version']  # Two dashes
+        }
+
+        df=pd.DataFrame(df)
+
+        result = self.applemusic.liked_songs(df)
+        # Assert
+        self.assertEqual(result, [], [], [])
+        
+    def test_no_dash(self):
+        df= {
+        'Country': ['Norway'],
+        'Track Identifier': [1210094305],
+        'Media type': ['AUDIO'],
+        'Date Played': ['20170419'],
+        'Hours': ['12'],
+        'Play Duration Milliseconds': [255555],
+        'Source Type': ['IPHONE'],
+        'Play Count': [3],
+        'Skip Count': [1],
+        'Ignore For Recommendations': [None],
+        'Track Reference': [1.210094e+09],
+        'Track Description': ['Symphony by Clean Bandit']  # No dashes
+        }
+        df=pd.DataFrame(df)
+
+        result = self.applemusic.liked_songs(df)
+        # Assert
+        self.assertEqual(result, [], [], [])
+    
     
     def test_negative_handle_artists(self):
         # Arrange

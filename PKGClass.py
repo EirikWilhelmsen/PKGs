@@ -103,7 +103,7 @@ class PKGFunctions:
                         match_found = True
                         break
                 if not match_found:
-                    # print("FP: for",test_item['object']['value']['description'], test_item["object"]["value"]["related_entities"], "\n")
+                    print("FP: for",test_item['object']['value']['description'], test_item["object"]["value"]["related_entities"], "\n")
                     false_positives += 1
 
             false_negatives = len(ground_truth_data) - true_positives
@@ -118,7 +118,7 @@ class PKGFunctions:
                         match_found = True
                         break
                 if not match_found:
-                    # print("FP: ", test_item["object"]["value"]["description"])
+                    print("FP: ", test_item["object"]["value"]["description"])
                     false_positives += 1
             false_negatives = len(ground_truth_data) - true_positives
         
@@ -131,7 +131,7 @@ class PKGFunctions:
                         match_found = True
                         break
                 if not match_found:
-                    # print("FP: for",test_item['object']['value']['description'], test_item["object"]["value"]["related_entities"][-1], "\n")
+                    print("FP: for",test_item['object']['value']['description'], test_item["object"]["value"]["related_entities"][-1], "\n")
                     false_positives += 1
             false_negatives = len(ground_truth_data) - true_positives
         
@@ -144,7 +144,7 @@ class PKGFunctions:
                         match_found = True
                         break
                 if not match_found:
-                    # print("FP: for",test_item['object']['value']['description'], test_item["object"]["value"]["related_entities"][:-2], "\n")
+                    print("FP: for",test_item['object']['value']['description'], test_item["object"]["value"]["related_entities"][:-2], "\n")
                     false_positives += 1
             false_negatives = len(ground_truth_data) - true_positives
         

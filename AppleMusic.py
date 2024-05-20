@@ -114,7 +114,7 @@ class AppleMusicFunctions:
 
         if len(play_count_by_year_filtered) == 0:
             return "Not enough data"
-        elif 0 < len(play_count_by_year_filtered):#< 37:
+        elif 0 < len(play_count_by_year_filtered)< 37:
             # Filters out the songs with play counts lower than 30 
             merged_df = pd.merge(sorted_total_play_count_filtered, play_count_by_year_filtered[['Track Identifier', 'Year']], on='Track Identifier', how='left')
             # Fills NaN values in 'Year' with empty strings
@@ -129,7 +129,7 @@ class AppleMusicFunctions:
             
             # print(enjoyed_songs_df)
 
-            # Removes duplicates and sorts the years
+            # Removes more duplicates and sorts the years
             result = enjoyed_songs_df.groupby('Track Description').agg({
                 'Year': lambda x: ', '.join(map(str, sorted(set(x))))  
             }).reset_index()
@@ -181,13 +181,23 @@ class AppleMusicFunctions:
                 artist_or_group, song_name = parts
                 Song_Names.append(song_name.strip())
                 Artists_and_Groups.append(artist_or_group.strip())
-                Year.append(enjoyed_songs_df['Year'][i])
+                Year.append(result['Year'][i])
                 
             else: 
-                print(parts)
+                # print(parts)
                 Songs_ignored+=1    
             i+=1
+        print("Solo_Songnames: ")
+        print(Solo_Songnames)
+        print("Song_Names: ")
+        print(Song_Names)
+        Solo_Songnames = [song[0].replace('[', '').replace(']', '') for song in Solo_Songnames]
+        for song in Solo_Songnames[:]:
+            if song in Song_Names:
+                Solo_Songnames.remove(song)
 
+        print(len(Solo_Songnames))
+        # print(len(Solo_Songnames))
 
         # Code for checking the ignored songs 
         # Songs_ignored=str(Songs_ignored)
@@ -323,16 +333,19 @@ class AppleMusicFunctions:
                 artist_query_part = ''.join(f'"{artist}"' for artist in artists)  #"The Chainsmokers""Coldplay"
 
                 # Constructs the query with all artists, song name, and tags (if any)        
-                if tags==[]:
-                    query = f'"{song_cleaned}"{artist_query_part}'
+                if tags==[""]:
+                    query = f'"{song_cleaned}" {artist_query_part}'
                 else: 
                     tags=str(tags).strip("'[]\"")
-                    query = f'"{song_cleaned}"{artist_query_part} {tags}'
+                    query = f'"{song_cleaned}" {artist_query_part} {tags}'
 
                 params = {'query': query, 'fmt': 'json'} #, 'limit':8}
                 Queries.append(query)
                 print("hei",query)
                 # Makes the artists ready to be put in the statement
+
+                artist_query_part = ' '.join(f'"{artist}"' for artist in artists)
+                print(artist_query_part)
                 artist_query_part=artist_query_part.split('" "')
                 artist_query_part='", "'.join(artist_query_part)
                 artist_query_part=artist_query_part.replace('"','')
