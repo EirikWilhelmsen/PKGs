@@ -24,23 +24,23 @@
         <tr>
             <td><img src="static/images/Apple_Music_icon.png" alt="missing" class="index_img"></td>
             <td>Apple Music</td>
-            <td><button class="platform-btn" onclick="showOptions('appleOptions')">Enter</button></td>
+            <td><button class="platform-btn" onclick="showOptions('appleOptions')">Login</button></td>
         </tr>
-        <tr>
+        <!--<tr>
             <td></td>
             <td>Entity Linking</td>
             <td><button class="platform-btn" onclick="showOptions('EntityOptions')">Enter</button></td>
-        </tr>
+        </tr>-->
     </table>
 
     <div class="options" id="spotifyOptions" style="display: none;">
-        <form action="/proceed" method="post"> <!-- Form starts here -->
+        <form action="/proceed" method="post">
             <h2>Select the data from Spotify you let us get access to</h2>
-            <label><input type="checkbox" name="usernameCheckbox"> Username</label> <!-- Added name attribute -->
-            <label><input type="checkbox" name="playlistsCheckbox"> Playlists</label> <!-- Added name attribute -->
-            <label><input type="checkbox" name="songsCheckbox" onclick="toggleNumSongs()"> Songs</label> <!-- Added onclick attribute -->
+            <label><input type="checkbox" name="usernameCheckbox"> Username</label>
+            <label><input type="checkbox" name="playlistsCheckbox"> Playlists</label> 
+            <label><input type="checkbox" name="songsCheckbox" onclick="toggleNumSongs()"> Songs</label> 
             <div id="numSongsDiv" style="display: none;">
-                Number of Songs: <input type="number" name="numSongsInput" min="1" value="1"> <!-- Added name attribute -->
+                Number of Songs: <input type="number" name="numSongsInput" min="1" value="1"> 
             </div>
             <button id="proceed-spotify" style="display: none;"  type="submit" name="platform" value="spotify-API">Proceed</button>
         </form>
@@ -52,7 +52,7 @@
         <form action="/proceed" method="post" enctype="multipart/form-data">
             <h2>Select the data from Netflix you let us get access to</h2>
             <label><input type="checkbox" name="viewCheckbox" onclick="togglePercenteOfHistory()">Give access to Netflix viewing history</label> <!-- Added onclick attribute -->
-            <div id="PercentageDiv" style="display: none;">
+            <div id="NetflixDiv" style="display: none;">
                 <input type="file" name="file" accept=".csv">
                 <button id="procced-netflix" style="display: none;" type="submit" name="platform" onclick="showProgressbar('Netflix')" value="netflix-upload">Proceed</button>
             </div>
@@ -67,10 +67,10 @@
             <label><input type="checkbox" name="viewCheckbox" onclick="toggleAppleM()">Give access to Apple Music daily listening history</label> 
             <p>The file that can be processed is: 'Apple Music - Play History Daily Tracks.csv' 
                 To get the file, request the privacy data 'Apple Media Services Information' from <a href="privacy.apple.com">privacy.apple.com</a> using your Apple account. After receiving the data, go into part 1, Apple_Media_Services and then Apple Music Activity to find the file.</p>
-            <div id="PrecentageDiv" style="display: none;">
+            <div id="AppleMDiv" style="display: none;">
                 <input type="file" name="file" accept=".csv">
+                <button id="procced-applemusic" style="display: none;" type="submit" name="platform" onclick="showProgressbar('AppleM')" value="AppleM-upload">Proceed</button>
             </div>
-            <button id="procced-applemusic" style="display: none;" type="submit" name="platform" value="AppleM-upload">Proceed</button>
         </form>
         <form action="/proceed_test" method="post">
             <button style="margin-top:10px;" type="submit" name="platform" value="applemusic-TEST" onclick="showProgressbar('AppleM')">test</button>
@@ -139,12 +139,17 @@
             var optionsDiv = document.getElementById(optionId);
             var spotifyOptions = document.getElementById("spotifyOptions");
             var netflixOptions = document.getElementById("netflixOptions");
+            var appleOptions = document.getElementById("appleOptions");
             if (spotifyOptions.style.display === "block") {
                 spotifyOptions.style.display = "none";
                 optionsDiv.style.display = "block";
             }
             else if (netflixOptions.style.display === "block") {
                 netflixOptions.style.display = "none";
+                optionsDiv.style.display = "block";
+            }
+            else if (appleOptions.style.display === "block") {
+                appleOptions.style.display = "none";
                 optionsDiv.style.display = "block";
             }
             else {
@@ -165,8 +170,8 @@
             }
         }
         
-        function togglePrecentOfHistory() {
-            var percentageDiv = document.getElementById("PercentageDiv");
+        function togglePercenteOfHistory() {
+            var percentageDiv = document.getElementById("NetflixDiv");
             var button = document.getElementById("procced-netflix");
             
             if (percentageDiv.style.display === "none") {
@@ -178,7 +183,7 @@
             }
         }
         function toggleAppleM() {
-            var percentageDiv = document.getElementById("PrecentageDiv");
+            var percentageDiv = document.getElementById("AppleMDiv");
             var button = document.getElementById("procced-applemusic");
             if (percentageDiv.style.display === "none") {
                 percentageDiv.style.display = "block";
