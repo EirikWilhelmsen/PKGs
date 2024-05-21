@@ -100,7 +100,7 @@
     "Hit 'Em Up (feat. Outlawz)2Pac": {
         "main_artist_name": "2Pac",
         "entity_link_artist": "https://musicbrainz.org/artist/382f1005-e9ab-4684-afd4-0bdae4ee37f2",
-        "entity_link_track": "https://musicbrainz.org/recording/ac908cc2-406f-49c6-9126-71b6dcca1cbb",
+        "entity_link_track": "https://musicbrainz.org/recording/7fcd8b36-7448-45a9-bb0f-244d36c97f39",
         "cleaned_song": "Hit 'Em Up",
         "artist_queries": "2Pac, Outlawz"
     },
@@ -212,7 +212,7 @@
     "Temptations2Pac": {
         "main_artist_name": "2Pac",
         "entity_link_artist": "https://musicbrainz.org/artist/382f1005-e9ab-4684-afd4-0bdae4ee37f2",
-        "entity_link_track": "https://musicbrainz.org/recording/5a3a8287-b105-4a56-a0e9-854cf30728ae",
+        "entity_link_track": "https://musicbrainz.org/recording/491f1c2c-b551-477a-9555-56968601ce6a",
         "cleaned_song": "Temptations",
         "artist_queries": "2Pac"
     },
@@ -268,7 +268,7 @@
     "Everyday (feat. Future)Ariana Grande": {
         "main_artist_name": "Ariana Grande",
         "entity_link_artist": "https://musicbrainz.org/artist/f4fdbb4c-e4b7-47a0-b83b-d91bbfcfa387",
-        "entity_link_track": "https://musicbrainz.org/recording/0e1fc621-363b-4408-a038-00250a9d61fc",
+        "entity_link_track": "https://musicbrainz.org/recording/9c2f4754-32c6-4150-8127-645c17fe278a",
         "cleaned_song": "Everyday",
         "artist_queries": "Ariana Grande, Future"
     },
@@ -282,7 +282,7 @@
     "Into YouAriana Grande": {
         "main_artist_name": "Ariana Grande",
         "entity_link_artist": "https://musicbrainz.org/artist/f4fdbb4c-e4b7-47a0-b83b-d91bbfcfa387",
-        "entity_link_track": "https://musicbrainz.org/recording/afd9fe85-99b2-471c-98c5-77665db7cd07",
+        "entity_link_track": "https://musicbrainz.org/recording/6e1ca317-8201-47dd-a882-1c29e33437c5",
         "cleaned_song": "Into You",
         "artist_queries": "Ariana Grande"
     },
@@ -364,9 +364,9 @@
         "artist_queries": "Camila Cabello"
     },
     "On & On (feat. Daniel Levi)Cartoon": {
-        "main_artist_name": "Wrong artist found",
-        "entity_link_artist": "Artist link not found",
-        "entity_link_track": "Track link not found",
+        "main_artist_name": "Cartoon",
+        "entity_link_artist": "https://musicbrainz.org/artist/9e38b54a-a548-43bc-8098-d1b2550d00f9",
+        "entity_link_track": "https://musicbrainz.org/recording/916d0441-a491-4f9d-936e-b1c2aa80d86c",
         "cleaned_song": "On & On",
         "artist_queries": "Cartoon, Daniel Levi"
     },
@@ -387,7 +387,7 @@
     "No Promises (feat. Demi Lovato)Cheat Codes": {
         "main_artist_name": "Cheat Codes",
         "entity_link_artist": "https://musicbrainz.org/artist/8b579b9a-84ef-4975-884f-19e988cfc181",
-        "entity_link_track": "https://musicbrainz.org/recording/fafda913-cf9d-453f-a458-53f449c0a75a",
+        "entity_link_track": "https://musicbrainz.org/recording/0d3c3a20-9b44-4436-a818-b52d4ecd10f6",
         "cleaned_song": "No Promises",
         "artist_queries": "Cheat Codes, Demi Lovato"
     },
@@ -478,7 +478,7 @@
     "Lose YourselfEminem": {
         "main_artist_name": "Eminem",
         "entity_link_artist": "https://musicbrainz.org/artist/b95ce3ff-3d05-4e87-9e01-c97b66af13d4",
-        "entity_link_track": "https://musicbrainz.org/recording/63131a66-78c7-4bfd-9dac-3f846e5274a4",
+        "entity_link_track": "https://musicbrainz.org/recording/5cf2a6e8-8643-4ab0-8e00-f4d0f749b25c",
         "cleaned_song": "Lose Yourself",
         "artist_queries": "Eminem"
     },
@@ -499,7 +499,7 @@
     "MockingbirdEminem": {
         "main_artist_name": "Eminem",
         "entity_link_artist": "https://musicbrainz.org/artist/b95ce3ff-3d05-4e87-9e01-c97b66af13d4",
-        "entity_link_track": "https://musicbrainz.org/recording/88f80e62-efb4-4bfb-8eeb-c1f733d78f66",
+        "entity_link_track": "https://musicbrainz.org/recording/badebed5-e36e-4a9e-a496-456810fedfb2",
         "cleaned_song": "Mockingbird",
         "artist_queries": "Eminem"
     },
@@ -632,7 +632,7 @@
     "BelieverImagine Dragons": {
         "main_artist_name": "Imagine Dragons",
         "entity_link_artist": "https://musicbrainz.org/artist/012151a8-0f9a-44c9-997f-ebd68b5389f9",
-        "entity_link_track": "https://musicbrainz.org/recording/8f4908fb-1def-4607-b194-96c61c724108",
+        "entity_link_track": "https://musicbrainz.org/recording/e5c7a324-cca2-4ccb-ab9c-6d3a390b9d0a",
         "cleaned_song": "Believer",
         "artist_queries": "Imagine Dragons"
     },
@@ -758,7 +758,7 @@
     "Despacito (feat. Daddy Yankee)Luis Fonsi": {
         "main_artist_name": "Luis Fonsi",
         "entity_link_artist": "https://musicbrainz.org/artist/d68fda90-ab8d-4799-be56-317ba4ae700f",
-        "entity_link_track": "https://musicbrainz.org/recording/1109d8da-ce4a-4739-9414-242dc3e9b81c",
+        "entity_link_track": "https://musicbrainz.org/recording/683bb568-5275-4b7e-adee-320dc057175f",
         "cleaned_song": "Despacito",
         "artist_queries": "Luis Fonsi, Daddy Yankee"
     },
@@ -779,7 +779,7 @@
     "Cold (feat. Future)Maroon 5": {
         "main_artist_name": "Maroon 5",
         "entity_link_artist": "https://musicbrainz.org/artist/0ab49580-c84f-44d4-875f-d83760ea2cfe",
-        "entity_link_track": "https://musicbrainz.org/recording/f28a6ae0-1d79-4d16-8c25-7ef244396fcb",
+        "entity_link_track": "https://musicbrainz.org/recording/c9a6166a-bfc7-449e-b423-9430eb2e4770",
         "cleaned_song": "Cold",
         "artist_queries": "Maroon 5, Future"
     },
@@ -903,9 +903,9 @@
         "artist_queries": "Ricegum"
     },
     "Its Every Night Sis (feat. Alissa Violet)Ricegum": {
-        "main_artist_name": "Ricegum",
-        "entity_link_artist": "https://musicbrainz.org/artist/e150f414-8b11-433d-bd2b-1e37e1cfc5c0",
-        "entity_link_track": "https://musicbrainz.org/recording/5e19cec4-44e9-4cf2-9f51-7b790ea37a2d",
+        "main_artist_name": "Wrong artist found",
+        "entity_link_artist": "Artist link not found",
+        "entity_link_track": "Track link not found",
         "cleaned_song": "Its Every Night Sis",
         "artist_queries": "Ricegum, Alissa Violet"
     },

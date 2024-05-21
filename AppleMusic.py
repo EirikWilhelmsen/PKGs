@@ -114,7 +114,7 @@ class AppleMusicFunctions:
 
         if len(play_count_by_year_filtered) == 0:
             return "Not enough data"
-        elif 0 < len(play_count_by_year_filtered)< 37:
+        elif 0 < len(play_count_by_year_filtered):#< 37:
             # Filters out the songs with play counts lower than 30 
             merged_df = pd.merge(sorted_total_play_count_filtered, play_count_by_year_filtered[['Track Identifier', 'Year']], on='Track Identifier', how='left')
             # Fills NaN values in 'Year' with empty strings
@@ -300,9 +300,12 @@ class AppleMusicFunctions:
             # Loads the cache (creates the cache if it's not there)
             
             key=song_name+artists
-            # Checks for entry in the cache
+            # # Checks for entry in the cache
             if key not in self.cache:
                 # Gets the song name, artists from the song part, and any tags.
+
+
+                
                 song_cleaned, featured_artists, tags = self.extract_and_clean_name(song_name)
                 
                 Cleaned_Songs.append(song_cleaned)
@@ -351,7 +354,7 @@ class AppleMusicFunctions:
                 artist_query_part=artist_query_part.replace('"','')
                 artist_queries.append(artist_query_part)   
 
-          
+            
                 response = requests.get(url, params=params)
                 data = response.json()
                 # Checks if there's a response with a recording
@@ -359,6 +362,8 @@ class AppleMusicFunctions:
                     # Gets the first element in the response
                     recording = data['recordings'][0]
                     recording_main_artist_id = recording['artist-credit'][0]['artist']['id']
+                    recording_main_artist_name = recording['artist-credit'][0]['artist']['name']
+                    
                         
                 # for i in data['recordings']:         
                 #     if artist_name == record['artist-credit'][0]['artist']['name'] and song_name == record['title']
@@ -371,7 +376,7 @@ class AppleMusicFunctions:
                     # print(main_artist_data['id'])
                     # Checks if the obtained recording artist matches the main from the start
                     try: 
-                        if recording_main_artist_id == main_artist_data['id']:
+                        if recording_main_artist_name == artists[0]:
                             search_results.append(recording)
                             
                             
@@ -379,7 +384,7 @@ class AppleMusicFunctions:
                             entity_links_musicbrainz_tracks.append(track_entity_link)
                             # print(entity_links_musicbrainz_tracks)
 
-                            artist_entity_link=url_musicbrainz_artist+main_artist_data['id']
+                            artist_entity_link=url_musicbrainz_artist+recording_main_artist_id
                             entity_links_musicbrainz_artists.append(artist_entity_link)
                             # print(entity_links_musicbrainz_artists)
                         
@@ -404,7 +409,7 @@ class AppleMusicFunctions:
                     main_artist_names=main_artist_names[0:-1]
                     main_artist_names.append("Wrong artist found")
 
-                # Updates the cache  
+            # Updates the cache  
                 self.cache[key] = {
                     'main_artist_name': main_artist_names[-1],
                     'entity_link_artist': entity_links_musicbrainz_artists[-1],
@@ -414,7 +419,7 @@ class AppleMusicFunctions:
                 }
 
                 self.save_cache(self.cache)
-                
+            
                 
             else: 
                 # print(cache[key])
