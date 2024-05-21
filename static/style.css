@@ -243,3 +243,76 @@ input {
     border-radius: 8px;
     transition: width 0.3s ease-in-out; /* Smooth transition effect */
 }
+
+
+
+/* APPLE MUSIC */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f5;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+#main-title {
+    color: #333;
+}
+
+#applemusicTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#applemusicTable th, #applemusicTable td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+}
+
+#applemusicTable th {
+    background-color: #5050a0;
+    color: white;
+}
+
+a {
+    color: #337ab7;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    #applemusicTable, #applemusicTable th, #applemusicTable td {
+        display: block;
+        width: 100%;
+    }
+
+    #applemusicTable th {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    #applemusicTable td {
+        border: none;
+        position: relative;
+        padding-left: 50%;
+        text-align: right;
+    }
+
+    #applemusicTable td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+    }
+}
