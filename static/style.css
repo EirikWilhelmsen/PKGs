@@ -247,72 +247,83 @@ input {
 
 
 /* APPLE MUSIC */
-
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f5;
-    color: #333;
-    margin: 0;
-    padding: 20px;
+font-family: Arial, sans-serif;
+background-color: #f0f0f5;
+color: #333;
+margin: 0;
+padding: 20px;
 }
 
 #main-title {
-    color: #333;
+color: #333;
+}
+
+#applemusicTable li {
+list-style-type: none; /* Removes the bullet points from list items */
 }
 
 #applemusicTable {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
+width: 100%;
+border-collapse: collapse;
+margin-top: 20px;
 }
 
 #applemusicTable th, #applemusicTable td {
-    text-align: left;
-    padding: 8px;
-    border-bottom: 1px solid #ccc;
+text-align: left;
+padding: 8px;
+border-bottom: 1px solid #ccc;
 }
 
 #applemusicTable th {
-    background-color: #5050a0;
-    color: white;
+background-color: #5050a0;
+color: white;
+}
+
+#applemusicTable th[colspan="1"] {
+    text-align: center; /* Center align the text */
+    display: block; /* Makes the header span the full width */
+    width: 100%; /* Ensure it occupies the full width */
+    box-sizing: border-box; /* Includes padding and border in the element's total width */
 }
 
 a {
-    color: #337ab7;
-    text-decoration: none;
+color: #337ab7;
+text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+text-decoration: underline;
 }
 
+
 @media (max-width: 600px) {
-    #applemusicTable, #applemusicTable th, #applemusicTable td {
-        display: block;
-        width: 100%;
-    }
+#applemusicTable, #applemusicTable th, #applemusicTable td {
+    display: block;
+    width: 100%;
+}
 
-    #applemusicTable th {
-        position: absolute;
-        top: -9999px;
-        left: -9999px;
-    }
+#applemusicTable th {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
 
-    #applemusicTable td {
-        border: none;
-        position: relative;
-        padding-left: 50%;
-        text-align: right;
-    }
+#applemusicTable td {
+    border: none;
+    position: relative;
+    padding-left: 50%;
+    text-align: right;
+}
 
-    #applemusicTable td:before {
-        content: attr(data-label);
-        position: absolute;
-        left: 10px;
-        width: 45%;
-        padding-right: 10px;
-        white-space: nowrap;
-        text-align: left;
-        font-weight: bold;
-    }
+#applemusicTable td:before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    text-align: left;
+    font-weight: bold;
+}
 }
