@@ -47,12 +47,13 @@ class AppleMusicFunctions:
         return df
 
     def disliked_songs(self, df):
-        """sumary_line
+        """Finds disliked songs
         
         Keyword arguments:
-        df -- dataframe 
-        Return: return_description
+        df -- dataframe containing the CSV file information
+        Return: Song_Names list and Artists_and_Groups list -- Lists from the track description split on ( - ) 
         """
+
         
         # Checks for songs played shorter than 30 seconds:
         df_less_than_30000ms = df[df['Play Duration Milliseconds']<=30000]
@@ -88,7 +89,12 @@ class AppleMusicFunctions:
 
 
     def liked_songs(self, df):
+        """Finds liked songs
         
+        Keyword arguments:
+        df -- dataframe containing the CSV file information
+        Return: Year list, Song_Names list and Artists_and_Groups list -- Lists from the track description split on ( - ), and important years retrieved from the date played column
+        """
         # Gets total playcount for each song
         total_play_count = df.groupby(['Track Identifier', 'Track Description'])['Play Count'].sum().reset_index()
         # Sorts total_play_count in descending order
@@ -114,7 +120,7 @@ class AppleMusicFunctions:
 
         if len(play_count_by_year_filtered) == 0:
             return "Not enough data"
-        elif 0 < len(play_count_by_year_filtered):#< 37:
+        elif 0 < len(play_count_by_year_filtered):#< 37: #remove :# to limit number of songs to be linked 
             # Filters out the songs with play counts lower than 30 
             merged_df = pd.merge(sorted_total_play_count_filtered, play_count_by_year_filtered[['Track Identifier', 'Year']], on='Track Identifier', how='left')
             # Fills NaN values in 'Year' with empty strings
@@ -221,6 +227,15 @@ class AppleMusicFunctions:
 
 
     def extract_and_clean_name(self, song_name):
+        """Cleans song name, and extracts featured artists and tags from the song name
+        
+        Keyword arguments:
+        song_name -- string containing a song name and in some cases, feat. artists and tags
+        Return: cleaned_name string, featured_artists string, tags string -- 
+        cleaned name is the song name with the other elements removed, featured artists are artists written in the song name, 
+        tags is other information written in brackets.
+        """
+
         # featured_artists=[]
         # Regular expressions to find featured artists within parentheses
         featured_artists = re.findall(r'\(feat\.? ([^)]+)\)', song_name)
@@ -237,6 +252,13 @@ class AppleMusicFunctions:
 
 
     def artist_check_musicbrainz(self, artist):
+        """Checks for a possible artist in MusicBrainz 
+        
+        Keyword arguments:
+        artist -- string containing a possible artist name
+        Return: data['artists'][0] or None-- The data related to the first instance in the MusicBrainz response.
+        """
+
         # Checks if the artist exists in MusicBrainz
         url_artist = 'https://musicbrainz.org/ws/2/artist'
         params = {'query': f'"{artist}"', 'fmt': 'json'}
@@ -250,6 +272,13 @@ class AppleMusicFunctions:
         return None
 
     def handle_artists(self, artist_string):
+        """Finds the artists from a string possibly containing one or multiple artists
+        
+        Keyword arguments:
+        artist_string -- string containing the artist/artists taken from the track description
+        Return: artists_listed list -- list containing all the artists found on MusicBrainz.
+        """
+
         # Tries combinations of artist names to find a match
 
         if not "," in artist_string or not "&" in artist_string:#.artist_check_musicbrainz(artist_string):
@@ -279,6 +308,15 @@ class AppleMusicFunctions:
         return artists_listed
 
     def search_track_musicbrainz(self, song_names, artists_and_groups):
+        """Finds the track information, and puts it in lists with corresponding lengths.
+        
+        Keyword arguments:
+        song_names list, artists_and_groups list -- Lists with corresponding song names and artists and groups taken from the csv file.
+        Return: main_artist_names, entity_links_musicbrainz_artists, entity_links_musicbrainz_tracks, Cleaned_Songs, Queries, artist_queries -- 
+        lists containing respectively: main artists (first index in musicbrainz response), the main artists' musicbrainz entity links, the tracks' 
+        musicbrainz entity links, cleaned songs' names, queries to music brainz, and the artist queries containing all the artists for each song.
+        """
+
         # Searches for the songs in the cache, and if there's no entry of it, to the MusicBrainz API
         url = 'https://musicbrainz.org/ws/2/recording'
         url_musicbrainz_track = 'https://musicbrainz.org/recording/'
@@ -402,6 +440,7 @@ class AppleMusicFunctions:
                         entity_links_musicbrainz_artists.append("Artist link not found")
                         main_artist_names=main_artist_names[0:-1]
                         main_artist_names.append("Wrong artist found")
+
                 else:
                     # print('No recordings found for', song_name)
                     entity_links_musicbrainz_tracks.append("Track not found")
