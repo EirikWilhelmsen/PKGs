@@ -15,9 +15,18 @@ The method's course of action consists of 3 steps respectively, illustrated in t
 
 *The course of action of the proposed method*
 
+## Data Processing
+<u style="text-decoration: none; -webkit-text-decoration-color: blue; text-decoration-color: blue;"></u>
+Data processing is the most extensive part of the proposed method. Here, we extract valuable information from the user's uploaded file, such as repeating songs and movies; in other words, we extract data that tells us something about the user's preferences. Each service processes data in its way.
+
 ## Entity Linking
 <u style="text-decoration: none; -webkit-text-decoration-color: blue; text-decoration-color: blue;"></u>
-Entity linking (EL) is a big part of our development. EL involves searching for corresponding entities in a KB. We use the KBs Music Brainz for songs and OMDb and IMDb for movies. `search_artist()` from SpotifyClass.py shows how the Music Brainz API could search artists and songs to retrieve their respective URIs. `search_OMDb()` shows how the movie IMDb ID could be retrieved as well as three related actors, and `get_actor_imdb_id` shows how to get the URI for those three actors.
+Entity Linking (EL), is the most extensive part of data processing. EL involves searching for corresponding entities in a KB. We use the KBs Music Brainz for songs and OMDb and IMDb for movies. `search_artist()` from SpotifyClass.py shows how the Music Brainz API could search artists and songs to retrieve their respective URIs. `search_OMDb()` shows how the movie IMDb ID could be retrieved as well as three related actors, and `get_actor_imdb_id` shows how to get the URI for those three actors.
+
+## Converting data
+<u style="text-decoration: none; -webkit-text-decoration-color: blue; text-decoration-color: blue;"></u>
+Data is converted to create statements that fit the PKG framework. This happens mainly in `statemets.py`, which contains functions specific to each service. Some of the services have different statement templates so that statements will be correctly formulated for songs with several artists, for example.
+
 
 ### Starting the program
 
@@ -30,11 +39,11 @@ Note that the Spotify API is unavailable unless a request is sent to Eirik with 
 
 Contributors:
 
-Eirik Wilhelmsen created EntityLinking.html, netflix.html, spotify.html, GroundTruthNetflix.py, GroundTruthSpotify.py, NetflixClass.py, PKGClass.py, SpotifyClass.py
+Eirik Wilhelmsen created EntityLinking.html, netflix.html, spotify.html, GroundTruthNetflix.py, GroundTruthSpotify.py, NetflixClass.py, PKGClass.py, SpotifyClass.py, README.md, test_NetflixFunctions.py, test_SpotifyFunctions.py
 
-Ottar Jensen created applemusic.html, AppleMusic.py, GroundTruthAppleM.py
+Ottar Jensen created applemusic.html, AppleMusic.py
 
 Worked together on:
 
-app.py, Statements.py, index.html, AppleMusic.py, GroundTruthAppleM.py
+app.py, Statements.py, index.html, GroundTruthAppleM.py, test_AppleMusicFunctions.py
 
