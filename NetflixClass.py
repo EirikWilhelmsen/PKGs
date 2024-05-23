@@ -3,7 +3,6 @@ import csv
 from datetime import datetime
 import json
 import imdb
-from rfc3987 import match
 from PKGClass import URI
 import os
 
@@ -16,28 +15,50 @@ class NetflixFunctions:
         pass
     
     def load_actors_id(self):
+        """loads actor names and their IMDb IDs from cache file into self.actors"""
+        
         try:
             with open(os.path.join(os.path.dirname(__file__), "data/cache_files/actors.json"), 'r', encoding='utf-8') as file:
                 self.actors = json.load(file)
         except FileNotFoundError:
             self.actors = []
+
     
     def load_movies(self):
+        """loads movie titles and their IMDb IDs from cache file into self.movies"""
+
         try:
             with open(os.path.join(os.path.dirname(__file__), "data/cache_files/movies.json"), 'r', encoding='utf-8') as file:
                 self.movies = json.load(file)
         except FileNotFoundError:
             self.movies = []
+
     
     def save_actors_id(self):
+        """saves actor names and their IMDb IDs to cache file"""
+        
         with open(os.path.join(os.path.dirname(__file__), "data/cache_files/actors.json"), 'w', encoding='utf-8') as file:
             json.dump(self.actors, file)
+
     
     def save_movies(self):
+        """saves movie titles and their IMDb IDs to cache file"""
+
         with open(os.path.join(os.path.dirname(__file__), "data/cache_files/movies.json"), 'w', encoding='utf-8') as file:
             json.dump(self.movies, file)
+
     
     def find_movie_id_and_actors(self, liked_movies):
+        """assigns IMDb IDs to movies and actors anc creates a dict for each
+        
+        Keyword arguments:
+        liked_movies -- list of movies watched more than two times, which we want to assing IMDb IDs to
+        Return: 
+        movie_actor_uris -- dictionary with movie URI as key and actor URIs as values
+        movie_titles -- dictionary with movie titles as keys and IMDb movie titles as values
+        movie_actor_list -- dictionary with IMDb IDs as keys and actors as values
+        """
+        
         movies_info = []
         movie_titles = {}
         movie_actor_list = {}
@@ -57,7 +78,7 @@ class NetflixFunctions:
         return movie_actor_uris, movie_titles, movie_actor_list
 
     def get_actor_imdb_id(self,actor_name):
-        """sumary_line
+        """searches imdbPY module for actor IMDb ID
         
         Keyword arguments:
         actor_name -- name of the actor
@@ -81,7 +102,7 @@ class NetflixFunctions:
             return None
     
     def read_csv_file(self, file_path):
-        """sumary_line
+        """reads the provided CSV file and extracts hooks and movies watched more than two times in a duration of a week
         
         Keyword arguments:
         file_path -- path to the file
@@ -125,7 +146,7 @@ class NetflixFunctions:
         return hooks, liked_movies
     
     def search_OMDb(self, query, type):
-        """sumary_line
+        """searched OMDb API for movie information, primarily for IMDb ID and actors
         
         Keyword arguments:
         query -- movie title
@@ -176,7 +197,7 @@ class NetflixFunctions:
             return None
         
     def link_entities(self, reference):
-        """sumary_line
+        """creates URI for movies and actors
         
         Keyword arguments:
         reference -- dictionary with movie-actor associations

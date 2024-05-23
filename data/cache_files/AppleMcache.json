@@ -51,7 +51,7 @@
     "Brenda's Got a Baby2Pac": {
         "main_artist_name": "2Pac",
         "entity_link_artist": "https://musicbrainz.org/artist/382f1005-e9ab-4684-afd4-0bdae4ee37f2",
-        "entity_link_track": "https://musicbrainz.org/recording/a64f3036-2622-4f25-b3cd-c89455acba61",
+        "entity_link_track": "https://musicbrainz.org/recording/1e661df3-73a4-4047-aa2b-e266337d6ce7",
         "cleaned_song": "Brenda's Got a Baby",
         "artist_queries": "2Pac"
     },
@@ -212,7 +212,7 @@
     "Temptations2Pac": {
         "main_artist_name": "2Pac",
         "entity_link_artist": "https://musicbrainz.org/artist/382f1005-e9ab-4684-afd4-0bdae4ee37f2",
-        "entity_link_track": "https://musicbrainz.org/recording/491f1c2c-b551-477a-9555-56968601ce6a",
+        "entity_link_track": "https://musicbrainz.org/recording/5a3a8287-b105-4a56-a0e9-854cf30728ae",
         "cleaned_song": "Temptations",
         "artist_queries": "2Pac"
     },
@@ -282,7 +282,7 @@
     "Into YouAriana Grande": {
         "main_artist_name": "Ariana Grande",
         "entity_link_artist": "https://musicbrainz.org/artist/f4fdbb4c-e4b7-47a0-b83b-d91bbfcfa387",
-        "entity_link_track": "https://musicbrainz.org/recording/6e1ca317-8201-47dd-a882-1c29e33437c5",
+        "entity_link_track": "https://musicbrainz.org/recording/afd9fe85-99b2-471c-98c5-77665db7cd07",
         "cleaned_song": "Into You",
         "artist_queries": "Ariana Grande"
     },
@@ -322,9 +322,9 @@
         "artist_queries": "Ariana Grande, Nicki Minaj"
     },
     "The Way (feat. Mac Miller) [Spanglish Version]Ariana Grande": {
-        "main_artist_name": "Ariana Grande",
-        "entity_link_artist": "https://musicbrainz.org/artist/f4fdbb4c-e4b7-47a0-b83b-d91bbfcfa387",
-        "entity_link_track": "https://musicbrainz.org/recording/80569bdd-a11e-4a05-bea7-6afcd7c744fa",
+        "main_artist_name": "Wrong artist found",
+        "entity_link_artist": "Artist link not found",
+        "entity_link_track": "Track link not found",
         "cleaned_song": "The Way",
         "artist_queries": "Ariana Grande, Mac Miller"
     },
@@ -436,7 +436,7 @@
     "BerzerkEminem": {
         "main_artist_name": "Eminem",
         "entity_link_artist": "https://musicbrainz.org/artist/b95ce3ff-3d05-4e87-9e01-c97b66af13d4",
-        "entity_link_track": "https://musicbrainz.org/recording/dbe41896-877d-415d-b0d7-bb29f846b581",
+        "entity_link_track": "https://musicbrainz.org/recording/eecfa020-2833-4cd4-bb5c-4b235f41d1dc",
         "cleaned_song": "Berzerk",
         "artist_queries": "Eminem"
     },
@@ -478,7 +478,7 @@
     "Lose YourselfEminem": {
         "main_artist_name": "Eminem",
         "entity_link_artist": "https://musicbrainz.org/artist/b95ce3ff-3d05-4e87-9e01-c97b66af13d4",
-        "entity_link_track": "https://musicbrainz.org/recording/5cf2a6e8-8643-4ab0-8e00-f4d0f749b25c",
+        "entity_link_track": "https://musicbrainz.org/recording/63131a66-78c7-4bfd-9dac-3f846e5274a4",
         "cleaned_song": "Lose Yourself",
         "artist_queries": "Eminem"
     },
@@ -499,14 +499,14 @@
     "MockingbirdEminem": {
         "main_artist_name": "Eminem",
         "entity_link_artist": "https://musicbrainz.org/artist/b95ce3ff-3d05-4e87-9e01-c97b66af13d4",
-        "entity_link_track": "https://musicbrainz.org/recording/badebed5-e36e-4a9e-a496-456810fedfb2",
+        "entity_link_track": "https://musicbrainz.org/recording/88f80e62-efb4-4bfb-8eeb-c1f733d78f66",
         "cleaned_song": "Mockingbird",
         "artist_queries": "Eminem"
     },
     "My Name IsEminem": {
         "main_artist_name": "Eminem",
         "entity_link_artist": "https://musicbrainz.org/artist/b95ce3ff-3d05-4e87-9e01-c97b66af13d4",
-        "entity_link_track": "https://musicbrainz.org/recording/9a256117-967d-4ac5-b904-c720c9c16cff",
+        "entity_link_track": "https://musicbrainz.org/recording/3ca0be9d-dce9-486c-a5a0-9e4738a7563b",
         "cleaned_song": "My Name Is",
         "artist_queries": "Eminem"
     },
@@ -541,7 +541,7 @@
     "Stan (feat. Dido)Eminem": {
         "main_artist_name": "Eminem",
         "entity_link_artist": "https://musicbrainz.org/artist/b95ce3ff-3d05-4e87-9e01-c97b66af13d4",
-        "entity_link_track": "https://musicbrainz.org/recording/d8702718-1663-4cfb-9a7f-4b64e2902092",
+        "entity_link_track": "https://musicbrainz.org/recording/ccbf9eb3-d0aa-4a9c-8fba-119f24fb8e49",
         "cleaned_song": "Stan",
         "artist_queries": "Eminem, Dido"
     },
@@ -562,7 +562,7 @@
     "The Real Slim ShadyEminem": {
         "main_artist_name": "Eminem",
         "entity_link_artist": "https://musicbrainz.org/artist/b95ce3ff-3d05-4e87-9e01-c97b66af13d4",
-        "entity_link_track": "https://musicbrainz.org/recording/c2245b3c-c453-4c98-a414-45806f42694b",
+        "entity_link_track": "https://musicbrainz.org/recording/a6aebcad-e430-48ff-81bd-0a8978fab218",
         "cleaned_song": "The Real Slim Shady",
         "artist_queries": "Eminem"
     },
@@ -604,7 +604,7 @@
     "Sign of the TimesHarry Styles": {
         "main_artist_name": "Harry Styles",
         "entity_link_artist": "https://musicbrainz.org/artist/7eb1ce54-a355-41f9-8d68-e018b096d427",
-        "entity_link_track": "https://musicbrainz.org/recording/4d02b763-64b5-44f3-9593-be9513f1db89",
+        "entity_link_track": "https://musicbrainz.org/recording/3125b023-6a45-4a68-98ec-a88634866983",
         "cleaned_song": "Sign of the Times",
         "artist_queries": "Harry Styles"
     },
@@ -758,7 +758,7 @@
     "Despacito (feat. Daddy Yankee)Luis Fonsi": {
         "main_artist_name": "Luis Fonsi",
         "entity_link_artist": "https://musicbrainz.org/artist/d68fda90-ab8d-4799-be56-317ba4ae700f",
-        "entity_link_track": "https://musicbrainz.org/recording/683bb568-5275-4b7e-adee-320dc057175f",
+        "entity_link_track": "https://musicbrainz.org/recording/1109d8da-ce4a-4739-9414-242dc3e9b81c",
         "cleaned_song": "Despacito",
         "artist_queries": "Luis Fonsi, Daddy Yankee"
     },
@@ -961,7 +961,7 @@
     "Don't Let Me Down (feat. Daya)The Chainsmokers": {
         "main_artist_name": "The Chainsmokers",
         "entity_link_artist": "https://musicbrainz.org/artist/91a81925-92f9-4fc9-b897-93cf01226282",
-        "entity_link_track": "https://musicbrainz.org/recording/afdb2cf5-6780-45ec-b261-e32a8a681402",
+        "entity_link_track": "https://musicbrainz.org/recording/06dd7f76-f905-4ec1-8ad7-62a5a308265b",
         "cleaned_song": "Don't Let Me Down",
         "artist_queries": "The Chainsmokers, Daya"
     },
