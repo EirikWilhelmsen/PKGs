@@ -2,7 +2,6 @@
 import re
 import requests
 import json
-from datetime import datetime
 from rfc3987 import match
 from PKGClass import URI
 import time
@@ -18,12 +17,20 @@ class SpotifyFunctions:
         self.load_artist_and_song_id()
         
     def read_json_file(self, file_path):
+        """Reads a json file
+        Keyword arguments:
+        file_path -- path to the file
+        Return: data -- data from the file
+        """
+
         with open(file_path, 'r', encoding='utf-8') as json_file:
             print("fant fil", file_path)
             data = json.load(json_file)
         return data
     
     def load_artist_and_song_id(self):
+        """Loads artists and songs from cache file"""
+        
         try:
             with open(os.path.join(os.path.dirname(__file__), "data/cache_files/artist_and_song_id.json"), 'r', encoding='utf-8') as file:
                 self.artist_and_song_id = json.load(file)
@@ -31,10 +38,17 @@ class SpotifyFunctions:
             self.artist_and_song_id = []
     
     def save_artist_and_song_id(self):
+        """Saves artists and songs to cache file"""
+
         with open(os.path.join(os.path.dirname(__file__), "data/cache_files/artist_and_song_id.json"), 'w', encoding='utf-8') as file:
             json.dump(self.artist_and_song_id, file)
     
     def generate_variants(self,song_name):
+        """Generates variants of the song name
+        Keyword arguments:
+        song_name -- song name
+        Return: variants -- list of song name variants with different apostrophes
+        """
         variants = [song_name]
         if "'" in song_name:
             variants.append(song_name.replace("'", "`"))
@@ -61,7 +75,7 @@ class SpotifyFunctions:
 
     
     def search_artist(self, artist_name, song_name):
-        """sumary_line
+        """searches musicbrainz for artist and song
         
         Keyword arguments:
         artist_name -- artist name
@@ -92,13 +106,12 @@ class SpotifyFunctions:
 
         time.sleep(1.1)
 
+        # A lot of data is processed here to avoid searching musicbrainz multiple times
+
         if data.get('recordings'):
             for record in data['recordings']:
-                print(self.artist_index)
                 for song_name in song_names:
                     if len(record['artist-credit']) > 1 and self.artist_index < len(record['artist-credit']):
-                        print("fikk", record['title'], record['artist-credit'][self.artist_index]['artist']['name'])
-
                         if artist_name == record['artist-credit'][self.artist_index]['artist']['name'] and song_name == record['title']:
                             artist_template = f"https://musicbrainz.org/artist/{record['artist-credit'][self.artist_index]['artist']['id']}"
                             artist_uri = URI(artist_template.format(entity_name=artist_name))
@@ -108,7 +121,6 @@ class SpotifyFunctions:
                                 song_name = self.current_song_name
                             self.artist_and_song_id.append({"artist_name": artist_name, "song_name": song_name, "artist_URI": artist_uri, "song_URI": song_uri})
                             self.save_artist_and_song_id()
-                            print("fikk treff med", song_name)
                             self.artist_index += 1
                             return artist_uri, song_uri, song_name
                     elif artist_name == record['artist-credit'][0]['artist']['name'] and song_name == record['title']:
@@ -120,7 +132,6 @@ class SpotifyFunctions:
                             song_name = self.current_song_name
                         self.artist_and_song_id.append({"artist_name": artist_name, "song_name": song_name, "artist_URI": artist_uri, "song_URI": song_uri})
                         self.save_artist_and_song_id()
-                        print("fikk treff med", song_name)
                         self.artist_index += 1
                         return artist_uri, song_uri, song_name
                 self.artist_and_song_id.append({"artist_name": artist_name, "song_name": song_name, "artist_URI": "No:URI:found", "song_URI": "No:URI:found"})
@@ -128,12 +139,11 @@ class SpotifyFunctions:
                 self.artist_index += 1
                 return None, None, song_name
         else:
-            print("fikk ikke respons")
             self.artist_index
             return "No response", "No response", "No response"
 
     def assign_URI(self, file_path):
-        """sumary_line
+        """assign the URI for the artist and song
         
         Keyword arguments:
         file_path -- path to the file
@@ -156,13 +166,11 @@ class SpotifyFunctions:
         for track in data:
             artist_uri_list = []
             track_uri_list = []
-            print(len(track['artists']))
             self.artist_index = 0
             song_name = self.remove_feat_part(track['name'])
             for artist in track["artists"]: # in case of multiple artists
                 artist_name = artist['name']
                 artist_URI, song_URI, new_song_name = self.search_artist(artist_name, song_name)
-                print(new_song_name)
                 if artist_URI is None and song_URI is None:
                     artist_uri_list.append("No:URI:found")
                     track_uri_list.append("No:URI:found")
@@ -188,24 +196,6 @@ class SpotifyFunctions:
                         track_URI_list[i].pop(j)
 
             track_URI_list_combined.append(track_URI_list)
-
-
-        #        print("returned artist_URI", artist_URI, "returned song_URI", song_URI)
-        #        if song_URI is not None and artist_URI is not None:
-        #            artist_uri_list.append(artist_URI)
-        #            if song_name in songs_checked and song_URI not in track_URI_list:
-        #                track_URI_list[-1] = song_URI
-        #            else:
-        #                track_URI_list.append(song_URI)
-        #        else:
-        #            artist_uri_list.append("No:URI:found")
-        #            if song_name in songs_checked:
-        #                break
-        #            track_URI_list.append("No:URI:found")
-        #        songs_checked.append(song_name)
-        #    artist_URI_list.append(artist_uri_list)
-        #
-        #track_URI_list_combined.append(track_URI_list)
 
         return data, track_URI_list_combined, artist_URI_list, song_names
 

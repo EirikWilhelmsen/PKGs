@@ -18,7 +18,6 @@ from NetflixClass import NetflixFunctions
 from GroundTruthSpotify import groundTruthSpotify
 from SpotifyClass import SpotifyFunctions
 
-#from AppleMusic import AppleMusic
 from GroundTruthAppleM import groundTruthAppleM
 from AppleMusic import AppleMusicFunctions
 
@@ -36,7 +35,7 @@ url = "http://127.0.0.1:5000/statements"
 
 
 app = Flask(__name__)
-app.secret_key = "lrip4pJM10OMJHdaHZ9c5w"  # Change this to a secure, random key
+#app.secret_key = "lrip4pJM10OMJHdaHZ9c5w"
 
 # Spotify API credentials
 SPOTIFY_CLIENT_ID = "13793570c33c4c2885ee1735e4749ac3"
@@ -160,6 +159,11 @@ def proceed_test():
         elif platform == 'applemusic-TEST':
             return redirect(url_for('test', platform='applemusic-TEST'))
     return redirect(url_for('index'))
+
+
+####################
+### Progress Bar ###
+####################
 
 @app.route('/progress-spotify')
 def progress_spotify():
